@@ -1,11 +1,11 @@
 backend:
   name: github
-  repo: Iker-Projects/sandra-psicologia   # ← Cambia esto por tu usuario/repo de GitHub
+  repo: Iker-Projects/ABRAZO-DE-KOALA   # ← Cambia esto por tu usuario/repo de GitHub
   branch: main
   site_domain: starlit-praline-38da20.netlify.app
 
-  site_url: https://starlit-praline-38da20.netlify.app
-
+  
+site_url: https://starlit-praline-38da20.netlify.app
 # Las imágenes subidas desde el panel se guardan aquí
 media_folder: "imagenes"
 public_folder: "/imagenes"
