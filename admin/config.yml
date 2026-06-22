@@ -1,10 +1,6 @@
 backend:
-  name: github
-  repo: Iker-Projects/ABRAZO-DE-KOALA
+  repo: git-gateway
   branch: main
-  site_domain: starlit-praline-38da20.netlify.app
-  auth_type: pkce
-
   
 site_url: https://starlit-praline-38da20.netlify.app
 # Las imágenes subidas desde el panel se guardan aquí
