@@ -40,7 +40,7 @@ collections:
           - { label: "Email",      name: "email",     widget: "string", default: "sandracc1998@gmail.com" }
           - { label: "Ubicación",  name: "ubicacion", widget: "string", default: "Santiago de Compostela" }
           - { label: "Instagram / Web", name: "instagram", widget: "string", default: "@pscologa_koalificada" }
-          - { label: "xrewgrne", name: "formspree_id", widget: "string", hint: "xrewgrne" }
+          - { label: "ID de Formspree", name: "formspree_id", widget: "string", hint: "Ve a formspree.io, crea un formulario y pega aquí el ID (ej: xbjeqkzp)" }
 
   # ── SERVICIOS ────────────────────────────────────────────────────────
   - name: "servicios"
