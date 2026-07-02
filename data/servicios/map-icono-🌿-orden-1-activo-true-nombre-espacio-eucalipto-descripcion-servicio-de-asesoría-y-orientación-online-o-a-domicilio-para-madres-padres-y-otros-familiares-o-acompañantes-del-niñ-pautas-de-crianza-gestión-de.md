@@ -19,7 +19,7 @@ descripcion: >-
 
   - Acompañamiento en procesos de cambio o adaptación.
 
-  - Fomento de la autonomía infantil.
+  - Herramientas para el fomento de la autonomía infantil.
 
   - Orientación sobre desarrollo y aprendizaje.
 
