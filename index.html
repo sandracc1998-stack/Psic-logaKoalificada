@@ -189,7 +189,7 @@ educativa y apoyo a menores.</p>
       <span class="service-badge">A DOMICILIO O EN ESPACIOS NATURALES</span>
       <div class="service-card"><div class="service-icon">🧠</div><div class="service-name">EduKoala</div><div class="service-desc">Apoyo psicoeducativo: servicio de orientación y asesoramiento en necesidades educativas especiales.</div></div>
        <span class="service-badge">A DOMICILIO O EN ESPACIOS NATURALES</span>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -285,12 +285,12 @@ async function loadData() {
       if (perfil.frase) document.getElementById('about-frase').textContent = '"' + perfil.frase + '"';
       if (perfil.foto) {
         const container = document.getElementById('foto-container');
-        container.innerHTML = '<img src="' + perfil.foto + '" alt="' + (perfil.nombre || 'Sandra') + '">';
+        container.innerHTML = '<img src="' + perfil.imagenparaweb.png + '" alt="' + (perfil.nombre || 'Sandra') + '">';
         container.className = '';
       }
     }
 
-    const contacto = await fetch('/ABRAZO-DE-KOALA/data/contacto.json').then(r => r.json()).catch(() => null);
+    const contacto = await fetch('/PSICÓLOGA KOALIFICADA/data/contacto.json').then(r => r.json()).catch(() => null);
     if (contacto) {
       if (contacto.telefono) {
         document.getElementById('c-telefono').textContent = contacto.telefono;
