@@ -125,9 +125,10 @@
     <div class="hero-text">
       <span class="eyebrow">Graduada en Psicología · Santiago de Compostela</span>
         <h1 id="hero-tagline">Un espacio seguro para <em>crecer</em>, <em>aprender</em> y <em>comprender</em></h1>
-      <p class="hero-desc" id="hero-desc">Acompaño a niñ@s y familias desde la empatía y el respeto, potenciando sus <strong>capacidades<strong> y guiándolos en su <strong>desarrollo<strong> educativo y evolutivo.</p>
+      <p class="hero-desc" id="hero-desc">Acompaño a niñ@s y familias desde la empatía y el respeto, potenciando sus <strong>capacidades</strong> y guiándolos en su <strong>desarrollo</strong> educativo y evolutivo.</p>
       <div class="badge-row">
-        <span class="badge">♾️ Intervención psicoeducativa y apoyo en TEA (Trastorno del Espectro Autista)</span>
+        <span class="badge">🧠 Intervención psicoeducativa</span>
+          <span class="badge">♾️ Apoyo en Trastorno del Espectro Autista (TEA)</span>
         <span class="badge">🌱 Estimulación temprana y desarrollo infantil</span>
         <span class="badge">🌟 Necesidades Educativas Especiales (NEE) </span>
       </div>
@@ -287,9 +288,8 @@ async function loadData() {
         document.getElementById('about-desc').textContent = perfil.descripcion;
       }
       if (perfil.frase) document.getElementById('about-frase').textContent = '"' + perfil.frase + '"';
-      if (perfil.foto) {
-            const container = document.getElementById('foto-container');
-        container.innerHTML = '<img src="' + (perfil.imagenparaweb || 'Imagen para web.png') + '" alt="' + (perfil.nombre || 'Sandra') + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); display: block;">';
+             const container = document.getElementById('foto-container');
+        container.innerHTML = '<img src="Imagen para web.png" alt="Sandra Carrera" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg); display:block;">';
         container.className = '';
 
     const contacto = await fetch('/PSICÓLOGA KOALIFICADA/data/contacto.json').then(r => r.json()).catch(() => null);
