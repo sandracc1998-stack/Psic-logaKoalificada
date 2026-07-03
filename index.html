@@ -65,11 +65,13 @@
 
     #servicios { background: var(--cream); }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .service-card { background: var(--white); border-radius: var(--radius-md); padding: 2rem 1.75rem; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; border-top: 3px solid transparent; }
+    .service-card { background: var(--white); border-radius: var(--radius-md); padding: 2rem 1.75rem; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; border-top: 3px solid transparent; display: flex; flex-direction: column;.}
     .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(92,61,61,.12); border-top-color: var(--rose); }
     .service-icon { font-size: 2rem; margin-bottom: 1rem; }
     .service-name { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 500; color: var(--bark); margin-bottom: .5rem; }
     .service-desc { font-size: .9rem; color: var(--muted); line-height: 1.65; }
+    .service-badge { display: inline-block; margin-top: 1rem; padding: 0.5rem 0.8rem; background-color: var(--cream); color: var(--bark); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; border-radius: var(--radius-sm); border: 1px solid var(--blush); align-self: flex-start; }
+
 
     #contacto { background: var(--white); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
