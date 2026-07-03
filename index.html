@@ -58,9 +58,10 @@
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .about-quote { font-family: var(--ff-display); font-size: 1.5rem; font-style: italic; color: var(--mauve); border-left: 3px solid var(--blush); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.4; }
     .about-body { color: var(--text); line-height: 1.75; }
-    .values-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: .6rem; }
-    .value-item { display: flex; align-items: center; gap: .75rem; font-size: .95rem; }
-    .value-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); flex-shrink: 0; }
+    .values-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.value-item { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; background-color: var(--white); padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow); border-top: 4px solid var(--rose); font-size: 1rem; }
+.value-dot { display: none; }
+
 
     #servicios { background: var(--cream); }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
