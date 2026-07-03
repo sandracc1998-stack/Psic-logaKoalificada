@@ -123,14 +123,14 @@
   <div class="hero">
     <div class="hero-text">
       <span class="eyebrow">Graduada en Psicología · Santiago de Compostela</span>
-      <h1 id="hero-tagline">Un espacio seguro para <em>crecer, aprender</em> y comprender</em></h1>
-      <p class="hero-desc" id="hero-desc">Acompaño a niñ@s y familias desde la empatía y el respeto, potenciando sus capacidades y guiándolos en su desarrollo educativo y evolutivo.</p>
+        <h1 id="hero-tagline">Un espacio seguro para <em>crecer</em>, <em>aprender</em> y <em>comprender</em></h1>
+      <p class="hero-desc" id="hero-desc">Acompaño a niñ@s y familias desde la empatía y el respeto, potenciando sus <strong>capacidades<strong> y guiándolos en su <strong>desarrollo<strong> educativo y evolutivo.</p>
       <div class="badge-row">
-        <span class="badge">🧩 Intervención psicoeducativa y apoyo en TEA</span>
+        <span class="badge">♾️ Intervención psicoeducativa y apoyo en TEA (Trastorno del Espectro Autista)</span>
         <span class="badge">🌱 Estimulación temprana y desarrollo infantil</span>
-        <span class="badge">📚 Necesidades Educativas Especiales (NEE) </span>
+        <span class="badge">🌟 Necesidades Educativas Especiales (NEE) </span>
       </div>
-      <a class="btn-primary" href="#contacto">Escríbeme ♡</a>
+      <a class="btn-primary" href="#contacto"><strong>Escríbeme<strong>♡</a>
     </div>
     <div class="hero-visual">
       <div class="photo-card">
@@ -151,7 +151,7 @@
         <span class="section-label">Sobre mí</span>
         <h2 class="section-title">Hola, soy <em id="about-nombre">Sandra</em></h2>
         <div class="about-quote" id="about-frase">"Creo en un acompañamiento cercano, respetuoso y personalizado."</div>
-        <p class="about-body">Soy graduada en psicología con formación en TEA, dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención
+        <p class="about-body">Soy graduada en psicología con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención
 educativa y apoyo a menores.</p>
         <p class="about-body" style="margin-top:.85rem;" id="about-desc">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para adyudaros en este camino.</p>
         <div class="values-list">
@@ -286,11 +286,9 @@ async function loadData() {
       }
       if (perfil.frase) document.getElementById('about-frase').textContent = '"' + perfil.frase + '"';
       if (perfil.foto) {
-        const container = document.getElementById('foto-container');
-        container.innerHTML = '<img src="' + perfil.imagenparaweb.png + '" alt="' + (perfil.nombre || 'Sandra') + '">';
+            const container = document.getElementById('foto-container');
+        container.innerHTML = '<img src="' + (perfil.imagenparaweb || 'Imagen para web.png') + '" alt="' + (perfil.nombre || 'Sandra') + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); display: block;">';
         container.className = '';
-      }
-    }
 
     const contacto = await fetch('/PSICÓLOGA KOALIFICADA/data/contacto.json').then(r => r.json()).catch(() => null);
     if (contacto) {
