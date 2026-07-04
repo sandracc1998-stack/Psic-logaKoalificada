@@ -177,6 +177,138 @@
     grid-template-columns: 1fr; /* Pasa a 1 sola columna en celulares */
     gap: 16px;
   }
+/* Estilos generales de la nueva sección */
+.como-trabajo-seccion {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.como-trabajo-titulo {
+  font-family: var(--ff-display, sans-serif);
+  font-size: 2rem;
+  color: #5c3d3d; /* Cambia por var(--dark) si prefieres tu variable */
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+
+/* Contenedor flexible para alinear las 3 tarjetas en horizontal */
+.como-trabajo-contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  perspective: 1000px; /* Necesario para el efecto 3D del giro */
+}
+
+/* Configuración de la estructura de la tarjeta */
+.tarjeta-giratoria {
+  flex: 1;
+  min-width: 280px;
+  height: 420px; /* Altura fija para que el contenido de la lista quepa perfectamente */
+  background-color: transparent;
+}
+
+.tarjeta-interno {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-shadow: var(--shadow, 0 4px 15px rgba(0,0,0,0.05));
+  border-radius: var(--radius-md, 16px);
+}
+
+/* Activación del giro al pasar el cursor o hacer clic */
+.tarjeta-giratoria:hover .tarjeta-interno,
+.tarjeta-giratoria:focus .tarjeta-interno {
+  transform: rotateY(180deg);
+}
+
+/* Estilos comunes para ambas caras de la tarjeta */
+.tarjeta-frontal, .tarjeta-trasera {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Soporte navegadores antiguos */
+  backface-visibility: hidden;
+  border-radius: var(--radius-md, 16px);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* CARA DELANTERA: Fondo granate oscuro, letra clara crema */
+.tarjeta-frontal {
+  background-color: #5c3d3d; /* Tu color granate/marrón oscuro predominante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-frontal h3 {
+  font-family: var(--ff-display, sans-serif);
+  color: #fcf4f0; /* Color crema claro */
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}
+
+/* CARA TRASERA: Fondo claro crema, letra oscura granate */
+.tarjeta-trasera {
+  background-color: #fcf4f0; /* Fondo crema claro */
+  color: #5c3d3d; /* Texto granate oscuro */
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  border: 2px solid #5c3d3d; /* Opcional: un borde sutil para enmarcar el reverso */
+}
+
+/* Formato de la lista de viñetas en el reverso */
+.tarjeta-trasera ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarjeta-trasera li {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Pequeño punto decorativo para suplir la viñeta tradicional */
+.tarjeta-trasera li::before {
+  content: "•";
+  color: #5c3d3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+.tarjeta-trasera li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsividad: Se vuelven verticales en pantallas de celulares automáticamente */
+@media (max-width: 900px) {
+  .como-trabajo-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarjeta-giratoria {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 380px; /* Permite que la tarjeta estire si el texto es largo en móvil */
+  }
 }
 
 
@@ -330,6 +462,73 @@ educativa y apoyo a menores.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="como-trabajo-seccion">
+  <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
+  
+  <div class="como-trabajo-contenedor">
+    
+    <!-- TARJETA 1: ONLINE -->
+    <div class="tarjeta-giratoria">
+      <div class="tarjeta-interno">
+        <!-- Parte delantera -->
+        <div class="tarjeta-frontal">
+          <h3>ONLINE</h3>
+        </div>
+        <!-- Parte trasera -->
+        <div class="tarjeta-trasera">
+          <ul>
+            <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
+            <li><strong>Orientación personalizada:</strong> estrategias adaptadas al temperamento de tu hijo.</li>
+            <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, sueño y autonomía.</li>
+            <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
+            <li><strong>Enfoque preventivo:</strong> pautas profesionales para evitar que los problemas crezcan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 2: A DOMICILIO -->
+    <div class="tarjeta-giratoria">
+      <div class="tarjeta-interno">
+        <!-- Parte delantera -->
+        <div class="tarjeta-frontal">
+          <h3>A DOMICILIO</h3>
+        </div>
+        <!-- Parte trasera -->
+        <div class="tarjeta-trasera">
+          <ul>
+            <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</li>
+            <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hijos.</li>
+            <li><strong>Herramientas de aplicación inmediata:</strong> Diseñamos pautas adaptadas al espacio físico de tu casa.</li>
+            <li><strong>Ambiente de total confianza:</strong> Los niños se muestran tal y como son al estar en su entorno seguro.</li>
+            <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 3: EN ESPACIOS NATURALES -->
+    <div class="tarjeta-giratoria">
+      <div class="tarjeta-interno">
+        <!-- Parte delantera -->
+        <div class="tarjeta-frontal">
+          <h3>EN ESPACIOS NATURALES</h3>
+        </div>
+        <!-- Parte trasera -->
+        <div class="tarjeta-trasera">
+          <ul>
+            <li><strong>Intervención in situ:</strong> Trabajamos directamente en los espacios cotidianos (parques, supermercados, cines).</li>
+            <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante.</li>
+            <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse en el mundo real, no solo en un despacho.</li>
+            <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, luces, esperas).</li>
+            <li><strong>Estrategias para la vida pública:</strong> Diseñamos herramientas para que salir en familia sea una experiencia tranquila.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
