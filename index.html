@@ -26,18 +26,18 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--text); font-family: var(--ff-body); font-size: 1rem; line-height: 1.65; }
+    body { background: var(--cream); color: var(--text); font-family: var(--ff-body); font-size: 1rem; line-height: 1.65; padding-top: 1rem; }
 
     /* MENÚ DE NAVEGACIÓN */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
     .nav-logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--mauve); text-decoration: none; font-style: italic; }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
     /* SECCIÓN PRINCIPAL PRESENTACIÓN */
-    .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
+    .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 4rem 2rem; position: relative; z-index: 1; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 75vh; }
     .eyebrow { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
     .hero-grid h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.12; color: var(--bark); margin-bottom: 1.5rem; }
     .hero-grid h1 em { font-style: italic; color: var(--mauve); }
@@ -51,7 +51,7 @@
     .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* SECCIONES COMUNES */
-    section { padding: 5rem 2rem; }
+    section { padding: 5rem 2rem; position: relative; z-index: 1; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; display: block; text-align: center; }
     .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; text-align: center; }
@@ -112,6 +112,7 @@
 
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
+      body { padding-top: 0; }
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
       .photo-card { max-width: 400px; margin: 0 auto; }
       .about-quote { border-left: none; border-top: 2px solid var(--blush); border-bottom: 2px solid var(--blush); padding: 1rem 0; }
@@ -133,8 +134,3 @@
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
