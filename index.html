@@ -59,10 +59,60 @@
     .about-quote { font-family: var(--ff-display); font-size: 1.5rem; font-style: italic; color: var(--mauve); border-left: 3px solid var(--blush); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.4; }
     .about-body { color: var(--text); line-height: 1.75; }
     /* Contenedor general */
-.seccion-valores {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+.values-list {
+  display: flex;
+  flex-direction: row; /* Fuerza la línea horizontal */
+  justify-content: space-between; /* Distribuye el espacio uniformemente */
+  gap: 1rem; /* Reduce un poco el espacio para que quepan bien las 4 */
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.value-item {
+  flex: 1; /* Hace que todas las tarjetas tengan exactamente el mismo ancho */
+  min-width: 200px; /* Evita que se aplasten demasiado en pantallas medianas */
+  background-color: var(--white);
+  border: 1px solid var(--rose);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.25rem; /* Ajuste de espaciado interno más compacto */
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.value-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(92,61,61,.12);
+}
+
+.value-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.value-name {
+  font-family: var(--ff-display);
+  font-size: 1.1rem; /* Un poco más pequeña para encajar en la fila */
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: .5rem;
+}
+
+.value-desc {
+  font-size: .85rem; /* Ajuste de lectura óptimo para columnas estrechas */
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Adaptación para celulares: si no caben de lado, se vuelven verticales automáticamente */
+@media (max-width: 768px) {
+  .values-list {
+    flex-direction: column;
+  }
+}
+
 }
 
 /* Configuración de la cuadrícula (Grid) */
@@ -210,10 +260,9 @@
     <div class="hero-visual">
       <div class="photo-card">
         <div id="foto-container" class="photo-placeholder">
-          <span style="font-size:4rem">🐨</span>
-       <img src="imagen-sandra-koala.png" alt="koala">
+                <img src="imagen-sandra-koala.png" alt="koala">
         </div>
-        <div class="tagline-ribbon">"Orientación y apoyo psicoeducativo personalizado ♡"</div>
+        <div class="tagline-ribbon">"Orientación y apoyo psicoeducativo personalizado"</div>
       </div>
     </div>
   </div>
@@ -234,33 +283,33 @@ educativa y apoyo a menores.</p>
 <section class="seccion-valores">
   <div class="contenedor-valores">
     
-    <!-- Tarjeta 1 -->
-    <div class="tarjeta-valor">
-      <div class="icono-valor">🤝</div>
-      <h3>Empatía y escucha activa</h3>
-      <p>Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
-    </div>
+<div class="values-list">
 
-    <!-- Tarjeta 2 -->
-    <div class="tarjeta-valor">
-      <div class="icono-valor">⏳</div>
-      <h3>Respeto al ritmo de cada proceso</h3>
-      <p>Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
-    </div>
+  <div class="value-item">
+    <div class="value-icon">🤝</div>
+    <h3 class="value-name">Empatía y escucha activa</h3>
+    <p class="value-desc">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+  </div>
 
-    <!-- Tarjeta 3 -->
-    <div class="tarjeta-valor">
-      <div class="icono-valor">🧠</div>
-      <h3>Regulación emocional</h3>
-      <p>Herramientas prácticas y estrategias personalizadas para identificar, comprender y gestionar las emociones en el día a día.</p>
-    </div>
+  <div class="value-item">
+    <div class="value-icon">⏳</div>
+    <h3 class="value-name">Respeto al ritmo de cada proceso</h3>
+    <p class="value-desc">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+  </div>
 
-    <!-- Tarjeta 4 -->
-    <div class="tarjeta-valor">
-      <div class="icono-valor">🧩</div>
-      <h3>Material específico y adaptado</h3>
-      <p>Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
-    </div>
+  <div class="value-item">
+    <div class="value-icon">🧠</div>
+    <h3 class="value-name">Regulación emocional</h3>
+    <p class="value-desc">Herramientas prácticas y estrategias personalizadas para identificar, comprender y gestionar las emociones en el día a día.</p>
+  </div>
+
+  <div class="value-item">
+    <div class="value-icon">🧩</div>
+    <h3 class="value-name">Material específico y adaptado</h3>
+    <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+  </div>
+
+</div>
 
   </div>
 </section>
