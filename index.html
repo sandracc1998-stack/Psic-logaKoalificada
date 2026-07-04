@@ -134,6 +134,27 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.seccion-valores-cabecera {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.valores-titulo {
+  font-family: var(--ff-display, sans-serif);
+  font-size: 2.2rem;
+  color: var(--dark, #5c3d3d);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.linea-decorativa {
+  width: 60px;
+  height: 3px;
+  background-color: var(--rose, #e1bca8);
+  margin: 0 auto;
+  border-radius: 2px;
+}
 
 /* Efecto interactivo al pasar el mouse */
 .tarjeta-valor:hover {
@@ -370,6 +391,7 @@
   <a class="nav-logo" href="#" id="nav-nombre">Sandra Carrera</a>
   <ul class="nav-links">
     <li><a href="#sobre-mi">Sobre mí</a></li>
+    <a href="#mis-valores" class="nav-link">Mis Valores</a>
     <li><a href="#servicios">Servicios</a></li>
     <a href="#como-trabajo" class="nav-link">Cómo trabajo</a>
     <li><a href="#contacto">Contacto</a></li>
@@ -415,9 +437,11 @@ educativa y apoyo a menores.</p>
         <div class="values-list">
 <section class="seccion-valores">
   <div class="contenedor-valores">
-    
+    <div class="seccion-valores-cabecera">
+  <h2 class="valores-titulo">Mis Valores</h2>
+  <div class="linea-decorativa"></div>
+</div>
 <div class="values-list">
-
   <div class="value-item">
     <div class="value-icon">🤝</div>
     <h3 class="value-name">Empatía y escucha activa</h3>
@@ -444,25 +468,6 @@ educativa y apoyo a menores.</p>
 
 </div>
 
-  </div>
-</section>
-      </div>
-      <div style="background:var(--blush);border-radius:var(--radius-lg);padding:2.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
-        <div style="text-align:center;font-size:3.5rem;">🐨</div>
-        <p style="font-family:var(--ff-display);font-size:1.15rem;font-style:italic;color:var(--mauve);text-align:center;line-height:1.5;">"Donde cada pequeño paso es una gran victoria."</p>
-        <div style="background:var(--white);border-radius:var(--radius-sm);padding:1.25rem;">
-          <p style="font-size:.85rem;color:var(--muted);text-align:center;">Especialidades principales</p>
-          <ul style="list-style:none;margin-top:.75rem;display:flex;flex-direction:column;gap:.5rem;">
-            <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">♾️<strong>TEA</strong> Trastorno del Espectro Autista</li>
-            <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">🌱<strong>Desarrollo Infantil</strong></li>
-            <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">🧩<strong>NEE</strong> Necesidades Específicas de Apoyo Educativo</li>
-             <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">🤗<strong>Inteligencia Emocional</strong></li>
-             <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">🎈<strong>Ocio y Tiempo Libre</strong></li>
-             <li style="display:flex;align-items:center;gap:.6rem;font-size:.9rem;">🌟<strong>Educación Especial</strong></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
         <div class="services-grid" id="services-grid">
