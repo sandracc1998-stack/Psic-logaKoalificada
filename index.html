@@ -134,3 +134,251 @@
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandra Carrera — Psicóloga especializada en TEA y NEE</title>
+  <link rel="preconnect" href="https://googleapis.com" />
+  <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:  #FAF6F0;
+      --blush:  #EDD9CC;
+      --rose:   #C9897A;
+      --mauve:  #8B5E6A;
+      --bark:   #5C3D3D;
+      --text:   #3D2929;
+      --muted:  #9A7878;
+      --white:  #FFFFFF;
+      --ff-display: 'Cormorant Garamond', Georgia, serif;
+      --ff-body:    'DM Sans', system-ui, sans-serif;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 4px 24px rgba(92,61,61,.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--text); font-family: var(--ff-body); font-size: 1rem; line-height: 1.65; }
+
+    /* MENÚ DE NAVEGACIÓN */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
+    .nav-logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--mauve); text-decoration: none; font-style: italic; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
+    .nav-links a:hover { color: var(--rose); }
+
+    /* SECCIÓN PRINCIPAL PRESENTACIÓN */
+    .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
+    .eyebrow { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
+    .hero-grid h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.12; color: var(--bark); margin-bottom: 1.5rem; }
+    .hero-grid h1 em { font-style: italic; color: var(--mauve); }
+    .about-quote { font-family: var(--ff-display); font-size: 1.5rem; font-style: italic; color: var(--mauve); border-left: 3px solid var(--blush); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.4; }
+    .about-body { color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
+    .btn-primary { display: inline-block; background: var(--mauve); color: var(--white); text-decoration: none; padding: .85rem 2rem; border-radius: 999px; font-weight: 500; font-size: .95rem; letter-spacing: .02em; transition: background .2s, transform .15s; border: none; cursor: pointer; margin-top: 1rem; }
+    .btn-primary:hover { background: var(--bark); transform: translateY(-1px); }
+    
+    /* CONFIGURACIÓN IMAGEN KOALA */
+    .photo-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--blush); box-shadow: 0 16px 48px rgba(92,61,61,.14); width: 100%; }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* SECCIONES COMUNES */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; display: block; }
+    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; }
+
+    /* SECCIÓN MIS VALORES */
+    #mis-valores { background: var(--white); }
+    .seccion-valores-cabecera { text-align: center; margin-bottom: 3rem; }
+    .valores-titulo { font-family: var(--ff-display); font-size: 2.2rem; color: var(--bark); font-weight: 600; margin-bottom: 0.5rem; }
+    .linea-decorativa { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto; border-radius: 2px; }
+    
+    .values-list { display: flex; flex-direction: row; justify-content: space-between; gap: 1.25rem; width: 100%; flex-wrap: wrap; }
+    .value-item { flex: 1; min-width: 220px; background-color: var(--cream); border: 1px solid var(--blush); border-radius: var(--radius-md); padding: 2rem 1.5rem; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: flex-start; }
+    .value-item:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(92,61,61,.12); }
+    .value-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
+    .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+
+    /* SECCIÓN CÓMO TRABAJO */
+    #como-trabajo { background: var(--cream); }
+    .como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
+    .como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
+    
+    .tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
+    .tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
+    .tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
+    
+    .tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); padding: 28px 24px; box-sizing: border-box; }
+    .tarjeta-frontal { background-color: var(--bark); display: flex; align-items: center; justify-content: center; }
+    .tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.5rem; font-weight: 500; letter-spacing: 1px; text-align: center; margin: 0; }
+    
+    .tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: center; border: 2px solid var(--bark); }
+    .tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
+    .tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
+    .tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
+    .tarjeta-trasera li:last-child { margin-bottom: 0; }
+
+    /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+      .photo-card { max-width: 400px; margin: 0 auto; }
+      .about-quote { border-left: none; border-top: 2px solid var(--blush); border-bottom: 2px solid var(--blush); padding: 1rem 0; }
+      .values-list { flex-direction: column; gap: 1.5rem; }
+      .como-trabajo-contenedor { flex-direction: column; align-items: center; }
+      .tarjeta-giratoria { width: 100%; max-width: 400px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <a href="#" class="nav-logo">Sandra Carrera</a>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#mis-valores">Mis Valores</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
+  <main class="hero-seccion" id="sobre-mi">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Psicóloga Educativa</span>
+        <h1>Hola, soy <em>Sandra</em></h1>
+        <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
+        <p class="about-body">Soy graduada en psicología con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervention educativa y apoyo a menores.</p>
+        <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+        <a href="imagen-sandra-koala.png" target="_blank" class="btn-primary">Ver Currículum (PDF)</a>
+      </div>
+      <div class="photo-card">
+        <img src="imagen-sandra-koala.png" alt="koala">
+      </div>
+    </div>
+  </main>
+
+  <!-- SECCIÓN MIS VALORES -->
+  <section id="mis-valores">
+    <div class="section-inner">
+      
+      <div class="seccion-valores-cabecera">
+        <h2 class="valores-titulo">Mis Valores</h2>
+        <div class="linea-decorativa"></div>
+      </div>
+
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-icon">🤝</div>
+          <h3 class="value-name">Empatía y escucha activa</h3>
+          <p class="value-desc">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">⏳</div>
+          <h3 class="value-name">Respeto al ritmo</h3>
+          <p class="value-desc">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">🧠</div>
+          <h3 class="value-name">Regulación emocional</h3>
+
+        <div class="value-item">
+          <div class="value-icon">🧩</div>
+          <h3 class="value-name">Material adaptado</h3>
+          <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+        </div>
+      </div> <!-- Cierre de values-list -->
+
+    </div> <!-- Cierre de section-inner de Mis Valores -->
+  </section>
+
+  <!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
+  <section id="como-trabajo">
+    <div class="section-inner">
+      
+      <div class="como-trabajo-cabecera">
+        <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
+      </div>
+      
+      <div class="como-trabajo-contenedor">
+        
+        <!-- TARJETA 1: ONLINE -->
+        <div class="tarjeta-giratoria">
+          <div class="tarjeta-interno">
+            <div class="tarjeta-frontal">
+              <h3>ONLINE</h3>
+            </div>
+            <div class="tarjeta-trasera">
+              <ul>
+                <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
+                <li><strong>Orientación personalizada:</strong> estrategias adaptadas al temperamento de tu hijo.</li>
+                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, sueño y autonomía.</li>
+                <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
+                <li><strong>Enfoque preventivo:</strong> pautas profesionales para evitar que los problemas crezcan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 2: A DOMICILIO -->
+        <div class="tarjeta-giratoria">
+          <div class="tarjeta-interno">
+            <div class="tarjeta-frontal">
+              <h3>A DOMICILIO</h3>
+            </div>
+            <div class="tarjeta-trasera">
+              <ul>
+                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
+                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hijos.</li>
+                <li><strong>Herramientas de aplicación inmediata:</strong> Diseñamos pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
+                <li><strong>Ambiente de total confianza:</strong> Los niños se muestran tal y como son al estar en su entorno seguro, facilitando un diagnóstico y guía más precisos.</li>
+                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA 3: ESPACIOS NATURALES -->
+        <div class="tarjeta-giratoria">
+          <div class="tarjeta-interno">
+            <div class="tarjeta-frontal">
+              <h3>EN ESPACIOS NATURALES</h3>
+            </div>
+            <div class="tarjeta-trasera">
+              <ul>
+                <li><strong>Intervención in situ:</strong> Trabajamos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
+                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hijo presenta una rabieta, desobediencia o bloqueo.</li>
+                <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
+                <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, esperas, luces, otras personas) en el comportamiento de tus pequeños.</li>
+                <li><strong>Estrategias para la vida pública:</strong> Diseñamos herramientas prácticas para que salir en familia deje de ser una fuente de estrés y se convierta en una experiencia tranquila.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Cierre de como-trabajo-contenedor -->
+    </div> <!-- Cierre de section-inner de Cómo Trabajo -->
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" style="background: var(--white); text-align: center;">
+    <div class="section-inner">
+      <span class="section-label">Contacto</span>
+      <h2 class="section-title">¿Hablamos?</h2>
+      <p class="section-intro" style="margin: 0 auto 2rem; color: var(--muted); max-width: 560px;">Si deseas agendar una sesión o tienes cualquier pregunta sobre mi metodología de trabajo, no dudes en escribirme.</p>
+      <a href="mailto:tu-correo@dominio.com" class="btn-primary">Enviar un mensaje</a>
+    </div>
+  </section>
+
+</body>
+</html>
+
