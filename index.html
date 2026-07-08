@@ -96,7 +96,6 @@
       .values-list { flex-direction: column; gap: 1.5rem; }
       .como-trabajo-contenedor { flex-direction: column; align-items: center; }
       .tarjeta-giratoria { width: 100%; max-width: 400px; }
-    }
   </style>
 </head>
 <body>
@@ -119,10 +118,9 @@
         <span class="eyebrow">Psicóloga Educativa</span>
         <h1>Hola, soy <em>Sandra</em></h1>
         <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervention educativa y apoyo a menores.</p>
+        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervention educativa y apoyo a menores y sus familias.</p>
         <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-        <a href="imagen-sandra-koala.png" target="_blank" class="btn-primary">Ver Currículum (PDF)</a>
-      </div>
+       </div>
       <div class="photo-card">
         <img src="imagen-sandra-koala.png" alt="koala">
       </div>
@@ -154,6 +152,8 @@
         <div class="value-item">
           <div class="value-icon">🧠</div>
           <h3 class="value-name">Regulación emocional</h3>
+           <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+        </div>
 
         <div class="value-item">
           <div class="value-icon">🧩</div>
@@ -184,10 +184,9 @@
             <div class="tarjeta-trasera">
               <ul>
                 <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
-                <li><strong>Orientación personalizada:</strong> estrategias adaptadas al temperamento de tu hijo.</li>
-                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, sueño y autonomía.</li>
+                <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
+                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
                 <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
-                <li><strong>Enfoque preventivo:</strong> pautas profesionales para evitar que los problemas crezcan.</li>
               </ul>
             </div>
           </div>
@@ -202,9 +201,8 @@
             <div class="tarjeta-trasera">
               <ul>
                 <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
-                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hijos.</li>
-                <li><strong>Herramientas de aplicación inmediata:</strong> Diseñamos pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                <li><strong>Ambiente de total confianza:</strong> Los niños se muestran tal y como son al estar en su entorno seguro, facilitando un diagnóstico y guía más precisos.</li>
+                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
+                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
                 <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
               </ul>
             </div>
@@ -219,11 +217,10 @@
             </div>
             <div class="tarjeta-trasera">
               <ul>
-                <li><strong>Intervención in situ:</strong> Trabajamos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
-                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hijo presenta una rabieta, desobediencia o bloqueo.</li>
+                <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
+                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una rabieta, desobediencia o bloqueo.</li>
                 <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
                 <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, esperas, luces, otras personas) en el comportamiento de tus pequeños.</li>
-                <li><strong>Estrategias para la vida pública:</strong> Diseñamos herramientas prácticas para que salir en familia deje de ser una fuente de estrés y se convierta en una experiencia tranquila.</li>
               </ul>
             </div>
           </div>
@@ -238,11 +235,24 @@
     <div class="section-inner">
       <span class="section-label">Contacto</span>
       <h2 class="section-title">¿Hablamos?</h2>
-      <p class="section-intro" style="margin: 0 auto 2rem; color: var(--muted); max-width: 560px;">Si deseas agendar una sesión o tienes cualquier pregunta sobre mi metodología de trabajo, no dudes en escribirme.</p>
-      <a href="mailto:tu-correo@dominio.com" class="btn-primary">Enviar un mensaje</a>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
     </div>
-  </section>
 
+    <div>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+    </div>
+
+    <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí tu mensaje..."></textarea>
+    </div>
+
+    <button type="submit">Enviar mensaje</button>
+</form>
 </body>
 </html>
+      
 
