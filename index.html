@@ -107,7 +107,7 @@
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+    <a href="#seccion-contacto" class="boton-nav">Contacto</a>
     </ul>
   </nav>
 
@@ -313,11 +313,10 @@
 </style>
 
 <!-- ESTRUCTURA DEL FORMULARIO -->
-<div class="formulario-contacto">
-    <form action="ENLACE_DE_ENVIO" method="POST">
+<div class="formulario-contacto" id="seccion-contacto">
+  <form action="https://formspree.io/f/mnjkykly" method="POST" id="seccion-contacto">
         <div class="campo-grupo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                       <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
         </div>
 
         <div class="campo-grupo">
@@ -333,7 +332,3 @@
         <button type="submit" class="boton-enviar">Enviar mensaje</button>
     </form>
 </div>
-<form action="https://formspree.io/f/mnjkykly" method="POST">
-
-      
-
