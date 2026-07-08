@@ -231,28 +231,108 @@
   </section>
 
   <!-- SECCIÓN CONTACTO -->
-  <section id="contacto" style="background: var(--white); text-align: center;">
-    <div class="section-inner">
-      <span class="section-label">Contacto</span>
-      <h2 class="section-title">¿Hablamos?</h2>
-      <div>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-    </div>
+<style>
+    /* Contenedor principal del formulario */
+    .formulario-contacto {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff; /* Fondo blanco para que resalte sobre el crema de la web */
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    <div>
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required placeholder="tu@email.com">
-    </div>
+    /* Grupos de campos (separación vertical) */
+    .campo-grupo {
+        margin-bottom: 20px;
+        text-align: left; /* Alinea los textos a la izquierda */
+    }
 
-    <div>
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí tu mensaje..."></textarea>
-    </div>
+    /* Estilo de las etiquetas (Nombres de los campos) */
+    .campo-grupo label {
+        display: block;
+        margin-bottom: 8px;
+        color: #4a2828; /* Tono granate/marrón de tu cabecera */
+        font-weight: 600;
+        font-size: 14px;
+    }
 
-    <button type="submit">Enviar mensaje</button>
-</form>
-</body>
+    /* Estilo de las cajas de texto y el área de mensaje */
+    .campo-grupo input, 
+    .campo-grupo textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #e0dcd8; /* Borde suave */
+        border-radius: 8px;
+        font-size: 15px;
+        color: #333333;
+        background-color: #fdfcfb;
+        box-sizing: border-box; /* Evita que el campo se salga del contenedor */
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto al hacer clic en un campo */
+    .campo-grupo input:focus, 
+    .campo-grupo textarea:focus {
+        border-color: #a37070; /* Color de acento más vivo al seleccionar */
+        outline: none;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(163, 112, 112, 0.2);
+    }
+
+    /* Altura fija para el cuadro de mensaje */
+    .campo-grupo textarea {
+        height: 120px;
+        resize: vertical; /* Permite estirar abajo pero no a los lados */
+    }
+
+    /* Estilo del botón de enviar */
+    .boton-enviar {
+        width: 100%;
+        padding: 14px;
+        background-color: #4a2828; /* El color granate corporativo de tu web */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    /* Efecto al pasar el ratón por encima del botón */
+    .boton-enviar:hover {
+        background-color: #5c3333; /* Un tono un poco más claro del mismo granate */
+    }
+
+    /* Efecto al hacer clic en el botón */
+    .boton-enviar:active {
+        transform: scale(0.98);
+    }
+</style>
+
+<!-- ESTRUCTURA DEL FORMULARIO -->
+<div class="formulario-contacto">
+    <form action="ENLACE_DE_ENVIO" method="POST">
+        <div class="campo-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="campo-grupo">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+
+        <div class="campo-grupo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
+        </div>
+
+        <button type="submit" class="boton-enviar">Enviar mensaje</button>
+    </form>
+</div>
 </html>
       
 
