@@ -312,11 +312,27 @@
     }
 </style>
 
+Aquí tienes el código editado. He añadido el título "Contacto" dentro del formulario y la regla CSS correspondiente con el color granate oscuro (código hexadecimal #4A0E17).
+## Código HTML y CSS Integrado
+
 <!-- ESTRUCTURA DEL FORMULARIO -->
 <div class="formulario-contacto" id="seccion-contacto">
-  <form action="https://formspree.io/f/mnjkykly" method="POST" id="seccion-contacto">
+  <!-- ESTILOS CSS AÑADIDOS -->
+  <style>
+    .titulo-contacto {
+      color: #4A0E17; /* Color granate oscuro */
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-family: sans-serif; /* Puedes cambiar la tipografía aquí */
+    }
+  </style>
+
+  <form action="https://formspree.io/f/mnjkykly" method="POST">
+        <!-- TÍTULO AÑADIDO -->
+        <h2 class="titulo-contacto">Contacto</h2>
+
         <div class="campo-grupo">
-                       <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
         </div>
 
         <div class="campo-grupo">
@@ -332,3 +348,5 @@
         <button type="submit" class="boton-enviar">Enviar mensaje</button>
     </form>
 </div>
+
+
