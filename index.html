@@ -68,26 +68,47 @@
     .value-icon { font-size: 2rem; margin-bottom: 1rem; }
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    
+.como-trabajo-titulo { font-family: var(--ff-display); font-size: 2.2rem; color: var(--bark); font-weight: 600; margin-bottom: 0.5rem; }
+.como-trabajo-linea { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto; border-radius: 2px; }
+.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
 
-    /* SECCIÓN CÓMO TRABAJO */
-    #como-trabajo { background: var(--cream); }
-    .como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
-    .como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
-    
-    .tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
-    .tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
-    .tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
-    
-    .tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); padding: 28px 24px; box-sizing: border-box; }
-    .tarjeta-frontal { background-color: var(--bark); display: flex; align-items: center; justify-content: center; }
-    .tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.5rem; font-weight: 500; letter-spacing: 1px; text-align: center; margin: 0; }
-    
-    .tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: center; border: 2px solid var(--bark); }
-    .tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
-    .tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
-    .tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
-    .tarjeta-trasera li:last-child { margin-bottom: 0; }
+   /* ---- NUEVOS FONDOS PARA LA PARTE FRONTAL ---- */
+.tarjeta-giratoria:nth-child(1) .tarjeta-frontal {
+    background-image: linear-gradient(rgba(44, 40, 36, 0.75), rgba(44, 40, 36, 0.75)), url('ruta-a-tus-hojas-eucalipto.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
+.tarjeta-giratoria:nth-child(2) .tarjeta-frontal {
+    background-image: linear-gradient(rgba(44, 40, 36, 0.75), rgba(44, 40, 36, 0.75)), url('ruta-a-koalas-abrazandose.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjeta-giratoria:nth-child(3) .tarjeta-frontal {
+    background-image: linear-gradient(rgba(44, 40, 36, 0.75), rgba(44, 40, 36, 0.75)), url('ruta-a-koala-gafas-cerebro.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---- NUEVOS ESTILOS PARA LOS TÍTULOS TRASEROS ---- */
+.tarjeta-trasera {
+    flex-direction: column; /* Permite colocar el título arriba y la lista abajo */
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.titulo-trasero {
+    color: #4A0E17; /* Tu granate oscuro */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Fuerza las mayúsculas */
+    margin-top: 0;
+    margin-bottom: 15px; /* Separación con la lista */
+    font-family: var(--ff-display);
+    width: 100%;
+}
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
@@ -166,66 +187,66 @@
   </section>
 
   <!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
-  <section id="como-trabajo">
-    <div class="section-inner">
-      
-      <div class="como-trabajo-cabecera">
-        <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
-      </div>
-      
-      <div class="como-trabajo-contenedor">
-        
-        <!-- TARJETA 1: ONLINE -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
+ <div class="como-trabajo-contenedor">
+   <section id="como-trabajo">
+  <div class="como-trabajo-cabecera">
+    <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
+    <div class="como-trabajo-linea"></div>
+  </div>
+  
+  <div class="como-trabajo-contenedor">
+    <!-- Aquí van tus tarjetas o contenido actual -->
+  </div>
+</section>
+    <!-- TARJETA 1: ESPACIO EUCALIPTO -->
+    <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
             <div class="tarjeta-frontal">
-              <h3>ONLINE</h3>
+                <h3>Espacio eucalipto</h3>
             </div>
             <div class="tarjeta-trasera">
-              <ul>
-                <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
-                <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
-                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
-                <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
-              </ul>
+                <h4 class="titulo-trasero">ONLINE</h4>
+                <ul>
+                    <li>Tu primer punto de la lista actual aquí</li>
+                    <li>Tu segundo punto de la lista actual aquí</li>
+                </ul>
             </div>
-          </div>
         </div>
+    </div>
 
-        <!-- TARJETA 2: A DOMICILIO -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
+    <!-- TARJETA 2: ABRAZO DEL KOALA -->
+    <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
             <div class="tarjeta-frontal">
-              <h3>A DOMICILIO</h3>
+                <h3>Abrazo del Koala</h3>
             </div>
             <div class="tarjeta-trasera">
-              <ul>
-                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
-                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
-                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
-              </ul>
+                <h4 class="titulo-trasero">A DOMICILIO</h4>
+                <ul>
+                    <li>Tu primer punto de la lista actual aquí</li>
+                    <li>Tu segundo punto de la lista actual aquí</li>
+                </ul>
             </div>
-          </div>
         </div>
+    </div>
 
-        <!-- TARJETA 3: ESPACIOS NATURALES -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
+    <!-- TARJETA 3: EDUKOALA -->
+    <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
             <div class="tarjeta-frontal">
-              <h3>EN ESPACIOS NATURALES</h3>
+                <h3>EduKoala</h3>
             </div>
             <div class="tarjeta-trasera">
-              <ul>
-                <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
-                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una rabieta, desobediencia o bloqueo.</li>
-                <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
-                <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, esperas, luces, otras personas) en el comportamiento de tus pequeños.</li>
-              </ul>
+                <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
+                <ul>
+                    <li>Tu primer punto de la lista actual aquí</li>
+                    <li>Tu segundo punto de la lista actual aquí</li>
+                </ul>
             </div>
-          </div>
         </div>
+    </div>
 
+</div>
       </div> <!-- Cierre de como-trabajo-contenedor -->
     </div> <!-- Cierre de section-inner de Cómo Trabajo -->
   </section>
