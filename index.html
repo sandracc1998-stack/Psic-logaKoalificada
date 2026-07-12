@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Psicóloga Koalificada — Sandra Carrera</title>
-   <link rel="preconnect" href="https://googleapis.com" />
+  <title>Psicóloga Koalificada — Sandra Carrera</title>
+  
+  <link rel="preconnect" href="https://googleapis.com" />
   <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  
   <style>
     :root {
       --cream:  #FAF6F0;
@@ -35,6 +37,108 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
+    /* SECCIÓN DE BIENVENIDA (HERO) CON FOTO EN EL LATERAL */
+    .hero-layout {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 20px 3rem 20px;
+    }
+
+    .hero-texto {
+      flex: 1;
+      text-align: left;
+    }
+
+    /* El gran título de la marca */
+    .hero-title {
+      font-family: var(--ff-display);
+      color: var(--bark);
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.5px;
+    }
+
+    /* Subtítulo o lema */
+    .hero-tagline {
+      color: var(--bark);
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin: 0 0 3rem 0;
+      font-weight: 500;
+    }
+
+    /* Saludo personal */
+    .hero-saludo {
+      font-family: var(--ff-display);
+      color: var(--bark);
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+
+    /* La frase entre comillas */
+    .hero-frase {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #555;
+      margin: 0 0 2rem 0;
+      line-height: 1.5;
+    }
+
+    /* Párrafos de descripción */
+    .hero-descripcion {
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.6;
+      margin: 0 0 1.2rem 0;
+      max-width: 700px;
+      text-align: justify;
+    }
+
+    /* CONTROL DEL TAMAÑO DE LA FOTO EN EL LATERAL */
+    .photo-card {
+      flex: 0 0 300px;
+      max-width: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      object-fit: contain;
+    }
+
+    /* RESPONSIVE: Ajustes para pantallas de móvil */
+    @media (max-width: 768px) {
+      .hero-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding-top: 3rem;
+      }
+      .hero-texto {
+        text-align: center;
+      }
+      .hero-title { font-size: 2.3rem; }
+      .hero-tagline { font-size: 1rem; margin-bottom: 2rem; }
+      .hero-saludo { font-size: 1.6rem; }
+      .hero-descripcion { text-align: left; }
+      .photo-card {
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 260px;
+      }
+    }
     /* SECCIÓN PRINCIPAL PRESENTACIÓN */
     .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
     .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
@@ -150,19 +254,29 @@
     </ul>
   </nav>
 
-<!-- SECCIÓN DE BIENVENIDA / HERO -->
-<section id="inicio" class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-title">Psicóloga Koalificada</h1>
-    <p class="hero-subtitle">Sandra Carrera — Gabinete de Psicología Infantil</p>
-    <!-- Tus botones de contacto si los tuvieras aquí -->
+<!-- SECCIÓN DE BIENVENIDA (HERO) -->
+<section id="inicio" class="hero-seccion">
+  <div class="section-inner">
+    <div class="hero-contenedor">
+      
+      <div class="hero-texto">
+        <h1 class="hero-title">Psicóloga Koalificada</h1>
+        <p class="hero-tagline">Sandra Carrera — Gabinete de Psicología Infantil</p>
+        
+        <h2 class="hero-saludo">Hola, soy Sandra</h2>
+        <p class="hero-frase">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
+        
+        <p class="hero-descripcion">
+          Soy psicóloga con formación en trastornos del espectro autista (TEA), dificultades del desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.
+        </p>
+        <p class="hero-descripcion">
+          Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
-        <h1>Hola, soy <em>Sandra</em></h1>
-        <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
-        <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-       </div>
       <div class="photo-card">
         <img src="imagen-sandra-koala.png" alt="koala">
       </div>
