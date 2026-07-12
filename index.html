@@ -70,23 +70,32 @@
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
     /* SECCIÓN CÓMO TRABAJO */
-    #como-trabajo { background: var(--cream); }
-    .como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
-    .como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
-    
-    .tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
-    .tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
-    .tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
-    
-    .tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); padding: 28px 24px; box-sizing: border-box; }
-    .tarjeta-frontal { background-color: var(--bark); display: flex; align-items: center; justify-content: center; }
-    .tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.5rem; font-weight: 500; letter-spacing: 1px; text-align: center; margin: 0; }
-    
-    .tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: center; border: 2px solid var(--bark); }
-    .tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
-    .tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
-    .tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
-    .tarjeta-trasera li:last-child { margin-bottom: 0; }
+#como-trabajo { background: var(--cream); }
+.como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
+.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
+
+.tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
+.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
+.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
+
+.tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); padding: 28px 24px; box-sizing: border-box; }
+
+/* AJUSTES CARA FRONTAL */
+.tarjeta-frontal { background-color: var(--bark); display: flex; align-items: center; justify-content: center; text-align: center; }
+.contenido-frontal { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+.icono-tarjeta { font-size: 3.5rem; color: var(--cream); opacity: 0.9; }
+.tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.6rem; font-weight: 500; letter-spacing: 0.5px; margin: 0; }
+.subtitulo-frontal { color: var(--cream); font-size: 0.95rem; line-height: 1.4; opacity: 0.85; margin: 0; padding: 0 10px; }
+
+/* AJUSTES CARA TRASERA */
+.tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: flex-start; border: 2px solid var(--bark); overflow-y: auto; }
+.contenido-trasero { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+.titulo-trasero { font-family: var(--ff-display); color: var(--bark); font-size: 1.2rem; font-weight: bold; margin: 0; letter-spacing: 1px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; text-align: center; }
+
+.tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
+.tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
+.tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
+.tarjeta-trasera li:last-child { margin-bottom: 0; }
 
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
@@ -165,23 +174,30 @@
     </div> <!-- Cierre de section-inner de Mis Valores -->
   </section>
 
-  <!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
-  <section id="como-trabajo">
-    <div class="section-inner">
+ <!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
+<section id="como-trabajo">
+  <div class="section-inner">
+    
+    <div class="como-trabajo-cabecera">
+      <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
+    </div>
+    
+    <div class="como-trabajo-contenedor">
       
-      <div class="como-trabajo-cabecera">
-        <h2 class="como-trabajo-titulo">Cómo trabajo</h2>
-      </div>
-      
-      <div class="como-trabajo-contenedor">
-        
-        <!-- TARJETA 1: ONLINE -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
-            <div class="tarjeta-frontal">
-              <h3>ONLINE</h3>
+      <!-- TARJETA 1: ESPACIO EUCALIPTO -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <!-- Puedes cambiar esta clase si usas otra librería de iconos o usar una etiqueta <img src="..."> -->
+              <i class="icono-tarjeta fas fa-leaf"></i> 
+              <h3>Espacio eucalipto</h3>
+              <p class="subtitulo-frontal">Orientación y acompañamiento para familias</p>
             </div>
-            <div class="tarjeta-trasera">
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">ONLINE</h4>
               <ul>
                 <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
                 <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
@@ -191,14 +207,21 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- TARJETA 2: A DOMICILIO -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
-            <div class="tarjeta-frontal">
-              <h3>A DOMICILIO</h3>
+      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <i class="icono-tarjeta fas fa-paw"></i>
+              <h3>El abrazo del koala</h3>
+              <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
             </div>
-            <div class="tarjeta-trasera">
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">A DOMICILIO</h4>
               <ul>
                 <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
                 <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
@@ -208,14 +231,21 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- TARJETA 3: ESPACIOS NATURALES -->
-        <div class="tarjeta-giratoria">
-          <div class="tarjeta-interno">
-            <div class="tarjeta-frontal">
-              <h3>EN ESPACIOS NATURALES</h3>
+      <!-- TARJETA 3: EDUKOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <i class="icono-tarjeta fas fa-brain"></i>
+              <h3>EduKoala</h3>
+              <p class="subtitulo-frontal">Apoyo psicoeducativo en necesidades educativas especiales</p>
             </div>
-            <div class="tarjeta-trasera">
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
               <ul>
                 <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
                 <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una rabieta, desobediencia o bloqueo.</li>
@@ -225,10 +255,12 @@
             </div>
           </div>
         </div>
+      </div>
 
-      </div> <!-- Cierre de como-trabajo-contenedor -->
-    </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-  </section>
+    </div> <!-- Cierre de como-trabajo-contenedor -->
+  </div> <!-- Cierre de section-inner de Cómo Trabajo -->
+</section>
+
 
   <!-- SECCIÓN CONTACTO -->
 <style>
