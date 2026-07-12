@@ -69,55 +69,181 @@
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
- /* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
+/* ==========================================
+   SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS) 
+   ========================================== */
+#como-trabajo { 
+  background: var(--cream); 
+  padding: 5rem 2rem;
+}
+
+.como-trabajo-cabecera { 
+  text-align: center; 
+  margin-bottom: 3rem; 
+}
+
+/* Contenedor que vuelve a poner las 3 tarjetas en fila horizontal */
+.como-trabajo-contenedor { 
+  display: flex !important; 
+  flex-direction: row !important; 
+  justify-content: center !important; 
+  gap: 24px !important; 
+  width: 100% !important; 
+  perspective: 1000px !important; 
+  flex-wrap: wrap !important; 
+}
+
+/* Recuperamos el tamaño original de tarjeta de tu primer código */
+.tarjeta-giratoria { 
+  flex: 1 !important; 
+  min-width: 280px !important; 
+  max-width: 360px !important;
+  height: 440px !important; 
+  background-color: transparent !important; 
+}
+
+.tarjeta-interno { 
+  position: relative !important; 
+  width: 100% !important; 
+  height: 100% !important; 
+  text-align: left !important; 
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+  transform-style: preserve-3d !important; 
+  box-shadow: var(--shadow) !important; 
+  border-radius: var(--radius-md) !important; 
+}
+
+/* Efecto de giro al pasar el ratón */
+.tarjeta-giratoria:hover .tarjeta-interno { 
+  transform: rotateY(180deg) !important; 
+}
+
+/* Propiedades comunes para ambas caras */
+.tarjeta-frontal, .tarjeta-trasera { 
+  position: absolute !important; 
+  width: 100% !important; 
+  height: 100% !important; 
+  -webkit-backface-visibility: hidden !important; 
+  backface-visibility: hidden !important; 
+  border-radius: var(--radius-md) !important; 
+  box-sizing: border-box !important; 
+}
+
+/* CARA FRONTAL: Con tu nuevo color suave modificado */
 .tarjeta-frontal { 
-  background-color: var(--blush); /* He usado var(--blush) o var(--cream) para un fondo suave y cálido */
-  padding: 24px 20px 0 20px; 
+  background-color: var(--blush) !important; /* Color suave de fondo */
+  padding: 24px 20px 0 20px !important; 
+  display: flex !important;
+  flex-direction: column !important;
 }
+
 .contenido-frontal { 
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
-  justify-content: space-between; 
+  display: flex !important; 
+  flex-direction: column !important; 
+  height: 100% !important; 
+  justify-content: space-between !important; 
 }
+
 .bloque-texto-frontal { 
-  text-align: center; 
-  margin-bottom: 15px; 
+  text-align: center !important; 
+  margin-bottom: 15px !important; 
 }
-/* Cambiamos el color de los títulos a var(--bark) para que contrasten sobre el fondo claro */
+
+/* Títulos oscuros legibles sobre el fondo suave */
 .tarjeta-frontal h3 { 
-  font-family: var(--ff-display); 
-  color: var(--bark); 
-  font-size: 1.6rem; 
-  font-weight: 600; 
-  letter-spacing: 0.5px; 
-  margin: 0 0 10px 0; 
-  text-align: center; 
+  font-family: var(--ff-display) !important; 
+  color: var(--bark) !important; 
+  font-size: 1.6rem !important; 
+  font-weight: 600 !important; 
+  letter-spacing: 0.5px !important; 
+  margin: 0 0 10px 0 !important; 
+  text-align: center !important; 
 }
-/* Cambiamos el color del subtítulo a var(--text) o var(--muted) */
+
 .subtitulo-frontal { 
-  color: var(--text); 
-  font-size: 0.95rem; 
-  line-height: 1.4; 
-  margin: 0; 
-  text-align: center; 
-  opacity: 0.9;
+  color: var(--text) !important; 
+  font-size: 0.95rem !important; 
+  line-height: 1.4 !important; 
+  margin: 0 !important; 
+  text-align: center !important; 
+  opacity: 0.9 !important;
 }
-/* EL BLOQUE DE LA IMAGEN SE MANTIENE IGUAL */
+
+/* Bloque para que los koalas se asienten abajo sin pisar las letras */
 .bloque-imagen-frontal { 
-  flex: 1; 
-  display: flex; 
-  align-items: flex-end; 
-  justify-content: center; 
-  overflow: hidden; 
-  border-bottom-left-radius: var(--radius-md); 
-  border-bottom-right-radius: var(--radius-md); 
+  flex: 1 !important; 
+  display: flex !important; 
+  align-items: flex-end !important; 
+  justify-content: center !important; 
+  overflow: hidden !important; 
+  border-bottom-left-radius: var(--radius-md) !important; 
+  border-bottom-right-radius: var(--radius-md) !important; 
 }
+
 .imagen-frontal-tarjeta { 
-  width: 100%; 
-  height: 90%; 
-  object-fit: contain; 
-  mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
+  width: 100% !important; 
+  height: 90% !important; 
+  object-fit: contain !important; 
+  mix-blend-mode: multiply !important; 
+}
+
+/* CARA TRASERA: Recupera el comportamiento limpio original */
+.tarjeta-trasera { 
+  background-color: var(--white) !important; 
+  color: var(--bark) !important; 
+  transform: rotateY(180deg) !important; 
+  display: flex !important; 
+  align-items: flex-start !important; 
+  border: 2px solid var(--bark) !important; 
+  overflow-y: auto !important; 
+  padding: 28px 24px !important; 
+}
+
+.contenido-trasero { 
+  width: 100% !important; 
+  display: flex !important; 
+  flex-direction: column !important; 
+  gap: 16px !important; 
+}
+
+.titulo-trasero { 
+  font-family: var(--ff-display) !important; 
+  color: var(--bark) !important; 
+  font-size: 1.2rem !important; 
+  font-weight: bold !important; 
+  margin: 0 !important; 
+  letter-spacing: 1px !important; 
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important; 
+  padding-bottom: 8px !important; 
+  text-align: center !important; 
+}
+
+.tarjeta-trasera ul { 
+  list-style-type: none !important; 
+  padding: 0 !important; 
+  margin: 0 !important; 
+}
+
+.tarjeta-trasera li { 
+  font-size: 0.85rem !important; 
+  line-height: 1.45 !important; 
+  margin-bottom: 12px !important; 
+  position: relative !important; 
+  padding-left: 15px !important; 
+  text-align: left !important;
+}
+
+.tarjeta-trasera li::before { 
+  content: "•" !important; 
+  color: var(--bark) !important; 
+  position: absolute !important; 
+  left: 0 !important; 
+  top: 0 !important; 
+  font-weight: bold !important; 
+}
+
+.tarjeta-trasera li:last-child { 
+  margin-bottom: 0 !important; 
 }
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
