@@ -69,18 +69,9 @@
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
-/* SECCIÓN CÓMO TRABAJO */
-#como-trabajo { background: var(--cream); }
-.como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
-.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
-
-.tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
-.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
-.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
-
-    /* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
+/* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
 .tarjeta-frontal { 
-  background-color: var(--blush); /
+  background-color: var(--blush); /* He usado var(--blush) o var(--cream) para un fondo suave y cálido */
   padding: 24px 20px 0 20px; 
 }
 
@@ -96,6 +87,7 @@
   margin-bottom: 15px; 
 }
 
+/* Cambiamos el color de los títulos a var(--bark) para que contrasten sobre el fondo claro */
 .tarjeta-frontal h3 { 
   font-family: var(--ff-display); 
   color: var(--bark); 
@@ -106,6 +98,7 @@
   text-align: center; 
 }
 
+/* Cambiamos el color del subtítulo a var(--text) o var(--muted) */
 .subtitulo-frontal { 
   color: var(--text); 
   font-size: 0.95rem; 
@@ -132,6 +125,7 @@
   object-fit: contain; 
   mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
 }
+ CÓDIGO CSS EDITADO CON TARJETAS TRASERAS FONDO OSCURO Y LETRA CLARA
 
 /* CARA TRASERA: Inversión de colores (Fondo oscuro y texto claro) */
 .tarjeta-trasera { 
@@ -198,7 +192,7 @@
 .tarjeta-trasera li:last-child { 
   margin-bottom: 0 !important; 
 }
- 
+
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
