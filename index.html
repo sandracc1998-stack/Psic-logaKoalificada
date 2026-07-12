@@ -252,187 +252,127 @@
 .tarjeta-trasera li:last-child { 
   margin-bottom: 0 !important; 
 }
-  /* SECCIÓN CONTACTO UNIFICADA */
+/* Corrección total para la sección de contacto */
 #seccion-contacto {
-  background-color: var(--white);
-  padding: 5rem 2rem;
+  background-color: var(--cream) !important; /* Mantiene el color crema unificado de tu fondo */
+  padding: 5rem 2rem !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+#seccion-contacto .section-inner {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
 }
 
 .contacto-flex-contenedor {
   display: flex !important;
-  flex-direction: row !important; /* Coloca la tarjeta a la izquierda y formulario a la derecha */
+  flex-direction: row !important; /* Obliga a ponerse uno al lado del otro */
   justify-content: center !important;
-  align-items: stretch !important; /* Hace que ambos bloques tengan la misma altura si es posible */
-  gap: 45px !important;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap !important;
+  align-items: stretch !important; /* Iguala la altura de la tarjeta y el formulario */
+  gap: 40px !important; /* Espacio de separación entre ambos */
+  width: 100% !important;
+  flex-wrap: wrap !important; /* Si no caben en móvil, se apilan */
 }
 
-.tarjeta-datos-contacto-oscura, .formulario-contacto {
+/* Tarjeta oscura (Estilo parte trasera de tus tarjetas) */
+.tarjeta-datos-contacto-oscura {
   flex: 1 !important;
   min-width: 320px !important;
-  max-width: 480px !important;
+  max-width: 460px !important;
+  background-color: var(--bark) !important; /* Tu color marrón oscuro */
+  border: 2px solid var(--blush) !important;
+  padding: 35px 30px !important;
+  border-radius: 24px !important;
+  box-shadow: var(--shadow) !important;
   box-sizing: border-box !important;
 }
 
-/* TARJETA ESTILO OSCURO (Como la trasera de Cómo Trabajo) */
-.tarjeta-datos-contacto-oscura {
-  background-color: var(--bark) !important; /* Fondo marrón oscuro */
-  border: 2px solid var(--cream) !important; /* Borde claro para separar con sutileza */
-  padding: 35px 30px;
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-}
-
 .datos-contacto-cabecera {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 30px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-bottom: 25px !important;
 }
 
 .datos-contacto-titulo {
   font-family: var(--ff-display) !important;
-  color: var(--cream) !important; /* Texto claro */
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 0;
+  color: var(--cream) !important; /* Letras claras */
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
 }
 
-.corazon-icono {
-  font-size: 1.3rem;
-}
+.corazon-icono { font-size: 1.3rem !important; }
 
 .lista-datos-contacto {
-  list-style-type: none !important;
+  list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
 }
 
 .lista-datos-contacto li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 0 !important;
-  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
 }
 
-.lista-datos-contacto li::before {
-  content: none !important; /* Limpia cualquier punto residual */
-}
+.lista-datos-contacto li::before { content: none !important; } /* Quita puntos rotos */
 
-.dato-icono {
-  font-size: 1.2rem;
-  width: 24px;
-  text-align: center;
-  flex-shrink: 0;
-}
+.dato-icono { font-size: 1.2rem !important; width: 24px !important; text-align: center !important; flex-shrink: 0 !important; }
 
-/* Líneas divisorias internas con tono sutil claro */
 .dato-linea {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid rgba(250, 246, 240, 0.2) !important; 
-  padding-bottom: 8px;
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 8px !important;
+  border-bottom: 1px solid rgba(250, 246, 240, 0.2) !important; /* Línea sutil clarita */
+  padding-bottom: 8px !important;
 }
 
-.dato-etiqueta {
-  font-weight: 600;
-  color: var(--white) !important; /* Etiquetas en blanco para jerarquía */
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
+.dato-etiqueta { font-weight: 600 !important; color: var(--white) !important; font-size: 0.95rem !important; }
+.dato-valor { color: var(--cream) !important; font-size: 0.95rem !important; }
 
-.dato-valor {
-  color: var(--cream) !important; /* Valores en color crema suave */
-  font-size: 0.95rem;
-}
-
-/* ESTILOS DEL FORMULARIO DE CONTACTO (Se mantienen limpios en blanco) */
+/* El bloque blanco del formulario */
 .formulario-contacto {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex: 1 !important;
+  min-width: 320px !important;
+  max-width: 460px !important;
+  padding: 35px 30px !important;
+  background-color: #ffffff !important; /* Blanco limpio para el formulario */
+  border-radius: 24px !important; /* Redondeado igual que la tarjeta */
+  box-shadow: var(--shadow) !important;
+  box-sizing: border-box !important;
 }
 
 .titulo-contacto {
-  color: var(--bark);
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-family: var(--ff-display);
-  font-weight: 600;
+  color: var(--bark) !important;
+  font-size: 24px !important;
+  margin-bottom: 20px !important;
+  font-family: var(--ff-display) !important;
+  font-weight: 600 !important;
 }
 
-.campo-grupo {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.campo-grupo label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--bark);
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.campo-grupo input, .campo-grupo textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #e0dcd8;
-  border-radius: 8px;
-  font-size: 15px;
-  color: #333333;
-  background-color: #fdfcfb;
-  box-sizing: border-box;
-}
-
-.campo-grupo textarea {
-  height: 120px;
-  resize: vertical;
-}
-
-.boton-enviar {
-  width: 100%;
-  padding: 14px;
-  background-color: var(--bark);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.boton-enviar:hover {
-  background-color: var(--rose);
-}
-
-/* RESPONSIVE: En móviles se apila verticalmente */
+/* Ajuste responsive para móviles */
 @media (max-width: 768px) {
   .contacto-flex-contenedor {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 35px !important;
+    gap: 30px !important;
   }
   .tarjeta-datos-contacto-oscura, .formulario-contacto {
     max-width: 100% !important;
     width: 100% !important;
   }
   .dato-linea {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
   }
 }
 
@@ -602,191 +542,76 @@
   </div> <!-- Cierre de section-inner de Cómo Trabajo -->
 </section>
 
-<section id="seccion-contacto">
-  <div class="section-inner">
-    <div class="contacto-flex-contenedor">
-      
-      <!-- NUEVA TARJETA DE DATOS (A LA IZQUIERDA, ESTILO OSCURO) -->
-      <div class="tarjeta-datos-contacto-oscura">
-        <div class="datos-contacto-cabecera">
-          <h3 class="datos-contacto-titulo">Mis datos de contacto</h3>
-          <span class="corazon-icono">❤️</span>
-        </div>
+  <!-- SECCIÓN CONTACTO COMPLETA Y UNIFICADA -->
+  <section id="seccion-contacto">
+    <div class="section-inner">
+      <div class="contacto-flex-contenedor">
         
-        <ul class="lista-datos-contacto">
-          <li>
-            <span class="dato-icono">👤</span>
-            <div class="dato-linea">
-              <span class="dato-etiqueta">Nombre:</span>
-              <span class="dato-valor">Sandra Carrera Castaño</span>
-            </div>
-          </li>
-          <li>
-            <span class="dato-icono">📞</span>
-            <div class="dato-linea">
-              <span class="dato-etiqueta">Teléfono:</span>
-              <span class="dato-valor">+34 678 51 78 90</span>
-            </div>
-          </li>
-          <li>
-            <span class="dato-icono">✉️</span>
-            <div class="dato-linea">
-              <span class="dato-etiqueta">Correo:</span>
-              <span class="dato-valor">sandra.cc1998@gmail.com</span>
-            </div>
-          </li>
-          <li>
-            <span class="dato-icono">📍</span>
-            <div class="dato-linea">
-              <span class="dato-etiqueta">Ubicación:</span>
-              <span class="dato-valor">Santiago de Compostela</span>
-            </div>
-          </li>
-          <li>
-            <span class="dato-icono">🌐</span>
-            <div class="dato-linea">
-              <span class="dato-etiqueta">Instagram:</span>
-              <span class="dato-valor">@koala.psicoeducativa</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- FORMULARIO DE CONTACTO (A LA DERECHA) -->
-      <div class="formulario-contacto">
-        <form action="https://formspree.io" method="POST">
-          <h2 class="titulo-contacto">Contacto</h2>
-          <div class="campo-grupo">
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        <!-- TARJETA DE DATOS (A LA IZQUIERDA) -->
+        <div class="tarjeta-datos-contacto-oscura">
+          <div class="datos-contacto-cabecera">
+            <h3 class="datos-contacto-titulo">Mis datos de contacto</h3>
+            <span class="corazon-icono">❤️</span>
           </div>
-          <div class="campo-grupo">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-          </div>
-          <div class="campo-grupo">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
-          </div>
-          <button type="submit" class="boton-enviar">Enviar mensaje</button>
-        </form>
-      </div>
-
-    </div> <!-- Cierre de contacto-flex-contenedor -->
-  </div>
-</section>
-
-  <!-- SECCIÓN CONTACTO -->
-<style>
-    /* Contenedor principal del formulario */
-    .formulario-contacto {
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 30px;
-        background-color: #ffffff; /* Fondo blanco para que resalte sobre el crema de la web */
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* Grupos de campos (separación vertical) */
-    .campo-grupo {
-        margin-bottom: 20px;
-        text-align: left; /* Alinea los textos a la izquierda */
-    }
-
-    /* Estilo de las etiquetas (Nombres de los campos) */
-    .campo-grupo label {
-        display: block;
-        margin-bottom: 8px;
-        color: #4a2828; /* Tono granate/marrón de tu cabecera */
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    /* Estilo de las cajas de texto y el área de mensaje */
-    .campo-grupo input, 
-    .campo-grupo textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #e0dcd8; /* Borde suave */
-        border-radius: 8px;
-        font-size: 15px;
-        color: #333333;
-        background-color: #fdfcfb;
-        box-sizing: border-box; /* Evita que el campo se salga del contenedor */
-        transition: all 0.3s ease;
-    }
-
-    /* Efecto al hacer clic en un campo */
-    .campo-grupo input:focus, 
-    .campo-grupo textarea:focus {
-        border-color: #a37070; /* Color de acento más vivo al seleccionar */
-        outline: none;
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(163, 112, 112, 0.2);
-    }
-
-    /* Altura fija para el cuadro de mensaje */
-    .campo-grupo textarea {
-        height: 120px;
-        resize: vertical; /* Permite estirar abajo pero no a los lados */
-    }
-
-    /* Estilo del botón de enviar */
-    .boton-enviar {
-        width: 100%;
-        padding: 14px;
-        background-color: #4a2828; /* El color granate corporativo de tu web */
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.1s ease;
-    }
-
-    /* Efecto al pasar el ratón por encima del botón */
-    .boton-enviar:hover {
-        background-color: #5c3333; /* Un tono un poco más claro del mismo granate */
-    }
-
-    /* Efecto al hacer clic en el botón */
-    .boton-enviar:active {
-        transform: scale(0.98);
-    }
-</style>
-
-<!-- ESTRUCTURA DEL FORMULARIO -->
-<div class="formulario-contacto" id="seccion-contacto">
-  <!-- ESTILOS CSS AÑADIDOS -->
-  <style>
-    .titulo-contacto {
-      color: #4A0E17; /* Color granate oscuro */
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-family: sans-serif; /* Puedes cambiar la tipografía aquí */
-    }
-  </style>
-
-  <form action="https://formspree.io/f/mnjkykly" method="POST">
-        <!-- TÍTULO AÑADIDO -->
-        <h2 class="titulo-contacto">Contacto</h2>
-
-        <div class="campo-grupo">
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+          
+          <ul class="lista-datos-contacto">
+            <li>
+              <span class="dato-icono">👤</span>
+              <div class="dato-linea">
+                <span class="dato-etiqueta">Nombre:</span>
+                <span class="dato-valor">Sandra Carrera Castaño</span>
+              </div>
+            </li>
+            <li>
+              <span class="dato-icono">📞</span>
+              <div class="dato-linea">
+                <span class="dato-etiqueta">Teléfono:</span>
+                <span class="dato-valor">+34 678 51 78 90</span>
+              </div>
+            </li>
+            <li>
+              <span class="dato-icono">✉️</span>
+              <div class="dato-linea">
+                <span class="dato-etiqueta">Correo:</span>
+                <span class="dato-valor">sandra.cc1998@gmail.com</span>
+              </div>
+            </li>
+            <li>
+              <span class="dato-icono">📍</span>
+              <div class="dato-linea">
+                <span class="dato-etiqueta">Ubicación:</span>
+                <span class="dato-valor">Santiago de Compostela</span>
+              </div>
+            </li>
+            <li>
+              <span class="dato-icono">🌐</span>
+              <div class="dato-linea">
+                <span class="dato-etiqueta">Instagram:</span>
+                <span class="dato-valor">@koala.psicoeducativa</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div class="campo-grupo">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        <!-- FORMULARIO DE CONTACTO (A LA DERECHA) -->
+        <div class="formulario-contacto">
+          <form action="https://formspree.io" method="POST">
+            <h2 class="titulo-contacto">Contacto</h2>
+            <div class="campo-grupo">
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="campo-grupo">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="campo-grupo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
+            </div>
+            <button type="submit" class="boton-enviar">Enviar mensaje</button>
+          </form>
         </div>
 
-        <div class="campo-grupo">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
-        </div>
-
-        <button type="submit" class="boton-enviar">Enviar mensaje</button>
-    </form>
-</div>
+      </div> <!-- Cierre de contacto-flex-contenedor -->
+    </div> <!-- Cierre de section-inner -->
+  </section>
