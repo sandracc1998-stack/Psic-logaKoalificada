@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psicóloga Koalificada — Sandra Carrera</title>
-  
+  <title>Sandra Carrera — Psicóloga especializada en TEA y NEE</title>
   <link rel="preconnect" href="https://googleapis.com" />
   <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  
   <style>
     :root {
       --cream:  #FAF6F0;
@@ -33,108 +31,37 @@
     /* MENÚ DE NAVEGACIÓN */
     nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
     .nav-logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--mauve); text-decoration: none; font-style: italic; }
-    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
-    .boton-nav { background: var(--bark); color: var(--white) !important; padding: 0.5rem 1rem; border-radius: var(--radius-sm); text-decoration: none; font-size: 0.85rem; transition: background 0.3s; }
-    .boton-nav:hover { background: var(--rose); color: var(--white) !important; }
 
-    /* SECCIÓN DE BIENVENIDA (HERO) */
-    .hero-seccion {
-      background-color: var(--white);
-      padding: 4rem 0;
-      width: 100%;
-    }
+    /* SECCIÓN PRINCIPAL PRESENTACIÓN */
+    .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
+    .eyebrow { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
+    .hero-grid h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.12; color: var(--bark); margin-bottom: 1.5rem; }
+    .hero-grid h1 em { font-style: italic; color: var(--mauve); }
+    .about-quote { font-family: var(--ff-display); font-size: 1.5rem; font-style: italic; color: var(--mauve); border-left: 3px solid var(--blush); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.4; }
+    .about-body { color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
+    .btn-primary { display: inline-block; background: var(--mauve); color: var(--white); text-decoration: none; padding: .85rem 2rem; border-radius: 999px; font-weight: 500; font-size: .95rem; letter-spacing: .02em; transition: background .2s, transform .15s; border: none; cursor: pointer; margin-top: 1rem; }
+    .btn-primary:hover { background: var(--bark); transform: translateY(-1px); }
+    
+    /* CONFIGURACIÓN IMAGEN KOALA */
+    .photo-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--blush); box-shadow: 0 16px 48px rgba(92,61,61,.14); width: 100%; }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    .hero-layout {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 50px;
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 0 24px;
-      box-sizing: border-box;
-    }
-
-    .hero-texto {
-      flex: 1 !important;
-      text-align: left !important;
-    }
-
-    .hero-title {
-      font-family: var(--ff-display);
-      color: var(--bark);
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin: 0 0 0.5rem 0;
-      letter-spacing: -0.5px;
-      text-align: left;
-    }
-
-    .hero-tagline {
-      color: var(--bark);
-      font-size: 1.15rem;
-      opacity: 0.8;
-      margin: 0 0 2.5rem 0;
-      font-weight: 500;
-      text-align: left;
-    }
-
-    .hero-saludo {
-      font-family: var(--ff-display);
-      color: var(--bark);
-      font-size: 2rem;
-      font-weight: 600;
-      margin: 0 0 1rem 0;
-      text-align: left;
-    }
-
-    .hero-frase {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: #555;
-      margin: 0 0 1.5rem 0;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    .hero-descripcion {
-      font-size: 1rem;
-      color: #4a4a4a;
-      line-height: 1.6;
-      margin: 0 0 1.2rem 0;
-      text-align: justify;
-    }
-
-    .photo-card {
-      flex: 0 0 320px !important;
-      max-width: 320px !important;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow);
-      object-fit: contain;
-    }
-
-    /* SECCIONES ELEMENTOS COMUNES */
+    /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; text-align: center; }
-    .title-underline { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto 3rem auto; border-radius: 2px; }
+    .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; display: block; }
+    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; }
 
     /* SECCIÓN MIS VALORES */
     #mis-valores { background: var(--white); }
     .seccion-valores-cabecera { text-align: center; margin-bottom: 3rem; }
     .valores-titulo { font-family: var(--ff-display); font-size: 2.2rem; color: var(--bark); font-weight: 600; margin-bottom: 0.5rem; }
     .linea-decorativa { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto; border-radius: 2px; }
+    
     .values-list { display: flex; flex-direction: row; justify-content: space-between; gap: 1.25rem; width: 100%; flex-wrap: wrap; }
     .value-item { flex: 1; min-width: 220px; background-color: var(--cream); border: 1px solid var(--blush); border-radius: var(--radius-md); padding: 2rem 1.5rem; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: flex-start; }
     .value-item:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(92,61,61,.12); }
@@ -142,33 +69,426 @@
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
-    /* SECCIÓN CÓMO TRABAJO */
-    #como-trabajo { background: var(--cream); padding: 5rem 2rem; }
-    .como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
-    .como-trabajo-contenedor { display: flex !important; flex-direction: row !important; justify-content: center !important; gap: 24px !important; width: 100% !important; perspective: 1000px !important; flex-wrap: wrap !important; }
-    .tarjeta-giratoria { flex: 1 !important; min-width: 280px !important; max-width: 360px !important; height: 440px !important; background-color: transparent !important; }
-    .tarjeta-interno { position: relative !important; width: 100% !important; height: 100% !important; text-align: left !important; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important; transform-style: preserve-3d !important; box-shadow: var(--shadow) !important; border-radius: var(--radius-md) !important; }
-    .tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg) !important; }
-    .tarjeta-frontal, .tarjeta-trasera { position: absolute !important; width: 100% !important; height: 100% !important; -webkit-backface-visibility: hidden !important; backface-visibility: hidden !important; border-radius: var(--radius-md) !important; box-sizing: border-box !important; }
-    
-    .tarjeta-frontal { background-color: var(--blush) !important; padding: 24px 20px 0 20px !important; display: flex !important; flex-direction: column !important; }
-    .contenido-frontal { display: flex !important; flex-direction: column !important; height: 100% !important; justify-content: space-between !important; }
-    .bloque-texto-frontal { text-align: center !important; margin-bottom: 15px !important; }
-    .tarjeta-frontal h3 { font-family: var(--ff-display) !important; color: var(--bark) !important; font-size: 1.6rem !important; font-weight: 600 !important; letter-spacing: 0.5px !important; margin: 0 0 10px 0 !important; text-align: center !important; }
-    .subtitulo-frontal { color: var(--text) !important; font-size: 0.95rem !important; line-height: 1.4 !important; margin: 0 !important; text-align: center !important; opacity: 0.9 !important; }
-    .bloque-imagen-frontal { flex: 1 !important; display: flex !important; align-items: flex-end !important; justify-content: center !important; overflow: hidden !important; border-bottom-left-radius: var(--radius-md) !important; border-bottom-right-radius: var(--radius-md) !important; }
-    .imagen-frontal-tarjeta { width: 100% !important; height: 90% !important; object-fit: contain !important; mix-blend-mode: multiply !important; }
-    
-    .tarjeta-trasera { background-color: var(--bark) !important; color: var(--cream) !important; transform: rotateY(180deg) !important; display: flex !important; align-items: flex-start !important; border: 2px solid var(--cream) !important; overflow-y: auto !important; padding: 28px 24px !important; }
-    .contenido-trasero { width: 100% !important; display: flex !important; flex-direction: column !important; gap: 16px !important; }
-    .titulo-trasero { font-family: var(--ff-display) !important; color: var(--cream) !important; font-size: 1.2rem !important; font-weight: bold !important; margin: 0 !important; letter-spacing: 1px !important; border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; padding-bottom: 8px !important; text-align: center !important; }
-    .tarjeta-trasera ul { list-style-type: none !important; padding: 0 !important; margin: 0 !important; }
-    .tarjeta-trasera li { font-size: 0.85rem !important; line-height: 1.45; margin-bottom: 12px !important; position: relative !important; padding-left: 15px !important; text-align: left !important; color: var(--cream) !important; }
-    .tarjeta-trasera li strong { color: var(--white) !important; }
-    .tarjeta-trasera li::before { content: "•" !important; color: var(--rose) !important; position: absolute !important; left: 0 !important; top: 0 !important; font-weight: bold !important; }
-    .tarjeta-trasera li:last-child { margin-bottom: 0 !important; }
+/* SECCIÓN CÓMO TRABAJO */
+#como-trabajo { background: var(--cream); }
+.como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
+.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
 
-    /* SECCIÓN CONTACTO UNIFICADA */
-    #seccion-contacto { background-color: var(--cream) !important; padding: 5rem 2rem !important; width: 100% !important; display: block !important; }
-    #seccion-contacto .section-inner { max-width: 1100px !important; margin: 0 auto !important; }
-.contacto-flex-contenedor { display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: stretch !important; gap: 40px !important; width: 100% !important; flex-wrap: wrap !important; }.tarjeta-datos-contacto-oscura, .formulario-contacto { flex: 1 !important; min-width: 320px !important; max-width: 460px !important; box-sizing: border-box !important; }.tarjeta-datos-contacto-oscura { background-color: var(--bark) !important; border: 2px solid var(--blush) !important; padding: 35px 30px !important; border-radius: 24px !important; box-shadow: var(--shadow) !important; }.datos-contacto-cabecera { display: flex !important; align-items: center !important; justify-content: center !important; gap: 8px !important; margin-bottom: 25px !important; }.datos-contacto-titulo { font-family: var(--ff-display) !important; color: var(--cream) !important; font-size: 1.6rem !important; font-weight: 600 !important; margin: 0 !important; }.corazon-icono { font-size: 1.3rem !important; }.lista-datos-contacto { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; gap: 20px !important; }.lista-datos-contacto li { display: flex !important; align-items: center !important; gap: 14px !important; }.lista-datos-contacto li::before { content: none !important; }.dato-icono { font-size: 1.2rem !important; width: 24px !important; text-align: center !important; flex-shrink: 0 !important; }.dato-linea { flex: 1 !important; display: flex !important; justify-content: flex-start !important; align-items: center !important; gap: 8px !important; border-bottom: 1px solid rgba(250, 246, 240, 0.2) !important; padding-bottom: 8px !important; }.dato-etiqueta { font-weight: 600 !important; color: var(--white) !important; font-size: 0.95rem !important; }.dato-valor { color: var(--cream) !important; font-size: 0.95rem !important; }/* FORMULARIO DE CONTACTO BLANCO */.formulario-contacto { padding: 35px 30px !important; background-color: #ffffff !important; border-radius: 24px !important; box-shadow: var(--shadow) !important; }.titulo-contacto { color: var(--bark) !important; font-size: 24px !important; margin-bottom: 20px !important; font-family: var(--ff-display) !important; font-weight: 600 !important; }.campo-grupo { margin-bottom: 20px; text-align: left; }.campo-grupo label { display: block; margin-bottom: 8px; color: var(--bark); font-weight: 600; font-size: 14px; }.campo-grupo input, .campo-grupo textarea { width: 100%; padding: 12px; border: 1px solid #e0dcd8; border-radius: 8px; font-size: 15px; color: #333333; background-color: #fdfcfb; box-sizing: border-box; }.campo-grupo textarea { height: 120px; resize: vertical; }.boton-enviar { width: 100%; padding: 14px; background-color: var(--bark); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }.boton-enviar:hover { background-color: var(--rose); }/* RESPONSIVE */@media (max-width: 768px) {.hero-layout { flex-direction: column !important; gap: 35px; text-align: center; }.hero-texto { text-align: center !important; }.hero-title, .hero-tagline, .hero-saludo, .hero-frase { text-align: center !important; }.hero-descripcion { text-align: left; }.photo-card { flex: 0 0 auto !important; width: 75%; max-width: 260px !important; }.values-list { flex-direction: column; gap: 1.5rem; }.como-trabajo-contenedor { flex-direction: column; align-items: center; }.tarjeta-giratoria { width: 100%; max-width: 400px; }.contacto-flex-contenedor { flex-direction: column !important; align-items: center !important; gap: 30px !important; }.tarjeta-datos-contacto-oscura, .formulario-contacto { max-width: 100% !important; width: 100% !important; }.dato-linea { flex-direction: column; align-items: flex-start; gap: 4px; }}Sandra CarreraSobre míMis ValoresCómo trabajoContacto📍Ubicación:Santiago de Compostela🌐Instagram:@koala.psicoeducativaContactoCorreo ElectrónicoMensajeEnviar mensaje
+.tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
+.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
+.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
+
+    /* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
+.tarjeta-frontal { 
+  background-color: var(--blush); /
+  padding: 24px 20px 0 20px; 
+}
+
+.contenido-frontal { 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; 
+  justify-content: space-between; 
+}
+
+.bloque-texto-frontal { 
+  text-align: center; 
+  margin-bottom: 15px; 
+}
+
+.tarjeta-frontal h3 { 
+  font-family: var(--ff-display); 
+  color: var(--bark); 
+  font-size: 1.6rem; 
+  font-weight: 600; 
+  letter-spacing: 0.5px; 
+  margin: 0 0 10px 0; 
+  text-align: center; 
+}
+
+.subtitulo-frontal { 
+  color: var(--text); 
+  font-size: 0.95rem; 
+  line-height: 1.4; 
+  margin: 0; 
+  text-align: center; 
+  opacity: 0.9;
+}
+
+/* EL BLOQUE DE LA IMAGEN SE MANTIENE IGUAL */
+.bloque-imagen-frontal { 
+  flex: 1; 
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: center; 
+  overflow: hidden; 
+  border-bottom-left-radius: var(--radius-md); 
+  border-bottom-right-radius: var(--radius-md); 
+}
+
+.imagen-frontal-tarjeta { 
+  width: 100%; 
+  height: 90%; 
+  object-fit: contain; 
+  mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
+}
+
+/* CARA TRASERA: Inversión de colores (Fondo oscuro y texto claro) */
+.tarjeta-trasera { 
+  background-color: var(--bark) !important; /* Cambiado a marrón oscuro */
+  color: var(--cream) !important; /* Cambiado a texto crema claro */
+  transform: rotateY(180deg) !important; 
+  display: flex !important; 
+  align-items: flex-start !important; 
+  border: 2px solid var(--cream) !important; /* Borde claro para que resalte */
+  overflow-y: auto !important; 
+  padding: 28px 24px !important; 
+}
+
+.contenido-trasero { 
+  width: 100% !important; 
+  display: flex !important; 
+  flex-direction: column !important; 
+  gap: 16px !important; 
+}
+
+.titulo-trasero { 
+  font-family: var(--ff-display) !important; 
+  color: var(--cream) !important; /* Título interno en crema claro */
+  font-size: 1.2rem !important; 
+  font-weight: bold !important; 
+  margin: 0 !important; 
+  letter-spacing: 1px !important; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; /* Línea divisoria clara y sutil */
+  padding-bottom: 8px !important; 
+  text-align: center !important; 
+}
+
+.tarjeta-trasera ul { 
+  list-style-type: none !important; 
+  padding: 0 !important; 
+  margin: 0 !important; 
+}
+
+.tarjeta-trasera li { 
+  font-size: 0.85rem !important; 
+  line-height: 1.45 !important; 
+  margin-bottom: 12px !important; 
+  position: relative !important; 
+  padding-left: 15px !important; 
+  text-align: left !important;
+  color: var(--cream) !important; /* Asegura que toda la lista sea clara */
+}
+
+/* Cambia los textos en negrita (strong) a un color crema puro para que resalten */
+.tarjeta-trasera li strong {
+  color: var(--white) !important;
+}
+
+/* Cambiamos el punto de la lista a crema claro para que se vea sobre el fondo oscuro */
+.tarjeta-trasera li::before { 
+  content: "•" !important; 
+  color: var(--rose) !important; /* Usamos tu color rosa/rosa viejo para darle un toque destacado al punto */
+  position: absolute !important; 
+  left: 0 !important; 
+  top: 0 !important; 
+  font-weight: bold !important; 
+}
+
+.tarjeta-trasera li:last-child { 
+  margin-bottom: 0 !important; 
+}
+ 
+    /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+      .photo-card { max-width: 400px; margin: 0 auto; }
+      .about-quote { border-left: none; border-top: 2px solid var(--blush); border-bottom: 2px solid var(--blush); padding: 1rem 0; }
+      .values-list { flex-direction: column; gap: 1.5rem; }
+      .como-trabajo-contenedor { flex-direction: column; align-items: center; }
+      .tarjeta-giratoria { width: 100%; max-width: 400px; }
+  </style>
+</head>
+<body>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <a href="#" class="nav-logo">Sandra Carrera</a>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#mis-valores">Mis Valores</a></li>
+      <li><a href="#como-trabajo">Cómo trabajo</a></li>
+    <a href="#seccion-contacto" class="boton-nav">Contacto</a>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
+  <main class="hero-seccion" id="sobre-mi">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Psicóloga Educativa</span>
+        <h1>Hola, soy <em>Sandra</em></h1>
+        <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
+        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
+        <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+       </div>
+      <div class="photo-card">
+        <img src="imagen-sandra-koala.png" alt="koala">
+      </div>
+    </div>
+  </main>
+
+  <!-- SECCIÓN MIS VALORES -->
+  <section id="mis-valores">
+    <div class="section-inner">
+      
+      <div class="seccion-valores-cabecera">
+        <h2 class="valores-titulo">Mis Valores</h2>
+        <div class="linea-decorativa"></div>
+      </div>
+
+      <div class="values-list">
+        <div class="value-item">
+          <div class="value-icon">🤝</div>
+          <h3 class="value-name">Empatía y escucha activa</h3>
+          <p class="value-desc">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">⏳</div>
+          <h3 class="value-name">Respeto al ritmo</h3>
+          <p class="value-desc">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">🧠</div>
+          <h3 class="value-name">Regulación emocional</h3>
+           <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">🧩</div>
+          <h3 class="value-name">Material adaptado</h3>
+          <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+        </div>
+      </div> <!-- Cierre de values-list -->
+
+    </div> <!-- Cierre de section-inner de Mis Valores -->
+  </section>
+
+ <!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
+<section id="como-trabajo">
+  <div class="section-inner">
+    
+    <!-- Cabecera unificada con el estilo de Mis Valores -->
+    <div class="como-trabajo-cabecera">
+      <h2 class="section-title">Cómo trabajo</h2>
+      <div class="title-underline"></div>
+    </div>
+    
+    <div class="como-trabajo-contenedor">
+      
+      <!-- TARJETA 1: ESPACIO EUCALIPTO -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>Espacio eucalipto</h3>
+                <p class="subtitulo-frontal">Orientación y acompañamiento para familias</p>
+              </div>
+              <div class="bloque-imagen-frontal">
+                <img src="espacio-eucalipto.png" alt="Espacio Eucalipto" class="imagen-frontal-tarjeta">
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">ONLINE</h4>
+              <ul>
+                <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
+                <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
+                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
+                <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>El abrazo del koala</h3>
+                <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
+              </div>
+              <div class="bloque-imagen-frontal">
+                <img src="abrazo-koala.png" alt="El abrazo del koala" class="imagen-frontal-tarjeta">
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">A DOMICILIO</h4>
+              <ul>
+                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
+                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
+                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
+                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA 3: EDUKOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>EduKoala</h3>
+                <p class="subtitulo-frontal">Apoyo psicoeducativo en necesidades educativas especiales</p>
+              </div>
+              <div class="bloque-imagen-frontal">
+                <img src="edu-koala.png" alt="EduKoala" class="imagen-frontal-tarjeta">
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
+              <ul>
+                <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
+                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una rabieta, desobediencia o bloqueo.</li>
+                <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
+                <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, esperas, luces, otras personas) en el comportamiento de tus pequeños.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Cierre de como-trabajo-contenedor -->
+  </div> <!-- Cierre de section-inner de Cómo Trabajo -->
+</section>
+
+
+  <!-- SECCIÓN CONTACTO -->
+<style>
+    /* Contenedor principal del formulario */
+    .formulario-contacto {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff; /* Fondo blanco para que resalte sobre el crema de la web */
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Grupos de campos (separación vertical) */
+    .campo-grupo {
+        margin-bottom: 20px;
+        text-align: left; /* Alinea los textos a la izquierda */
+    }
+
+    /* Estilo de las etiquetas (Nombres de los campos) */
+    .campo-grupo label {
+        display: block;
+        margin-bottom: 8px;
+        color: #4a2828; /* Tono granate/marrón de tu cabecera */
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    /* Estilo de las cajas de texto y el área de mensaje */
+    .campo-grupo input, 
+    .campo-grupo textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #e0dcd8; /* Borde suave */
+        border-radius: 8px;
+        font-size: 15px;
+        color: #333333;
+        background-color: #fdfcfb;
+        box-sizing: border-box; /* Evita que el campo se salga del contenedor */
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto al hacer clic en un campo */
+    .campo-grupo input:focus, 
+    .campo-grupo textarea:focus {
+        border-color: #a37070; /* Color de acento más vivo al seleccionar */
+        outline: none;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(163, 112, 112, 0.2);
+    }
+
+    /* Altura fija para el cuadro de mensaje */
+    .campo-grupo textarea {
+        height: 120px;
+        resize: vertical; /* Permite estirar abajo pero no a los lados */
+    }
+
+    /* Estilo del botón de enviar */
+    .boton-enviar {
+        width: 100%;
+        padding: 14px;
+        background-color: #4a2828; /* El color granate corporativo de tu web */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    /* Efecto al pasar el ratón por encima del botón */
+    .boton-enviar:hover {
+        background-color: #5c3333; /* Un tono un poco más claro del mismo granate */
+    }
+
+    /* Efecto al hacer clic en el botón */
+    .boton-enviar:active {
+        transform: scale(0.98);
+    }
+</style>
+
+<!-- ESTRUCTURA DEL FORMULARIO -->
+<div class="formulario-contacto" id="seccion-contacto">
+  <!-- ESTILOS CSS AÑADIDOS -->
+  <style>
+    .titulo-contacto {
+      color: #4A0E17; /* Color granate oscuro */
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-family: sans-serif; /* Puedes cambiar la tipografía aquí */
+    }
+  </style>
+
+  <form action="https://formspree.io/f/mnjkykly" method="POST">
+        <!-- TÍTULO AÑADIDO -->
+        <h2 class="titulo-contacto">Contacto</h2>
+
+        <div class="campo-grupo">
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="campo-grupo">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+
+        <div class="campo-grupo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
+        </div>
+
+        <button type="submit" class="boton-enviar">Enviar mensaje</button>
+    </form>
+</div>
