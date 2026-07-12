@@ -69,129 +69,64 @@
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
-/* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
-.tarjeta-frontal { 
-  background-color: var(--blush); /* He usado var(--blush) o var(--cream) para un fondo suave y cálido */
-  padding: 24px 20px 0 20px; 
-}
+/* SECCIÓN CÓMO TRABAJO */
+#como-trabajo { background: var(--cream); }
+.como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
+.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
+
+.tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
+.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
+.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
+
+/* Ajustes comunes de las caras */
+.tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); box-sizing: border-box; }
+
+/* NUEVA ESTRUCTURA CARA FRONTAL */
+.tarjeta-frontal { background-color: var(--bark); padding: 24px 20px 0 20px; } /* Quitamos el padding inferior para que la imagen toque el borde */
 
 .contenido-frontal { 
   display: flex; 
   flex-direction: column; 
   height: 100%; 
-  justify-content: space-between; 
+  justify-content: space-between; /* Empuja el texto arriba y la imagen abajo */
 }
 
-.bloque-texto-frontal { 
-  text-align: center; 
-  margin-bottom: 15px; 
+.bloque-texto-frontal {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-/* Cambiamos el color de los títulos a var(--bark) para que contrasten sobre el fondo claro */
-.tarjeta-frontal h3 { 
-  font-family: var(--ff-display); 
-  color: var(--bark); 
-  font-size: 1.6rem; 
-  font-weight: 600; 
-  letter-spacing: 0.5px; 
-  margin: 0 0 10px 0; 
-  text-align: center; 
+.tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.6rem; font-weight: 500; letter-spacing: 0.5px; margin: 0 0 10px 0; }
+.subtitulo-frontal { color: var(--cream); font-size: 0.95rem; line-height: 1.4; opacity: 0.85; margin: 0; }
+
+/* BLOQUE DE LA IMAGEN INFERIOR */
+.bloque-imagen-frontal {
+  flex: 1; /* Ocupa todo el espacio vertical disponible abajo */
+  display: flex;
+  align-items: flex-end; /* Alinea la imagen al fondo exacto de la tarjeta */
+  justify-content: center;
+  overflow: hidden;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
 }
 
-/* Cambiamos el color del subtítulo a var(--text) o var(--muted) */
-.subtitulo-frontal { 
-  color: var(--text); 
-  font-size: 0.95rem; 
-  line-height: 1.4; 
-  margin: 0; 
-  text-align: center; 
-  opacity: 0.9;
+.imagen-frontal-tarjeta {
+  width: 100%;
+  height: 90%; /* Ajusta este porcentaje si quieres que la imagen suba más o menos */
+  object-fit: contain; /* Evita que la ilustración se deforme */
+  mix-blend-mode: multiply; /* Elimina los fondos blancos e integra los dibujos en el marrón */
 }
 
-/* EL BLOQUE DE LA IMAGEN SE MANTIENE IGUAL */
-.bloque-imagen-frontal { 
-  flex: 1; 
-  display: flex; 
-  align-items: flex-end; 
-  justify-content: center; 
-  overflow: hidden; 
-  border-bottom-left-radius: var(--radius-md); 
-  border-bottom-right-radius: var(--radius-md); 
-}
+/* CARA TRASERA */
+.tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: flex-start; border: 2px solid var(--bark); overflow-y: auto; padding: 28px 24px; }
+.contenido-trasero { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+.titulo-trasero { font-family: var(--ff-display); color: var(--bark); font-size: 1.2rem; font-weight: bold; margin: 0; letter-spacing: 1px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; text-align: center; }
 
-.imagen-frontal-tarjeta { 
-  width: 100%; 
-  height: 90%; 
-  object-fit: contain; 
-  mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
-}
- CÓDIGO CSS EDITADO CON TARJETAS TRASERAS FONDO OSCURO Y LETRA CLARA
+.tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
+.tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
+.tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
+.tarjeta-trasera li:last-child { margin-bottom: 0; }
 
-/* CARA TRASERA: Inversión de colores (Fondo oscuro y texto claro) */
-.tarjeta-trasera { 
-  background-color: var(--bark) !important; /* Cambiado a marrón oscuro */
-  color: var(--cream) !important; /* Cambiado a texto crema claro */
-  transform: rotateY(180deg) !important; 
-  display: flex !important; 
-  align-items: flex-start !important; 
-  border: 2px solid var(--cream) !important; /* Borde claro para que resalte */
-  overflow-y: auto !important; 
-  padding: 28px 24px !important; 
-}
-
-.contenido-trasero { 
-  width: 100% !important; 
-  display: flex !important; 
-  flex-direction: column !important; 
-  gap: 16px !important; 
-}
-
-.titulo-trasero { 
-  font-family: var(--ff-display) !important; 
-  color: var(--cream) !important; /* Título interno en crema claro */
-  font-size: 1.2rem !important; 
-  font-weight: bold !important; 
-  margin: 0 !important; 
-  letter-spacing: 1px !important; 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; /* Línea divisoria clara y sutil */
-  padding-bottom: 8px !important; 
-  text-align: center !important; 
-}
-
-.tarjeta-trasera ul { 
-  list-style-type: none !important; 
-  padding: 0 !important; 
-  margin: 0 !important; 
-}
-
-.tarjeta-trasera li { 
-  font-size: 0.85rem !important; 
-  line-height: 1.45 !important; 
-  margin-bottom: 12px !important; 
-  position: relative !important; 
-  padding-left: 15px !important; 
-  text-align: left !important;
-  color: var(--cream) !important; /* Asegura que toda la lista sea clara */
-}
-
-/* Cambia los textos en negrita (strong) a un color crema puro para que resalten */
-.tarjeta-trasera li strong {
-  color: var(--white) !important;
-}
-
-/* Cambiamos el punto de la lista a crema claro para que se vea sobre el fondo oscuro */
-.tarjeta-trasera li::before { 
-  content: "•" !important; 
-  color: var(--rose) !important; /* Usamos tu color rosa/rosa viejo para darle un toque destacado al punto */
-  position: absolute !important; 
-  left: 0 !important; 
-  top: 0 !important; 
-  font-weight: bold !important; 
-}
-
-.tarjeta-trasera li:last-child { 
-  margin-bottom: 0 !important; 
-}
 
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
