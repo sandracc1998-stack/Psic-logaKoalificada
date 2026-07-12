@@ -4,31 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>Psicóloga Koalificada — Sandra Carrera</title>
- 
-  /* ESTILOS PARA EL TÍTULO DE BIENVENIDA */
-.hero-title {
-  font-family: var(--ff-display);
-  color: var(--bark); /* El color marrón oscuro de tus tarjetas */
-  font-size: 3.5rem;  /* Un tamaño grande e importante */
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.5px;
-}
-
-.hero-subtitle {
-  color: var(--bark);
-  font-size: 1.5rem;
-  opacity: 0.85;
-  margin-top: 0;
-}
-
-/* Ajuste para pantallas de móvil */
-@media (max-width: 768px) {
-  .hero-title { font-size: 2.5rem; }
-  .hero-subtitle { font-size: 1.2rem; }
-}
-
-  <link rel="preconnect" href="https://googleapis.com" />
+   <link rel="preconnect" href="https://googleapis.com" />
   <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -334,6 +310,55 @@
 
 
   <!-- SECCIÓN CONTACTO -->
+  <!-- CONTENEDOR DE CONTACTO UNIFICADO -->
+<div class="contacto-flex-contenedor">
+
+  <!-- NUEVA TARJETA DE DATOS DE CONTACTO (Estilo de tu imagen) -->
+  <div class="tarjeta-datos-contacto">
+    <div class="datos-contacto-cabecera">
+      <h3 class="datos-contacto-titulo">Mis datos de contacto</h3>
+      <span class="corazon-icono">❤️</span>
+    </div>
+    
+    <ul class="lista-datos-contacto">
+      <li>
+        <span class="dato-icono">👤</span>
+        <div class="dato-linea">
+          <span class="dato-etiqueta">Nombre:</span>
+          <span class="dato-valor">Sandra Carrera Castaño</span>
+        </div>
+      </li>
+      <li>
+        <span class="dato-icono">📞</span>
+        <div class="dato-linea">
+          <span class="dato-etiqueta">Teléfono:</span>
+          <span class="dato-valor">+34 678 51 78 90</span>
+        </div>
+      </li>
+      <li>
+        <span class="dato-icono">✉️</span>
+        <div class="dato-linea">
+          <span class="dato-etiqueta">Correo:</span>
+          <span class="dato-valor">psikoala@psikoala.com</span>
+        </div>
+      </li>
+      <li>
+        <span class="dato-icono">📍</span>
+        <div class="dato-linea">
+          <span class="dato-etiqueta">Ubicación:</span>
+          <span class="dato-valor">Santiago de Compostela</span>
+        </div>
+      </li>
+      <li>
+        <span class="dato-icono">🌐</span>
+        <div class="dato-linea">
+          <span class="dato-etiqueta">Instagram</span>
+          <span class="dato-valor">@psiko.koalificada</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 <style>
     /* Contenedor principal del formulario */
     .formulario-contacto {
