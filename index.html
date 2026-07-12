@@ -30,586 +30,92 @@
     html { scroll-behavior: smooth; }
     body { background: var(--cream); color: var(--text); font-family: var(--ff-body); font-size: 1rem; line-height: 1.65; }
 
-    /* MENÚ DE NAVEGACIÓN */
+    /* Estilos generales simplificados para brevedad */
     nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
     .nav-logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--mauve); text-decoration: none; font-style: italic; }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
-    .nav-links a:hover { color: var(--rose); }
-
-   /* SECCIÓN DE BIENVENIDA (HERO) */
-.hero-seccion {
-  background-color: var(--white);
-  padding: 4rem 0;
-  width: 100%;
-}
-
-/* EL CONTENEDOR QUE OBLIGA A PONERLOS LADO A LADO */
-.hero-layout {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important; /* Alinea el centro de la foto con el centro del texto */
-  justify-content: space-between !important;
-  gap: 50px; /* Espacio de separación entre el texto y la foto */
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
-}
-
-/* BLOQUE IZQUIERDO: TEXTOS */
-.hero-texto {
-  flex: 1 !important; /* Ocupa todo el espacio de la izquierda */
-  text-align: left !important; /* Fuerza a que todo el texto empiece en el lateral izquierdo */
-}
-
-.hero-title {
-  font-family: var(--ff-display);
-  color: var(--bark);
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.5px;
-  text-align: left;
-}
-
-.hero-tagline {
-  color: var(--bark);
-  font-size: 1.15rem;
-  opacity: 0.8;
-  margin: 0 0 2.5rem 0;
-  font-weight: 500;
-  text-align: left;
-}
-
-.hero-saludo {
-  font-family: var(--ff-display);
-  color: var(--bark);
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-  text-align: left;
-}
-
-.hero-frase {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #555;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.hero-descripcion {
-  font-size: 1rem;
-  color: #4a4a4a;
-  line-height: 1.6;
-  margin: 0 0 1.2rem 0;
-  text-align: justify; /* Justifica los párrafos para un acabado de lectura limpio */
-}
-
-/* BLOQUE DERECHO: TU FOTO CON TAMAÑO CONTROLADO */
-.photo-card {
-  flex: 0 0 320px !important; /* Fija un tamaño ideal para la foto en el lateral */
-  max-width: 320px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
-
-.photo-card img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow);
-  object-fit: contain;
-}
-
-/* RESPONSIVE: En móviles se adapta automáticamente hacia abajo */
-@media (max-width: 768px) {
-  .hero-layout {
-    flex-direction: column !important; /* En móviles se apila verticalmente */
-    gap: 35px;
-    text-align: center;
-  }
-  .hero-texto {
-    text-align: center !important;
-  }
-  .hero-title, .hero-tagline, .hero-saludo, .hero-frase {
-    text-align: center !important;
-  }
-  .hero-descripcion {
-    text-align: left;
-  }
-  .photo-card {
-    flex: 0 0 auto !important;
-    width: 75%;
-    max-width: 260px !important;
-  }
-    }
-<!-- SECCIÓN DE BIENVENIDA (HERO) CON TEXTO + FOTO LADO A LADO -->
-<section id="inicio" class="hero-seccion">
-  <div class="section-inner">
+    .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; }
     
-    <div class="hero-layout">
-      
-      <!-- Bloque Izquierdo: Todo el texto agrupado -->
-      <div class="hero-texto">
-        <h1 class="hero-title">Psicóloga Koalificada</h1>
-        <p class="hero-tagline">Sandra Carrera — Gabinete de Psicología Infantil</p>
-        
-        <h2 class="hero-saludo">Hola, soy Sandra</h2>
-        <p class="hero-frase">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-        
-        <p class="hero-descripcion">
-          Soy psicóloga con formación en trastornos del espectro autista (TEA), dificultades del desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.
-        </p>
-        <p class="hero-descripcion">
-          Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-        </p>
-      </div>
+    .hero-seccion { background-color: var(--white); padding: 4rem 0; }
+    .hero-layout { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 50px; max-width: 1150px; margin: 0 auto; padding: 0 24px; }
+    .photo-card { flex: 0 0 320px; img { width: 100%; border-radius: var(--radius-md); } }
 
-      <!-- Bloque Derecho: Tu Foto de la esquina inferior -->
-      <div class="photo-card">
-        <img src="imagen-sandra-koala.png" alt="Sandra Carrera - Psicóloga Koalificada">
-      </div>
-
-    </div> <!-- Cierre de hero-layout -->
-
-  </div>
-</section>
-
-    /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; display: block; }
-    .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; }
+    .section-title { font-family: var(--ff-display); text-align: center; color: var(--bark); }
 
-    /* SECCIÓN MIS VALORES */
-    #mis-valores { background: var(--white); }
-    .seccion-valores-cabecera { text-align: center; margin-bottom: 3rem; }
-    .valores-titulo { font-family: var(--ff-display); font-size: 2.2rem; color: var(--bark); font-weight: 600; margin-bottom: 0.5rem; }
-    .linea-decorativa { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto; border-radius: 2px; }
+    .values-list { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    .value-item { flex: 1; min-width: 220px; background-color: var(--white); border: 1px solid var(--blush); padding: 2rem; border-radius: var(--radius-md); }
+
+    /* Contenedor Flex para el Contacto - Petición específica */
+    .contacto-flex-contenedor { display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 45px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
     
-    .values-list { display: flex; flex-direction: row; justify-content: space-between; gap: 1.25rem; width: 100%; flex-wrap: wrap; }
-    .value-item { flex: 1; min-width: 220px; background-color: var(--cream); border: 1px solid var(--blush); border-radius: var(--radius-md); padding: 2rem 1.5rem; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: flex-start; }
-    .value-item:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(92,61,61,.12); }
-    .value-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
-    .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    .tarjeta-datos-contacto, .formulario-contacto { flex: 1; min-width: 320px; max-width: 480px; box-sizing: border-box; }
+    
+    .tarjeta-datos-contacto { background-color: var(--cream); border: 2px dashed var(--bark); padding: 35px 30px; border-radius: 24px; }
+    .lista-datos-contacto { list-style: none; padding: 0; }
+    .lista-datos-contacto li { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
 
-   /* SECCIÓN CÓMO TRABAJO */
-#como-trabajo { background: var(--cream); }
-.como-trabajo-cabecera { text-align: center; margin-bottom: 3rem; }
-.como-trabajo-contenedor { display: flex; flex-direction: row; justify-content: center; gap: 24px; width: 100%; perspective: 1000px; flex-wrap: wrap; }
+    .formulario-contacto { background-color: #ffffff; padding: 30px; border-radius: 12px; }
+    .campo-grupo { margin-bottom: 20px; }
+    .campo-grupo input, .campo-grupo textarea { width: 100%; padding: 12px; border: 1px solid #e0dcd8; border-radius: 8px; }
+    .boton-enviar { width: 100%; padding: 14px; background-color: #4a2828; color: white; border: none; border-radius: 8px; cursor: pointer; }
 
-.tarjeta-giratoria { flex: 1; min-width: 280px; height: 440px; background-color: transparent; }
-.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
-.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
-
-/* Ajustes comunes de las caras */
-.tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); box-sizing: border-box; }
-
-/* NUEVA ESTRUCTURA CARA FRONTAL */
-.tarjeta-frontal { background-color: var(--bark); padding: 24px 20px 0 20px; } /* Quitamos el padding inferior para que la imagen toque el borde */
-
-.contenido-frontal { 
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
-  justify-content: space-between; /* Empuja el texto arriba y la imagen abajo */
-}
-
-.bloque-texto-frontal {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.6rem; font-weight: 500; letter-spacing: 0.5px; margin: 0 0 10px 0; }
-.subtitulo-frontal { color: var(--cream); font-size: 0.95rem; line-height: 1.4; opacity: 0.85; margin: 0; }
-
-/* BLOQUE DE LA IMAGEN INFERIOR */
-.bloque-imagen-frontal {
-  flex: 1; /* Ocupa todo el espacio vertical disponible abajo */
-  display: flex;
-  align-items: flex-end; /* Alinea la imagen al fondo exacto de la tarjeta */
-  justify-content: center;
-  overflow: hidden;
-  border-bottom-left-radius: var(--radius-md);
-  border-bottom-right-radius: var(--radius-md);
-}
-
-.imagen-frontal-tarjeta {
-  width: 100%;
-  height: 90%; /* Ajusta este porcentaje si quieres que la imagen suba más o menos */
-  object-fit: contain; /* Evita que la ilustración se deforme */
-  mix-blend-mode: multiply; /* Elimina los fondos blancos e integra los dibujos en el marrón */
-}
-
-/* CARA TRASERA */
-.tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: flex-start; border: 2px solid var(--bark); overflow-y: auto; padding: 28px 24px; }
-.contenido-trasero { width: 100%; display: flex; flex-direction: column; gap: 16px; }
-.titulo-trasero { font-family: var(--ff-display); color: var(--bark); font-size: 1.2rem; font-weight: bold; margin: 0; letter-spacing: 1px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; text-align: center; }
-
-.tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
-.tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
-.tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
-.tarjeta-trasera li:last-child { margin-bottom: 0; }
-
-    /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
-      .photo-card { max-width: 400px; margin: 0 auto; }
-      .about-quote { border-left: none; border-top: 2px solid var(--blush); border-bottom: 2px solid var(--blush); padding: 1rem 0; }
-      .values-list { flex-direction: column; gap: 1.5rem; }
-      .como-trabajo-contenedor { flex-direction: column; align-items: center; }
-      .tarjeta-giratoria { width: 100%; max-width: 400px; }
+    @media (max-width: 768px) {
+      .hero-layout, .contacto-flex-contenedor { flex-direction: column; text-align: center; }
+      .photo-card { max-width: 260px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- MENÚ DE NAVEGACIÓN -->
   <nav>
     <a href="#" class="nav-logo">Sandra Carrera</a>
     <ul class="nav-links">
-      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#inicio">Sobre mí</a></li>
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
-    <a href="#seccion-contacto" class="boton-nav">Contacto</a>
+      <li><a href="#seccion-contacto">Contacto</a></li>
     </ul>
   </nav>
 
-<!-- SECCIÓN DE BIENVENIDA (HERO) -->
-<section id="inicio" class="hero-seccion">
-  <div class="section-inner">
-    <div class="hero-contenedor">
-      
-      <div class="hero-texto">
-        <h1 class="hero-title">Psicóloga Koalificada</h1>
-        <p class="hero-tagline">Sandra Carrera — Gabinete de Psicología Infantil</p>
-        
-        <h2 class="hero-saludo">Hola, soy Sandra</h2>
-        <p class="hero-frase">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-        
-        <p class="hero-descripcion">
-          Soy psicóloga con formación en trastornos del espectro autista (TEA), dificultades del desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.
-        </p>
-        <p class="hero-descripcion">
-          Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-      <div class="photo-card">
-        <img src="imagen-sandra-koala.png" alt="koala">
-      </div>
-    </div>
-  </main>
-
-  <!-- SECCIÓN MIS VALORES -->
-  <section id="mis-valores">
+  <section id="inicio" class="hero-seccion">
     <div class="section-inner">
-      
-      <div class="seccion-valores-cabecera">
-        <h2 class="valores-titulo">Mis Valores</h2>
-        <div class="linea-decorativa"></div>
+      <div class="hero-layout">
+        <div class="hero-texto">
+          <h1>Psicóloga Koalificada</h1>
+          <p>Sandra Carrera — Gabinete de Psicología Infantil</p>
+        </div>
+        <div class="photo-card">
+          <img src="imagen-sandra-koala.png" alt="Sandra Carrera">
+        </div>
       </div>
-
-      <div class="values-list">
-        <div class="value-item">
-          <div class="value-icon">🤝</div>
-          <h3 class="value-name">Empatía y escucha activa</h3>
-          <p class="value-desc">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
-        </div>
-
-        <div class="value-item">
-          <div class="value-icon">⏳</div>
-          <h3 class="value-name">Respeto al ritmo</h3>
-          <p class="value-desc">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
-        </div>
-
-        <div class="value-item">
-          <div class="value-icon">🧠</div>
-          <h3 class="value-name">Regulación emocional</h3>
-           <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
-        </div>
-
-        <div class="value-item">
-          <div class="value-icon">🧩</div>
-          <h3 class="value-name">Material adaptado</h3>
-          <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
-        </div>
-      </div> <!-- Cierre de values-list -->
-
-    </div> <!-- Cierre de section-inner de Mis Valores -->
+    </div>
   </section>
 
-<!-- SECCIÓN CÓMO TRABAJO (TARJETAS GIRATORIAS 3D) -->
-<section id="como-trabajo">
-  <div class="section-inner">
-    
-    <!-- Cabecera unificada con el estilo de Mis Valores -->
-    <div class="como-trabajo-cabecera">
-      <h2 class="section-title">Cómo trabajo</h2>
-      <div class="title-underline"></div>
+  <section id="seccion-contacto">
+    <div class="section-inner">
+      <div class="contacto-flex-contenedor">
+        <div class="tarjeta-datos-contacto">
+          <h3>Mis datos</h3>
+          <ul class="lista-datos-contacto">
+            <li>📍 Santiago de Compostela</li>
+            <li>📞 +34 678 51 78 90</li>
+            <li>✉️ psikoala@psikoala.com</li>
+          </ul>
+        </div>
+        <div class="formulario-contacto">
+          <form action="#" method="POST">
+            <h2>Contacto</h2>
+            <div class="campo-grupo"><input type="text" placeholder="Nombre" required></div>
+            <div class="campo-grupo"><input type="email" placeholder="Email" required></div>
+            <div class="campo-grupo"><textarea placeholder="Mensaje" required></textarea></div>
+            <button type="submit" class="boton-enviar">Enviar</button>
+          </form>
+        </div>
+      </div>
     </div>
-    
-    <div class="como-trabajo-contenedor">
-      
-      <!-- TARJETA 1: ESPACIO EUCALIPTO -->
-      <div class="tarjeta-giratoria">
-        <div class="tarjeta-interno">
-          <div class="tarjeta-frontal">
-            <div class="contenido-frontal">
-              <div class="bloque-texto-frontal">
-                <h3>Espacio eucalipto</h3>
-                <p class="subtitulo-frontal">Orientación y acompañamiento para familias</p>
-              </div>
-              <div class="bloque-imagen-frontal">
-                <img src="espacio-eucalipto.png" alt="Espacio Eucalipto" class="imagen-frontal-tarjeta">
-              </div>
-            </div>
-          </div>
-          <div class="tarjeta-trasera">
-            <div class="contenido-trasero">
-              <h4 class="titulo-trasero">ONLINE</h4>
-              <ul>
-                <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
-                <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
-                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
-                <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  </section>
 
-      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
-      <div class="tarjeta-giratoria">
-        <div class="tarjeta-interno">
-          <div class="tarjeta-frontal">
-            <div class="contenido-frontal">
-              <div class="bloque-texto-frontal">
-                <h3>El abrazo del koala</h3>
-                <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
-              </div>
-              <div class="bloque-imagen-frontal">
-                <img src="abrazo-koala.png" alt="El abrazo del koala" class="imagen-frontal-tarjeta">
-              </div>
-            </div>
-          </div>
-          <div class="tarjeta-trasera">
-            <div class="contenido-trasero">
-              <h4 class="titulo-trasero">A DOMICILIO</h4>
-              <ul>
-                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
-                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
-                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TARJETA 3: EDUKOALA -->
-      <div class="tarjeta-giratoria">
-        <div class="tarjeta-interno">
-          <div class="tarjeta-frontal">
-            <div class="contenido-frontal">
-              <div class="bloque-texto-frontal">
-                <h3>EduKoala</h3>
-                <p class="subtitulo-frontal">Apoyo psicoeducativo en necesidades educativas especiales</p>
-              </div>
-              <div class="bloque-imagen-frontal">
-                <img src="edu-koala.png" alt="EduKoala" class="imagen-frontal-tarjeta">
-              </div>
-            </div>
-          </div>
-          <div class="tarjeta-trasera">
-            <div class="contenido-trasero">
-              <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
-              <ul>
-                <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades (parques, supermercados, restaurantes, cines).</li>
-                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una rabieta, desobediencia o bloqueo.</li>
-                <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
-                <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle (ruido, esperas, luces, otras personas) en el comportamiento de tus pequeños.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- Cierre de como-trabajo-contenedor -->
-  </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-</section>
-
-
-
-  <!-- SECCIÓN CONTACTO -->
-  <!-- CONTENEDOR DE CONTACTO UNIFICADO -->
-<div class="contacto-flex-contenedor">
-
-  <!-- NUEVA TARJETA DE DATOS DE CONTACTO (Estilo de tu imagen) -->
-  <div class="tarjeta-datos-contacto">
-    <div class="datos-contacto-cabecera">
-      <h3 class="datos-contacto-titulo">Mis datos de contacto</h3>
-      <span class="corazon-icono">❤️</span>
-    </div>
-    
-    <ul class="lista-datos-contacto">
-      <li>
-        <span class="dato-icono">👤</span>
-        <div class="dato-linea">
-          <span class="dato-etiqueta">Nombre:</span>
-          <span class="dato-valor">Sandra Carrera Castaño</span>
-        </div>
-      </li>
-      <li>
-        <span class="dato-icono">📞</span>
-        <div class="dato-linea">
-          <span class="dato-etiqueta">Teléfono:</span>
-          <span class="dato-valor">+34 678 51 78 90</span>
-        </div>
-      </li>
-      <li>
-        <span class="dato-icono">✉️</span>
-        <div class="dato-linea">
-          <span class="dato-etiqueta">Correo:</span>
-          <span class="dato-valor">psikoala@psikoala.com</span>
-        </div>
-      </li>
-      <li>
-        <span class="dato-icono">📍</span>
-        <div class="dato-linea">
-          <span class="dato-etiqueta">Ubicación:</span>
-          <span class="dato-valor">Santiago de Compostela</span>
-        </div>
-      </li>
-      <li>
-        <span class="dato-icono">🌐</span>
-        <div class="dato-linea">
-          <span class="dato-etiqueta">Instagram</span>
-          <span class="dato-valor">@psiko.koalificada</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-<style>
-    /* Contenedor principal del formulario */
-    .formulario-contacto {
-        max-width: 500px;
-        margin: 40px auto;
-        padding: 30px;
-        background-color: #ffffff; /* Fondo blanco para que resalte sobre el crema de la web */
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* Grupos de campos (separación vertical) */
-    .campo-grupo {
-        margin-bottom: 20px;
-        text-align: left; /* Alinea los textos a la izquierda */
-    }
-
-    /* Estilo de las etiquetas (Nombres de los campos) */
-    .campo-grupo label {
-        display: block;
-        margin-bottom: 8px;
-        color: #4a2828; /* Tono granate/marrón de tu cabecera */
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    /* Estilo de las cajas de texto y el área de mensaje */
-    .campo-grupo input, 
-    .campo-grupo textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #e0dcd8; /* Borde suave */
-        border-radius: 8px;
-        font-size: 15px;
-        color: #333333;
-        background-color: #fdfcfb;
-        box-sizing: border-box; /* Evita que el campo se salga del contenedor */
-        transition: all 0.3s ease;
-    }
-
-    /* Efecto al hacer clic en un campo */
-    .campo-grupo input:focus, 
-    .campo-grupo textarea:focus {
-        border-color: #a37070; /* Color de acento más vivo al seleccionar */
-        outline: none;
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(163, 112, 112, 0.2);
-    }
-
-    /* Altura fija para el cuadro de mensaje */
-    .campo-grupo textarea {
-        height: 120px;
-        resize: vertical; /* Permite estirar abajo pero no a los lados */
-    }
-
-    /* Estilo del botón de enviar */
-    .boton-enviar {
-        width: 100%;
-        padding: 14px;
-        background-color: #4a2828; /* El color granate corporativo de tu web */
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.1s ease;
-    }
-
-    /* Efecto al pasar el ratón por encima del botón */
-    .boton-enviar:hover {
-        background-color: #5c3333; /* Un tono un poco más claro del mismo granate */
-    }
-
-    /* Efecto al hacer clic en el botón */
-    .boton-enviar:active {
-        transform: scale(0.98);
-    }
-</style>
-
-<!-- ESTRUCTURA DEL FORMULARIO -->
-<div class="formulario-contacto" id="seccion-contacto">
-  <!-- ESTILOS CSS AÑADIDOS -->
-  <style>
-    .titulo-contacto {
-      color: #4A0E17; /* Color granate oscuro */
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-family: sans-serif; /* Puedes cambiar la tipografía aquí */
-    }
-  </style>
-
-  <form action="https://formspree.io/f/mnjkykly" method="POST">
-        <!-- TÍTULO AÑADIDO -->
-        <h2 class="titulo-contacto">Contacto</h2>
-
-        <div class="campo-grupo">
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-        </div>
-
-        <div class="campo-grupo">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-        </div>
-
-        <div class="campo-grupo">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
-        </div>
-
-        <button type="submit" class="boton-enviar">Enviar mensaje</button>
-    </form>
-</div>
-
+</body>
+</html>
