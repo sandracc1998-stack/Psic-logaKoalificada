@@ -96,7 +96,12 @@
 .tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
 .tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
 .tarjeta-trasera li:last-child { margin-bottom: 0; }
-
+    .imagen-frontal-tarjeta {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin: 10px 0;
+}
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
@@ -209,29 +214,34 @@
         </div>
       </div>
 
-      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
-      <div class="tarjeta-giratoria">
-        <div class="tarjeta-interno">
-          <div class="tarjeta-frontal">
-            <div class="contenido-frontal">
-              <i class="icono-tarjeta fas fa-paw"></i>
-              <h3>El abrazo del koala</h3>
-              <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
-            </div>
-          </div>
-          <div class="tarjeta-trasera">
-            <div class="contenido-trasero">
-              <h4 class="titulo-trasero">A DOMICILIO</h4>
-              <ul>
-                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
-                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
-                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+     <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
+<div class="tarjeta-giratoria">
+  <div class="tarjeta-interno">
+    <!-- Quitamos la clase 'tarjeta-koala' del fondo si ya no quieres la imagen ocupando toda la tarjeta -->
+    <div class="tarjeta-frontal">
+      <div class="contenido-frontal">
+        <h3>El abrazo del koala</h3>
+        
+        <!-- AQUÍ AÑADES LA IMAGEN (Ajusta 'img/' si la metiste en una carpeta) -->
+        <img src="abrazo-koala.png" alt="Icono El abrazo del koala" class="imagen-frontal-tarjeta">
+        
+        <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
       </div>
+    </div>
+    <div class="tarjeta-trasera">
+      <div class="contenido-trasero">
+        <h4 class="titulo-trasero">A DOMICILIO</h4>
+        <ul>
+          <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren (rabietas, rutinas de sueño, comidas).</li>
+          <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
+          <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
+          <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus pequeños.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- TARJETA 3: EDUKOALA -->
       <div class="tarjeta-giratoria">
