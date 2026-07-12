@@ -74,19 +74,16 @@
   background-color: var(--blush); /* He usado var(--blush) o var(--cream) para un fondo suave y cálido */
   padding: 24px 20px 0 20px; 
 }
-
 .contenido-frontal { 
   display: flex; 
   flex-direction: column; 
   height: 100%; 
   justify-content: space-between; 
 }
-
 .bloque-texto-frontal { 
   text-align: center; 
   margin-bottom: 15px; 
 }
-
 /* Cambiamos el color de los títulos a var(--bark) para que contrasten sobre el fondo claro */
 .tarjeta-frontal h3 { 
   font-family: var(--ff-display); 
@@ -97,7 +94,6 @@
   margin: 0 0 10px 0; 
   text-align: center; 
 }
-
 /* Cambiamos el color del subtítulo a var(--text) o var(--muted) */
 .subtitulo-frontal { 
   color: var(--text); 
@@ -107,7 +103,6 @@
   text-align: center; 
   opacity: 0.9;
 }
-
 /* EL BLOQUE DE LA IMAGEN SE MANTIENE IGUAL */
 .bloque-imagen-frontal { 
   flex: 1; 
@@ -118,14 +113,12 @@
   border-bottom-left-radius: var(--radius-md); 
   border-bottom-right-radius: var(--radius-md); 
 }
-
 .imagen-frontal-tarjeta { 
   width: 100%; 
   height: 90%; 
   object-fit: contain; 
   mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
 }
-
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
