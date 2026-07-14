@@ -39,24 +39,24 @@
    ESTRUCTURA DE LA CABECERA (HERO) - CÓDIGO UNIFICADO Y LIMPIO
    ========================================================================== */
 
-/* REDUCE EL ESPACIO SUPERIOR E INFERIOR DE LA SECCIÓN */
+/* 1. EVITA QUE EL MENÚ PISE EL TÍTULO */
 .hero-seccion {
     width: 100%;
-    padding: 20px 0 40px 0; /* Reduce el relleno de arriba (20px) y abajo (40px) */
+    padding: 120px 0 40px 0 !important; /* Añade 120px arriba para empujar el texto hacia abajo del menú */
     display: flex;
     justify-content: center;
-    min-height: auto !important; /* Elimina la altura forzada de 70vh que creaba el hueco */
+    min-height: auto !important;
 }
 
-/* COMPACTA LA CUADRÍCULA Y ELIMINA ESPACIOS EXTRA */
+/* 2. ALINEACIÓN SIMÉTRICA (Estira los contenedores) */
 .hero-grid {
     display: grid;
-    grid-template-columns: 65% 35%;
-    gap: 3rem; /* Reduce un poco la separación entre el texto y tu foto */
+    grid-template-columns: 63% 37%;
+    gap: 4rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: start; /* Alinea los elementos arriba para que no floten en el centro */
+    align-items: stretch; /* Fuerza a que la columna de la foto mida igual que el texto */
     padding: 0 20px;
 }
 
@@ -64,107 +64,74 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
-/* Conserva tu tipografía y diseño original del título principal */
 .hero-grid h1 { 
     font-family: var(--ff-display); 
-    font-size: clamp(2.8rem, 5vw, 4.2rem); 
+    font-size: clamp(2.4rem, 4vw, 3.2rem); 
     font-weight: 400; 
-    line-height: 1.12; 
+    line-height: 1.2; 
     color: var(--bark); 
-    margin-bottom: 1.5rem; 
-    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
-.hero-grid h1 em { 
-    font-style: italic; 
-    color: var(--mauve); 
-}
-
-/* Conserva el diseño original de tu frase destacada */
-.about-quote { 
-    font-family: var(--ff-display); 
-    font-size: 1.5rem; 
-    font-style: italic; 
-    color: var(--mauve); 
-    border-left: 3px solid var(--blush); 
-    padding-left: 1.5rem; 
-    margin-bottom: 1.5rem; 
-    line-height: 1.4; 
-}
-
-/* CONTROL Y DISEÑO DEL KOALA EN EL TÍTULO */
+/* 3. KOALA GRANDE (Ocupa el alto de las dos líneas) */
 .koala-inline {
     display: inline-block !important;
     vertical-align: middle;
-    height: 90px; /* Tamaño grande adaptado a tus dos líneas de título */
+    height: 105px !important; /* Aumentado para igualar el bloque de las dos líneas del título */
     width: auto !important;
-    margin-left: 15px;
+    margin-left: 20px;
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
 }
 
-/* NUEVA TARJETA VERDE OSCURO CON TEXTO CLARO */
-/* TARJETA VERDE CON EFECTO SUAVE Y DIFUMINADO */
+/* 4. TARJETA VERDE MÁS OSCURA */
 .tarjeta-verde {
-    /* Color verde oliva medio con 15% de opacidad (cambia el fondo pesado por un velo suave) */
-    background-color: rgba(46, 79, 58, 0.15) !important; 
-    
-    /* EFECTO DIFUMINADO: Aplica un filtro de desenfoque al fondo que haya detrás de la tarjeta */
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important; /* Compatibilidad con Safari */
-    
-    padding: 30px;
+    background-color: rgba(46, 79, 58, 0.75) !important; /* Subido al 75% para un contraste excelente */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 35px;
     border-radius: var(--radius-lg);
-    margin-top: 25px;
+    margin-top: 2rem;
     width: 100%;
-    
-    /* Borde sutil sutilmente más oscuro para definir la tarjeta sin endurecerla */
-    border: 1px solid rgba(46, 79, 58, 0.2); 
+    border: 1px solid rgba(46, 79, 58, 0.5); 
     box-sizing: border-box;
 }
 
-/* IMPORTANTE: Como ahora el fondo es claro y difuminado, el texto debe volver a ser OSCURO para leerse bien */
+/* TEXTO BLANCO DENTRO DE LA TARJETA VERDE */
 .tarjeta-verde .about-body {
-    color: var(--bark) !important; /* Usa tu color oscuro original de la web (marrón corteza) */
+    color: #ffffff !important; /* Blanco puro para una lectura perfecta */
     font-size: 1.15rem; 
-    line-height: 1.75; 
-    margin-bottom: 1rem;
-}
-
-/* Formato del texto dentro de la tarjeta verde */
-.tarjeta-verde .about-body {
-    color: #f7f4ee !important; /* Fuerza la letra clara */
-    font-size: 1.15rem; 
-    line-height: 1.75; 
-    margin-bottom: 1rem;
+    line-height: 1.7; 
+    margin-bottom: 1.2rem;
 }
 
 .tarjeta-verde .about-body:last-child {
-    margin-bottom: 0; /* Mantiene limpio el margen inferior de la tarjeta */
+    margin-bottom: 0;
 }
 
-/* CONTROL Y DISEÑO DE TU FOTO DE PERFIL ENMARCADA */
+/* 5. FOTO QUE LLEGA HASTA EL FINAL DE LA TARJETA */
 .foto-perfil { 
     position: relative; 
     border-radius: var(--radius-lg); 
     overflow: hidden; 
-    aspect-ratio: 4/5; 
-    background: var(--blush); 
-    box-shadow: 0 16px 48px rgba(92,61,61,.14); 
     width: 100%; 
-    max-width: 380px; /* Evita que la foto crezca de forma desproporcionada */
+    max-width: 400px;
+    height: 100%; /* Sigue fielmente la altura de la tarjeta verde */
     justify-self: center;
 }
 
 .foto-perfil img { 
     width: 100% !important; 
-    height: 100% !important; 
-    object-fit: cover; 
+    height: 100% !important; /* Obliga a la imagen a estirarse verticalmente */
+    object-fit: cover; /* Recorta los bordes de la imagen para que no se deforme al estirarse */
     display: block; 
 }
+
 
 /* BOTÓN DE CONTACTO (Mantiene tus estilos originales del botón) */
 .btn-primary { 
@@ -415,7 +382,7 @@
      <div class="hero-grid">
       
       <div class="hero-contenido">
-        <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em> <img src="imagen-koala.png" alt="Koala decorativo" class="koala-inline"></h1>
+        <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em> <img src="img-koala.png" alt="Koala decorativo" class="koala-inline"></h1>
         
         <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
         
