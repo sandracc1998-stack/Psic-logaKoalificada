@@ -81,9 +81,9 @@
 .koala-inline {
     display: inline-block !important;
     vertical-align: middle;
-    height: 105px !important; /* Aumentado para igualar el bloque de las dos líneas del título */
+    height: 140px !important; /* Aumentado a 140px para que abarque la altura de las dos líneas de texto grande */
     width: auto !important;
-    margin-left: 20px;
+    margin-left: 25px; /* Más separación para que respire al lado del texto */
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
@@ -358,7 +358,17 @@
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
       .photo-card { max-width: 400px; margin: 0 auto; }
-      .about-quote { border-left: none; border-top: 2px solid var(--blush); border-bottom: 2px solid var(--blush); padding: 1rem 0; }
+      .about-quote { 
+    font-family: var(--ff-display); 
+    font-size: 1.8rem; /* Aumentado de tamaño para que destaque más */
+    font-style: italic; 
+    color: #2e4f3a; /* Color verde oscuro corporativo (a juego con tu marca) */
+    border-left: 4px solid var(--blush); /* Borde un poco más grueso para equilibrar */
+    padding-left: 1.5rem; 
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; 
+    line-height: 1.4; 
+}
       .values-list { flex-direction: column; gap: 1.5rem; }
       .como-trabajo-contenedor { flex-direction: column; align-items: center; }
       .tarjeta-giratoria { width: 100%; max-width: 400px; }
