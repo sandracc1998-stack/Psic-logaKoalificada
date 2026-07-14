@@ -39,23 +39,24 @@
    ESTRUCTURA DE LA CABECERA (HERO) - CÓDIGO UNIFICADO Y LIMPIO
    ========================================================================== */
 
+/* REDUCE EL ESPACIO SUPERIOR E INFERIOR DE LA SECCIÓN */
 .hero-seccion {
     width: 100%;
-    padding: 60px 0;
+    padding: 20px 0 40px 0; /* Reduce el relleno de arriba (20px) y abajo (40px) */
     display: flex;
     justify-content: center;
-    min-height: 70vh;
+    min-height: auto !important; /* Elimina la altura forzada de 70vh que creaba el hueco */
 }
 
-/* Espacio optimizado: 65% para el texto extendido y 35% para la foto */
+/* COMPACTA LA CUADRÍCULA Y ELIMINA ESPACIOS EXTRA */
 .hero-grid {
     display: grid;
     grid-template-columns: 65% 35%;
-    gap: 4rem;
+    gap: 3rem; /* Reduce un poco la separación entre el texto y tu foto */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
+    align-items: start; /* Alinea los elementos arriba para que no floten en el centro */
     padding: 0 20px;
 }
 
@@ -106,14 +107,31 @@
 }
 
 /* NUEVA TARJETA VERDE OSCURO CON TEXTO CLARO */
+/* TARJETA VERDE CON EFECTO SUAVE Y DIFUMINADO */
 .tarjeta-verde {
-    background-color: #1e392a !important;
+    /* Color verde oliva medio con 15% de opacidad (cambia el fondo pesado por un velo suave) */
+    background-color: rgba(46, 79, 58, 0.15) !important; 
+    
+    /* EFECTO DIFUMINADO: Aplica un filtro de desenfoque al fondo que haya detrás de la tarjeta */
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important; /* Compatibilidad con Safari */
+    
     padding: 30px;
     border-radius: var(--radius-lg);
     margin-top: 25px;
     width: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Borde sutil sutilmente más oscuro para definir la tarjeta sin endurecerla */
+    border: 1px solid rgba(46, 79, 58, 0.2); 
     box-sizing: border-box;
+}
+
+/* IMPORTANTE: Como ahora el fondo es claro y difuminado, el texto debe volver a ser OSCURO para leerse bien */
+.tarjeta-verde .about-body {
+    color: var(--bark) !important; /* Usa tu color oscuro original de la web (marrón corteza) */
+    font-size: 1.15rem; 
+    line-height: 1.75; 
+    margin-bottom: 1rem;
 }
 
 /* Formato del texto dentro de la tarjeta verde */
