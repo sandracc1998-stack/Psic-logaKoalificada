@@ -45,10 +45,52 @@
     .about-body { color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
     .btn-primary { display: inline-block; background: var(--mauve); color: var(--white); text-decoration: none; padding: .85rem 2rem; border-radius: 999px; font-weight: 500; font-size: .95rem; letter-spacing: .02em; transition: background .2s, transform .15s; border: none; cursor: pointer; margin-top: 1rem; }
     .btn-primary:hover { background: var(--bark); transform: translateY(-1px); }
+/* Ajusta las columnas para dar más espacio al texto (70%) y menos a la foto (30%) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 70% 30%; 
+  gap: 40px; /* Separación interna entre el texto y la foto */
+  align-items: center; /* Alinea verticalmente los elementos */
+  max-width: 1200px; /* Permite que la web se estire de forma elegante en pantallas grandes */
+  margin: 0 auto;
+}
+
+/* Asegura que el contenedor de texto aproveche todo su ancho disponible */
+.hero-contenido {
+  width: 100%;
+}
+
+/* Evita que el título se rompa de manera brusca */
+.hero-contenido h1 {
+  max-width: 100%;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
     
-    /* CONFIGURACIÓN IMAGEN KOALA */
-    .photo-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--blush); box-shadow: 0 16px 48px rgba(92,61,61,.14); width: 100%; }
-    .photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* CONFIGURACIÓN NUEVA FOTO DE PERFIL (SANDRA) */
+.foto-perfil { 
+    position: relative; 
+    border-radius: var(--radius-lg); 
+    overflow: hidden; 
+    aspect-ratio: 4/5; 
+    background: var(--blush); 
+    box-shadow: 0 16px 48px rgba(92,61,61,.14); 
+    width: 100%; 
+}
+.foto-perfil img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* NUEVA CONFIGURACIÓN PARA EL KOALA FLOTANTE */
+.koala-flotante {
+    display: block;
+    max-width: 120px; /* Controla el tamaño del koala */
+    height: auto;
+    margin-top: 20px; /* Separa al koala del texto de arriba */
+}
 
     /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
@@ -272,21 +314,26 @@
     </ul>
   </nav>
 
-  <!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
-  <main class="hero-seccion" id="sobre-mi">
-    <div class="hero-grid">
-      <div>
-        <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em></h1>
-        <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
-        <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-    <img src="imgagen-koala.png" alt="Koala decorativo" class="koala-flotante">
-  </div> 
-     <div class="foto-perfil">
-    <img src="imgagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
-  </div>
+<!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
+<main class="hero-seccion" id="sobre-mi">
+  <div class="hero-grid">
+    
+    <!-- Bloque de contenido (Texto y Koala) -->
+    <div class="hero-contenido">
+      <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em></h1>
+      <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
+      <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
+      <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+      <img src="imagen-koala.png" alt="Koala decorativo" class="koala-flotante">
+    </div> <!-- Cierre correcto del bloque de texto -->
 
-  </main>
+    <!-- Bloque de la foto de perfil -->
+    <div class="foto-perfil">
+      <img src="imagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
+    </div>
+
+  </div> <!-- Cierre de hero-grid -->
+</main>
 
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
