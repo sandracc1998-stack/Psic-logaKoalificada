@@ -35,68 +35,100 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-/* AJUSTE DEL KOALA GRANDE (Escala con las dos líneas del título) */
-.koala-inline {
-    display: inline-block;
-    vertical-align: middle; 
-    height: 110px; /* Aumentado para igualar la altura de las dos líneas de texto */
-    width: auto;
-    margin-left: 15px;
-    object-fit: contain;
+/* ==========================================================================
+   ESTRUCTURA DE LA CABECERA (HERO) - CÓDIGO UNIFICADO Y LIMPIO
+   ========================================================================== */
+
+.hero-seccion {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
 }
 
-/* NUEVA TARJETA VERDE OSCURO */
-.tarjeta-verde {
-    background-color: #1e392a; /* Color verde oscuro (puedes cambiar el código HEX si usas otro verde específico) */
-    color: #f7f4ee; /* Color de letra claro/crema a juego con tu web */
-    padding: 25px 30px; /* Espaciado interno de la tarjeta */
-    border-radius: var(--radius-lg); /* Esquinas redondeadas como tu foto */
-    margin-top: 25px; /* Separación con la frase de arriba */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra sutil para dar volumen */
-}
-
-/* AJUSTES DEL TEXTO DENTRO DE LA TARJETA */
-.tarjeta-verde .about-body {
-    font-size: 1.15rem; /* Aumenta el tamaño de la letra */
-    line-height: 1.6; /* Espaciado cómodo entre líneas */
-    margin-bottom: 15px;
-}
-
-/* Elimina el margen del último párrafo para que no rompa el diseño */
-.tarjeta-verde .about-body:last-child {
-    margin-bottom: 0;
-}
-   .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
-    .eyebrow { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
-    .hero-grid h1 { font-family: var(--ff-display); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.12; color: var(--bark); margin-bottom: 1.5rem; }
-    .hero-grid h1 em { font-style: italic; color: var(--mauve); }
-    .about-quote { font-family: var(--ff-display); font-size: 1.5rem; font-style: italic; color: var(--mauve); border-left: 3px solid var(--blush); padding-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.4; }
-    .about-body { color: var(--text); line-height: 1.75; margin-bottom: 1rem; }
-    .btn-primary { display: inline-block; background: var(--mauve); color: var(--white); text-decoration: none; padding: .85rem 2rem; border-radius: 999px; font-weight: 500; font-size: .95rem; letter-spacing: .02em; transition: background .2s, transform .15s; border: none; cursor: pointer; margin-top: 1rem; }
-    .btn-primary:hover { background: var(--bark); transform: translateY(-1px); }
-/* Ajusta las columnas para dar más espacio al texto (70%) y menos a la foto (30%) */
+/* Espacio optimizado: 65% para el texto extendido y 35% para la foto */
 .hero-grid {
-  display: grid;
-  grid-template-columns: 70% 30%; 
-  gap: 40px; /* Separación interna entre el texto y la foto */
-  align-items: center; /* Alinea verticalmente los elementos */
-  max-width: 1200px; /* Permite que la web se estire de forma elegante en pantallas grandes */
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 20px;
 }
 
-/* Asegura que el contenedor de texto aproveche todo su ancho disponible */
 .hero-contenido {
-  width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Evita que el título se rompa de manera brusca */
-.hero-contenido h1 {
-  max-width: 100%;
-  line-height: 1.2;
-  margin-bottom: 20px;
+/* Conserva tu tipografía y diseño original del título principal */
+.hero-grid h1 { 
+    font-family: var(--ff-display); 
+    font-size: clamp(2.8rem, 5vw, 4.2rem); 
+    font-weight: 400; 
+    line-height: 1.12; 
+    color: var(--bark); 
+    margin-bottom: 1.5rem; 
+    width: 100%;
 }
-    
-  /* CONFIGURACIÓN NUEVA FOTO DE PERFIL (SANDRA) */
+
+.hero-grid h1 em { 
+    font-style: italic; 
+    color: var(--mauve); 
+}
+
+/* Conserva el diseño original de tu frase destacada */
+.about-quote { 
+    font-family: var(--ff-display); 
+    font-size: 1.5rem; 
+    font-style: italic; 
+    color: var(--mauve); 
+    border-left: 3px solid var(--blush); 
+    padding-left: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    line-height: 1.4; 
+}
+
+/* CONTROL Y DISEÑO DEL KOALA EN EL TÍTULO */
+.koala-inline {
+    display: inline-block !important;
+    vertical-align: middle;
+    height: 90px; /* Tamaño grande adaptado a tus dos líneas de título */
+    width: auto !important;
+    margin-left: 15px;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+/* NUEVA TARJETA VERDE OSCURO CON TEXTO CLARO */
+.tarjeta-verde {
+    background-color: #1e392a !important;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    margin-top: 25px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Formato del texto dentro de la tarjeta verde */
+.tarjeta-verde .about-body {
+    color: #f7f4ee !important; /* Fuerza la letra clara */
+    font-size: 1.15rem; 
+    line-height: 1.75; 
+    margin-bottom: 1rem;
+}
+
+.tarjeta-verde .about-body:last-child {
+    margin-bottom: 0; /* Mantiene limpio el margen inferior de la tarjeta */
+}
+
+/* CONTROL Y DISEÑO DE TU FOTO DE PERFIL ENMARCADA */
 .foto-perfil { 
     position: relative; 
     border-radius: var(--radius-lg); 
@@ -105,22 +137,39 @@
     background: var(--blush); 
     box-shadow: 0 16px 48px rgba(92,61,61,.14); 
     width: 100%; 
+    max-width: 380px; /* Evita que la foto crezca de forma desproporcionada */
+    justify-self: center;
 }
+
 .foto-perfil img { 
-    width: 100%; 
-    height: 100%; 
+    width: 100% !important; 
+    height: 100% !important; 
     object-fit: cover; 
     display: block; 
 }
 
-/* NUEVA CONFIGURACIÓN PARA EL KOALA FLOTANTE */
-.koala-flotante {
-    display: block;
-    max-width: 120px; /* Controla el tamaño del koala */
-    height: auto;
-    margin-top: 20px; /* Separa al koala del texto de arriba */
+/* BOTÓN DE CONTACTO (Mantiene tus estilos originales del botón) */
+.btn-primary { 
+    display: inline-block; 
+    background: var(--mauve); 
+    color: var(--white); 
+    text-decoration: none; 
+    padding: .85rem 2rem; 
+    border-radius: 999px; 
+    font-weight: 500; 
+    font-size: .95rem; 
+    letter-spacing: .02em; 
+    transition: background .2s, transform .15s; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 1.5rem; 
+    align-self: flex-start; /* Alinea el botón al inicio del texto */
 }
 
+.btn-primary:hover { 
+    background: var(--bark); 
+    transform: translateY(-1px); 
+}
     /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -347,35 +396,25 @@
 <main class="hero-seccion" id="sobre-mi">
   <div class="hero-grid">
     
-    <!-- Bloque de contenido (Texto y Koala) -->
     <div class="hero-contenido">
       <h1>
         Hola, soy Sandra, tu psicóloga <em>koalificada</em>
         <img src="imagen-koala.png" alt="Koala decorativo" class="koala-inline">
       </h1>
-      
       <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
       
-      <!-- NUEVA TARJETA VERDE CON TU INFORMACIÓN -->
       <div class="tarjeta-verde">
         <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
         <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
       </div>
     </div>
 
-    <!-- Bloque de la foto de perfil -->
     <div class="foto-perfil">
       <img src="imagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
     </div>
 
   </div>
 </main>
-
-    <!-- Bloque de la foto de perfil -->
-    <div class="foto-perfil">
-      <img src="imagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
-    </div>
-
   </div> <!-- Cierre de hero-grid -->
 </main>
 
