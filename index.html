@@ -35,15 +35,36 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-    /* SECCIÓN PRINCIPAL PRESENTACIÓN */
-    .hero-seccion { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-    /* Alinea el koala con el texto del título */
+/* AJUSTE DEL KOALA GRANDE (Escala con las dos líneas del título) */
 .koala-inline {
     display: inline-block;
-    vertical-align: middle; /* Lo centra a la altura de las letras */
-    height: 45px; /* Ajusta este número según el tamaño de tu tipografía */
+    vertical-align: middle; 
+    height: 110px; /* Aumentado para igualar la altura de las dos líneas de texto */
     width: auto;
-    margin-left: 10px; /* Separa un poco el koala de la palabra */
+    margin-left: 15px;
+    object-fit: contain;
+}
+
+/* NUEVA TARJETA VERDE OSCURO */
+.tarjeta-verde {
+    background-color: #1e392a; /* Color verde oscuro (puedes cambiar el código HEX si usas otro verde específico) */
+    color: #f7f4ee; /* Color de letra claro/crema a juego con tu web */
+    padding: 25px 30px; /* Espaciado interno de la tarjeta */
+    border-radius: var(--radius-lg); /* Esquinas redondeadas como tu foto */
+    margin-top: 25px; /* Separación con la frase de arriba */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra sutil para dar volumen */
+}
+
+/* AJUSTES DEL TEXTO DENTRO DE LA TARJETA */
+.tarjeta-verde .about-body {
+    font-size: 1.15rem; /* Aumenta el tamaño de la letra */
+    line-height: 1.6; /* Espaciado cómodo entre líneas */
+    margin-bottom: 15px;
+}
+
+/* Elimina el margen del último párrafo para que no rompa el diseño */
+.tarjeta-verde .about-body:last-child {
+    margin-bottom: 0;
 }
    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; min-height: 70vh; }
     .eyebrow { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
@@ -328,14 +349,27 @@
     
     <!-- Bloque de contenido (Texto y Koala) -->
     <div class="hero-contenido">
-     <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em>
-  <img src="imagen-koala.png" alt="Koala decorativo" class="koala-inline">
-</h1>
+      <h1>
+        Hola, soy Sandra, tu psicóloga <em>koalificada</em>
+        <img src="imagen-koala.png" alt="Koala decorativo" class="koala-inline">
+      </h1>
+      
       <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
-      <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
-      <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-      <img src="imagen-koala.png" alt="Koala decorativo" class="koala-flotante">
-    </div> <!-- Cierre correcto del bloque de texto -->
+      
+      <!-- NUEVA TARJETA VERDE CON TU INFORMACIÓN -->
+      <div class="tarjeta-verde">
+        <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
+        <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+      </div>
+    </div>
+
+    <!-- Bloque de la foto de perfil -->
+    <div class="foto-perfil">
+      <img src="imagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
+    </div>
+
+  </div>
+</main>
 
     <!-- Bloque de la foto de perfil -->
     <div class="foto-perfil">
