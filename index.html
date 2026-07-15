@@ -81,20 +81,21 @@
 .wrapper-koalificada {
     position: relative;
     display: inline-block;
-    margin-top: 50px; /* Genera espacio vertical libre arriba para que quepa el koala grande */
+    margin-top: 110px; /* Aumentado drásticamente para dar espacio al koala el triple de grande */
 }
 
-/* 3. KOALA GRANDE (Posicionado encima de la palabra) */
+/* 3. KOALA EL TRIPLE DE GRANDE (Posicionado encima de la palabra) */
 .koala-inline {
     position: absolute;
-    bottom: 100%; /* Se coloca justo encima de la línea de texto */
+    bottom: 95%; /* Se mantiene justo por encima de la palabra koalificada */
     left: 50%;
-    transform: translateX(-50%); /* Lo centra perfectamente sobre la palabra */
-    height: 70px !important; /* Ajusta este valor si deseas cambiar el tamaño visual del koala */
+    transform: translateX(-50%); 
+    height: 210px !important; /* TRIPLE DE TAMAÑO: Subido de 70px a 210px */
     width: auto !important;
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
+    z-index: 10; /* Asegura que el koala se visualice por encima de cualquier otro elemento */
 }
 
 /* 4. CONFIGURACIÓN DE LA CITA INFERIOR */
