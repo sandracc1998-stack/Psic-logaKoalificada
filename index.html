@@ -36,7 +36,7 @@
     .nav-links a:hover { color: var(--rose); }
 
 /* ==========================================================================
-   ESTRUCTURA DE LA CABECERA (HERO) - 3 COLUMNAS LIMPIAS
+   ESTRUCTURA DE LA CABECERA (HERO) - RETORNO A 2 COLUMNAS CON KOALA AL LADO
    ========================================================================== */
 
 .hero-seccion {
@@ -47,15 +47,15 @@
     min-height: auto !important;
 }
 
-/* Rediseño del Grid a 3 columnas para que nada se solape */
+/* Regresamos a la distribución simétrica de 2 columnas principales */
 .hero-grid {
     display: grid;
-    grid-template-columns: 50% 20% 30%; /* Texto, Tarjeta Koala y Tu Foto */
-    gap: 2rem;
+    grid-template-columns: 63% 37%;
+    gap: 4rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center; /* Centra verticalmente los tres elementos */
+    align-items: stretch;
     padding: 0 20px;
 }
 
@@ -66,14 +66,45 @@
     justify-content: flex-start;
 }
 
+/* Contenedor Flex para alinear horizontalmente el título y la tarjeta */
+.cabecera-titulo {
+    display: flex;
+    align-items: center; /* Centra el koala verticalmente respecto a las dos líneas */
+    gap: 2.5rem;          /* Espacio de separación entre el texto y la tarjeta */
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
 .hero-grid h1 { 
     font-family: var(--ff-display); 
     font-size: clamp(2.4rem, 4vw, 3.2rem); 
     font-weight: 400; 
     line-height: 1.2;
     color: var(--bark); 
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin: 0;
+    flex-shrink: 0; /* Evita que el título se comprima */
+}
+
+/* Tarjeta del Koala optimizada para el lateral */
+.tarjeta-koala {
+    background: #fdfaf4; 
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Permite que la tarjeta aproveche el espacio restante a la derecha */
+    max-width: 240px; /* Controla el ancho máximo del recuadro */
+}
+
+/* KOALA GIGANTE: Ocupa de manera imponente la altura del bloque del título */
+.koala-tarjeta-img {
+    height: 220px !important; /* Altura generosa que abarca el tamaño de las dos líneas */
+    width: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
 .about-quote {
@@ -83,41 +114,11 @@
     margin-bottom: 2rem;
 }
 
-/* Contenedor de la columna central */
-.columna-koala {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Tarjeta contenedora blanca/crema */
-.tarjeta-koala {
-    background: #fdfaf4; 
-    padding: 25px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* EL TRIPLE DE GRANDE: Control del tamaño del koala */
-.koala-tarjeta-img {
-    height: 180px !important; /* Incrementado para que se vea imponente y grande */
-    width: auto !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-}
-
-/* Estilo para asegurar que tu foto ocupe bien su lugar asignado */
 .hero-imagen img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 20px; /* Por si quieres que tu foto también tenga bordes suaves */
 }
-
 
 /* 4. TARJETA VERDE MÁS OSCURA */
 .tarjeta-verde {
@@ -421,12 +422,20 @@
 <main class="hero-seccion" id="sobre-mi">
      <div class="hero-grid">
       
-      <!-- COLUMNA 1: Textos -->
+      <!-- COLUMNA IZQUIERDA: Contenido -->
       <div class="hero-contenido">
-        <h1>
-          Hola, soy Sandra,<br>
-          tu psicóloga <em>koalificada</em>
-        </h1>
+        
+        <!-- Bloque flexible que alinea el título y el koala de forma contigua -->
+        <div class="cabecera-titulo">
+          <h1>
+            Hola, soy Sandra,<br>
+            tu psicóloga <em>koalificada</em>
+          </h1>
+          
+          <div class="tarjeta-koala">
+            <img src="img-koala.png" alt="Koala decorativo" class="koala-tarjeta-img">
+          </div>
+        </div>
         
         <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
         
@@ -436,21 +445,13 @@
         </div>
       </div>
 
-      <!-- COLUMNA 2: Nueva Tarjeta del Koala Grande -->
-      <div class="columna-koala">
-        <div class="tarjeta-koala">
-          <img src="img-koala.png" alt="Koala decorativo" class="koala-tarjeta-img">
-        </div>
-      </div>
-
-      <!-- COLUMNA 3: Tu Fotografía (Asegúrate de mantener tu etiqueta <img> original aquí abajo) -->
+      <!-- COLUMNA DERECHA: Tu Fotografía original -->
       <div class="hero-imagen">
-        <img src="tu-foto.jpg" alt="Sandra Carrera">
+        <img src="imagen-sandra.jpg" alt="imagen-sandra">
       </div>
       
     </div>
 </main>
-
         <div class="tarjeta-verde">
           <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
           <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
