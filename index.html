@@ -71,24 +71,39 @@
     font-family: var(--ff-display); 
     font-size: clamp(2.4rem, 4vw, 3.2rem); 
     font-weight: 400; 
-    line-height: 1.2; 
+    line-height: 1.4; /* Aumentado ligeramente para dar espacio al koala superior */
     color: var(--bark); 
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
-/* 3. KOALA GRANDE (Ocupa el alto de las dos líneas) */
+/* Contenedor relativo para posicionar el koala justo encima */
+.wrapper-koalificada {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px; /* Genera espacio vertical libre arriba para que quepa el koala grande */
+}
+
+/* 3. KOALA GRANDE (Posicionado encima de la palabra) */
 .koala-inline {
-    display: inline-block !important;
-    vertical-align: middle;
-    height: 140px !important; /* Aumentado a 140px para que abarque la altura de las dos líneas de texto grande */
+    position: absolute;
+    bottom: 100%; /* Se coloca justo encima de la línea de texto */
+    left: 50%;
+    transform: translateX(-50%); /* Lo centra perfectamente sobre la palabra */
+    height: 70px !important; /* Ajusta este valor si deseas cambiar el tamaño visual del koala */
     width: auto !important;
-    margin-left: 25px; /* Más separación para que respire al lado del texto */
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
 }
 
+/* 4. CONFIGURACIÓN DE LA CITA INFERIOR */
+.about-quote {
+    font-size: 1.4rem; /* Ajusta este valor para hacer la letra más grande según tu diseño */
+    color: #1e4620; /* Tono verde oscuro (puedes sustituirlo por tu variable de CSS ej: var(--green-dark)) */
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
 /* 4. TARJETA VERDE MÁS OSCURA */
 .tarjeta-verde {
     background-color: rgba(46, 79, 58, 0.75) !important; /* Subido al 75% para un contraste excelente */
@@ -392,15 +407,19 @@
      <div class="hero-grid">
       
       <div class="hero-contenido">
-        <h1>Hola, soy Sandra, tu psicóloga <em>koalificada</em> <img src="img-koala.png" alt="Koala decorativo" class="koala-inline"></h1>
+        <h1>
+          Hola, soy Sandra,<br>
+          tu psicóloga <span class="wrapper-koalificada"><em>koalificada</em><img src="img-koala.png" alt="Koala decorativo" class="koala-inline"></span>
+        </h1>
         
-        <p class="about-quote">"Creo en un acompañamiento cercano, respetuoso y personalizado."</p>
+        <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
         
         <div class="tarjeta-verde">
           <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
           <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
         </div>
       </div> <!-- Cierre correcto de hero-contenido -->
+
 
       <div class="foto-perfil">
         <img src="imagen-sandra.jpg" alt="Sandra Carrera - Psicóloga">
