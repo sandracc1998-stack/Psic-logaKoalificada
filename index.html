@@ -211,6 +211,14 @@
     text-align: center;
     margin-bottom: 3rem;
 }
+    .como-trabajo-contenedor {
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza a las tarjetas a ponerse en fila horizontal */
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    flex-wrap: wrap; /* Si la pantalla es pequeña o móvil, bajará de línea de forma limpia */
+}
 
 /* Copia esto aquí dentro para pintar la línea y la tipografía */
 .como-trabajo-cabecera h2 {
@@ -527,15 +535,15 @@
 
 </section> <!-- Cierre de section inner de Mis Valores -->
 
-<div class="como-trabajo-cabecera">
-  <h2>Cómo trabajo</h2>
-</div>
-
+<!-- SECCIÓN CÓMO TRABAJO -->
 <section class="como-trabajo-contenedor" id="como-trabajo">
 
-    <!-- Aquí continúa el resto de tus tarjetas (Espacio eucalipto, El abrazo del koala, EduKoala) -->
+  <div class="como-trabajo-cabecera">
+    <h2>Cómo trabajo</h2>
+  </div>
 
-      
+    <!-- Aquí continúa el resto de tus tarjetas (Espacio eucalipto, El abrazo del koala, EduKoala) -->
+     
       <!-- TARJETA 1: ESPACIO EUCALIPTO -->
       <div class="tarjeta-giratoria">
         <div class="tarjeta-interno">
