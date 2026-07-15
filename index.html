@@ -233,14 +233,26 @@
 }
 
 .como-trabajo-cabecera h2 {
-    font-family: var(--ff-display);
-    font-size: clamp(2.4rem, 4vw, 3.2rem);
-    font-weight: 400;
+    font-family: 'Playfair Display', serif, var(--ff-display) !important;
+    font-size: clamp(2.4rem, 4vw, 3.2rem) !important;
+    font-weight: 400 !important;
     color: var(--bark);
     margin: 0;
     padding-bottom: 15px;
     position: relative;
     display: inline-block;
+}
+
+.como-trabajo-cabecera h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #d97d64;
+    border-radius: 2px;
 }
 
 .como-trabajo-cabecera h2::after {
