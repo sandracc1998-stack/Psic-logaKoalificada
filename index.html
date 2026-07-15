@@ -205,21 +205,60 @@
     .value-name { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--bark); margin-bottom: .5rem; }
     .value-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; }
 
-/* SECCIÓN CÓMO TRABAJO */
-#como-trabajo { background: var(--cream); }
-.como-trabajo-cabecera {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-    .como-trabajo-contenedor {
-    display: flex !important;
-    flex-direction: row !important; /* Fuerza a las tarjetas a ponerse en fila horizontal */
-    justify-content: center;
-    gap: 24px;
+/* ==========================================================================
+   SECCIÓN CÓMO TRABAJO - CORRECCIÓN DE ALTURA Y ALINEACIÓN HORIZONTAL
+   ========================================================================== */
+
+/* 1. SECCIÓN PRINCIPAL: Fondo crema y espacio arriba para que el menú no tape el título */
+#como-trabajo { 
+    background: var(--cream);
+    padding: 100px 0 60px 0 !important; /* Añade 100px arriba para empujar el título hacia abajo */
     width: 100%;
-    flex-wrap: wrap; /* Si la pantalla es pequeña o móvil, bajará de línea de forma limpia */
 }
 
+/* 2. CABECERA DEL TÍTULO (Centrado y con espacio hacia abajo) */
+.como-trabajo-cabecera {
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.como-trabajo-cabecera h2 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    font-weight: 400;
+    color: var(--bark);
+    margin: 0;
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.como-trabajo-cabecera h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #d97d64;
+    border-radius: 2px;
+}
+
+/* 3. CONTENEDOR DE TARJETAS: Distribución horizontal limpia */
+.como-trabajo-contenedor {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Reducido ligeramente a 20px para que las 3 tarjetas quepan juntas sin bajarse */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
 /* Copia esto aquí dentro para pintar la línea y la tipografía */
 .como-trabajo-cabecera h2 {
     font-family: var(--ff-display);
