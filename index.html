@@ -123,59 +123,7 @@
     object-fit: cover; /* Evita deformaciones */
     border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
 }
-    
-/* --- CAMBIOS PARA PANTALLAS MÓVILES --- */
-@media (max-width: 768px) {
-    
-    /* El menú se adapta en vertical o puedes ocultarlo en un botón */
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin: 0;
-    }
 
-    .nav-menu a {
-        margin: 0;
-    }
-
-    /* El diseño de 2 columnas pasa a ser de 1 sola columna vertical */
-    .hero-container {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-        padding: 20px;
-    }
-
-    /* En móvil, el koala pasa abajo del título para que no se aplasten */
-    .title-koala-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .title-koala-row h1 {
-        font-size: 2rem;
-    }
-
-    .koala-img {
-        width: 100px;
-    }
-
-    .slogan {
-        text-align: center;
-        font-size: 1.1rem;
-    }
-
-    /* Colocamos la foto de perfil en una posición óptima (por ejemplo, arriba del todo o abajo) */
-    .col-right {
-        order: -1; /* Esto sube la foto de perfil al principio en el móvil si lo deseas */
-    }
-  
 /* ==========================================================
    TEXTOS Y TARJETA VERDE
    ========================================================== */
@@ -616,7 +564,7 @@
       
     </div>
 </main>
-  
+
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
     <div class="section-inner">
@@ -947,3 +895,4 @@
     </div>
 
 </div>
+
