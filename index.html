@@ -123,87 +123,7 @@
     object-fit: cover; /* Evita deformaciones */
     border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
 }
-/* --- ESTILOS GENERALES Y ORDENADOR --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fcf9f5; /* Fondo beige claro aproximado */
-    color: #4a3b32; /* Color de texto oscuro suave */
-}
-
-/* Navegación */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 4%;
-    background-color: #fcf9f5;
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #4a3b32;
-    margin-left: 20px;
-}
-
-/* Contenedor Principal (Grid de 2 columnas) */
-.hero-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* La columna del texto es más ancha */
-    gap: 40px;
-    padding: 40px 4%;
-    align-items: start;
-}
-
-/* Fila del título junto al koala */
-.title-koala-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.title-koala-row h1 {
-    font-size: 2.8rem;
-    color: #6b4f3a;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.koala-img {
-    width: 120px;
-    height: auto;
-}
-
-.slogan {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #2e5a44; /* Verde oscuro del eslogan */
-    margin: 30px 0;
-}
-
-/* Bloque verde inferior */
-.info-card {
-    background-color: #557a65; /* Verde del recuadro */
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 20px;
-    line-height: 1.6;
-}
-
-/* Imagen de perfil derecha */
-.profile-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-
+    
 /* --- CAMBIOS PARA PANTALLAS MÓVILES --- */
 @media (max-width: 768px) {
     
@@ -255,6 +175,7 @@ body {
     .col-right {
         order: -1; /* Esto sube la foto de perfil al principio en el móvil si lo deseas */
     }
+  
 /* ==========================================================
    TEXTOS Y TARJETA VERDE
    ========================================================== */
