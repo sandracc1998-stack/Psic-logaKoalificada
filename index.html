@@ -536,6 +536,37 @@
       .values-list { flex-direction: column; gap: 1.5rem; }
       .como-trabajo-contenedor { flex-direction: column; align-items: center; }
       .tarjeta-giratoria { width: 100%; max-width: 400px; }
+      /* --- ARREGLO EXCLUSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+    header, .header, .nav-container {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 15px !important;
+    }
+    nav, .nav-menu, .links {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin: 15px 0 0 0 !important;
+    }
+    nav a, .nav-menu a {
+        margin: 5px 0 !important;
+    }
+    .hero-container, [class*="hero"], [class*="presentacion"] {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 20px !important;
+        gap: 20px !important;
+    }
+    .col-right {
+        order: -1 !important; /* Sube tu foto arriba del texto en el móvil */
+    }
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
   </style>
 </head>
 <body>
