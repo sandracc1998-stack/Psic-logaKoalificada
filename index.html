@@ -85,52 +85,29 @@
     flex-shrink: 0; /* Evita que el título se comprima */
 }
 
-/* Tarjeta del Koala optimizada para el lateral */
-.tarjeta-koala {
-    background: #fdfaf4; 
+/* ==========================================
+   CÓDIGO DEL KOALA (SIN TARJETAS DE FONDO)
+   ========================================== */
+
+/* 1. Este contenedor centra al koala sin alterar el resto de tu página */
+.seccion-koala-unica {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     padding: 20px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1; /* Permite que la tarjeta aproveche el espacio restante a la derecha */
-    max-width: 240px; /* Controla el ancho máximo del recuadro */
-}
-    /* Configuración del fondo general */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5; /* Un fondo gris claro para notar la transparencia */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: transparent !important; /* Elimina la tarjeta blanca o cualquier fondo */
+    flex-grow: 1; /* Mantiene la flexibilidad en el lateral si lo necesitas */
+    max-width: 240px; /* Controla que no se haga gigante en el lateral */
 }
 
-/* Contenedor del koala sin tarjetas blancas */
-.contenedor-koala {
-    background: transparent; /* Elimina cualquier tarjeta o fondo blanco */
-    padding: 0;
-    border: none;
-}
-
-/* Estilos para suavizar y redondear el Koala */
-.imagen-koala {
+/* 2. Estilos que redondean y suavizan los bordes del koala */
+.imagen-koala-nueva {
+    display: block;
     max-width: 100%;
     height: auto;
-    
-    /* 1. Redondear los bordes (Ajusta el número a tu gusto) */
-    border-radius: 24px; 
-    
-    /* 2. Suavizar los bordes con un difuminado sutil */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08); 
-    
-    /* Evita que los bordes de la imagen se pixelen al redondear */
-    overflow: hidden;
-    object-fit: cover;
+    border-radius: 24px; /* Hace los bordes redondos */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Suaviza el contorno */
 }
-
     /* Redondeado armónico para la fotografía principal */
 .hero-imagen img {
     width: 100%;
@@ -559,25 +536,19 @@ body {
             tu psicóloga <em>koalificada</em>
           </h1>
         </div>
-        <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagen del Koala</title>
+<div class="seccion-koala-unica">
+<!DOCTYPE html>
+    <!-- Esta línea es obligatoria para que el HTML lea tu archivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Contenedor principal sin fondos rígidos -->
-    <div class="contenedor-koala">
-        <!-- Reemplaza "tu-imagen-koala.png" por la ruta o enlace de tu imagen -->
-        <img src="imagen-koala.png" alt="Koala" class="imagen-koala">
+    <!-- AQUÍ SE SUTITUYE EL KOALA -->
+    <div class="seccion-koala-unica">
+        <!-- Cambia 'koala.png' por el nombre exacto de tu imagen -->
+        <img src="imagen-koala.png" alt="Koala" class="imagen-koala.png">
     </div>
-
 </body>
 </html>
-
         <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
         
         <div class="tarjeta-verde">
