@@ -47,7 +47,7 @@
     min-height: auto !important;
 }
 
-/* Regresamos a la distribución simétrica de 2 columnas principales */
+/* Distribución simétrica de 2 columnas principales */
 .hero-grid {
     display: grid;
     grid-template-columns: 63% 37%;
@@ -66,11 +66,11 @@
     justify-content: flex-start;
 }
 
-/* Contenedor Flex para alinear horizontalmente el título y la tarjeta */
+/* Contenedor Flex para alinear horizontalmente el título y el koala */
 .cabecera-titulo {
     display: flex;
-    align-items: center; /* Centra el koala verticalmente respecto a las dos líneas */
-    gap: 2.5rem;          /* Espacio de separación entre el texto y la tarjeta */
+    align-items: center; /* Centra el koala verticalmente respecto al título */
+    gap: 2.5rem;          /* Espacio de separación entre el texto y el koala */
     margin-bottom: 1.5rem;
     width: 100%;
 }
@@ -85,47 +85,48 @@
     flex-shrink: 0; /* Evita que el título se comprima */
 }
 
-/* ==========================================
-   CÓDIGO DEL KOALA (SIN TARJETAS DE FONDO)
-   ========================================== */
+/* ==========================================================
+   CÓDIGO DEL KOALA OPTIMIZADO (SIN BORDES NI FONDOS RÍGIDOS)
+   ========================================================== */
 
-/* 1. Este contenedor centra al koala sin alterar el resto de tu página */
+/* Contenedor flexible del koala al lado del título */
 .seccion-koala-unica {
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding: 20px;
-    background: transparent !important; /* Elimina la tarjeta blanca o cualquier fondo */
-    flex-grow: 1; /* Mantiene la flexibilidad en el lateral si lo necesitas */
-    max-width: 240px; /* Controla que no se haga gigante en el lateral */
+    background: transparent !important; /* Elimina cualquier tarjeta o fondo */
+    max-width: 140px; /* Tamaño controlado para que no se coma el espacio del título */
+    width: 100%;
 }
 
-/* 2. Estilos que redondean y suavizan los bordes del koala */
+/* Estilos de redondeado y suavizado para el koala */
 .imagen-koala-nueva {
     display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 24px; /* Hace los bordes redondos */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Suaviza el contorno */
-}
-    /* Redondeado armónico para la fotografía principal */
-.hero-imagen img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    border-radius: 24px; /* Redondea los bordes del koala */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy sutil para suavizar el contorno */
+}
+
+/* ==========================================================
+   FOTOGRAFÍA PRINCIPAL (FOTO DE SANDRA)
+   ========================================================== */
+
+.hero-imagen {
+    width: 100%;
+    display: flex;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita deformaciones */
     border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
 }
 
-
-
-/* KOALA GIGANTE: Ocupa de manera imponente la altura del bloque del título */
-.koala-tarjeta-img {
-    height: 220px !important; /* Altura generosa que abarca el tamaño de las dos líneas */
-    width: auto !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-}
+/* ==========================================================
+   TEXTOS Y TARJETA VERDE
+   ========================================================== */
 
 .about-quote {
     font-size: 1.4rem;
@@ -134,15 +135,9 @@
     margin-bottom: 2rem;
 }
 
-.hero-imagen img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* 4. TARJETA VERDE MÁS OSCURA */
+/* Tarjeta verde con contraste excelente */
 .tarjeta-verde {
-    background-color: rgba(46, 79, 58, 0.75) !important; /* Subido al 75% para un contraste excelente */
+    background-color: rgba(46, 79, 58, 0.75) !important; 
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     padding: 35px;
@@ -153,9 +148,9 @@
     box-sizing: border-box;
 }
 
-/* TEXTO BLANCO DENTRO DE LA TARJETA VERDE */
+/* Texto blanco dentro de la tarjeta verde */
 .tarjeta-verde .about-body {
-    color: #ffffff !important; /* Blanco puro para una lectura perfecta */
+    color: #ffffff !important; 
     font-size: 1.15rem; 
     line-height: 1.7; 
     margin-bottom: 1.2rem;
@@ -163,24 +158,6 @@
 
 .tarjeta-verde .about-body:last-child {
     margin-bottom: 0;
-}
-
-/* 5. FOTO QUE LLEGA HASTA EL FINAL DE LA TARJETA */
-.foto-perfil { 
-    position: relative; 
-    border-radius: var(--radius-lg); 
-    overflow: hidden; 
-    width: 100%; 
-    max-width: 400px;
-    height: 100%; /* Sigue fielmente la altura de la tarjeta verde */
-    justify-self: center;
-}
-
-.foto-perfil img { 
-    width: 100% !important; 
-    height: 100% !important; /* Obliga a la imagen a estirarse verticalmente */
-    object-fit: cover; /* Recorta los bordes de la imagen para que no se deforme al estirarse */
-    display: block; 
 }
 
 
@@ -524,47 +501,37 @@
 
 <!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
 <main class="hero-seccion" id="sobre-mi">
-     <div class="hero-grid">
+    <div class="hero-grid">
       
-      <!-- COLUMNA IZQUIERDA: Contenido -->
-      <div class="hero-contenido">
+        <!-- COLUMNA IZQUIERDA: Contenido -->
+        <div class="hero-contenido">
         
-        <!-- Bloque flexible que alinea el título y el koala de forma contigua -->
-        <div class="cabecera-titulo">
-          <h1>
-            Hola, soy Sandra,<br>
-            tu psicóloga <em>koalificada</em>
-          </h1>
-        </div>
-<div class="seccion-koala-unica">
-<!DOCTYPE html>
-    <!-- Esta línea es obligatoria para que el HTML lea tu archivo CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- AQUÍ SE SUTITUYE EL KOALA -->
-    <div class="seccion-koala-unica">
-        <!-- Cambia 'koala.png' por el nombre exacto de tu imagen -->
-        <img src="imagen-koala.png" alt="Koala" class="imagen-koala.png">
-    </div>
-</body>
-</html>
-        <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
-        
-        <div class="tarjeta-verde">
-          <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
-          <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-        </div>
-      </div>
+            <!-- Bloque flexible que alinea el título y el koala de forma contigua -->
+            <div class="cabecera-titulo">
+                <h1>
+                    Hola, soy Sandra,<br>
+                    tu psicóloga <em>koalificada</em>
+                </h1>
+                <!-- El Koala ahora vive aquí dentro, al lado del texto -->
+                <div class="seccion-koala-unica">
+                    <img src="imagen-koala.png" alt="Koala" class="imagen-koala-nueva">
+                </div>
+            </div>
 
-      <!-- COLUMNA DERECHA: Tu Fotografía original -->
-      <div class="hero-imagen">
-        <img src="imagen-sandra.jpg" alt="imagen-sandra">
-      </div>
+            <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+        
+            <div class="tarjeta-verde">
+                <p class="about-body">Soy psicóloga con formación en trastorno del espectro autista (TEA), dificultades de desarrollo y necesidades educativas especiales (NEE). Cuento con experiencia en intervención educativa y apoyo a niñ@s y sus familias.</p>
+                <p class="about-body">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: Tu Fotografía original -->
+        <div class="hero-imagen">
+            <img src="imagen-sandra.jpg" alt="Sandra">
+        </div>
       
     </div>
-</main>
-  </div> <!-- Cierre de hero-grid -->
 </main>
 
   <!-- SECCIÓN MIS VALORES -->
