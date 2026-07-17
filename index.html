@@ -123,114 +123,126 @@
     border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
 }
 /* ==========================================================================
-   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
+   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES (CORREGIDA)
    ========================================================================== */
 @media (max-width: 768px) {
   
-  /* 1. FRASE INICIAL Y KOALA */
-  /* Ajusta el contenedor para que la frase y el koala se alineen juntos sin estirarse */
-  .contenedor-frase-inicial {
-    display: flex !important;
-    flex-direction: row !important; /* Mantiene al koala al lado */
-    align-items: center !important;  /* Centra verticalmente el texto y el koala */
-    justify-content: center !important; /* Centra el bloque en la pantalla */
-    white-space: normal !important;  /* Evita que la frase se estire horizontalmente */
-  }
-
-  /* Asegura que el koala sea visible en móviles */
-  .imagen-koala {
-    display: block !important;
-    visibility: visible !important;
-    width: auto !important;          /* Evita que se deforme */
-    max-width: 50px !important;      /* Ajusta este tamaño según tu koala */
-    height: auto !important;
-  }
-
-  /* 2. MENÚ DE NAVEGACIÓN EN DOS LÍNEAS */
-  /* Fuerza al contenedor principal del menú a apilar los elementos en vertical */
-  .contenedor-header-principal {
-    display: flex !important;
-    flex-direction: column !important; 
+  /* 1. MENÚ DE NAVEGACIÓN EN DOS LÍNEAS PERFECTAS */
+  nav {
+    flex-direction: column !important; /* Apila título arriba y botones abajo */
     align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important; /* Reduce padding para ganar espacio */
+    gap: 0.5rem !important;
+  }
+
+  /* Tu título en una sola línea y más pequeño */
+  .nav-logo {
+    font-size: 1rem !important; /* Reduce el tamaño para que quepa en una línea */
+    white-space: nowrap !important; /* Evita que el nombre se rompa en dos líneas */
+    width: auto !important;
     text-align: center !important;
   }
 
-  /* Línea 1: El título ocupa todo el ancho superior */
-  .clase-titulo-sandra {
+  /* Botones del menú debajo en una sola fila (flexibles) */
+  .nav-links {
     width: 100% !important;
-    margin-bottom: 10px !important;  /* Separa el título de los botones */
+    justify-content: center !important;
+    gap: 0.8rem !important; /* Reduce espacio entre botones para que quepan */
+    padding: 0 !important;
+    flex-wrap: nowrap !important; /* Fuerza una sola línea si es posible */
   }
 
-  /* Línea 2: Los comandos/botones se colocan debajo en fila */
-  .contenedor-botones-menu {
-    width: 100% !important;
+  .nav-links a {
+    font-size: 0.75rem !important; /* Letra ligeramente más pequeña para móvil */
+  }
+
+
+  /* 2. REESTRUCTURACIÓN DEL HERO (TODO AL MISMO ANCHO) */
+  /* Cambia el grid de 2 columnas a 1 sola columna vertical */
+  .hero-grid {
     display: flex !important;
-    flex-direction: row !important;   /* Mantiene los botones en una línea */
-    justify-content: center !important; /* Centra los botones horizontalmente */
-    flex-wrap: wrap !important;       /* Si no caben, bajan de forma ordenada */
-    gap: 10px !important;             /* Espacio de separación entre los botones */
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 15px !important; /* Margen lateral estándar de móvil */
+    gap: 2rem !important;
   }
-}
-    
-/* ==========================================================
-   TEXTOS Y TARJETA VERDE
-   ========================================================== */
 
-.about-quote {
-    font-size: 1.4rem;
-    color: #1e4620;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
+  .hero-seccion {
+    padding: 80px 0 20px 0 !important; /* Reduce el espacio superior en móvil */
+  }
 
-/* Tarjeta verde con contraste excelente */
-.tarjeta-verde {
-    background-color: rgba(46, 79, 58, 0.75) !important; 
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    padding: 35px;
-    border-radius: var(--radius-lg);
-    margin-top: 2rem;
-    width: 100%;
-    border: 1px solid rgba(46, 79, 58, 0.5); 
-    box-sizing: border-box;
-}
+  .hero-contenido {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 
-/* Texto blanco dentro de la tarjeta verde */
-.tarjeta-verde .about-body {
-    color: #ffffff !important; 
-    font-size: 1.15rem; 
-    line-height: 1.7; 
-    margin-bottom: 1.2rem;
-}
+  /* 3. FRASE INICIAL Y KOALA AL LADO */
+  /* Tu contenedor original (.cabecera-titulo) ahora alinea el H1 y el Koala */
+  .cabecera-titulo {
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza al koala a estar al lado */
+    align-items: center !important;
+    justify-content: space-between !important; /* Separa el texto del koala uniformemente */
+    gap: 1rem !important; /* Espacio prudencial para que no choquen */
+    width: 100% !important;
+  }
 
-.tarjeta-verde .about-body:last-child {
-    margin-bottom: 0;
-}
+  /* Evita que el título se estire o empuje al koala fuera de la pantalla */
+  .hero-grid h1 {
+    font-size: 1.5rem !important; /* Ajusta el tamaño de "Hola soy Sandra..." */
+    line-height: 1.3 !important;
+    flex: 1 !important; /* Ocupa el espacio disponible de forma fluida */
+    white-space: normal !important;
+  }
 
+  /* Tu contenedor del koala adaptado a la fila móvil */
+  .seccion-koala-unica {
+    display: block !important;
+    visibility: visible !important;
+    flex-shrink: 0 !important; /* Evita que el koala se comprima */
+    max-width: 65px !important; /* Tamaño ideal del koala al lado del texto en móvil */
+    width: 65px !important;
+  }
 
-/* BOTÓN DE CONTACTO (Mantiene tus estilos originales del botón) */
-.btn-primary { 
-    display: inline-block; 
-    background: var(--mauve); 
-    color: var(--white); 
-    text-decoration: none; 
-    padding: .85rem 2rem; 
-    border-radius: 999px; 
-    font-weight: 500; 
-    font-size: .95rem; 
-    letter-spacing: .02em; 
-    transition: background .2s, transform .15s; 
-    border: none; 
-    cursor: pointer; 
-    margin-top: 1.5rem; 
-    align-self: flex-start; /* Alinea el botón al inicio del texto */
-}
+  .imagen-koala-nueva {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* 4. UNIFICACIÓN DE ANCHOS (FRASES, TARJETA Y FOTO) */
+  /* Fuerza a la frase secundaria a medir el 100% del contenedor */
+  .about-quote {
+    font-size: 1.15rem !important; /* Ajusta el tamaño del texto */
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
+  }
 
-.btn-primary:hover { 
-    background: var(--bark); 
-    transform: translateY(-1px); 
-}
+  /* Forzar la tarjeta verde al ancho exacto del contenedor */
+  .tarjeta-verde {
+    width: 100% !important;
+    padding: 20px !important; /* Reduce el padding interno para pantallas estrechas */
+    margin-top: 1.5rem !important;
+  }
+
+  /* Forzar la foto de perfil al mismo ancho estándar */
+  .hero-imagen {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .hero-imagen img {
+    width: 100% !important;
+    height: auto !important; /* Cambia a auto para que no se deforme al achicar el ancho */
+  }
+
+  .btn-primary {
+    align-self: center !important; /* Centra el botón en móviles para mejorar el diseño */
+    width: 100% !important; /* Opcional: hace el botón ancho completo si lo deseas */
+    text-align: center !important;
+  }
     /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
