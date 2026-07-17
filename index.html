@@ -98,11 +98,6 @@
     max-width: 140px; /* Tamaño controlado para que no se coma el espacio del título */
     width: 100%;
 }
-/* Cambia ".clase-del-koala" por la clase real de tu imagen o contenedor */
-.clase-del-koala {
-    display: inline-block !important; 
-    visibility: visible !important;
-}
 /* Estilos de redondeado y suavizado para el koala */
 .imagen-koala-nueva {
     display: block;
@@ -127,7 +122,56 @@
     object-fit: cover; /* Evita deformaciones */
     border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
 }
+/* ==========================================================================
+   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. FRASE INICIAL Y KOALA */
+  /* Ajusta el contenedor para que la frase y el koala se alineen juntos sin estirarse */
+  .contenedor-frase-inicial {
+    display: flex !important;
+    flex-direction: row !important; /* Mantiene al koala al lado */
+    align-items: center !important;  /* Centra verticalmente el texto y el koala */
+    justify-content: center !important; /* Centra el bloque en la pantalla */
+    white-space: normal !important;  /* Evita que la frase se estire horizontalmente */
+  }
 
+  /* Asegura que el koala sea visible en móviles */
+  .imagen-koala {
+    display: block !important;
+    visibility: visible !important;
+    width: auto !important;          /* Evita que se deforme */
+    max-width: 50px !important;      /* Ajusta este tamaño según tu koala */
+    height: auto !important;
+  }
+
+  /* 2. MENÚ DE NAVEGACIÓN EN DOS LÍNEAS */
+  /* Fuerza al contenedor principal del menú a apilar los elementos en vertical */
+  .contenedor-header-principal {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Línea 1: El título ocupa todo el ancho superior */
+  .clase-titulo-sandra {
+    width: 100% !important;
+    margin-bottom: 10px !important;  /* Separa el título de los botones */
+  }
+
+  /* Línea 2: Los comandos/botones se colocan debajo en fila */
+  .contenedor-botones-menu {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;   /* Mantiene los botones en una línea */
+    justify-content: center !important; /* Centra los botones horizontalmente */
+    flex-wrap: wrap !important;       /* Si no caben, bajan de forma ordenada */
+    gap: 10px !important;             /* Espacio de separación entre los botones */
+  }
+}
+    
 /* ==========================================================
    TEXTOS Y TARJETA VERDE
    ========================================================== */
