@@ -36,9 +36,70 @@
     .nav-links a:hover { color: var(--rose); }
 
 /* ==========================================================================
-   ESTRUCTURA DE LA CABECERA (HERO) - RETORNO A 2 COLUMNAS CON KOALA AL LADO
+   ESTRUCTURA GENERAL Y MENÚ (ORDENADOR)
    ========================================================================== */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    background: var(--cream); 
+    color: var(--text); 
+    font-family: var(--ff-body); 
+    font-size: 1rem; 
+    line-height: 1.65; 
+}
+
+/* MENÚ DE NAVEGACIÓN (Escritorio) */
+nav { 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    background: rgba(250,246,240,.92); 
+    backdrop-filter: blur(8px); 
+    border-bottom: 1px solid var(--blush); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: .75rem 2rem; 
+}
+
+.nav-logo { 
+    font-family: var(--ff-display); 
+    font-size: 1.25rem; 
+    color: var(--mauve); 
+    text-decoration: none; 
+    font-style: italic; 
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 1.75rem; 
+    list-style: none; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--bark); 
+    font-size: .875rem; 
+    font-weight: 500; 
+    letter-spacing: .02em; 
+    transition: color .2s; 
+}
+
+.nav-links a:hover { 
+    color: var(--rose); 
+}
+
+/* ==========================================================================
+   ESTRUCTURA DE LA CABECERA (HERO) - 2 COLUMNAS (ORDENADOR)
+   ========================================================================== */
 .hero-seccion {
     width: 100%;
     padding: 120px 0 40px 0 !important;
@@ -47,7 +108,6 @@
     min-height: auto !important;
 }
 
-/* Distribución simétrica de 2 columnas principales */
 .hero-grid {
     display: grid;
     grid-template-columns: 63% 37%;
@@ -66,11 +126,10 @@
     justify-content: flex-start;
 }
 
-/* Contenedor Flex para alinear horizontalmente el título y el koala */
 .cabecera-titulo {
     display: flex;
-    align-items: center; /* Centra el koala verticalmente respecto al título */
-    gap: 2.5rem;          /* Espacio de separación entre el texto y el koala */
+    align-items: center; 
+    gap: 2.5rem;          
     margin-bottom: 1.5rem;
     width: 100%;
 }
@@ -82,35 +141,28 @@
     line-height: 1.2;
     color: var(--bark); 
     margin: 0;
-    flex-shrink: 0; /* Evita que el título se comprima */
+    flex-shrink: 0; 
 }
 
-/* ==========================================================
-   CÓDIGO DEL KOALA OPTIMIZADO (SIN BORDES NI FONDOS RÍGIDOS)
-   ========================================================== */
-
-/* Contenedor flexible del koala al lado del título */
+/* KOALA (ORDENADOR) */
 .seccion-koala-unica {
     display: flex;
     justify-content: center; 
     align-items: center;
-    background: transparent !important; /* Elimina cualquier tarjeta o fondo */
-    max-width: 140px; /* Tamaño controlado para que no se coma el espacio del título */
+    background: transparent !important; 
+    max-width: 140px; 
     width: 100%;
 }
-/* Estilos de redondeado y suavizado para el koala */
+
 .imagen-koala-nueva {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 24px; /* Redondea los bordes del koala */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy sutil para suavizar el contorno */
+    border-radius: 24px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
 }
 
-/* ==========================================================
-   FOTOGRAFÍA PRINCIPAL (FOTO DE SANDRA)
-   ========================================================== */
-
+/* FOTOGRAFÍA PRINCIPAL (ORDENADOR) */
 .hero-imagen {
     width: 100%;
     display: flex;
@@ -119,57 +171,109 @@
 .hero-imagen img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita deformaciones */
-    border-radius: 24px !important; /* Curvatura idéntica a tus tarjetas y botones */
+    object-fit: cover; 
+    border-radius: 24px !important; 
 }
+
+/* ==========================================================
+   TEXTOS Y TARJETA VERDE ORIGINALES (RECUPERADOS PARA ORDENADOR)
+   ========================================================== */
+.about-quote {
+    font-size: 1.4rem;
+    color: #1e4620;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.tarjeta-verde {
+    background-color: rgba(46, 79, 58, 0.75) !important; 
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    margin-top: 2rem;
+    width: 100%;
+    border: 1px solid rgba(46, 79, 58, 0.5); 
+    box-sizing: border-box;
+}
+
+.tarjeta-verde .about-body {
+    color: #ffffff !important; 
+    font-size: 1.15rem; 
+    line-height: 1.7; 
+    margin-bottom: 1.2rem;
+}
+
+.tarjeta-verde .about-body:last-child {
+    margin-bottom: 0;
+}
+
+.btn-primary { 
+    display: inline-block; 
+    background: var(--mauve); 
+    color: var(--white); 
+    text-decoration: none; 
+    padding: .85rem 2rem; 
+    border-radius: 999px; 
+    font-weight: 500; 
+    font-size: .95rem; 
+    letter-spacing: .02em; 
+    transition: background .2s, transform .15s; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 1.5rem; 
+    align-self: flex-start;
+}
+
+.btn-primary:hover { 
+    background: var(--bark); 
+    transform: translateY(-1px); 
+}
+
 /* ==========================================================================
-   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES (CORREGIDA)
+   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
    ========================================================================== */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   
   /* 1. MENÚ DE NAVEGACIÓN EN DOS LÍNEAS PERFECTAS */
   nav {
-    flex-direction: column !important; /* Apila título arriba y botones abajo */
+    flex-direction: column !important; 
     align-items: center !important;
     justify-content: center !important;
-    padding: 0.75rem 1rem !important; /* Reduce padding para ganar espacio */
+    padding: 0.75rem 1rem !important; 
     gap: 0.5rem !important;
   }
 
-  /* Tu título en una sola línea y más pequeño */
   .nav-logo {
-    font-size: 1rem !important; /* Reduce el tamaño para que quepa en una línea */
-    white-space: nowrap !important; /* Evita que el nombre se rompa en dos líneas */
+    font-size: 1rem !important; 
+    white-space: nowrap !important; 
     width: auto !important;
     text-align: center !important;
   }
 
-  /* Botones del menú debajo en una sola fila (flexibles) */
   .nav-links {
     width: 100% !important;
     justify-content: center !important;
-    gap: 0.8rem !important; /* Reduce espacio entre botones para que quepan */
+    gap: 0.8rem !important; 
     padding: 0 !important;
-    flex-wrap: nowrap !important; /* Fuerza una sola línea si es posible */
+    flex-wrap: nowrap !important; 
   }
 
   .nav-links a {
-    font-size: 0.75rem !important; /* Letra ligeramente más pequeña para móvil */
+    font-size: 0.75rem !important; 
   }
 
-
   /* 2. REESTRUCTURACIÓN DEL HERO (TODO AL MISMO ANCHO) */
-  /* Cambia el grid de 2 columnas a 1 sola columna vertical */
   .hero-grid {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 0 15px !important; /* Margen lateral estándar de móvil */
+    padding: 0 15px !important; 
     gap: 2rem !important;
   }
 
   .hero-seccion {
-    padding: 80px 0 20px 0 !important; /* Reduce el espacio superior en móvil */
+    padding: 80px 0 20px 0 !important; 
   }
 
   .hero-contenido {
@@ -178,30 +282,27 @@
   }
 
   /* 3. FRASE INICIAL Y KOALA AL LADO */
-  /* Tu contenedor original (.cabecera-titulo) ahora alinea el H1 y el Koala */
   .cabecera-titulo {
     display: flex !important;
-    flex-direction: row !important; /* Fuerza al koala a estar al lado */
+    flex-direction: row !important; 
     align-items: center !important;
-    justify-content: space-between !important; /* Separa el texto del koala uniformemente */
-    gap: 1rem !important; /* Espacio prudencial para que no choquen */
+    justify-content: space-between !important; 
+    gap: 1rem !important; 
     width: 100% !important;
   }
 
-  /* Evita que el título se estire o empuje al koala fuera de la pantalla */
   .hero-grid h1 {
-    font-size: 1.5rem !important; /* Ajusta el tamaño de "Hola soy Sandra..." */
+    font-size: 1.5rem !important; 
     line-height: 1.3 !important;
-    flex: 1 !important; /* Ocupa el espacio disponible de forma fluida */
+    flex: 1 !important; 
     white-space: normal !important;
   }
 
-  /* Tu contenedor del koala adaptado a la fila móvil */
   .seccion-koala-unica {
     display: block !important;
     visibility: visible !important;
-    flex-shrink: 0 !important; /* Evita que el koala se comprima */
-    max-width: 65px !important; /* Tamaño ideal del koala al lado del texto en móvil */
+    flex-shrink: 0 !important; 
+    max-width: 65px !important; 
     width: 65px !important;
   }
 
@@ -210,23 +311,21 @@
     width: 100% !important;
     height: auto !important;
   }
+
   /* 4. UNIFICACIÓN DE ANCHOS (FRASES, TARJETA Y FOTO) */
-  /* Fuerza a la frase secundaria a medir el 100% del contenedor */
   .about-quote {
-    font-size: 1.15rem !important; /* Ajusta el tamaño del texto */
+    font-size: 1.15rem !important; 
     width: 100% !important;
     margin-bottom: 1.5rem !important;
     text-align: left !important;
   }
 
-  /* Forzar la tarjeta verde al ancho exacto del contenedor */
   .tarjeta-verde {
     width: 100% !important;
-    padding: 20px !important; /* Reduce el padding interno para pantallas estrechas */
+    padding: 20px !important; 
     margin-top: 1.5rem !important;
-  }
+}
 
-  /* Forzar la foto de perfil al mismo ancho estándar */
   .hero-imagen {
     width: 100% !important;
     max-width: 100% !important;
@@ -235,15 +334,16 @@
 
   .hero-imagen img {
     width: 100% !important;
-    height: auto !important; /* Cambia a auto para que no se deforme al achicar el ancho */
+    height: auto !important; 
   }
 
   .btn-primary {
-    align-self: center !important; /* Centra el botón en móviles para mejorar el diseño */
-    width: 100% !important; /* Opcional: hace el botón ancho completo si lo deseas */
+    align-self: center !important; 
+    width: 100% !important; 
     text-align: center !important;
   }
-  }
+}
+
     /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
