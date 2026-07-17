@@ -176,7 +176,7 @@ nav {
 }
 
 /* ==========================================================
-   TEXTOS Y TARJETA VERDE ORIGINALES (RECUPERADOS PARA ORDENADOR)
+   TEXTOS Y TARJETA VERDE ORIGINALES (ORDENADOR)
    ========================================================== */
 .about-quote {
     font-size: 1.4rem;
@@ -263,25 +263,28 @@ nav {
     font-size: 0.75rem !important; 
   }
 
-  /* 2. REESTRUCTURACIÓN DEL HERO (TODO AL MISMO ANCHO) */
+  /* 2. REESTRUCTURACIÓN DEL HERO A UNA COLUMNA VERTICAL */
   .hero-grid {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     padding: 0 15px !important; 
-    gap: 2rem !important;
+    gap: 1.5rem !important;
   }
 
   .hero-seccion {
     padding: 80px 0 20px 0 !important; 
   }
 
+  /* El contenedor principal también se maneja con Flexbox para ordenar sus elementos */
   .hero-contenido {
     width: 100% !important;
     max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  /* 3. FRASE INICIAL Y KOALA AL LADO */
+  /* 3. FRASE INICIAL Y KOALA AL LADO (SIEMPRE ARRIBA DE TODO) */
   .cabecera-titulo {
     display: flex !important;
     flex-direction: row !important; 
@@ -289,6 +292,7 @@ nav {
     justify-content: space-between !important; 
     gap: 1rem !important; 
     width: 100% !important;
+    order: 1 !important; /* Posición 1: Título y Koala */
   }
 
   .hero-grid h1 {
@@ -312,24 +316,23 @@ nav {
     height: auto !important;
   }
 
-  /* 4. UNIFICACIÓN DE ANCHOS (FRASES, TARJETA Y FOTO) */
+  /* Frase secundaria va inmediatamente después de la principal */
   .about-quote {
     font-size: 1.15rem !important; 
     width: 100% !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
     text-align: left !important;
+    order: 2 !important; /* Posición 2: Frase de acompañamiento */
   }
 
-  .tarjeta-verde {
-    width: 100% !important;
-    padding: 20px !important; 
-    margin-top: 1.5rem !important;
-}
-
+  /* 4. REORDENACIÓN: PRIMERO FOTO, LUEGO TARJETA VERDE */
+  /* Forzar la foto de perfil al mismo ancho estándar y ponerla arriba */
   .hero-imagen {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 1.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    order: 3 !important; /* Posición 3: Tu fotografía pasa aquí delante */
   }
 
   .hero-imagen img {
@@ -337,10 +340,19 @@ nav {
     height: auto !important; 
   }
 
+  /* Forzar la tarjeta verde debajo de la imagen */
+  .tarjeta-verde {
+    width: 100% !important;
+    padding: 20px !important; 
+    margin-top: 0.5rem !important;
+    order: 4 !important; /* Posición 4: Tarjeta verde al final */
+  }
+
   .btn-primary {
     align-self: center !important; 
     width: 100% !important; 
     text-align: center !important;
+    order: 5 !important; /* El botón de contacto cierra la sección */
   }
 }
 
