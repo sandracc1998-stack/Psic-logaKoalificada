@@ -35,54 +35,68 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
-<section class="hero-seccion">
-    <div class="hero-grid">
-        
-        <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
-        <div class="hero-contenido">
-            <div class="cabecera-titulo">
-                <h1>Hola soy...</h1>
-                <!-- Imagen pequeña al lado del título -->
-                <div class="seccion-koala-unica">
-                    <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
-                </div>
-            </div>
-            
-            <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
-            <div class="sub-tarjetas-container">
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
-                </div>
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-                </div>
-            </div>
-        </div>
+/* Contenedor principal Grid/Flex */
+.hero-seccion {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-        <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
-        <div class="hero-imagen">
-            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
-        </div>
-
-    </div>
-</section>
-    /* ==========================================================
-   AJUSTE DE IMAGEN DE CABECERA Y CONTROL DE LÍNEAS
-   ========================================================== */
-.seccion-koala-unica {
-    display: flex !important;
-    align-items: center !important;
-    align-self: stretch !important; /* Fuerza a ocupar el alto disponible de las dos líneas */
+/* Fila superior: Título y Sandra */
+.cabecera-titulo {
+    display: flex;
+    align-items: stretch; /* Estira la imagen al alto del texto */
+    justify-content: flex-start;
+    gap: 1.5rem; /* Imagen más cerca del texto */
+    margin-bottom: 2.5rem;
+    width: 100%;
 }
 
 .imagen-sandra-koala-nueva {
-    width: 140px !important;       /* Tamaño ampliado y más visible */
-    height: 100% !important;        /* Se estira al alto de su contenedor */
-    object-fit: cover !important;   /* Evita que se deforme o aplaste la foto */
-    border-radius: 24px !important; /* Bordes redondeados corporativos */
+    width: 160px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);
 }
 
+/* Fila inferior: Tarjetas y Koala */
+.fila-contenido-inferior {
+    display: flex;
+    gap: 2.5rem;
+    align-items: stretch; /* Estira el koala al alto de las tarjetas */
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Tarjetas una encima de otra */
+.sub-tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1.8;
+}
+
+.tarjeta-redondeada-cabecera {
+    background-color: rgba(110, 44, 62, 0.75);
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(110, 44, 62, 0.5);
+}
+
+/* Imagen del Koala */
+.hero-imagen {
+    flex: 0.9;
+    display: flex;
+}
+
+.foto-koala-mediana {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
 
 /* ==========================================================================
    CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
@@ -627,42 +641,43 @@
 <!-- ESTRUCTURA DE LA CABECERA (HERO) -->
 <section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
     
-<!-- FILA 1: TÍTULO MÁS GRANDE EN DOS LÍNEAS Y FOTO ADAPTADA AL ALTO -->
-<div class="cabecera-titulo" style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; margin-bottom: 2.5rem; width: 100%;">
-    
-    <!-- Texto con salto de línea controlado -->
-    <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
-        Hola soy Sandra, <br><span style="display: inline-block; white-space: nowrap;">tu psicóloga koalificada</span>
-    </h1>
-    
-    <!-- Contenedor de imagen ampliado que se adapta al alto total -->
-    <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex; align-items: center; align-self: stretch;">
-        <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="width: 140px; height: 100%; min-height: 120px; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
+    <!-- FILA 1: TÍTULO EN DOS LÍNEAS Y FOTO DE SANDRA ADAPTADA AL ALTO -->
+    <div class="cabecera-titulo" style="display: flex; align-items: stretch; justify-content: flex-start; gap: 1.5rem; margin-bottom: 2.5rem; width: 100%;">
+        
+        <!-- Texto con salto de línea controlado -->
+        <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
+            Hola soy Sandra, <br><span style="display: inline-block; white-space: nowrap;">tu psicóloga koalificada</span>
+        </h1>
+        
+        <!-- Contenedor de imagen ampliado que iguala la altura del h1 -->
+        <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex;">
+            <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="width: 160px; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
+        </div>
+
     </div>
 
-</div>
-
-    <!-- FILA 2: TARJETAS A LA IZQUIERDA E IMAGEN MEDIANA A LA DERECHA -->
-    <div class="fila-contenido-inferior" style="display: flex; gap: 2.5rem; align-items: center; justify-content: space-between; width: 100%;">
+    <!-- FILA 2: TARJETAS EN VERTICAL E IMAGEN DEL KOALA A LA DERECHA (MISMO ALTO) -->
+    <div class="fila-contenido-inferior" style="display: flex; gap: 2.5rem; align-items: stretch; justify-content: space-between; width: 100%;">
         
-        <!-- Bloque de las dos tarjetas redondeadas -->
-        <div class="sub-tarjetas-container" style="display: flex; gap: 1.5rem; flex: 1.8;">
-            <div class="tarjeta-redondeada-cabecera" style="flex: 1; background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
-                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Especializada en el acompañamiento integral y la autonomía infantil.</p>
+        <!-- Bloque de las dos tarjetas en columna (una encima de otra) -->
+        <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1.8;">
+            <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
+                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
             </div>
-            <div class="tarjeta-redondeada-cabecera" style="flex: 1; background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
-                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Intervención psicoeducativa personalizada en entornos reales.</p>
+            <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
+                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
             </div>
         </div>
 
-        <!-- Imagen del Koala Mediana a la derecha -->
-        <div class="hero-imagen" style="flex: 0.9; display: flex; justify-content: flex-end;">
-            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="max-width: 280px; width: 100%; height: auto; border-radius: 24px;">
+        <!-- Imagen del Koala a la derecha adaptada al alto de las tarjetas -->
+        <div class="hero-imagen" style="flex: 0.9; display: flex;">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
         </div>
 
     </div>
 
 </section> <!-- Cierre definitivo de la sección Hero -->
+
 
 
   <!-- SECCIÓN MIS VALORES -->
@@ -808,17 +823,17 @@
         <!-- COLUMNA IZQUIERDA: SOBRE MÍ (FONDO GRANATE / LETRA CREMA) -->
         <div class="tarjeta-granate" style="flex: 1.2; min-width: 320px;">
             <h3>Sobre Mí</h3>
-            <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
+            <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE).</p> 
+              
+          <p class="about-body">Cuento con experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
             
-            <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
-            
-            <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
-                <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo <em>"de campo"</em> in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
-                <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
-            </ul>
-            
-            <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
+            <p class="about-body">Creo en un acompañamiento seguro, dinámico y totalmente personalizado. </p>
+          
+             <p class="about-body">Mi enfoque se centra en el diseño de actividades estructuradas y adaptadas al ritmo de cada niño.</p>
+  
+            <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. </p>
+          
+             <p class="about-body">Cada niñ@ y cada familia tiene sus necesidades, estoy aquí para guiaros en este camino.</p>
         </div>
 
         <!-- COLUMNA DERECHA: DATOS DE CONTACTO (FONDO CREMA / LETRA GRANATE) -->
