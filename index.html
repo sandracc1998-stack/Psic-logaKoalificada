@@ -638,7 +638,44 @@ nav {
 .tarjeta-trasera li:last-child { 
   margin-bottom: 0 !important; 
 }
+/* ==========================================================
+   TARJETA DATOS DE CONTACTO (CREMA Y GRANATE)
+   ========================================================== */
+.tarjeta-contacto-crema {
+    background-color: #fffdd0 !important; /* Fondo crema claro */
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(110, 44, 62, 0.2); /* Borde sutil granate */
+    box-sizing: border-box;
+}
 
+/* Títulos principales de la tarjeta derecha en granate */
+.tarjeta-contacto-crema h3,
+.tarjeta-contacto-crema h4 {
+    color: #6e2c3e !important;
+    margin-top: 0;
+}
+
+/* Párrafos e iconos de la tarjeta derecha en granate */
+.tarjeta-contacto-crema p,
+.tarjeta-contacto-crema span {
+    color: #6e2c3e !important;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Enlaces de redes sociales en granate y sin subrayado */
+.tarjeta-contacto-crema .redes-sociales a {
+    color: #6e2c3e !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.tarjeta-contacto-crema .redes-sociales a:hover {
+    opacity: 0.8;
+}
+    
     /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
@@ -687,43 +724,36 @@ nav {
         max-width: 100% !important;
         height: auto !important;
     }
-}
-
-        /* ==========================================================
-   TARJETA SOBRE MÍ (GRANATE Y CREMA CLARO)
+  /* ==========================================================
+   ESTILOS DE LAS TARJETAS REDONDEADAS DE LA CABECERA
    ========================================================== */
-.tarjeta-sobre-mi {
-    background-color: rgba(110, 44, 62, 0.75) !important; /* Fondo granate suave */
+.tarjeta-redondeada-cabecera {
+    flex: 1;
+    background-color: rgba(110, 44, 62, 0.75) !important; /* Granate suave */
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
-    padding: 35px;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(110, 44, 62, 0.5); /* Borde granate sutil */
+    padding: 25px;
+    border-radius: 30px; /* Bordes notablemente redondeados */
+    border: 1px solid rgba(110, 44, 62, 0.5);
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Color crema claro para el título principal dentro de la tarjeta */
-.tarjeta-sobre-mi h3 {
-    color: #fffdd0 !important;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
+/* Estilo del texto dentro de las dos tarjetas */
+.tarjeta-redondeada-cabecera p {
+    color: #fffdd0 !important; /* Letra crema clara */
+    font-size: 1rem; /* Tamaño más pequeño que el bloque Sobre Mí */
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
 }
-
-/* Color crema claro para el texto explicativo */
-.tarjeta-sobre-mi .about-body {
-    color: #fffdd0 !important; 
-    font-size: 1.15rem; 
-    line-height: 1.7; 
-}
-      
-  </style>
-</head>
-<body>
+</style>, </head>, <body>
   
   <!-- MENÚ DE NAVEGACIÓN -->
   <nav>
-    <a href="#" class="nav-logo">Sandra Carrera Castaño - Psicóloga Koalificada</a>
+    <a href="#" class="nav-logo">Sandra Carrera Castaño -  <em>NºColegiada: G-07583 </em></a>
     <ul class="nav-links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#mis-valores">Mis Valores</a></li>
@@ -732,37 +762,41 @@ nav {
     </ul>
   </nav>
 
-<!-- SECCIÓN PRESENTACIÓN PRINCIPAL (HERO) -->
-<main class="hero-seccion" id="sobre-mi">
-    <div class="hero-grid">
-      
-        <!-- COLUMNA IZQUIERDA: Contenido -->
-        <div class="hero-contenido">
-        
-            <!-- Bloque flexible que alinea el título y el koala de forma contigua -->
-            <div class="cabecera-titulo">
-                <h1>
-                    Hola, soy Sandra,<br>
-                    tu psicóloga <em>koalificada</em>
-                </h1>
-                <!-- El Koala ahora vive aquí dentro, al lado del texto -->
-                <div class="seccion-koala-unica">
-                    <img src="imagen-sandra-koala.png" alt="Koala" class="imagen-sandra-koala-nueva">
-                </div>
-            </div>
-
-            <p class="about-quote">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
-                <p class="about-quote">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-            </div>
-        </div>
-
-        <!-- COLUMNA DERECHA: Tu Fotografía original -->
-        <div class="hero-imagen">
-            <img src="imagen-koala.png" alt="imagen-koala.png">
-        </div>
-      
+<!-- SECCIÓN DE BIENVENIDA / CABECERA -->
+<div class="cabecera-bienvenida-container" style="display: flex; flex-direction: column; gap: 2rem; width: 100%; margin-bottom: 3rem;">
+    
+    <!-- FILA 1: TÍTULO PRINCIPAL Y FOTO PEQUEÑA -->
+    <div class="fila-titulo-cabecera" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+        <h1 class="titulo-bienvenida" style="margin: 0; font-size: 2.8rem; color: #6e2c3e;">Hola soy...</h1>
+        <img src="imagen-sandra-koala.png" alt="Sandra" class="foto-sandra-pequena" style="width: 70px; height: 70px; object-fit: cover; border-radius: 50%;">
     </div>
-</main>
+
+    <!-- FILA 2: LAS DOS TARJETAS Y LA IMAGEN GRANDE -->
+    <div class="fila-contenido-cabecera" style="display: flex; gap: 2rem; align-items: center; width: 100%;">
+        
+        <!-- Contenedor interno para las dos tarjetas redondeadas -->
+        <div class="sub-tarjetas-container" style="display: flex; gap: 1.5rem; flex: 2;">
+            
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta-redondeada-cabecera">
+                <p>Aquí va tu primera frase descriptiva breve de presentación.</p>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta-redondeada-cabecera">
+                <p>Aquí va tu segunda frase descriptiva breve de presentación.</p>
+            </div>
+            
+        </div>
+
+        <!-- Imagen del Koala a la derecha (Tamaño controlado) -->
+        <div class="contenedor-koala-grande" style="flex: 1; display: flex; justify-content: flex-end;">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="max-width: 250px; width: 100%; height: auto;">
+        </div>
+
+    </div>
+</div>
+
 
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
@@ -1044,51 +1078,50 @@ nav {
 </style>
 
 
-<!-- ESTRUCTURA HTML REORGANIZADA -->
-<div class="seccion-contacto-container" id="seccion-contacto">
+<!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
+<div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 2rem; width: 100%;">
     
-    <!-- BLOQUE SUPERIOR: DOS COLUMNAS -->
-    <div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 2rem; width: 100%;">
+    <!-- COLUMNA IZQUIERDA: SOBRE MÍ (GRANATE + CREMA) -->
+    <div class="tarjeta-sobre-mi" style="flex: 1;">
+        <h3>Sobre Mí</h3>
+        <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
+        
+        <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
+        
+        <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
+            <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
+            <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo "de campo" in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
+            <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
+        </ul>
+        
+        <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
+    </div>
 
-     
-<!-- COLUMNA IZQUIERDA: SOBRE MÍ (CON PUNTOS) -->
-<div class="tarjeta-sobre-mi" style="flex: 1;">
-    <h3>Sobre Mí</h3>
-    <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE).</p>
-    <p class="about-body"> Cuento con una experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
-    <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. </p>
-    <p class="about-body">Respeto al ritmo de cada niñ@: Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</p>
-    <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. </p>
-    <p class="about-body">Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
+    <!-- COLUMNA DERECHA: DATOS DE CONTACTO (CREMA + GRANATE) -->
+    <div class="tarjeta-contacto-crema" style="flex: 1;">
+        <h3>Datos de Contacto</h3>
+        
+        <div class="info-item" style="margin-bottom: 1.5rem;">
+            <h4>Correo Electrónico</h4>
+            <span>✉️ psikoala@psikoala.com</span>
+        </div>
+
+        <div class="info-item" style="margin-bottom: 1.5rem;">
+            <h4>Ubicación</h4>
+            <p>📍 Santiago de Compostela</p>
+        </div>
+
+        <div class="info-item">
+            <h4>Redes Sociales</h4>
+            <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
+                <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
-
-        </div>
-
-        <!-- COLUMNA DERECHA: DATOS DE CONTACTO -->
-        <div class="tarjeta-informacion" style="flex: 1;">
-            <h3>Datos de Contacto</h3>
-            
-            <div class="info-item">
-                <h4>Correo Electrónico</h4>
-                <span class="about-body">✉️ psikoala@psikoala.com</span>
-            </div>
-
-            <div class="info-item">
-                <h4>Ubicación</h4>
-                <p>📍 Santiago de Compostela</p>
-            </div>
-
-            <div class="info-item">
-                <h4>Redes Sociales</h4>
-                <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
-                    <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
-                </div>
-            </div>
-        </div>
-        
-    </div>
 
     <!-- BLOQUE INFERIOR: FORMULARIO EN TARJETA ÚNICA -->
     <div class="formulario-contacto-contenedor" style="width: 100%;">
