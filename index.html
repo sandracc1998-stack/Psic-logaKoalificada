@@ -35,200 +35,38 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-/* ==========================================================================
-   ESTRUCTURA GENERAL Y MENÚ (ORDENADOR)
-   ========================================================================== */
-*, *::before, *::after { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-}
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion">
+    <div class="hero-grid">
+        
+        <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
+        <div class="hero-contenido">
+            <div class="cabecera-titulo">
+                <h1>Hola soy...</h1>
+                <!-- Imagen pequeña circular al lado del título -->
+                <div class="seccion-koala-unica">
+                    <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
+                </div>
+            </div>
+            
+            <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
+            <div class="sub-tarjetas-container">
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+                </div>
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+                </div>
+            </div>
+        </div>
 
-html { 
-    scroll-behavior: smooth; 
-}
+        <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
+        <div class="hero-imagen">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
+        </div>
 
-body { 
-    background: var(--cream); 
-    color: var(--text); 
-    font-family: var(--ff-body); 
-    font-size: 1rem; 
-    line-height: 1.65; 
-}
-
-/* MENÚ DE NAVEGACIÓN (Escritorio) */
-nav { 
-    position: sticky; 
-    top: 0; 
-    z-index: 100; 
-    background: rgba(250,246,240,.92); 
-    backdrop-filter: blur(8px); 
-    border-bottom: 1px solid var(--blush); 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: .75rem 2rem; 
-}
-
-.nav-logo { 
-    font-family: var(--ff-display); 
-    font-size: 1.25rem; 
-    color: var(--mauve); 
-    text-decoration: none; 
-    font-style: italic; 
-}
-
-.nav-links { 
-    display: flex; 
-    gap: 1.75rem; 
-    list-style: none; 
-}
-
-.nav-links a { 
-    text-decoration: none; 
-    color: var(--bark); 
-    font-size: .875rem; 
-    font-weight: 500; 
-    letter-spacing: .02em; 
-    transition: color .2s; 
-}
-
-.nav-links a:hover { 
-    color: var(--rose); 
-}
-
-/* ==========================================================================
-   ESTRUCTURA DE LA CABECERA (HERO) - 2 COLUMNAS (ORDENADOR)
-   ========================================================================== */
-.hero-seccion {
-    width: 100%;
-    padding: 120px 0 40px 0 !important;
-    display: flex;
-    justify-content: center;
-    min-height: auto !important;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 63% 37%;
-    gap: 4rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
-    padding: 0 20px;
-}
-
-.hero-contenido {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.cabecera-titulo {
-    display: flex;
-    align-items: center; 
-    gap: 2.5rem;          
-    margin-bottom: 1.5rem;
-    width: 100%;
-}
-
-.hero-grid h1 { 
-    font-family: var(--ff-display); 
-    font-size: clamp(2.4rem, 4vw, 3.2rem); 
-    font-weight: 400; 
-    line-height: 1.2;
-    color: var(--bark); 
-    margin: 0;
-    flex-shrink: 0; 
-}
-
-/* KOALA (ORDENADOR) */
-.seccion-koala-unica {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background: transparent !important; 
-    max-width: 140px; 
-    width: 100%;
-}
-
-.imagen-sandra-koala-nueva {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 24px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-}
-
-/* FOTOGRAFÍA PRINCIPAL (ORDENADOR) */
-.hero-imagen {
-    width: 100%;
-    display: flex;
-}
-
-.hero-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 24px !important; 
-}
-
-/* ==========================================================
-   TEXTOS Y TARJETA GRANATE (ORDENADOR)
-   ========================================================== */
-.about-quote {
-    font-size: 1.4rem;
-    color: #6e2c3e; /* Granate suave para el texto exterior */
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.tarjeta-granate {
-    background-color: rgba(110, 44, 62, 0.75) !important; /* Fondo granate suave con opacidad */
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    padding: 35px;
-    border-radius: var(--radius-lg);
-    margin-top: 2rem;
-    width: 100%;
-    border: 1px solid rgba(110, 44, 62, 0.5); /* Borde granate a juego */
-    box-sizing: border-box;
-}
-
-.tarjeta-granate .about-body {
-    color: #fffdd0 !important; /* Letra crema de alto contraste */
-    font-size: 1.15rem; 
-    line-height: 1.7; 
-    margin-bottom: 1.2rem;
-}
-
-.tarjeta-granate .about-body:last-child {
-    margin-bottom: 0;
-}
-
-.btn-primary { 
-    display: inline-block; 
-    background: var(--mauve); 
-    color: var(--white); 
-    text-decoration: none; 
-    padding: .85rem 2rem; 
-    border-radius: 999px; 
-    font-weight: 500; 
-    font-size: .95rem; 
-    letter-spacing: .02em; 
-    transition: background .2s, transform .15s; 
-    border: none; 
-    cursor: pointer; 
-    margin-top: 1.5rem; 
-    align-self: flex-start;
-}
-
-.btn-primary:hover { 
-    background: var(--bark); 
-    transform: translateY(-1px); 
-}
+    </div>
+</section>
 
 /* ==========================================================================
    CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
@@ -762,40 +600,39 @@ nav {
     </ul>
   </nav>
 
-<!-- SECCIÓN DE BIENVENIDA / CABECERA -->
-<div class="cabecera-bienvenida-container" style="display: flex; flex-direction: column; gap: 2rem; width: 100%; margin-bottom: 3rem;">
-    
-    <!-- FILA 1: TÍTULO PRINCIPAL Y FOTO PEQUEÑA -->
-    <div class="fila-titulo-cabecera" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-        <h1 class="titulo-bienvenida" style="margin: 0; font-size: 2.8rem; color: #6e2c3e;">Hola soy...</h1>
-        <img src="imagen-sandra-koala.png" alt="Sandra" class="foto-sandra-pequena" style="width: 70px; height: 70px; object-fit: cover; border-radius: 50%;">
-    </div>
-
-    <!-- FILA 2: LAS DOS TARJETAS Y LA IMAGEN GRANDE -->
-    <div class="fila-contenido-cabecera" style="display: flex; gap: 2rem; align-items: center; width: 100%;">
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion">
+    <div class="hero-grid">
         
-        <!-- Contenedor interno para las dos tarjetas redondeadas -->
-        <div class="sub-tarjetas-container" style="display: flex; gap: 1.5rem; flex: 2;">
-            
-            <!-- Tarjeta 1 -->
-            <div class="tarjeta-redondeada-cabecera">
-                <p>Aquí va tu primera frase descriptiva breve de presentación.</p>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="tarjeta-redondeada-cabecera">
-                <p>Aquí va tu segunda frase descriptiva breve de presentación.</p>
+        <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
+        <div class="hero-contenido">
+            <div class="cabecera-titulo">
+                <h1>Hola soy...</h1>
+                <!-- Imagen pequeña circular al lado del título -->
+                <div class="seccion-koala-unica">
+                    <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
+                </div>
             </div>
             
+            <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
+            <div class="sub-tarjetas-container">
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Especializada en el acompañamiento integral y la autonomía infantil.</p>
+                </div>
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Intervención psicoeducativa personalizada en entornos reales.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Imagen del Koala a la derecha (Tamaño controlado) -->
-        <div class="contenedor-koala-grande" style="flex: 1; display: flex; justify-content: flex-end;">
-            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="max-width: 250px; width: 100%; height: auto;">
+        <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
+        <div class="hero-imagen">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
         </div>
 
     </div>
-</div>
+</section>
+
 
 
   <!-- SECCIÓN MIS VALORES -->
@@ -944,139 +781,6 @@ nav {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         box-sizing: border-box;
     }
-
-    /* Tarjeta de información de contacto (Izquierda) */
-    .tarjeta-informacion {
-        flex: 1;
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        text-align: left;
-    }
-
-    .tarjeta-informacion h3 {
-        color: #4A0E17;
-        font-size: 24px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .info-item {
-        margin-bottom: 20px;
-    }
-
-    .info-item h4 {
-        color: #4a2828;
-        margin: 0 0 5px 0;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .info-item p, .info-item a {
-        margin: 0;
-        color: #333333;
-        font-size: 15px;
-        text-decoration: none;
-    }
-
-    .info-item a:hover {
-        text-decoration: underline;
-        color: #a37070;
-    }
-
-    /* Formulario de contacto (Derecha) */
-    .formulario-contacto {
-        flex: 1;
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Título del formulario */
-    .titulo-contacto {
-        color: #4A0E17;
-        font-size: 24px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    /* Grupos de campos */
-    .campo-grupo {
-        margin-bottom: 20px;
-        text-align: left;
-    }
-
-    .campo-grupo label {
-        display: block;
-        margin-bottom: 8px;
-        color: #4a2828;
-        font-weight: 600;
-        font-size: 14px;
-    }
-
-    /* Cajas de texto y textarea */
-    .campo-grupo input, 
-    .campo-grupo textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #e0dcd8;
-        border-radius: 8px;
-        font-size: 15px;
-        color: #333333;
-        background-color: #fdfcfb;
-        box-sizing: border-box;
-        transition: all 0.3s ease;
-        font-family: inherit;
-    }
-
-    /* Efecto focus */
-    .campo-grupo input:focus, 
-    .campo-grupo textarea:focus {
-        border-color: #a37070;
-        outline: none;
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(163, 112, 112, 0.2);
-    }
-
-    .campo-grupo textarea {
-        height: 120px;
-        resize: vertical;
-    }
-
-    /* Botón de enviar */
-    .boton-enviar {
-        width: 100%;
-        padding: 14px;
-        background-color: #4a2828;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.1s ease;
-    }
-
-    .boton-enviar:hover {
-        background-color: #5c3333;
-    }
-
-    .boton-enviar:active {
-        transform: scale(0.98);
-    }
-
-    /* Adaptación para pantallas pequeñas (Móviles) */
-    @media (max-width: 768px) {
-        .seccion-contacto-container {
-            flex-direction: column;
-        }
-    }
-</style>
-
 
 <!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
 <div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 2rem; width: 100%;">
