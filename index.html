@@ -67,6 +67,22 @@
 
     </div>
 </section>
+    /* ==========================================================
+   AJUSTE DE IMAGEN DE CABECERA Y CONTROL DE LÍNEAS
+   ========================================================== */
+.seccion-koala-unica {
+    display: flex !important;
+    align-items: center !important;
+    align-self: stretch !important; /* Fuerza a ocupar el alto disponible de las dos líneas */
+}
+
+.imagen-sandra-koala-nueva {
+    width: 140px !important;       /* Tamaño ampliado y más visible */
+    height: 100% !important;        /* Se estira al alto de su contenedor */
+    object-fit: cover !important;   /* Evita que se deforme o aplaste la foto */
+    border-radius: 24px !important; /* Bordes redondeados corporativos */
+}
+
 
 /* ==========================================================================
    CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
@@ -611,15 +627,20 @@
 <!-- ESTRUCTURA DE LA CABECERA (HERO) -->
 <section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
     
-    <!-- FILA 1: TÍTULO MÁS GRANDE Y FOTO PEQUEÑA ALINEADA A LA DERECHA -->
-    <div class="cabecera-titulo" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; width: 100%;">
-        <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
-            Hola soy Sandra, tu psicóloga koalificada
-        </h1>
-        <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex; align-items: center;">
-            <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="height: clamp(80px, 10vw, 110px); width: auto; object-fit: contain; border-radius: 16px;">
-        </div>
+<!-- FILA 1: TÍTULO MÁS GRANDE EN DOS LÍNEAS Y FOTO ADAPTADA AL ALTO -->
+<div class="cabecera-titulo" style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; margin-bottom: 2.5rem; width: 100%;">
+    
+    <!-- Texto con salto de línea controlado -->
+    <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
+        Hola soy Sandra, <br><span style="display: inline-block; white-space: nowrap;">tu psicóloga koalificada</span>
+    </h1>
+    
+    <!-- Contenedor de imagen ampliado que se adapta al alto total -->
+    <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex; align-items: center; align-self: stretch;">
+        <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="width: 140px; height: 100%; min-height: 120px; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
     </div>
+
+</div>
 
     <!-- FILA 2: TARJETAS A LA IZQUIERDA E IMAGEN MEDIANA A LA DERECHA -->
     <div class="fila-contenido-inferior" style="display: flex; gap: 2.5rem; align-items: center; justify-content: space-between; width: 100%;">
