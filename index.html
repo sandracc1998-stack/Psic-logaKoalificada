@@ -35,68 +35,6 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-/* Contenedor principal Grid/Flex */
-.hero-seccion {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Fila superior: Título y Sandra */
-.cabecera-titulo {
-    display: flex;
-    align-items: stretch; /* Estira la imagen al alto del texto */
-    justify-content: flex-start;
-    gap: 1.5rem; /* Imagen más cerca del texto */
-    margin-bottom: 2.5rem;
-    width: 100%;
-}
-
-.imagen-sandra-koala-nueva {
-    width: 160px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);
-}
-
-/* Fila inferior: Tarjetas y Koala */
-.fila-contenido-inferior {
-    display: flex;
-    gap: 2.5rem;
-    align-items: stretch; /* Estira el koala al alto de las tarjetas */
-    justify-content: space-between;
-    width: 100%;
-}
-
-/* Tarjetas una encima de otra */
-.sub-tarjetas-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex: 1.8;
-}
-
-.tarjeta-redondeada-cabecera {
-    background-color: rgba(110, 44, 62, 0.75);
-    padding: 25px;
-    border-radius: 30px;
-    border: 1px solid rgba(110, 44, 62, 0.5);
-}
-
-/* Imagen del Koala */
-.hero-imagen {
-    flex: 0.9;
-    display: flex;
-}
-
-.foto-koala-mediana {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-}
 
 /* ==========================================================================
    CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
@@ -788,30 +726,61 @@
     </ul>
   </nav>
 
-<section class="hero-seccion">
-    <div class="hero-grid-nuevo">
+<!-- Estilos para que en dispositivos móviles pase de 2 columnas a 1 columna ordenada -->
+<style>
+    @media (max-width: 768px) {
+        .hero-seccion { padding: 20px 15px !important; }
+        .hero-dos-columnas { flex-direction: column !important; gap: 2rem !important; }
+        .columna-izquierda-textos { width: 100% !important; }
+        .columna-derecha-imagen { width: 100% !important; }
+        .imagen-sandra-koala-nueva { height: 350px !important; }
+        .cabecera-titulo h1 { font-size: 2.2rem !important; }
+    }
+</style>
+
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px; box-sizing: border-box;">
+    
+    <!-- CONTENEDOR DE DOS COLUMNAS PRINCIPALES -->
+    <div class="hero-dos-columnas" style="display: flex; gap: 3rem; align-items: stretch; justify-content: space-between; width: 100%;">
         
-        <div class="hero-contenido-izq">
-            <div class="cabecera-titulo">
-                <h1>Hola soy Sandra, <br><span>tu psicóloga koalificada</span></h1>
+        <!-- COLUMNA IZQUIERDA: CONTIENE EL TÍTULO Y LAS TARJETAS (TODO DEL MISMO ANCHO) -->
+        <div class="columna-izquierda-textos" style="flex: 1.3; display: flex; flex-direction: column; gap: 2.5rem; justify-content: space-between;">
+            
+            <!-- Frase inicial en dos líneas perfectas -->
+            <div class="cabecera-titulo" style="width: 100%;">
+                <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; font-weight: bold;">
+                    Hola soy Sandra, <br><span style="display: inline-block; color: #6e2c3e;">tu psicóloga koalificada</span>
+                </h1>
             </div>
             
-            <div class="sub-tarjetas-container">
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+            <!-- Bloque de las dos tarjetas una encima de otra, con el mismo ancho que la frase superior -->
+            <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%;">
+                
+                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
+                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
+                        Creo en un acompañamiento cercano, respetuoso y personalizado.
+                    </p>
                 </div>
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+                
+                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
+                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
+                        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+                    </p>
                 </div>
+                
             </div>
+
         </div>
 
-        <div class="hero-imagen-derecha">
-            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
+        <!-- COLUMNA DERECHA: LA IMAGEN QUE IGNORA EL ALTO PROPIO Y SE ADAPTA AL BLOQUE IZQUIERDO -->
+        <div class="columna-derecha-imagen" style="flex: 1; display: flex; min-width: 290px;">
+            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
         </div>
 
     </div>
-</section>
+
+</section> <!-- Cierre definitivo de la sección Hero -->
 
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
