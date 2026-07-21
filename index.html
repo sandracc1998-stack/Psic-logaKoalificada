@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandra Carrera Castaño — Psicóloga especializada en TEA y NEE</title>
+  <title>Sandra Carrera Castaño — Psicóloga esducativa</title>
   <link rel="preconnect" href="https://googleapis.com" />
   <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -35,313 +35,132 @@
     .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
     .nav-links a:hover { color: var(--rose); }
 
-    /* ==========================================================================
-       ESTRUCTURA DE LA CABECERA (HERO) - 2 COLUMNAS (ORDENADOR)
-       ========================================================================== */
-    .hero-seccion {
-        width: 100%;
-        padding: 120px 0 40px 0 !important;
-        display: flex;
-        justify-content: center;
-        min-height: auto !important;
-    }
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion">
+    <div class="hero-grid">
+        
+        <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
+        <div class="hero-contenido">
+            <div class="cabecera-titulo">
+                <h1>Hola soy...</h1>
+                <!-- Imagen pequeña al lado del título -->
+                <div class="seccion-koala-unica">
+                    <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
+                </div>
+            </div>
+            
+            <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
+            <div class="sub-tarjetas-container">
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+                </div>
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+                </div>
+            </div>
+        </div>
 
-    .hero-grid {
-        display: grid;
-        grid-template-columns: 63% 37%;
-        gap: 4rem;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        align-items: stretch;
-        padding: 0 20px;
-    }
+        <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
+        <div class="hero-imagen">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
+        </div>
 
-    .hero-contenido {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+    </div>
+</section>
 
-    .cabecera-titulo {
-        display: flex;
-        align-items: center; 
-        gap: 2.5rem;          
-        margin-bottom: 1.5rem;
-        width: 100%;
-    }
-
-    .hero-grid h1 { 
-        font-family: var(--ff-display); 
-        font-size: clamp(2.4rem, 4vw, 3.2rem); 
-        font-weight: 400; 
-        line-height: 1.2;
-        color: #6e2c3e; /* Granate corporativo aplicado */
-        margin: 0;
-        flex-shrink: 0; 
-    }
-
-    /* FOTOGRAFÍAS CABECERA */
-    .seccion-koala-unica {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        background: transparent !important; 
-        max-width: 70px; /* Tamaño adaptado pequeño */
-        width: 100%;
-    }
-
-    .imagen-sandra-koala-nueva {
-        display: block;
-        width: 100%;
-        height: 70px;
-        object-fit: cover;
-        border-radius: 50%; /* Formato circular sutil */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    }
-
-    .hero-imagen {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .hero-imagen img {
-        max-width: 280px; /* Tamaño suavizado y controlado */
-        width: 100%;
-        height: auto;
-        border-radius: 24px !important; 
-    }
-
-    /* NUEVAS FRASES SECUNDARIAS DE LA CABECERA */
-    .sub-tarjetas-container {
-        display: flex;
-        gap: 1.5rem;
-        width: 100%;
-        margin-top: 1.5rem;
-    }
-
-    .tarjeta-redondeada-cabecera {
-        flex: 1;
-        background-color: rgba(110, 44, 62, 0.75) !important; /* Granate suave */
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        padding: 22px;
-        border-radius: 25px; /* Bordes redondeados */
-        border: 1px solid rgba(110, 44, 62, 0.5);
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-    }
-
-    .tarjeta-redondeada-cabecera p {
-        color: #fffdd0 !important; /* Letra crema clara */
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    /* ==========================================================
-       TEXTOS Y TARJETA GRANATE (SECCIÓN SOBRE MÍ)
-       ========================================================== */
-    .about-quote {
-        font-size: 1.4rem;
-        color: #6e2c3e; 
-        font-weight: bold;
-        margin-bottom: 2rem;
-    }
-
-    .tarjeta-granate {
-        background-color: rgba(110, 44, 62, 0.75) !important; 
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        padding: 35px;
-        border-radius: var(--radius-lg);
-        width: 100%;
-        border: 1px solid rgba(110, 44, 62, 0.5); 
-        box-sizing: border-box;
-    }
-
-    .tarjeta-granate .about-body {
-        color: #fffdd0 !important; 
-        font-size: 1.15rem; 
-        line-height: 1.7; 
-        margin-bottom: 1.2rem;
-    }
-
-    .tarjeta-granate .about-body:last-child {
-        margin-bottom: 0;
-    }
-
-    .btn-primary { 
-        display: inline-block; 
-        background: var(--mauve); 
-        color: var(--white); 
-        text-decoration: none; 
-        padding: .85rem 2rem; 
-        border-radius: 999px; 
-        font-weight: 500; 
-        font-size: .95rem; 
-        letter-spacing: .02em; 
-        transition: background .2s, transform .15s; 
-        border: none; 
-        cursor: pointer; 
-        margin-top: 1.5rem; 
-        align-self: flex-start;
-    }
-
-    .btn-primary:hover { 
-        background: var(--bark); 
-        transform: translateY(-1px); 
-    }
-
-    /* ==========================================================
-       TARJETA DATOS DE CONTACTO (CREMA E INVERTIDA)
-       ========================================================== */
-    .tarjeta-contacto-crema {
-        background-color: #fffdd0 !important; 
-        padding: 35px;
-        border-radius: var(--radius-lg);
-        border: 1px solid rgba(110, 44, 62, 0.2); 
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    .tarjeta-contacto-crema h3,
-    .tarjeta-contacto-crema h4 {
-        color: #6e2c3e !important; /* Letra granate */
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-
-    .tarjeta-contacto-crema p,
-    .tarjeta-contacto-crema span {
-        color: #6e2c3e !important;
-        font-size: 1.15rem;
-        line-height: 1.7;
-    }
-
-    .tarjeta-contacto-crema .redes-sociales a {
-        color: #6e2c3e !important;
-        text-decoration: none;
-        font-weight: 500;
-        transition: opacity 0.2s;
-    }
-
-    .tarjeta-contacto-crema .redes-sociales a:hover {
-        opacity: 0.8;
-    }
-
-    /* ==========================================================================
-       CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
-       ========================================================================== */
-    @media screen and (max-width: 768px) {
-      nav {
-        flex-direction: column !important; 
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0.75rem 1rem !important; 
-        gap: 0.5rem !important;
-      }
-      .nav-logo {
-        font-size: 1rem !important; 
-        white-space: nowrap !important; 
-        width: auto !important;
-        text-align: center !important;
-      }
-      .nav-links {
-        width: 100% !important;
-        justify-content: center !important;
-        gap: 0.8rem !important; 
-        padding: 0 !important;
-        flex-wrap: nowrap !important; 
-      }
-      .nav-links a {
-        font-size: 0.75rem !important; 
-      }
-      .hero-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 0 15px !important; 
-        gap: 1.5rem !important;
-      }
-      .hero-seccion {
-        padding: 80px 0 20px 0 !important; 
-      }
-      .hero-contenido {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-      }
-      .cabecera-titulo {
-        display: flex !important;
-        flex-direction: row !important; 
-        align-items: center !important;
-        justify-content: space-between !important; 
-        gap: 1rem !important; 
-        width: 100% !important;
-        order: 1 !important;
-      }
-      .hero-grid h1 {
-        font-size: 1.5rem !important; 
-        line-height: 1.3 !important;
-        flex: 1 !important; 
-        white-space: normal !important;
-      }
-      .seccion-koala-unica {
-        display: block !important;
-        visibility: visible !important;
-        flex-shrink: 0 !important; 
-        max-width: 65px !important; 
-        width: 65px !important;
-      }
-      .imagen-sandra-koala-nueva {
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
-      }
-      .sub-tarjetas-container {
-        flex-direction: column !important;
-        gap: 1rem !important;
-      }
-      .about-quote {
-        font-size: 1.15rem !important; 
-        width: 100% !important;
-        margin-bottom: 1rem !important;
-        text-align: left !important;
-        order: 2 !important;
-      }
-      .hero-imagen {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-top: 1rem !important;
-    /* CONTICUACIÓN DE LA ZONA MÓVIL Y VALORES */
-    margin-bottom: 1rem !important;
-    order: 3 !important; /* Posición 3: Tu fotografía pasa aquí delante */
+/* ==========================================================================
+   CONFIGURACIÓN EXCLUSIVA PARA PANTALLAS MÓVILES
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* 1. MENÚ DE NAVEGACIÓN EN DOS LÍNEAS PERFECTAS */
+  nav {
+    flex-direction: column !important; 
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important; 
+    gap: 0.5rem !important;
   }
 
-  .hero-imagen img {
-    width: 100% !important;
-    height: auto !important; 
-  }
-
-  /* Forzar la tarjeta granate debajo de la imagen */
-  .tarjeta-granate {
-    width: 100% !important;
-    padding: 20px !important; 
-    margin-top: 0.5rem !important;
-    order: 4 !important; /* Posición 4: Tarjeta granate al final */
-  }
-
-  .btn-primary {
-    align-self: center !important; 
-    width: 100% !important; 
+  .nav-logo {
+    font-size: 1rem !important; 
+    white-space: nowrap !important; 
+    width: auto !important;
     text-align: center !important;
-    order: 5 !important; /* El botón de contacto cierra la sección */
+  }
+
+  .nav-links {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 0.8rem !important; 
+    padding: 0 !important;
+    flex-wrap: nowrap !important; 
+  }
+
+  .nav-links a {
+    font-size: 0.75rem !important; 
+  }
+
+  /* 2. REESTRUCTURACIÓN DEL HERO A UNA COLUMNA VERTICAL */
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 15px !important; 
+    gap: 1.5rem !important;
+  }
+
+  .hero-seccion {
+    padding: 80px 0 20px 0 !important; 
+  }
+
+  /* El contenedor principal también se maneja con Flexbox para ordenar sus elementos */
+  .hero-contenido {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* 3. FRASE INICIAL Y KOALA AL LADO (SIEMPRE ARRIBA DE TODO) */
+  .cabecera-titulo {
+    display: flex !important;
+    flex-direction: row !important; 
+    align-items: center !important;
+    justify-content: space-between !important; 
+    gap: 1rem !important; 
+    width: 100% !important;
+    order: 1 !important; /* Posición 1: Título y Koala */
+  }
+
+  .hero-grid h1 {
+    font-size: 1.5rem !important; 
+    line-height: 1.3 !important;
+    flex: 1 !important; 
+    white-space: normal !important;
+  }
+
+  .seccion-koala-unica {
+    display: block !important;
+    visibility: visible !important;
+    flex-shrink: 0 !important; 
+    max-width: 65px !important; 
+    width: 65px !important;
+  }
+
+  .imagen-koala-nueva {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Frase secundaria va inmediatamente después de la principal */
+  .about-quote {
+    font-size: 1.15rem !important; 
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    order: 2 !important; /* Posición 2: Frase de acompañamiento */
   }
 }
 
@@ -351,154 +170,6 @@
     .section-label { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--rose); margin-bottom: .5rem; display: block; }
     .section-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); margin-bottom: 1rem; line-height: 1.2; }
 
-    /* SECCIÓN MIS VALORES */
-    #mis-valores { background: var(--white); }
-    .seccion-valores-cabecera { text-align: center; margin-bottom: 3rem; }
-    .valores-titulo { font-family: var(--ff-display); font-size: 2.2rem; color: var(--bark); font-weight: 600; margin-bottom: 0.5rem; }
-    .linea-decorativa { width: 60px; height: 3px; background-color: var(--rose); margin: 0 auto; border-radius: 2px; }
-  </style>
-</head>
-<body>
-
-  <!-- MENÚ DE NAVEGACIÓN -->
-  <nav>
-    <a href="#" class="nav-logo">Sandra Carrera</a>
-    <ul class="nav-links">
-      <li><a href="#sobre-mi">Sobre Mí</a></li>
-      <li><a href="#mis-valores">Valores</a></li>
-      <li><a href="#seccion-contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- ESTRUCTURA DE LA CABECERA (HERO) -->
-  <section class="hero-seccion">
-      <div class="hero-grid">
-          
-          <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
-          <div class="hero-contenido">
-              <div class="cabecera-titulo">
-                  <h1>Hola soy...</h1>
-                  <!-- Imagen pequeña circular al lado del título -->
-                  <div class="seccion-koala-unica">
-                      <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
-                  </div>
-              </div>
-              
-              <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
-              <div class="sub-tarjetas-container">
-                  <div class="tarjeta-redondeada-cabecera">
-                      <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
-                  </div>
-                  <div class="tarjeta-redondeada-cabecera">
-                      <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
-                  </div>
-              </div>
-          </div>
-
-          <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
-          <div class="hero-imagen">
-              <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
-          </div>
-
-      </div>
-  </section>
-
-  /* CONTINUACIÓN DEL BLOQUE @media PARA MÓVILES */
-  
-  .imagen-sandra-koala-nueva {
-    display: block !important;
-    width: 100% !important;
-    height: 65px !important;
-    object-fit: cover !important;
-  }
-
-  /* Adaptación de las tarjetas redondeadas pequeñas en móvil */
-  .sub-tarjetas-container {
-    flex-direction: column !important;
-    gap: 1rem !important;
-    width: 100% !important;
-    margin-top: 1rem !important;
-  }
-
-  .tarjeta-redondeada-cabecera {
-    width: 100% !important;
-    padding: 15px !important;
-  }
-
-  /* Frase secundaria exterior (si existe en tu plantilla) */
-  .about-quote {
-    font-size: 1.15rem !important; 
-    width: 100% !important;
-    margin-bottom: 1rem !important;
-    text-align: left !important;
-    order: 2 !important; 
-  }
-
-  /* 4. REORDENACIÓN: FOTO DE KOALA GRANDE */
-  .hero-imagen {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    justify-content: center !important;
-    order: 3 !important; 
-  }
-
-  .hero-imagen img {
-    max-width: 220px !important; /* Ligeramente más pequeño en pantallas móviles */
-    width: 100% !important;
-    height: auto !important; 
-  }
-
-  /* Forzar las tarjetas de la sección de contacto a una columna en móvil */
-  .contacto-superior-grid {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-
-  .tarjeta-granate, 
-  .tarjeta-contacto-crema {
-    width: 100% !important;
-    padding: 20px !important; 
-  }
-
-  .btn-primary {
-    align-self: center !important; 
-    width: 100% !important; 
-    text-align: center !important;
-  }
-}
-
-/* ==========================================================================
-   SECCIONES COMUNES
-   ========================================================================== */
-section { 
-    padding: 5rem 2rem; 
-}
-
-.section-inner { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-}
-
-.section-label { 
-    font-size: .75rem; 
-    font-weight: 500; 
-    letter-spacing: .12em; 
-    text-transform: uppercase; 
-    color: var(--rose); 
-    margin-bottom: .5rem; 
-    display: block; 
-}
-
-.section-title { 
-    font-family: var(--ff-display); 
-    font-size: clamp(2rem, 3.5vw, 2.8rem); 
-    font-weight: 400; 
-    color: var(--bark); 
-    margin-bottom: 1rem; 
-    line-height: 1.2; 
-}
     /* SECCIÓN MIS VALORES */
     #mis-valores { background: var(--white); }
     .seccion-valores-cabecera { text-align: center; margin-bottom: 3rem; }
@@ -519,7 +190,7 @@ section {
 /* 1. SECCIÓN PRINCIPAL: Fondo crema y espacio arriba para que el menú no tape el título */
 #como-trabajo { 
     background: var(--cream);
-    padding: 100px 0 60px 0 !important; 
+    padding: 100px 0 60px 0 !important; /* Añade 100px arriba para empujar el título hacia abajo */
     width: 100%;
 }
 
@@ -549,196 +220,203 @@ section {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: var(--rose); /* Sincronizado con tus variables */
+    background-color: #d97d64;
     border-radius: 2px;
 }
-/* ==========================================================================
-   DISEÑO DE TARJETAS GIRATORIAS (CÓMO TRABAJO)
-   ========================================================================== */
 
-/* 1. CONTENEDOR DE TARJETAS: Distribución horizontal limpia */
+.como-trabajo-cabecera h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #d97d64;
+    border-radius: 2px;
+}
+
+/* 3. CONTENEDOR DE TARJETAS: Distribución horizontal limpia */
 .como-trabajo-contenedor {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; 
+    gap: 20px; /* Reducido ligeramente a 20px para que las 3 tarjetas quepan juntas sin bajarse */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     flex-wrap: wrap;
 }
-
-.tarjeta-giratoria { 
-    flex: 0 1 340px !important; 
-    min-width: 280px; 
-    height: 440px; 
-    background-color: transparent; 
+/* Copia esto aquí dentro para pintar la línea y la tipografía */
+.como-trabajo-cabecera h2 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    font-weight: 400;
+    color: var(--bark);
+    margin: 0;
+    padding-bottom: 15px;
+    position: relative;
+    display: inline-block;
 }
 
-.tarjeta-interno { 
-    position: relative; 
-    width: 100%; 
-    height: 100%; 
-    text-align: left; 
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
-    transform-style: preserve-3d; 
-    box-shadow: var(--shadow); 
-    border-radius: var(--radius-md); 
+.como-trabajo-cabecera h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #d97d64; /* Tono coral de tu línea decorativa */
+    border-radius: 2px;
 }
-
-.tarjeta-giratoria:hover .tarjeta-interno { 
-    transform: rotateY(180deg); 
-}
+.tarjeta-giratoria { flex: 0 1 340px !important; min-width: 280px; height: 440px; background-color: transparent; }
+.tarjeta-interno { position: relative; width: 100%; height: 100%; text-align: left; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; box-shadow: var(--shadow); border-radius: var(--radius-md); }
+.tarjeta-giratoria:hover .tarjeta-interno { transform: rotateY(180deg); }
 
 /* Ajustes comunes de las caras */
-.tarjeta-frontal, 
-.tarjeta-trasera { 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden; 
-    border-radius: var(--radius-md); 
-    box-sizing: border-box; 
-}
+.tarjeta-frontal, .tarjeta-trasera { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-md); box-sizing: border-box; }
 
-/* CARA FRONTAL (Estilo suavizado unificado) */
-.tarjeta-frontal { 
-    background-color: var(--blush); /* Fondo suave y cálido */
-    padding: 24px 20px 0 20px; 
-} 
+/* NUEVA ESTRUCTURA CARA FRONTAL */
+.tarjeta-frontal { background-color: var(--bark); padding: 24px 20px 0 20px; } /* Quitamos el padding inferior para que la imagen toque el borde */
 
 .contenido-frontal { 
-    display: flex; 
-    flex-direction: column; 
-    height: 100%; 
-    justify-content: space-between; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; 
+  justify-content: space-between; /* Empuja el texto arriba y la imagen abajo */
 }
 
 .bloque-texto-frontal {
-    text-align: center;
-    margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.tarjeta-frontal h3 { 
-    font-family: var(--ff-display); 
-    color: var(--bark); /* Ajustado a marrón oscuro para contrastar con el fondo suave */
-    font-size: 1.6rem; 
-    font-weight: 500; 
-    letter-spacing: 0.5px; 
-    margin: 0 0 10px 0; 
-}
-
-.subtitulo-frontal { 
-    color: var(--text); 
-    font-size: 0.95rem; 
-    line-height: 1.4; 
-    opacity: 0.85; 
-    margin: 0; 
-}
+.tarjeta-frontal h3 { font-family: var(--ff-display); color: var(--cream); font-size: 1.6rem; font-weight: 500; letter-spacing: 0.5px; margin: 0 0 10px 0; }
+.subtitulo-frontal { color: var(--cream); font-size: 0.95rem; line-height: 1.4; opacity: 0.85; margin: 0; }
 
 /* BLOQUE DE LA IMAGEN INFERIOR */
 .bloque-imagen-frontal {
-    flex: 1; 
-    display: flex;
-    align-items: flex-end; 
-    justify-content: center;
-    overflow: hidden;
-    border-bottom-left-radius: var(--radius-md);
-    border-bottom-right-radius: var(--radius-md);
+  flex: 1; /* Ocupa todo el espacio vertical disponible abajo */
+  display: flex;
+  align-items: flex-end; /* Alinea la imagen al fondo exacto de la tarjeta */
+  justify-content: center;
+  overflow: hidden;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
 }
 
 .imagen-frontal-tarjeta {
-    width: 100%;
-    height: 90%; 
-    object-fit: contain; 
-    mix-blend-mode: multiply; /* Integra ilustraciones sin fondos blancos */
+  width: 100%;
+  height: 90%; /* Ajusta este porcentaje si quieres que la imagen suba más o menos */
+  object-fit: contain; /* Evita que la ilustración se deforme */
+  mix-blend-mode: multiply; /* Elimina los fondos blancos e integra los dibujos en el marrón */
 }
 
 /* CARA TRASERA */
+.tarjeta-trasera { background-color: var(--white); color: var(--bark); transform: rotateY(180deg); display: flex; align-items: flex-start; border: 2px solid var(--bark); overflow-y: auto; padding: 28px 24px; }
+.contenido-trasero { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+.titulo-trasero { font-family: var(--ff-display); color: var(--bark); font-size: 1.2rem; font-weight: bold; margin: 0; letter-spacing: 1px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; text-align: center; }
+
+.tarjeta-trasera ul { list-style-type: none; padding: 0; margin: 0; }
+.tarjeta-trasera li { font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; position: relative; padding-left: 15px; }
+.tarjeta-trasera li::before { content: "•"; color: var(--bark); position: absolute; left: 0; top: 0; font-weight: bold; }
+.tarjeta-trasera li:last-child { margin-bottom: 0; }
+
+/* AJUSTES CARA FRONTAL CON COLOR SUAVE (Actualizado) */
+.tarjeta-frontal { 
+  background-color: var(--blush); /* He usado var(--blush) o var(--cream) para un fondo suave y cálido */
+  padding: 24px 20px 0 20px; 
+}
+
+.contenido-frontal { 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; 
+  justify-content: space-between; 
+}
+
+.bloque-texto-frontal { 
+  text-align: center; 
+  margin-bottom: 15px; 
+}
+
+/* Cambiamos el color de los títulos a var(--bark) para que contrasten sobre el fondo claro */
+.tarjeta-frontal h3 { 
+  font-family: var(--ff-display); 
+  color: var(--bark); 
+  font-size: 1.6rem; 
+  font-weight: 600; 
+  letter-spacing: 0.5px; 
+  margin: 0 0 10px 0; 
+  text-align: center; 
+}
+
+/* Cambiamos el color del subtítulo a var(--text) o var(--muted) */
+.subtitulo-frontal { 
+  color: var(--text); 
+  font-size: 0.95rem; 
+  line-height: 1.4; 
+  margin: 0; 
+  text-align: center; 
+  opacity: 0.9;
+}
+
+/* EL BLOQUE DE LA IMAGEN SE MANTIENE IGUAL */
+.bloque-imagen-frontal { 
+  flex: 1; 
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: center; 
+  overflow: hidden; 
+  border-bottom-left-radius: var(--radius-md); 
+  border-bottom-right-radius: var(--radius-md); 
+}
+
+.imagen-frontal-tarjeta { 
+  width: 100%; 
+  height: 90%; 
+  object-fit: contain; 
+  mix-blend-mode: multiply; /* Sigue fusionando los dibujos con el nuevo fondo claro */
+}
+    
+/* CARA TRASERA: Inversión de colores (Fondo oscuro y texto claro) */
 .tarjeta-trasera { 
-    background-color: var(--white); 
-    color: var(--bark); 
-    transform: rotateY(180deg); 
-    display: flex; 
-    align-items: flex-start; 
-    border: 2px solid var(--bark); 
-    overflow-y: auto; 
-    padding: 28px 24px; 
-}
-
-.contenido-trasero { 
-    width: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 16px; 
-}
-
-.titulo-trasero { 
-    font-family: var(--ff-display); 
-    color: var(--bark); 
-    font-size: 1.2rem; 
-    font-weight: bold; 
-    margin: 0; 
-    letter-spacing: 1px; 
-    border-bottom: 1px solid rgba(0,0,0,0.1); 
-    padding-bottom: 8px; 
-    text-align: center; 
-}
-
-.tarjeta-trasera ul { 
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-}
-
-.tarjeta-trasera li { 
-    font-size: 0.85rem; 
-    line-height: 1.45; 
-    margin-bottom: 12px; 
-    position: relative; 
-    padding-left: 15px; 
-}
-
-.tarjeta-trasera li::before { 
-    content: "•"; 
-    color: var(--bark); 
-    position: absolute; 
-    left: 0; 
-    top: 0; 
-    font-weight: bold; 
-}
-
-.tarjeta-trasera li:last-child { 
-    margin-bottom: 0; 
-}
-/* ==========================================================================
-   AJUSTES AVANZADOS CARA TRASERA INVERTIDA (CÓMO TRABAJO)
-   ========================================================================== */
-
-.tarjeta-trasera { 
-  background-color: var(--bark) !important; /* Fondo marrón oscuro */
-  color: var(--cream) !important; /* Texto crema claro */
+  background-color: var(--bark) !important; /* Cambiado a marrón oscuro */
+  color: var(--cream) !important; /* Cambiado a texto crema claro */
   transform: rotateY(180deg) !important; 
   display: flex !important; 
   align-items: flex-start !important; 
-  border: 2px solid var(--cream) !important; /* Borde claro de contraste */
+  border: 2px solid var(--cream) !important; /* Borde claro para que resalte */
   overflow-y: auto !important; 
   padding: 28px 24px !important; 
 }
 
+.contenido-trasero { 
+  width: 100% !important; 
+  display: flex !important; 
+  flex-direction: column !important; 
+  gap: 16px !important; 
+}
+
 .titulo-trasero { 
   font-family: var(--ff-display) !important; 
-  color: var(--cream) !important; 
+  color: var(--cream) !important; /* Título interno en crema claro */
   font-size: 1.2rem !important; 
   font-weight: bold !important; 
   margin: 0 !important; 
   letter-spacing: 1px !important; 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; /* Línea divisoria clara */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; /* Línea divisoria clara y sutil */
   padding-bottom: 8px !important; 
   text-align: center !important; 
+}
+
+.tarjeta-trasera ul { 
+  list-style-type: none !important; 
+  padding: 0 !important; 
+  margin: 0 !important; 
 }
 
 .tarjeta-trasera li { 
@@ -748,60 +426,131 @@ section {
   position: relative !important; 
   padding-left: 15px !important; 
   text-align: left !important;
-  color: var(--cream) !important; 
+  color: var(--cream) !important; /* Asegura que toda la lista sea clara */
 }
 
+/* Cambia los textos en negrita (strong) a un color crema puro para que resalten */
 .tarjeta-trasera li strong {
-  color: var(--white) !important; /* Texto en negrita resalta en blanco puro */
+  color: var(--white) !important;
 }
 
+/* Cambiamos el punto de la lista a crema claro para que se vea sobre el fondo oscuro */
 .tarjeta-trasera li::before { 
   content: "•" !important; 
-  color: var(--rose) !important; /* Puntos de la lista destacados en color rosa */
+  color: var(--rose) !important; /* Usamos tu color rosa/rosa viejo para darle un toque destacado al punto */
   position: absolute !important; 
   left: 0 !important; 
   top: 0 !important; 
   font-weight: bold !important; 
 }
-/* ==========================================================================
-   OPTIMIZACIÓN DE RESPONSIVIDAD GENERAL (PANTALLAS MEDIANAS Y TABLETS)
-   ========================================================================== */
-@media (max-width: 900px) {
-    .values-list { 
-        flex-direction: column; 
-        gap: 1.5rem; 
-    }
-    .como-trabajo-contenedor { 
-        flex-direction: column; 
-        align-items: center; 
-    }
-    .tarjeta-giratoria { 
-        width: 100%; 
-        max-width: 400px; 
-    }
+
+.tarjeta-trasera li:last-child { 
+  margin-bottom: 0 !important; 
+}
+    /* ==========================================================
+   TARJETA IZQUIERDA: SOBRE MÍ (GRANATE Y LETRA CREMA)
+   ========================================================== */
+.tarjeta-granate {
+    background-color: rgba(110, 44, 62, 0.75) !important; /* Fondo granate suave con opacidad */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(110, 44, 62, 0.5); /* Borde granate a juego */
+    box-sizing: border-box;
 }
 
-/* ==========================================================================
-   ARREGLO EXCLUSIVO PARA MÓVILES (PANTALLAS HASTA 768px)
-   ========================================================================== */
+/* Título principal de la tarjeta izquierda en crema claro */
+.tarjeta-granate h3 {
+    color: #fffdd0 !important;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* Párrafos, listas e iconos de la tarjeta izquierda en crema claro */
+.tarjeta-granate p,
+.tarjeta-granate span,
+.tarjeta-granate ul,
+.tarjeta-granate li {
+    color: #fffdd0 !important;
+    font-size: 1.15rem; 
+    line-height: 1.7; 
+}
+
+
+/* ==========================================================
+   TARJETA DERECHA: DATOS DE CONTACTO (CREMA Y LETRA GRANATE)
+   ========================================================== */
+.tarjeta-contacto-crema {
+    background-color: #fffdd0 !important; /* Fondo crema claro */
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(110, 44, 62, 0.2); /* Borde sutil granate */
+    box-sizing: border-box;
+}
+
+/* Títulos principales de la tarjeta derecha en granate */
+.tarjeta-contacto-crema h3,
+.tarjeta-contacto-crema h4 {
+    color: #6e2c3e !important;
+    margin-top: 0;
+}
+
+/* Párrafos e iconos de la tarjeta derecha en granate */
+.tarjeta-contacto-crema p,
+.tarjeta-contacto-crema span {
+    color: #6e2c3e !important;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Enlaces de redes sociales en granate y sin subrayado */
+.tarjeta-contacto-crema .redes-sociales a {
+    color: #6e2c3e !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.tarjeta-contacto-crema .redes-sociales a:hover {
+    opacity: 0.8;
+}
+    
+    /* RESPONSIVIDAD (MÓVILES Y TABLETS) */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+      .photo-card { max-width: 400px; margin: 0 auto; }
+      .about-quote { 
+    font-family: var(--ff-display); 
+    font-size: 1.8rem; /* Aumentado de tamaño para que destaque más */
+    font-style: italic; 
+    color: #2e4f3a; /* Color granate oscuro corporativo (a juego con tu marca) */
+    border-left: 4px solid var(--blush); /* Borde un poco más grueso para equilibrar */
+    padding-left: 1.5rem; 
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; 
+    line-height: 1.4; 
+}
+      .values-list { flex-direction: column; gap: 1.5rem; }
+      .como-trabajo-contenedor { flex-direction: column; align-items: center; }
+      .tarjeta-giratoria { width: 100%; max-width: 400px; }
+      /* --- ARREGLO EXCLUSIVO PARA MÓVILES --- */
 @media (max-width: 768px) {
     header, .header, .nav-container {
         flex-direction: column !important;
         text-align: center !important;
         padding: 15px !important;
     }
-    
     nav, .nav-menu, .links {
         display: flex !important;
         flex-direction: column !important;
         gap: 12px !important;
         margin: 15px 0 0 0 !important;
     }
-    
     nav a, .nav-menu a {
         margin: 5px 0 !important;
     }
-    
     .hero-container, [class*="hero"], [class*="presentacion"] {
         grid-template-columns: 1fr !important;
         display: flex !important;
@@ -809,101 +558,91 @@ section {
         padding: 20px !important;
         gap: 20px !important;
     }
-    
     .col-right {
-        order: -1 !important; /* Sube la fotografía arriba del texto en móviles */
+        order: -1 !important; /* Sube tu foto arriba del texto en el móvil */
     }
-    
     img {
         max-width: 100% !important;
         height: auto !important;
     }
-
-    /* ESTILO DE LA CITA DESTACADA AJUSTADO AL GRANATE */
-    .about-quote { 
-        font-family: var(--ff-display); 
-        font-size: 1.8rem; 
-        font-style: italic; 
-        color: #6e2c3e; /* Corregido al granate suave corporativo */
-        border-left: 4px solid var(--blush); 
-        padding-left: 1.5rem; 
-        margin-top: 1.5rem;
-        margin-bottom: 2rem; 
-        line-height: 1.4; 
-    }
-}
+  
   /* ==========================================================
-     ESTILOS DE LAS TARJETAS REDONDEADAS DE LA CABECERA
-     ========================================================== */
-  .tarjeta-redondeada-cabecera {
-      flex: 1;
-      background-color: rgba(110, 44, 62, 0.75) !important; /* Granate suave */
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      padding: 25px;
-      border-radius: 30px; /* Bordes notablemente redondeados */
-      border: 1px solid rgba(110, 44, 62, 0.5);
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+   ESTILOS DE LAS TARJETAS REDONDEADAS DE LA CABECERA
+   ========================================================== */
+.tarjeta-redondeada-cabecera {
+    flex: 1;
+    background-color: rgba(110, 44, 62, 0.75) !important; /* Granate suave */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 25px;
+    border-radius: 30px; /* Bordes notablemente redondeados */
+    border: 1px solid rgba(110, 44, 62, 0.5);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  /* Estilo del texto dentro de las dos tarjetas */
-  .tarjeta-redondeada-cabecera p {
-      color: #fffdd0 !important; /* Letra crema clara */
-      font-size: 1rem; 
-      line-height: 1.5;
-      margin: 0;
-      text-align: center;
-  }
+/* Estilo del texto dentro de las dos tarjetas */
+.tarjeta-redondeada-cabecera p {
+    color: #fffdd0 !important; /* Letra crema clara */
+    font-size: 1rem; /* Tamaño más pequeño que el bloque Sobre Mí */
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+  
   </style>
 </head>
 <body>
+
   
   <!-- MENÚ DE NAVEGACIÓN -->
   <nav>
-    <a href="#" class="nav-logo">Sandra Carrera Castaño - <em>NºColegiada: G-07583</em></a>
+    <a href="#" class="nav-logo">Sandra Carrera Castaño -  <em>NºColegiada: G-07583 </em></a>
     <ul class="nav-links">
-      <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
-      <li><a href="#seccion-contacto" class="boton-nav">Contacto</a></li> <!-- Corregido dentro de li -->
+       <li><a href="#sobre-mi">Sobre mí</a></li>
+    <a href="#seccion-contacto" class="boton-nav">Contacto</a>
     </ul>
   </nav>
 
-  <!-- ESTRUCTURA DE LA CABECERA (HERO) -->
-  <section class="hero-seccion">
-      <div class="hero-grid">
-          
-          <!-- COLUMNA IZQUIERDA: TEXTOS Y SUB-TARJETAS -->
-          <div class="hero-contenido">
-              <div class="cabecera-titulo">
-                  <h1>Hola soy...</h1>
-                  <!-- Imagen pequeña circular al lado del título -->
-                  <div class="seccion-koala-unica">
-                      <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva">
-                  </div>
-              </div>
-              
-              <!-- Contenedor con las dos frases metidas en tarjetas redondeadas pequeñas -->
-              <div class="sub-tarjetas-container">
-                  <div class="tarjeta-redondeada-cabecera">
-                      <p>Especializada en el acompañamiento integral y la autonomía infantil.</p>
-                  </div>
-                  <div class="tarjeta-redondeada-cabecera">
-                      <p>Intervención psicoeducativa personalizada en entornos reales.</p>
-                  </div>
-              </div>
-          </div>
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    
+    <!-- FILA 1: TÍTULO MÁS GRANDE Y FOTO PEQUEÑA ALINEADA A LA DERECHA -->
+    <div class="cabecera-titulo" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; width: 100%;">
+        <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
+            Hola soy Sandra, tu psicóloga koalificada
+        </h1>
+        <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex; align-items: center;">
+            <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="height: clamp(80px, 10vw, 110px); width: auto; object-fit: contain; border-radius: 16px;">
+        </div>
+    </div>
 
-          <!-- COLUMNA DERECHA: IMAGEN DEL KOALA MEDIANA -->
-          <div class="hero-imagen">
-              <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana">
-          </div>
+    <!-- FILA 2: TARJETAS A LA IZQUIERDA E IMAGEN MEDIANA A LA DERECHA -->
+    <div class="fila-contenido-inferior" style="display: flex; gap: 2.5rem; align-items: center; justify-content: space-between; width: 100%;">
+        
+        <!-- Bloque de las dos tarjetas redondeadas -->
+        <div class="sub-tarjetas-container" style="display: flex; gap: 1.5rem; flex: 1.8;">
+            <div class="tarjeta-redondeada-cabecera" style="flex: 1; background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
+                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Especializada en el acompañamiento integral y la autonomía infantil.</p>
+            </div>
+            <div class="tarjeta-redondeada-cabecera" style="flex: 1; background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
+                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Intervención psicoeducativa personalizada en entornos reales.</p>
+            </div>
+        </div>
 
-      </div>
-  </section>
+        <!-- Imagen del Koala Mediana a la derecha -->
+        <div class="hero-imagen" style="flex: 0.9; display: flex; justify-content: flex-end;">
+            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="max-width: 280px; width: 100%; height: auto; border-radius: 24px;">
+        </div>
+
+    </div>
+
+</section> <!-- Cierre definitivo de la sección Hero -->
+
 
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
@@ -930,7 +669,7 @@ section {
         <div class="value-item">
           <div class="value-icon">🧠</div>
           <h3 class="value-name">Regulación emocional</h3>
-          <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+           <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
         </div>
 
         <div class="value-item">
@@ -939,183 +678,192 @@ section {
           <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
         </div>
       </div> <!-- Cierre de values-list -->
-      
-    </div> <!-- Cierre corregido de section-inner -->
-  </section> <!-- Cierre de section Mis Valores -->
-  <!-- SECCIÓN CÓMO TRABAJO -->
-  <section id="como-trabajo">
-    <div class="section-inner">
 
-      <div class="como-trabajo-cabecera">
-        <h2>Cómo trabajo</h2>
-      </div>
+</section> <!-- Cierre de section inner de Mis Valores -->
 
-      <!-- Contenedor con distribución horizontal limpia para las 3 tarjetas -->
-      <div class="como-trabajo-contenedor">
-         
-          <!-- TARJETA 1: ESPACIO EUCALIPTO -->
-          <div class="tarjeta-giratoria">
-            <div class="tarjeta-interno">
-              <div class="tarjeta-frontal">
-                <div class="contenido-frontal">
-                  <div class="bloque-texto-frontal">
-                    <h3>Espacio eucalipto</h3>
-                    <p class="subtitulo-frontal">Orientación y acompañamiento para familias</p>
-                  </div>
-                  <div class="bloque-imagen-frontal">
-                    <img src="espacio-eucalipto.png" alt="Espacio Eucalipto" class="imagen-frontal-tarjeta">
-                  </div>
-                </div>
+<!-- SECCIÓN CÓMO TRABAJO -->
+<section class="como-trabajo-contenedor" id="como-trabajo">
+
+  <div class="como-trabajo-cabecera">
+    <h2>Cómo trabajo</h2>
+  </div>
+
+    <!-- Aquí continúa el resto de tus tarjetas (Espacio eucalipto, El abrazo del koala, EduKoala) -->
+     
+      <!-- TARJETA 1: ESPACIO EUCALIPTO -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>Espacio eucalipto</h3>
+                <p class="subtitulo-frontal">Orientación y acompañamiento para familias</p>
               </div>
-              <div class="tarjeta-trasera">
-                <div class="contenido-trasero">
-                  <h4 class="titulo-trasero">ONLINE</h4>
-                  <ul>
-                    <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
-                    <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
-                    <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
-                    <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
-                  </ul>
-                </div>
+              <div class="bloque-imagen-frontal">
+                <img src="espacio-eucalipto.png" alt="Espacio Eucalipto" class="imagen-frontal-tarjeta">
               </div>
             </div>
           </div>
-
-          <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
-          <div class="tarjeta-giratoria">
-            <div class="tarjeta-interno">
-              <div class="tarjeta-frontal">
-                <div class="contenido-frontal">
-                  <div class="bloque-texto-frontal">
-                    <h3>El abrazo del koala</h3>
-                    <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
-                  </div>
-                  <div class="bloque-imagen-frontal">
-                    <img src="abrazo-koala.png" alt="El abrazo del koala" class="imagen-frontal-tarjeta">
-                  </div>
-                </div>
-              </div>
-              <div class="tarjeta-trasera">
-                <div class="contenido-trasero">
-                  <h4 class="titulo-trasero">A DOMICILIO</h4>
-                  <ul>
-                    <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</li>
-                    <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
-                    <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                    <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TARJETA 3: EDUKOALA -->
-          <div class="tarjeta-giratoria">
-            <div class="tarjeta-interno">
-              <div class="tarjeta-frontal">
-                <div class="contenido-frontal">
-                  <div class="bloque-texto-frontal">
-                    <h3>EduKoala</h3>
-                    <p class="subtitulo-frontal">Apoyo psicoeducativo en necesidades educativas especiales</p>
-                  </div>
-                  <div class="bloque-imagen-frontal">
-                    <img src="edu-koala.png" alt="EduKoala" class="imagen-frontal-tarjeta">
-                  </div>
-                </div>
-              </div>
-              <div class="tarjeta-trasera">
-                <div class="contenido-trasero">
-                  <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
-                  <ul>
-                    <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</li>
-                    <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</li>
-                    <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
-                    <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      </div> <!-- Cierre de como-trabajo-contenedor -->
-    </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-  </section>
-  <!-- SECCIÓN SOBRE MÍ Y CONTACTO COMPLETA -->
-  <section id="sobre-mi" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
-      
-      <!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
-      <div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 3rem; width: 100%;">
-          
-          <!-- COLUMNA IZQUIERDA: SOBRE MÍ (FONDO GRANATE / LETRA CREMA) -->
-          <div class="tarjeta-granate" style="flex: 1.2;">
-              <h3 style="color: #fffdd0; margin-bottom: 1.5rem; font-size: 1.6rem;">Sobre Mí</h3>
-              <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
-              
-              <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
-              
-              <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
-                  <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
-                  <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo <em>"de campo"</em> in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
-                  <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">ONLINE</h4>
+              <ul>
+                <li><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</li>
+                <li><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</li>
+                <li><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</li>
+                <li><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</li>
               </ul>
-              
-              <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
+            </div>
           </div>
-
-          <!-- COLUMNA DERECHA: DATOS DE CONTACTO (FONDO CREMA / LETRA GRANATE) -->
-          <div class="tarjeta-contacto-crema" style="flex: 0.8;">
-              <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem;">Datos de Contacto</h3>
-              
-              <div class="info-item" style="margin-bottom: 1.5rem;">
-                  <h4>Correo Electrónico</h4>
-                  <span>✉️ psikoala@psikoala.com</span>
-              </div>
-
-              <div class="info-item" style="margin-bottom: 1.5rem;">
-                  <h4>Ubicación</h4>
-                  <p>📍 Santiago de Compostela</p>
-              </div>
-
-              <div class="info-item">
-                  <h4>Redes Sociales</h4>
-                  <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
-                      <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
-                      <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
-                  </div>
-              </div>
-          </div>
-          
-      </div> <!-- Cierre de contacto-superior-grid -->
-
-      <!-- BLOQUE INFERIOR: FORMULARIO EN TARJETA ÚNICA -->
-      <div class="formulario-contacto-contenedor" id="seccion-contacto" style="width: 100%;">
-          <div class="formulario-contacto" style="background: var(--white); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow);">
-              <h2 class="titulo-contacto" style="font-family: var(--ff-display); color: var(--bark); font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Contacto</h2>
-              
-              <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
-                  <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                      <label for="nombre" style="font-weight: 500; color: var(--bark);">Nombre</label>
-                      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); font-family: inherit;">
-                  </div>
-
-                  <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                      <label for="email" style="font-weight: 500; color: var(--bark);">Correo Electrónico</label>
-                      <input type="email" id="email" name="email" required placeholder="tu@email.com" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); font-family: inherit;">
-                  </div>
-
-                  <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                      <label for="mensaje" style="font-weight: 500; color: var(--bark);">Mensaje</label>
-                      <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); font-family: inherit; min-height: 120px; resize: vertical;"></textarea>
-                  </div>
-
-                  <button type="submit" class="btn-primary" style="align-self: center; min-width: 200px; text-align: center;">Enviar mensaje</button>
-              </form>
-          </div>
+        </div>
       </div>
 
-  </section>
+      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>El abrazo del koala</h3>
+                <p class="subtitulo-frontal">Acompañamiento al desarrollo infantil</p>
+              </div>
+              <div class="bloque-imagen-frontal">
+                <img src="abrazo-koala.png" alt="El abrazo del koala" class="imagen-frontal-tarjeta">
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">A DOMICILIO</h4>
+              <ul>
+                <li><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</li>
+                <li><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
+                <li><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
+                <li><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</body>
-</html>
+      <!-- TARJETA 3: EDUKOALA -->
+      <div class="tarjeta-giratoria">
+        <div class="tarjeta-interno">
+          <div class="tarjeta-frontal">
+            <div class="contenido-frontal">
+              <div class="bloque-texto-frontal">
+                <h3>EduKoala</h3>
+                <p class="subtitulo-frontal">Apoyo psicoeducativo en necesidades educativas especiales</p>
+              </div>
+              <div class="bloque-imagen-frontal">
+                <img src="edu-koala.png" alt="EduKoala" class="imagen-frontal-tarjeta">
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta-trasera">
+            <div class="contenido-trasero">
+              <h4 class="titulo-trasero">EN ESPACIOS NATURALES</h4>
+              <ul>
+                <li><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</li>
+                <li><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</li>
+                <li><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real, no solo dentro de las paredes de un despacho.</li>
+                <li><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Cierre de como-trabajo-contenedor -->
+  </div> <!-- Cierre de section-inner de Cómo Trabajo -->
+</section>
+
+<!-- SECCIÓN CONTACTO COMPLETA (DOS COLUMNAS) -->
+<style>
+    /* Contenedor principal que envuelve ambas columnas */
+    .seccion-contacto-container {
+        display: flex;
+        max-width: 1000px; 
+        margin: 40px auto;
+        gap: 30px; 
+        padding: 0 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+
+<!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
+<div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 2rem; width: 100%;">
+    
+    <!-- COLUMNA IZQUIERDA: SOBRE MÍ (GRANATE + CREMA) -->
+    <div class="tarjeta-sobre-mi" style="flex: 1;">
+        <h3>Sobre Mí</h3>
+        <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
+        
+        <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
+        
+        <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
+            <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
+            <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo "de campo" in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
+            <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
+        </ul>
+        
+        <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
+    </div>
+
+    <!-- COLUMNA DERECHA: DATOS DE CONTACTO (CREMA + GRANATE) -->
+    <div class="tarjeta-contacto-crema" style="flex: 1;">
+        <h3>Datos de Contacto</h3>
+        
+        <div class="info-item" style="margin-bottom: 1.5rem;">
+            <h4>Correo Electrónico</h4>
+            <span>✉️ psikoala@psikoala.com</span>
+        </div>
+
+        <div class="info-item" style="margin-bottom: 1.5rem;">
+            <h4>Ubicación</h4>
+            <p>📍 Santiago de Compostela</p>
+        </div>
+
+        <div class="info-item">
+            <h4>Redes Sociales</h4>
+            <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
+                <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
 
+    <!-- BLOQUE INFERIOR: FORMULARIO EN TARJETA ÚNICA -->
+    <div class="formulario-contacto-contenedor" style="width: 100%;">
+        <div class="formulario-contacto">
+            <h2 class="titulo-contacto">Contacto</h2>
+            
+            <form action="https://formspree.io" method="POST">
+                <div class="campo-grupo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
