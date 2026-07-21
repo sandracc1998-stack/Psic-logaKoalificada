@@ -721,7 +721,6 @@
     <ul class="nav-links">
       <li><a href="#mis-valores">Mis Valores</a></li>
       <li><a href="#como-trabajo">Cómo trabajo</a></li>
-       <li><a href="#sobre-mi">Sobre mí</a></li>
     <a href="#seccion-contacto" class="boton-nav">Contacto</a>
     </ul>
   </nav>
@@ -913,69 +912,6 @@
       </div>
 </div> <!-- Cierre de como-trabajo-contenedor -->
 </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-
-<!-- Estilos dinámicos para garantizar el diseño en móviles y evitar desajustes -->
-<style>
-    @media (max-width: 768px) {
-        .hero-seccion { padding: 20px 15px !important; }
-        .hero-dos-columnas-fijas { flex-direction: column !important; gap: 2rem !important; }
-        .columna-izquierda-textos { width: 100% !important; }
-        .columna-derecha-imagen { width: 100% !important; }
-        .imagen-sandra-koala-nueva { height: 350px !important; }
-        .cabecera-titulo h1 { font-size: 2.2rem !important; }
-        
-        .seccion-formulario { padding: 40px 15px !important; margin: 40px auto !important; }
-        .formulario-contacto { padding: 25px 20px !important; }
-        .formulario-fila-doble { flex-direction: column !important; gap: 1.5rem !important; }
-        
-        .contacto-final-lista { flex-direction: column !important; gap: 1rem !important; align-items: center !important; }
-    }
-</style>
-
-<!-- ===================================================
-     1. SECCIÓN SUPERIOR HERO (DOS COLUMNAS) 
-     =================================================== -->
-<section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px; box-sizing: border-box;">
-    
-    <div class="hero-dos-columnas-fijas" style="display: flex; gap: 3rem; align-items: stretch; justify-content: space-between; width: 100%;">
-        
-        <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS DEL MISMO ANCHO -->
-        <div class="columna-izquierda-textos" style="flex: 1.3; display: flex; flex-direction: column; gap: 2.5rem; justify-content: space-between;">
-            
-            <!-- Frase inicial en dos líneas -->
-            <div class="cabecera-titulo" style="width: 100%;">
-                <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; font-weight: bold;">
-                    Hola soy Sandra, <br><span style="display: inline-block; color: #6e2c3e;">tu psicóloga koalificada</span>
-                </h1>
-            </div>
-            
-            <!-- Bloque de las dos tarjetas una encima de otra -->
-            <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%;">
-                
-                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
-                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
-                        Creo en un acompañamiento cercano, respetuoso y personalizado.
-                    </p>
-                </div>
-                
-                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
-                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
-                        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-                    </p>
-                </div>
-                
-            </div>
-
-        </div>
-
-        <!-- COLUMNA DERECHA: IMAGEN AJUSTADA AL ALTO TOTAL -->
-        <div class="columna-derecha-imagen" style="flex: 1; display: flex; min-width: 290px;">
-            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
-        </div>
-
-    </div>
-
-</section>
 
 <!-- ===================================================
      2. SECCIÓN INTERMEDIA: FORMULARIO DE CONTACTO
