@@ -911,41 +911,129 @@
           </div>
         </div>
       </div>
+</div> <!-- Cierre de como-trabajo-contenedor -->
+</div> <!-- Cierre de section-inner de Cómo Trabajo -->
 
-    </div> <!-- Cierre de como-trabajo-contenedor -->
-  </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-<!-- Sección Superior Hero -->
-<section class="hero-seccion">
-    <div class="hero-grid-nuevo">
-        <div class="hero-contenido-izq">
-            <div class="cabecera-titulo">
-                <h1>Hola soy Sandra, <br><span>tu psicóloga koalificada</span></h1>
+<!-- Estilos dinámicos para garantizar el diseño en móviles y evitar desajustes -->
+<style>
+    @media (max-width: 768px) {
+        .hero-seccion { padding: 20px 15px !important; }
+        .hero-dos-columnas-fijas { flex-direction: column !important; gap: 2rem !important; }
+        .columna-izquierda-textos { width: 100% !important; }
+        .columna-derecha-imagen { width: 100% !important; }
+        .imagen-sandra-koala-nueva { height: 350px !important; }
+        .cabecera-titulo h1 { font-size: 2.2rem !important; }
+        
+        .seccion-formulario { padding: 40px 15px !important; margin: 40px auto !important; }
+        .formulario-contacto { padding: 25px 20px !important; }
+        .formulario-fila-doble { flex-direction: column !important; gap: 1.5rem !important; }
+        
+        .contacto-final-lista { flex-direction: column !important; gap: 1rem !important; align-items: center !important; }
+    }
+</style>
+
+<!-- ===================================================
+     1. SECCIÓN SUPERIOR HERO (DOS COLUMNAS) 
+     =================================================== -->
+<section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px; box-sizing: border-box;">
+    
+    <div class="hero-dos-columnas-fijas" style="display: flex; gap: 3rem; align-items: stretch; justify-content: space-between; width: 100%;">
+        
+        <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS DEL MISMO ANCHO -->
+        <div class="columna-izquierda-textos" style="flex: 1.3; display: flex; flex-direction: column; gap: 2.5rem; justify-content: space-between;">
+            
+            <!-- Frase inicial en dos líneas -->
+            <div class="cabecera-titulo" style="width: 100%;">
+                <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; font-weight: bold;">
+                    Hola soy Sandra, <br><span style="display: inline-block; color: #6e2c3e;">tu psicóloga koalificada</span>
+                </h1>
             </div>
-            <div class="sub-tarjetas-container">
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+            
+            <!-- Bloque de las dos tarjetas una encima de otra -->
+            <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%;">
+                
+                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
+                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
+                        Creo en un acompañamiento cercano, respetuoso y personalizado.
+                    </p>
                 </div>
-                <div class="tarjeta-redondeada-cabecera">
-                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+                
+                <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5); width: 100%; box-sizing: border-box;">
+                    <p style="color: #fffdd0; font-size: 1.05rem; margin: 0; line-height: 1.6; font-weight: 400;">
+                        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: IMAGEN AJUSTADA AL ALTO TOTAL -->
+        <div class="columna-derecha-imagen" style="flex: 1; display: flex; min-width: 290px;">
+            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+     2. SECCIÓN INTERMEDIA: FORMULARIO DE CONTACTO
+     =================================================== -->
+<section class="seccion-formulario" style="width: 100%; max-width: 1200px; margin: 60px auto; padding: 0 20px; box-sizing: border-box;">
+    <div class="formulario-contacto" style="background-color: #fdf8f5; padding: 50px; border-radius: 30px; box-shadow: 0 10px 30px rgba(110, 44, 62, 0.05); box-sizing: border-box;">
+        
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <h2 style="color: #6e2c3e; font-size: 2.2rem; margin: 0 0 0.5rem 0; font-family: var(--ff-display);">¿Hablamos?</h2>
+            <p style="color: rgba(110, 44, 62, 0.8); font-size: 1.05rem; margin: 0;">Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
+        </div>
+
+        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+            
+            <!-- Fila doble: Nombre y Email -->
+            <div class="formulario-fila-doble" style="display: flex; gap: 1.5rem; width: 100%;">
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="nombre" style="color: #6e2c3e; font-weight: 500; font-size: 0.95rem;">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 14px 20px; border-radius: 14px; border: 1px solid rgba(110, 44, 62, 0.2); background-color: #fff; color: #333; font-size: 1rem; box-sizing: border-box; outline: none;">
+                </div>
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="email" style="color: #6e2c3e; font-weight: 500; font-size: 0.95rem;">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 14px 20px; border-radius: 14px; border: 1px solid rgba(110, 44, 62, 0.2); background-color: #fff; color: #333; font-size: 1rem; box-sizing: border-box; outline: none;">
                 </div>
             </div>
-        </div>
-        <div class="hero-imagen-derecha">
-            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
-        </div>
+
+            <!-- Asunto -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%;">
+                <label for="asunto" style="color: #6e2c3e; font-weight: 500; font-size: 0.95rem;">¿En qué puedo ayudarte?</label>
+                <input type="text" id="asunto" name="asunto" required style="width: 100%; padding: 14px 20px; border-radius: 14px; border: 1px solid rgba(110, 44, 62, 0.2); background-color: #fff; color: #333; font-size: 1rem; box-sizing: border-box; outline: none;">
+            </div>
+
+            <!-- Mensaje -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%;">
+                <label for="mensaje" style="color: #6e2c3e; font-weight: 500; font-size: 0.95rem;">Tu mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required style="width: 100%; padding: 14px 20px; border-radius: 14px; border: 1px solid rgba(110, 44, 62, 0.2); background-color: #fff; color: #333; font-size: 1rem; box-sizing: border-box; resize: vertical; outline: none; font-family: inherit;"></textarea>
+            </div>
+
+            <!-- Botón de Envío -->
+            <div style="text-align: center; margin-top: 1rem;">
+                <button type="submit" style="background-color: #6e2c3e; color: #fffdd0; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; cursor: pointer; box-shadow: 0 5px 15px rgba(110, 44, 62, 0.2); transition: all 0.3s ease;">Enviar mensaje</button>
+            </div>
+
+        </form>
+
     </div>
 </section>
 
-<!-- [Aquí colocas tu sección intermedia con el Formulario de contacto] -->
-
-<!-- Pie de página final -->
-<footer class="pie-contacto-final">
-    <div class="pie-contenedor">
-        <ul class="contacto-final-lista">
-            <li><a href="mailto:info@tuweb.com">✉ info@tuweb.com</a></li>
-            <li><a href="tel:+34600000000">📞 +34 600 000 000</a></li>
-            <li><span>📍 Santiago de Compostela</span></li>
-            <li><a href="#">📸 @psico_koalificada</a></li>
+<!-- ===================================================
+     3. PIE DE PÁGINA FINAL (DATOS EN LÍNEA ESTILO MENÚ)
+     =================================================== -->
+<footer class="pie-contacto-final" style="width: 100%; background-color: #6e2c3e; padding: 25px 0; margin-top: 60px;">
+    <div class="pie-contenedor" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+        <ul class="contacto-final-lista" style="display: flex; justify-content: center; align-items: center; gap: 3.5rem; list-style: none; margin: 0; padding: 0;">
+            <li><a href="mailto:info@tuweb.com" style="color: #fffdd0; text-decoration: none; font-size: 0.95rem; font-weight: 500;">✉ psikoala@psikoala.com</a></li>
+            <li><span style="color: #fffdd0; font-size: 0.95rem; font-weight: 500;">📍 Santiago de Compostela</span></li>
+            <li><a href="#" style="color: #fffdd0; text-decoration: none; font-size: 0.95rem; font-weight: 500;">📸 @psico.koalificada</a></li>
         </ul>
-    </div>
+    </div> 
 </footer>
+
