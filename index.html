@@ -776,94 +776,82 @@
 
     </div> <!-- Cierre de como-trabajo-contenedor -->
   </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-</section>
+<!-- ========================================== -->
+<!-- SECCIÓN CONTACTO COMPLETA (SOBRE MÍ + DATOS)-->
+<!-- ========================================== -->
+<section id="sobre-mi" class="seccion-contacto-container" style="display: flex; flex-direction: column; gap: 2rem; max-width: 1200px; margin: 60px auto; padding: 0 20px; box-sizing: border-box;">
 
-<!-- SECCIÓN CONTACTO COMPLETA (DOS COLUMNAS) -->
-<style>
-    /* Contenedor principal que envuelve ambas columnas */
-    .seccion-contacto-container {
-        display: flex;
-        max-width: 1000px; 
-        margin: 40px auto;
-        gap: 30px; 
-        padding: 0 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        box-sizing: border-box;
-    }
-
-<!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
-<div class="contacto-superior-grid" style="display: flex; gap: 2rem; margin-bottom: 2rem; width: 100%;">
-    
-    <!-- COLUMNA IZQUIERDA: SOBRE MÍ (GRANATE + CREMA) -->
-    <div class="tarjeta-sobre-mi" style="flex: 1;">
-        <h3>Sobre Mí</h3>
-        <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
+    <!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
+    <div class="contacto-superior-grid" style="display: flex; gap: 2rem; width: 100%; align-items: stretch; flex-wrap: wrap;">
         
-        <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
-        
-        <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
-            <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
-            <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo "de campo" in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
-            <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
-        </ul>
-        
-        <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
-    </div>
-
-    <!-- COLUMNA DERECHA: DATOS DE CONTACTO (CREMA + GRANATE) -->
-    <div class="tarjeta-contacto-crema" style="flex: 1;">
-        <h3>Datos de Contacto</h3>
-        
-        <div class="info-item" style="margin-bottom: 1.5rem;">
-            <h4>Correo Electrónico</h4>
-            <span>✉️ psikoala@psikoala.com</span>
+        <!-- COLUMNA IZQUIERDA: SOBRE MÍ (FONDO GRANATE / LETRA CREMA) -->
+        <div class="tarjeta-granate" style="flex: 1.2; min-width: 320px;">
+            <h3>Sobre Mí</h3>
+            <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE). Cuento con una sólida experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
+            
+            <p class="about-body">Entiendo la terapia y la intervención como un espacio seguro, dinámico y totalmente personalizado. Mi forma de trabajar se basa en:</p>
+            
+            <ul class="about-body" style="color: #fffdd0; padding-left: 20px; margin-bottom: 1.5rem; line-height: 1.7;">
+                <li style="margin-bottom: 0.8rem;"><strong>Enfoque centrado en la familia:</strong> Capacito y acompaño a los padres proporcionando herramientas prácticas para el día a día.</li>
+                <li style="margin-bottom: 0.8rem;"><strong>Intervención en entornos naturales:</strong> Realizo trabajo <em>"de campo"</em> in situ, tanto en el hogar como en la comunidad (ir a la compra, al cine, paseos), gestionando las dificultades en el momento exacto en el que aparecen.</li>
+                <li style="margin-bottom: 0;"><strong>Respeto al ritmo de cada niñ@:</strong> Diseño sesiones basadas en la motivación, el juego y el refuerzo positivo para potenciar sus capacidades individuales.</li>
+            </ul>
+            
+            <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. Si buscas un apoyo cercano, práctico y especializado para el desarrollo de tu hij@, estoy aquí para guiaros en este camino.</p>
         </div>
 
-        <div class="info-item" style="margin-bottom: 1.5rem;">
-            <h4>Ubicación</h4>
-            <p>📍 Santiago de Compostela</p>
-        </div>
+        <!-- COLUMNA DERECHA: DATOS DE CONTACTO (FONDO CREMA / LETRA GRANATE) -->
+        <div class="tarjeta-contacto-crema" style="flex: 0.8; min-width: 300px;">
+            <h3>Datos de Contacto</h3>
+            
+            <div class="info-item" style="margin-bottom: 1.5rem;">
+                <h4>Correo Electrónico</h4>
+                <span>✉️ psikoala@psikoala.com</span>
+            </div>
 
-        <div class="info-item">
-            <h4>Redes Sociales</h4>
-            <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
-                <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
-                <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
+            <div class="info-item" style="margin-bottom: 1.5rem;">
+                <h4>Ubicación</h4>
+                <p>📍 Santiago de Compostela</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Redes Sociales</h4>
+                <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
+                    <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
+                </div>
             </div>
         </div>
-    </div>
-    
-</div>
-
+        
+    </div> <!-- Fin de contacto-superior-grid -->
 
     <!-- BLOQUE INFERIOR: FORMULARIO EN TARJETA ÚNICA -->
-    <div class="formulario-contacto-contenedor" style="width: 100%;">
-        <div class="formulario-contacto">
-            <h2 class="titulo-contacto">Contacto</h2>
+    <div class="formulario-contacto-contenedor" style="width: 100%; margin-top: 1rem;">
+        <div class="formulario-contacto" style="background: var(--white, #FFFFFF); padding: 40px; border-radius: var(--radius-lg, 32px); box-shadow: var(--shadow);">
+            <h2 class="titulo-contacto" style="font-family: var(--ff-display); color: var(--bark); font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Contacto</h2>
             
-            <form action="https://formspree.io" method="POST">
-                <div class="campo-grupo">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="nombre" style="font-weight: 500; color: var(--bark);">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); width: 100%;">
                 </div>
 
-                <div class="campo-grupo">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="email" style="font-weight: 500; color: var(--bark);">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); width: 100%;">
                 </div>
 
-                <div class="campo-grupo">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?"></textarea>
+                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label for="mensaje" style="font-weight: 500; color: var(--bark);">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); min-height: 120px; resize: vertical; width: 100%;"></textarea>
                 </div>
 
-                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+                <button type="submit" class="btn-primary" style="align-self: center; min-width: 200px; text-align: center; padding: .85rem 2rem; border-radius: 999px; background: var(--mauve); color: var(--white); border: none; cursor: pointer; font-weight: 500;">Enviar mensaje</button>
             </form>
         </div>
     </div>
 
-</div>
-
-    </div>
-
-</div>
+</section>
+<!-- ========================================== -->
+<!-- FIN SECCIÓN CONTACTO                       -->
+<!-- ========================================== -->
