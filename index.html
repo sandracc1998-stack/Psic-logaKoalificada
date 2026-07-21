@@ -621,7 +621,157 @@
     margin: 0;
     text-align: center;
 }
-  
+  .hero-seccion {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-grid-nuevo {
+    display: flex;
+    gap: 2rem; /* Controla la cercanía entre textos e imagen */
+    align-items: stretch; /* Obliga a la imagen a estirarse al alto total del texto */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-contenido-izq {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.cabecera-titulo h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-family: var(--ff-display);
+    color: #6e2c3e;
+    line-height: 1.2;
+}
+
+.cabecera-titulo h1 span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.sub-tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.tarjeta-redondeada-cabecera {
+    background-color: rgba(110, 44, 62, 0.75);
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(110, 44, 62, 0.5);
+}
+
+.tarjeta-redondeada-cabecera p {
+    color: #fffdd0;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.hero-imagen-derecha {
+    flex: 1;
+    display: flex;
+}
+
+.imagen-sandra-koala-nueva {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+    .hero-seccion {
+        padding: 20px 15px;
+    }
+    .hero-grid-nuevo {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .hero-imagen-derecha {
+        width: 100%;
+    }
+    .imagen-sandra-koala-nueva {
+        height: 300px; /* Altura ideal fija para que la foto luzca en móviles */
+    }
+    .cabecera-titulo h1 {
+        font-size: 2.2rem;
+    }
+}
+/* Modificación del contenido izquierdo para que estire las tarjetas */
+.hero-contenido-izq {
+    flex: 2; /* Aumenta la proporción para dar más espacio horizontal */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sub-tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%; /* Obliga a las tarjetas a usar todo el ancho de su columna */
+}
+
+.tarjeta-redondeada-cabecera {
+    width: 100%;
+    box-sizing: border-box; /* Evita que el padding rompa el diseño */
+}
+
+/* --- ESTILOS DEL MENÚ DE CONTACTO FINAL --- */
+.pie-contacto-final {
+    width: 100%;
+    background-color: #6e2c3e;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+.pie-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contacto-final-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* Espaciado estilo menú de navegación */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-final-lista a, 
+.contacto-final-lista span {
+    color: #fffdd0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .contacto-final-lista {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
   </style>
 </head>
 <body>
@@ -638,47 +788,30 @@
     </ul>
   </nav>
 
-<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
-<section class="hero-seccion" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-    
-    <!-- FILA 1: TÍTULO EN DOS LÍNEAS Y FOTO DE SANDRA ADAPTADA AL ALTO -->
-    <div class="cabecera-titulo" style="display: flex; align-items: stretch; justify-content: flex-start; gap: 1.5rem; margin-bottom: 2.5rem; width: 100%;">
+<section class="hero-seccion">
+    <div class="hero-grid-nuevo">
         
-        <!-- Texto con salto de línea controlado -->
-        <h1 style="margin: 0; font-size: clamp(2.6rem, 5vw, 3.8rem); font-family: var(--ff-display); color: #6e2c3e; line-height: 1.2; flex: 1;">
-            Hola soy Sandra, <br><span style="display: inline-block; white-space: nowrap;">tu psicóloga koalificada</span>
-        </h1>
-        
-        <!-- Contenedor de imagen ampliado que iguala la altura del h1 -->
-        <div class="seccion-koala-unica" style="flex-shrink: 0; display: flex;">
-            <img src="imagen-sandra-koala.png" alt="Sandra" class="imagen-sandra-koala-nueva" style="width: 160px; height: 100%; object-fit: cover; border-radius: 24px; box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);">
-        </div>
-
-    </div>
-
-    <!-- FILA 2: TARJETAS EN VERTICAL E IMAGEN DEL KOALA A LA DERECHA (MISMO ALTO) -->
-    <div class="fila-contenido-inferior" style="display: flex; gap: 2.5rem; align-items: stretch; justify-content: space-between; width: 100%;">
-        
-        <!-- Bloque de las dos tarjetas en columna (una encima de otra) -->
-        <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1.8;">
-            <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
-                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+        <div class="hero-contenido-izq">
+            <div class="cabecera-titulo">
+                <h1>Hola soy Sandra, <br><span>tu psicóloga koalificada</span></h1>
             </div>
-            <div class="tarjeta-redondeada-cabecera" style="background-color: rgba(110, 44, 62, 0.75); padding: 25px; border-radius: 30px; border: 1px solid rgba(110, 44, 62, 0.5);">
-                <p style="color: #fffdd0; font-size: 1rem; margin: 0; line-height: 1.5;">Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+            
+            <div class="sub-tarjetas-container">
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+                </div>
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Imagen del Koala a la derecha adaptada al alto de las tarjetas -->
-        <div class="hero-imagen" style="flex: 0.9; display: flex;">
-            <img src="imagen-koala.png" alt="Koala" class="foto-koala-mediana" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+        <div class="hero-imagen-derecha">
+            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
         </div>
 
     </div>
-
-</section> <!-- Cierre definitivo de la sección Hero -->
-
-
+</section>
 
   <!-- SECCIÓN MIS VALORES -->
   <section id="mis-valores">
@@ -812,82 +945,38 @@
 
     </div> <!-- Cierre de como-trabajo-contenedor -->
   </div> <!-- Cierre de section-inner de Cómo Trabajo -->
-<!-- ========================================== -->
-<!-- SECCIÓN CONTACTO COMPLETA (SOBRE MÍ + DATOS)-->
-<!-- ========================================== -->
-<section id="sobre-mi" class="seccion-contacto-container" style="display: flex; flex-direction: column; gap: 2rem; max-width: 1200px; margin: 60px auto; padding: 0 20px; box-sizing: border-box;">
-
-    <!-- BLOQUE SUPERIOR: DOS COLUMNAS INVERTIDAS -->
-    <div class="contacto-superior-grid" style="display: flex; gap: 2rem; width: 100%; align-items: stretch; flex-wrap: wrap;">
-        
-        <!-- COLUMNA IZQUIERDA: SOBRE MÍ (FONDO GRANATE / LETRA CREMA) -->
-        <div class="tarjeta-granate" style="flex: 1.2; min-width: 320px;">
-            <h3>Sobre Mí</h3>
-            <p class="about-body">Soy psicóloga con formación en Trastorno del Espectro Autista (TEA), dificultades de desarrollo y Necesidades Educativas Especiales (NEE).</p> 
-              
-          <p class="about-body">Cuento con experiencia en intervención educativa y apoyo integral tanto a niñ@s como a sus familias.</p>
-            
-            <p class="about-body">Creo en un acompañamiento seguro, dinámico y totalmente personalizado. </p>
-          
-             <p class="about-body">Mi enfoque se centra en el diseño de actividades estructuradas y adaptadas al ritmo de cada niño.</p>
-  
-            <p class="about-body">Mi objetivo es derribar barreras y construir puentes hacia la autonomía real en vuestra rutina diaria. </p>
-          
-             <p class="about-body">Cada niñ@ y cada familia tiene sus necesidades, estoy aquí para guiaros en este camino.</p>
-        </div>
-
-        <!-- COLUMNA DERECHA: DATOS DE CONTACTO (FONDO CREMA / LETRA GRANATE) -->
-        <div class="tarjeta-contacto-crema" style="flex: 0.8; min-width: 300px;">
-            <h3>Datos de Contacto</h3>
-            
-            <div class="info-item" style="margin-bottom: 1.5rem;">
-                <h4>Correo Electrónico</h4>
-                <span>✉️ psikoala@psikoala.com</span>
+<!-- Sección Superior Hero -->
+<section class="hero-seccion">
+    <div class="hero-grid-nuevo">
+        <div class="hero-contenido-izq">
+            <div class="cabecera-titulo">
+                <h1>Hola soy Sandra, <br><span>tu psicóloga koalificada</span></h1>
             </div>
-
-            <div class="info-item" style="margin-bottom: 1.5rem;">
-                <h4>Ubicación</h4>
-                <p>📍 Santiago de Compostela</p>
-            </div>
-
-            <div class="info-item">
-                <h4>Redes Sociales</h4>
-                <div class="redes-sociales" style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://instagram.com" target="_blank">📸 @psico.koalificada</a>
-                    <a href="https://linkedin.com" target="_blank">💼 ://linkedin.com</a>
+            <div class="sub-tarjetas-container">
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Creo en un acompañamiento cercano, respetuoso y personalizado.</p>
+                </div>
+                <div class="tarjeta-redondeada-cabecera">
+                    <p>Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.</p>
                 </div>
             </div>
         </div>
-        
-    </div> <!-- Fin de contacto-superior-grid -->
-
-    <!-- BLOQUE INFERIOR: FORMULARIO EN TARJETA ÚNICA -->
-    <div class="formulario-contacto-contenedor" style="width: 100%; margin-top: 1rem;">
-        <div class="formulario-contacto" style="background: var(--white, #FFFFFF); padding: 40px; border-radius: var(--radius-lg, 32px); box-shadow: var(--shadow);">
-            <h2 class="titulo-contacto" style="font-family: var(--ff-display); color: var(--bark); font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Contacto</h2>
-            
-            <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
-                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <label for="nombre" style="font-weight: 500; color: var(--bark);">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); width: 100%;">
-                </div>
-
-                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <label for="email" style="font-weight: 500; color: var(--bark);">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); width: 100%;">
-                </div>
-
-                <div class="campo-grupo" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <label for="mensaje" style="font-weight: 500; color: var(--bark);">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="¿En qué puedo ayudarte?" style="padding: 0.75rem; border: 1px solid var(--blush); border-radius: var(--radius-sm); background: var(--cream); min-height: 120px; resize: vertical; width: 100%;"></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary" style="align-self: center; min-width: 200px; text-align: center; padding: .85rem 2rem; border-radius: 999px; background: var(--mauve); color: var(--white); border: none; cursor: pointer; font-weight: 500;">Enviar mensaje</button>
-            </form>
+        <div class="hero-imagen-derecha">
+            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
         </div>
     </div>
-
 </section>
-<!-- ========================================== -->
-<!-- FIN SECCIÓN CONTACTO                       -->
-<!-- ========================================== -->
+
+<!-- [Aquí colocas tu sección intermedia con el Formulario de contacto] -->
+
+<!-- Pie de página final -->
+<footer class="pie-contacto-final">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista">
+            <li><a href="mailto:info@tuweb.com">✉ info@tuweb.com</a></li>
+            <li><a href="tel:+34600000000">📞 +34 600 000 000</a></li>
+            <li><span>📍 Santiago de Compostela</span></li>
+            <li><a href="#">📸 @psico_koalificada</a></li>
+        </ul>
+    </div>
+</footer>
