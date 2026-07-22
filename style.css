@@ -145,10 +145,11 @@
 /* En ordenador usamos Grid para mantener la estructura de dos columnas */
 .hero-dos-columnas {
     display: grid;
-    grid-template-columns: 1.3f1 1fr;
+    grid-template-columns: 1.3fr 1fr; /* Aquí hemos cambiado el 1 por la r */
     gap: 3rem;
     width: 100%;
 }
+
 
 .cabecera-titulo {
     grid-column: 1;
