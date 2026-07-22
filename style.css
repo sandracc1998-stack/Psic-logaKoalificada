@@ -417,7 +417,7 @@ section {
 }
 
 /* ==========================================================================
-   6. SECCIÓN FORMULARIO DE CONTACTO Y PIE DE PÁGINA (CORREGIDO)
+   6. SECCIÓN FORMULARIO DE CONTACTO Y PIE DE PÁGINA (ESTILOS DEFINITIVOS)
    ========================================================================== */
 .seccion-formulario {
     width: 100%;
@@ -427,14 +427,15 @@ section {
     box-sizing: border-box;
 }
 
+/* Esta es la tarjeta contenedora que ahora sí envolverá todo el formulario */
 .formulario-contacto {
-    background-color: #fdf8f5;
+    background-color: #fdf8f5; /* Color de fondo de la tarjeta */
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(110, 44, 62, 0.05);
     box-sizing: border-box;
-    max-width: 800px; /* Centra y acota el formulario */
-    margin: 0 auto;
+    max-width: 800px; 
+    margin: 0 auto; /* Centra la tarjeta en la pantalla */
 }
 
 .formulario-cabecera {
@@ -516,10 +517,11 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Pie de página */
 .pie-contacto-final {
     width: 100%;
     background-color: #6e2c3e;
-    padding: 20px 0;
+    padding: 25px 0;
     margin-top: 60px;
 }
 
