@@ -1,39 +1,165 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandra Carrera Castaño — Psicóloga esducativa</title>
-  <link rel="preconnect" href="https://googleapis.com" />
-  <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --cream:  #FAF6F0;
-      --blush:  #EDD9CC;
-      --rose:   #C9897A;
-      --mauve:  #8B5E6A;
-      --bark:   #5C3D3D;
-      --text:   #3D2929;
-      --muted:  #9A7878;
-      --white:  #FFFFFF;
-      --ff-display: 'Cormorant Garamond', Georgia, serif;
-      --ff-body:    'DM Sans', system-ui, sans-serif;
-      --radius-sm: 12px;
-      --radius-md: 20px;
-      --radius-lg: 32px;
-      --shadow: 0 4px 24px rgba(92,61,61,.08);
+/* ==========================================================================
+   ESTILOS DE SECCIÓN DE CONTACTO Y PIE DE PÁGINA
+   ========================================================================== */
+.seccion-formulario {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.formulario-contacto {
+    background-color: #fdf8f5;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(110, 44, 62, 0.05);
+    box-sizing: border-box;
+}
+
+.formulario-cabecera {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.formulario-cabecera h2 {
+    color: #6e2c3e;
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem 0;
+    font-family: var(--ff-display);
+}
+
+.formulario-cabecera p {
+    color: rgba(110, 44, 62, 0.8);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.formulario-cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formulario-fila-doble {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.formulario-grupo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formulario-grupo.ancho-completo {
+    width: 100%;
+}
+
+.formulario-grupo label {
+    color: #6e2c3e;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.formulario-grupo input,
+.formulario-grupo textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(110, 44, 62, 0.2);
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.formulario-grupo textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.formulario-boton-contenedor {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.formulario-boton-contenedor button {
+    background-color: #6e2c3e;
+    color: #fffdd0;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(110, 44, 62, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Pie de página */
+.pie-contacto-final {
+    width: 100%;
+    background-color: #6e2c3e;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+.pie-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.contacto-final-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-final-lista a {
+    color: #fffdd0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.contacto-final-lista span {
+    color: #fffdd0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   VISTA MÓVIL ADICIONAL (PANTALLAS MENORES A 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .formulario-contacto {
+        padding: 30px 20px;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--text); font-family: var(--ff-body); font-size: 1rem; line-height: 1.65; }
-
-    /* MENÚ DE NAVEGACIÓN */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,246,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--blush); display: flex; align-items: center; justify-content: space-between; padding: .75rem 2rem; }
-    .nav-logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--mauve); text-decoration: none; font-style: italic; }
-    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--bark); font-size: .875rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; }
-    .nav-links a:hover { color: var(--rose); }
+    
+    /* El nombre y el email se apilan uno abajo de otro en móvil */
+    .formulario-fila-doble {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .contacto-final-lista {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
 
 
 /* ==========================================================================
