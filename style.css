@@ -131,7 +131,108 @@
     order: 2 !important; /* Posición 2: Frase de acompañamiento */
   }
 }
+/* ==========================================================================
+   ESTILOS GENERALES Y VISTA ORDENADOR
+   ========================================================================== */
+.hero-seccion {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
 
+/* En ordenador usamos Grid para mantener la estructura de dos columnas */
+.hero-dos-columnas {
+    display: grid;
+    grid-template-columns: 1.3f1 1fr;
+    gap: 3rem;
+    width: 100%;
+}
+
+.cabecera-titulo {
+    grid-column: 1;
+    width: 100%;
+}
+
+.cabecera-titulo h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-family: var(--ff-display);
+    color: #6e2c3e;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.cabecera-titulo h1 span {
+    display: inline-block;
+    color: #6e2c3e;
+}
+
+.sub-tarjetas-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.tarjeta-redondeada-cabecera {
+    background-color: rgba(110, 44, 62, 0.75);
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(110, 44, 62, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tarjeta-redondeada-cabecera p {
+    color: #fffdd0; /* Tu color crema */
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.columna-derecha-imagen {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* Ocupa el alto de la frase + tarjetas */
+    display: flex;
+    min-width: 290px;
+}
+
+.imagen-sandra-koala-nueva {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);
+}
+
+/* ==========================================================================
+   VISTA MÓVIL (PANTALLAS MENORES A 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-dos-columnas {
+        display: flex;
+        flex-direction: column; /* Pone los elementos en una sola columna vertical */
+        gap: 2rem;
+    }
+
+    /* Forzamos el nuevo orden visual */
+    .cabecera-titulo {
+        order: 1; /* Primero: Frase */
+    }
+
+    .columna-derecha-imagen {
+        order: 2; /* Segundo: Imagen */
+        height: 350px; /* Limitamos la altura en móvil para que no ocupe toda la pantalla */
+    }
+
+    .sub-tarjetas-container {
+        order: 3; /* Tercero: Tarjetas */
+    }
+}
     /* SECCIONES COMUNES */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
