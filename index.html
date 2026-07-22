@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandra Carrera - Psicóloga</title>
-    
-    <!-- ENLACE CORRECTO SI ESTÁN JUNTOS -->
+    <!-- Enlace directo al archivo de estilos separado -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 <!-- MENÚ DE NAVEGACIÓN -->
-<nav>
+<nav class="nav-principal">
   <a href="#" class="nav-logo">Sandra Carrera Castaño - <em>NºColegiada: G-07583 </em></a>
   <ul class="nav-links">
     <li><a href="#mis-valores">Mis Valores</a></li>
@@ -22,19 +21,18 @@
 
 <!-- 1. ESTRUCTURA DE LA CABECERA (HERO) -->
 <section class="hero-seccion">
-    <!-- CONTENEDOR PRINCIPAL -->
     <div class="hero-dos-columnas">
-        <!-- ELEMENTO 1: LA FRASE DE PRESENTACIÓN -->
+        <!-- Elemento 1: Frase de presentación -->
         <div class="cabecera-titulo">
             <h1>
                 Hola soy Sandra, <br><span>tu psicóloga koalificada</span>
             </h1>
         </div>
-        <!-- ELEMENTO 2: LA IMAGEN -->
+        <!-- Elemento 2: Imagen de Sandra -->
         <div class="columna-derecha-imagen">
             <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
         </div>
-        <!-- ELEMENTO 3: LAS TARJETAS -->
+        <!-- Elemento 3: Tarjetas de presentación -->
         <div class="sub-tarjetas-container">
             <div class="tarjeta-redondeada-cabecera">
                 <p>
@@ -83,14 +81,13 @@
 </section>
 
 <!-- 3. SECCIÓN CÓMO TRABAJO -->
-<section class="como-trabajo-contenedor" id="como-trabajo">
+<section class="como-trabajo-contenedor-seccion" id="como-trabajo">
   <div class="como-trabajo-cabecera">
     <h2>Cómo trabajo</h2>
   </div>
-  <!-- CONTENEDOR DE TARJETAS GIRATORIAS -->
-  <div class="tarjetas-giratorias-contenedor" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 20px 0;">     
+  <div class="tarjetas-giratorias-contenedor">     
       
-      <!-- TARJETA 1: ESPACIO EUCALIPTO -->
+      <!-- Tarjeta 1: Espacio Eucalipto -->
       <div class="tarjeta-giratoria">
         <div class="tarjeta-interno">
           <div class="tarjeta-frontal">
@@ -118,7 +115,7 @@
         </div>
       </div>
 
-      <!-- TARJETA 2: EL ABRAZO DEL KOALA -->
+      <!-- Tarjeta 2: El abrazo del Koala -->
       <div class="tarjeta-giratoria">
         <div class="tarjeta-interno">
           <div class="tarjeta-frontal">
@@ -146,7 +143,7 @@
         </div>
       </div>
 
-      <!-- TARJETA 3: EDUKOALA -->
+      <!-- Tarjeta 3: EduKoala -->
       <div class="tarjeta-giratoria">
         <div class="tarjeta-interno">
           <div class="tarjeta-frontal">
@@ -181,6 +178,7 @@
 <section id="contacto" class="seccion-formulario">
     <div class="formulario-contacto">
         <div class="formulario-cabecera">
+            <h2>¿Hablamos?</h2>
             <p>Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
         </div>
         <form action="#" method="POST" class="formulario-cuerpo">
@@ -198,15 +196,11 @@
                 <label for="asunto">¿En qué puedo ayudarte?</label>
                 <input type="text" id="asunto" name="asunto" required>
             </div>
-            <div class="formulario-grupo ancho-completo">
-                <label for="mensaje">Tu mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
             <div class="formulario-boton-contenedor">
                 <button type="submit">Enviar mensaje</button>
             </div>
         </form>
-    </div> <!-- ¡CORREGIDO! Cierre del div formulario-contacto que faltaba -->
+    </div>
 </section>
 
 <!-- 5. PIE DE PÁGINA FINAL -->
@@ -219,3 +213,6 @@
         </ul>
     </div> 
 </footer>
+
+</body>
+</html>
