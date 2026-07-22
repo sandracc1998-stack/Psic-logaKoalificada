@@ -174,14 +174,18 @@
   </div>
 </section>
 
-<!-- 4. SECCIÓN INTERMEDIA: FORMULARIO DE CONTACTO -->
+<!-- 4. SECCIÓN INTERMEDIA: FORMULARIO DE CONTACTO (ESTRUCTURA CORREGIDA) -->
 <section id="contacto" class="seccion-formulario">
     <div class="formulario-contacto">
+        
         <div class="formulario-cabecera">
             <h2>¿Hablamos?</h2>
             <p>Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
         </div>
+
         <form action="#" method="POST" class="formulario-cuerpo">
+            
+            <!-- Fila doble: Nombre y Email -->
             <div class="formulario-fila-doble">
                 <div class="formulario-grupo">
                     <label for="nombre">Nombre completo</label>
@@ -192,27 +196,19 @@
                     <input type="email" id="email" name="email" required>
                 </div>
             </div>
+
+            <!-- Asunto (Ocupa todo el ancho) -->
             <div class="formulario-grupo ancho-completo">
                 <label for="asunto">¿En qué puedo ayudarte?</label>
                 <input type="text" id="asunto" name="asunto" required>
             </div>
+
+            <!-- Botón de Envío Centrado -->
             <div class="formulario-boton-contenedor">
                 <button type="submit">Enviar mensaje</button>
             </div>
+
         </form>
-    </div>
+
+    </div> <!-- ¡Cierre fundamental de la caja contenedora! -->
 </section>
-
-<!-- 5. PIE DE PÁGINA FINAL -->
-<footer class="pie-contacto-final">
-    <div class="pie-contenedor">
-        <ul class="contacto-final-lista">
-            <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
-            <li><span>📍 Santiago de Compostela</span></li>
-            <li><a href="#">📸 @psico.koalificada</a></li>
-        </ul>
-    </div> 
-</footer>
-
-</body>
-</html>
