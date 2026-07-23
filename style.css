@@ -569,15 +569,41 @@ section {
     padding: 0;
   }
 
-  /* 2, 3 y 4. Hero / Inicio */
-  .hero-section, 
+  /* 2, 3 y 4. FIX ESPECÍFICO PARA LA CABECERA E INICIO */
+  header, 
+  main, 
+  section, 
   .hero, 
-  main {
+  .hero-container, 
+  .hero-content, 
+  .presentacion,
+  [class*="hero"] {
     display: flex !important;
     flex-direction: column !important;
+    grid-template-columns: 1fr !important;
     align-items: center !important;
-    text-align: center;
-    gap: 1.5rem;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Asegura que la imagen de Sandra se ponga en su propia fila centrada */
+  .hero img, 
+  .hero-image img, 
+  .presentacion img, 
+  section img,
+  header + main img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: 1rem auto !important;
+    display: block !important;
+  }
+
+  /* Ajuste de título */
+  h1, .hero h1, .titulo-principal {
+    text-align: center !important;
+    font-size: 1.8rem !important;
+    width: 100% !important;
   }
 
   /* 5 y 6. Tarjetas de Valores y Cómo Trabajo en vertical */
@@ -592,11 +618,11 @@ section {
     width: 100% !important;
   }
 
-  /* Ajuste para que las imágenes y tarjetas ocupen todo el ancho en móvil */
+  /* Ajuste para tarjetas */
   .card-valor, 
   .card-trabajo, 
   .card-hero, 
-  img {
+  .card {
     max-width: 100% !important;
     width: 100% !important;
     box-sizing: border-box;
