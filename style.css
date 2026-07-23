@@ -718,4 +718,20 @@ form button,
 .formulario-contacto button {
   color: #ffffff !important;
 }
+/* --- FIX 1: LETRA BLANCA EN TARJETAS SOBRE FONDO GRANATE --- */
+[class*="hero"] p,
+[class*="hero"] div,
+.hero-card,
+.hero-card p {
+  color: #ffffff !important;
+}
+
+/* --- FIX 2: DIFUMINAR FONDO BLANCO DE LAS IMÁGENES --- */
+#como-trabajo img,
+.seccion-trabajo img,
+div[class*="trabajo"] img,
+div[class*="koala"] img {
+  mix-blend-mode: multiply !important; /* Se come el fondo blanco de la foto */
+  background-color: transparent !important;
+}
 
