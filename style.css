@@ -639,4 +639,9 @@ section {
     box-sizing: border-box;
   }
 }
+/* --- COLOR CREMA PARA EL TEXTO DE LAS TARJETAS --- */
+.card-hero, 
+.card-hero p {
+  color: #fffdd0 !important; /* Color crema */
+}
 
