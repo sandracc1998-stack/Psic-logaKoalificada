@@ -644,4 +644,44 @@ section {
 .card-hero p {
   color: #fffdd0 !important; /* Color crema */
 }
+/* ==========================================================
+   CAMBIOS GENERALES (ORDENADOR Y MÓVIL)
+   ========================================================== */
+
+/* 1. ELIMINAR ESPACIO BLANCO LATERAL (Scroll horizontal) */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 2. CAMBIAR TEXTO SOBRE FONDO GRANATE A ROSA CREMA PASTEL */
+/* Afecta a las dos tarjetas del inicio, botón de envío y pie de página */
+.card-hero,
+.card-hero p,
+.hero-cards div,
+.hero-cards p,
+.btn-submit,
+.btn-contacto,
+footer,
+footer p,
+footer a,
+.footer,
+.footer p,
+.footer a,
+.contacto-final-lista a,
+.contacto-final-lista span {
+  color: #fbebe8 !important; /* Tono rosa crema suave */
+}
+
+/* 3. CAMBIAR FONDO DE LAS TARJETAS "MIS VALORES" A VERDE SUAVE PASTEL */
+#mis-valores .card-valor,
+#mis-valores .card,
+.section-valores .card-valor,
+.valores-grid .card,
+.card-valor {
+  background-color: #eaf3ed !important; /* Verde pastel suave */
+  border: 1px solid #d8e6db !important; /* Borde sutil a juego */
+}
 
