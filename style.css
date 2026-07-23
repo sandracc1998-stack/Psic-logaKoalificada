@@ -684,4 +684,38 @@ footer a,
   background-color: #eaf3ed !important; /* Verde pastel suave */
   border: 1px solid #d8e6db !important; /* Borde sutil a juego */
 }
+/* ==========================================================
+   NUEVOS AJUSTES (ORDENADOR Y MÓVIL)
+   ========================================================== */
+
+/* 1. Letra en color blanco para las tarjetas debajo de la imagen principal */
+.card-hero,
+.card-hero p,
+.hero-cards div,
+.hero-cards p {
+  color: #ffffff !important;
+}
+
+/* 2. Integrar la imagen de la tarjeta "El abrazo del koala" con el fondo */
+.card-trabajo img,
+.trabajo-grid img,
+#como-trabajo img {
+  mix-blend-mode: multiply !important; /* Difumina el fondo blanco de la imagen */
+  border-radius: 12px;
+}
+
+/* 3. Enlace "Contacto" del menú con el mismo color oscuro que los otros botones */
+.nav-links a.btn-contacto,
+.nav-links a[href="#contacto"] {
+  color: #2c2223 !important; /* Mismo tono oscuro que Mis Valores y Cómo Trabajo */
+  background: transparent !important; /* Quita fondos o sombreados si los tuviera */
+}
+
+/* 4. Texto del botón "Enviar mensaje" en color blanco */
+.btn-submit,
+button[type="submit"],
+form button,
+.formulario-contacto button {
+  color: #ffffff !important;
+}
 
