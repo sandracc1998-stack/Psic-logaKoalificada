@@ -17,6 +17,7 @@
   <ul class="nav-links">
     <li><a href="#mis-valores">Mis Valores</a></li>
     <li><a href="#como-trabajo">Cómo trabajo</a></li>
+    <li><a href="recursos.html">Recursos</a></li>
     <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
   </ul>
 </nav>
