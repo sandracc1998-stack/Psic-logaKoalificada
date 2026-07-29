@@ -1,0 +1,34 @@
+<!-- SECCIÓN DE CONTENIDO PRINCIPAL -->
+<section id="recursos-contenido" class="seccion-recursos-pagina">
+    <h2 class="titulo-recursos">Recursos koalificados</h2>
+    <p class="subtitulo-recursos">
+        Aquí encontrarás información y herramientas para acompañar el desarrollo de los más pequeños.
+    </p>
+    
+    <!-- CONTENEDOR DE LOS RECURSOS -->
+    <div class="contenedor-articulos">
+        
+        <!-- EJEMPLO DE RECURSO 1 (Puedes duplicar este bloque completo para añadir más) -->
+        <article class="tarjeta-recurso-amplia">
+            <!-- Título con el formato de la imagen -->
+            <h3 class="titulo-recurso-individual">Respeto al ritmo</h3>
+            <!-- Tarjeta amplia difuminada con el texto interior -->
+            <div class="bloque-texto-difuminado">
+                <p>
+                    Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales de desarrollo, ofreciendo un espacio seguro donde avanzar paso a paso.
+                </p>
+            </div>
+        </article>
+
+        <!-- EJEMPLO DE RECURSO 2 -->
+        <article class="tarjeta-recurso-amplia">
+            <h3 class="titulo-recurso-individual">Título del Segundo Recurso</h3>
+            <div class="bloque-texto-difuminado">
+                <p>
+                    Escribe aquí el desarrollo de tu segundo recurso o artículo psicopedagógico. Mantendrá el mismo diseño amplio y los tonos corporativos.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
