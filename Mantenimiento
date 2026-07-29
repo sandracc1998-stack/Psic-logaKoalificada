@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandra Carrera - En mantenimiento</title>
+    <!-- Mantenemos el enlace a tus estilos generales por si acaso -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS EXCLUSIVO PARA ESTA PÁGINA (No afecta al style.css principal) -->
+    <style>
+        .banner-mantenimiento {
+            background-color: #FDF8F5; /* Fondo rosa crema clarito */
+            border-left: 5px solid #4A2E35; /* Línea lateral granate */
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 110px auto 20px auto; /* Baja el aviso para que no lo tape el menú fijo */
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(74, 46, 53, 0.05);
+        }
+
+        .banner-mantenimiento p {
+            color: #4A2E35; /* Letra granate oscuro */
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<!-- MENÚ SIMPLIFICADO (Sin enlaces para que nadie se vaya a páginas a medias) -->
+<nav class="nav-principal">
+  <a href="#" class="nav-logo">
+    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
+  </a>
+</nav>
+
+<!-- BANNER DE AVISO DE CAMBIOS -->
+<div class="banner-mantenimiento">
+    <p>⚙️ Estamos haciendo mejoras en la web para ofrecerte un espacio más cómodo y con nuevos recursos. ¡Volvemos muy pronto!</p>
+</div>
+
+<!-- ESTRUCTURA DE LA CABECERA (HERO) -->
+<section class="hero-seccion">
+    <div class="hero-dos-columnas">
+        <div class="cabecera-titulo">
+            <h1>
+                Hola soy Sandra, <br><span>tu psicóloga koalificada</span>
+            </h1>
+        </div>
+        <div class="columna-derecha-imagen">
+            <img src="imagen-sandra-koala.png" alt="Sandra con Koala" class="imagen-sandra-koala-nueva">
+        </div>
+        <div class="sub-tarjetas-container">
+            <div class="tarjeta-redondeada-cabecera">
+                <p style="color: #ffffff !important;">
+                    Creo en un acompañamiento cercano, respetuoso y personalizado.
+                </p>
+            </div>
+            <div class="tarjeta-redondeada-cabecera">
+                <p style="color: #ffffff !important;">
+                    Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA CON CONTACTO DIRECTO -->
+<footer class="pie-contacto-final">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista">
+            <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
+            <li><span>📍 Santiago de Compostela</span></li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    📸 @psico.koalificada
+                </a>
+            </li>
+        </ul>
+    </div> 
+</footer>
+
+</body>
+</html>
