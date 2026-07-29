@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Valores - Sandra Carrera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-principal">
+  <a href="index.html" class="nav-logo">
+    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="valores.html">Mis Valores</a></li>
+    <li><a href="trabajo.html">Cómo trabajo</a></li>
+    <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- 2. SECCIÓN MIS VALORES -->
+<section id="mis-valores">
+  <div class="section-inner">
+    <div class="seccion-valores-cabecera">
+      <h2 class="valores-titulo">Mis Valores</h2>
+      <div class="linea-decorativa"></div>
+    </div>
+    <div class="values-list">
+      <div class="value-item">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-name">Empatía y escucha activa</h3>
+        <p class="value-desc">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">⏳</div>
+        <h3 class="value-name">Respeto al ritmo</h3>
+        <p class="value-desc">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🧠</div>
+        <h3 class="value-name">Regulación emocional</h3>
+         <p class="value-desc">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🧩</div>
+        <h3 class="value-name">Material adaptado</h3>
+        <p class="value-desc">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
