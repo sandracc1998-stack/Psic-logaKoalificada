@@ -724,3 +724,38 @@ img[src*="abrazo-koala.png"] {
   background-color: transparent !important;
   border-radius: 16px !important;
 }
+/* ==========================================
+   TARJETAS DE RECURSOS AMPLIAS
+   ========================================== */
+
+/* Contenedor individual de cada recurso */
+.tarjeta-recurso-amplia {
+    max-width: 1000px; /* Ocupa casi toda la pantalla de forma elegante */
+    margin: 0 auto 50px auto; /* Centra la tarjeta y da espacio con la siguiente */
+}
+
+/* Título del recurso igual al formato de la imagen */
+.titulo-recurso-individual {
+    color: #4A2E35; /* Granate oscuro */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Alineado a la izquierda como en tu sección de valores */
+}
+
+/* Tarjeta amplia con fondo rosa crema clarito y efecto difuminado suave */
+.bloque-texto-difuminado {
+    background-color: #FDF8F5; /* Tono rosa crema muy clarito y cálido */
+    border-radius: 16px; /* Bordes redondeados sutiles */
+    padding: 30px 40px; /* Espacio interno generoso para el texto */
+    box-shadow: 0 4px 20px rgba(74, 46, 53, 0.04); /* Sombra muy suave para dar efecto difuminado */
+}
+
+/* Formato del texto dentro de la tarjeta */
+.bloque-texto-difuminado p {
+    color: #4A2E35; /* Letra color granate oscuro solicitado */
+    font-size: 1.15rem;
+    line-height: 1.7; /* Separación de líneas para facilitar la lectura */
+    margin: 0;
+    text-align: left;
+}
