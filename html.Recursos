@@ -20,15 +20,16 @@
             </div>
         </article>
 
-        <!-- EJEMPLO DE RECURSO 2 -->
+          <!-- EJEMPLO DE RECURSO 2 -->
         <article class="tarjeta-recurso-amplia">
             <h3 class="titulo-recurso-individual">Título del Segundo Recurso</h3>
             <div class="bloque-texto-difuminado">
-                <p>
-                    Escribe aquí el desarrollo de tu segundo recurso o artículo psicopedagógico. Mantendrá el mismo diseño amplio y los tonos corporativos.
-                </p>
+                <p>Este es mi primer párrafo con la introducción del recurso.</p>
+                <p>Este es mi segundo párrafo donde explico la herramienta.</p>
+                <p>Y este es el párrafo final de conclusión.</p>
             </div>
         </article>
+
 
     </div>
 </section>
