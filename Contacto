@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sandra Carrera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-principal">
+  <a href="index.html" class="nav-logo">
+    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="valores.html">Mis Valores</a></li>
+    <li><a href="trabajo.html">Cómo trabajo</a></li>
+    <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- 4. SECCIÓN CONTACTO -->
+<section id="contacto" class="seccion-formulario">
+    <div class="formulario-contacto">
+        
+        <div class="formulario-cabecera">
+            <h2>¿Hablamos?</h2>
+            <p>Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
+        </div>
+
+        <form action="https://formspree.io/f/mnjkykly" method="POST" class="formulario-cuerpo">
+            
+            <div class="formulario-fila-doble">
+                <div class="formulario-grupo">
+                    <label for="id-nombre">Nombre completo</label>
+                    <input type="text" id="id-nombre" name="nombre" required>
+                </div>
+                <div class="formulario-grupo">
+                    <label for="id-email">Correo electrónico</label>
+                    <input type="email" id="id-email" name="email" required>
+                </div>
+            </div>
+
+            <div class="formulario-grupo ancho-completo">
+                <label for="id-asunto">¿En qué puedo ayudarte?</label>
+                <input type="text" id="id-asunto" name="asunto" required>
+            </div>
+
+            <div class="formulario-boton-contenedor">
+                <button type="submit" style="color: #ffffff !important;">Enviar mensaje</button>
+            </div>
+
+        </form>
+
+    </div>
+</section>
+</body>
+</html>
