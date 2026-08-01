@@ -5,118 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filosofía Koala - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- ESTILOS CSS EXCLUSIVOS (Aquí dentro es donde se procesan correctamente sin dar errores) -->
     <style>
         .filosofia-contenedor {
-            max-width: 850px;
+            max-width: 1050px;
             margin: 120px auto 40px auto;
             padding: 0 20px;
             font-family: sans-serif;
         }
-        .filosofia-titulo {
-            color: #4A2E35;
-            font-size: 2.6rem;
-            font-weight: 800;
-            margin-bottom: 25px;
-            text-align: center;
+        .cabecera-filosofia-flexible {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: left;
         }
-        .filosofia-texto {
+        @media (min-width: 768px) {
+            .cabecera-filosofia-flexible {
+                grid-template-columns: 2fr 1fr !important;
+            }
+        }
+        .tarjeta-rosa-filosofia {
+            background-color: #FDF8F5;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);
+            border-left: 6px solid #4A2E35;
+        }
+        .texto-interior-filosofia {
             line-height: 1.8;
-            color: #4b4b4b;
+            color: #5A454A;
             font-size: 1.15rem;
             text-align: justify;
         }
-        .filosofia-texto p {
+        .texto-interior-filosofia p {
             margin-bottom: 20px;
         }
-        .bloque-conexion {
-            background-color: #FDF8F5;
-            border-left: 5px solid #4A2E35;
-            padding: 20px;
-            border-radius: 0 12px 12px 0;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(74, 46, 53, 0.03);
+        .bloque-destacado-granate {
+            background-color: #4A2E35;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 15px;
         }
-        .bloque-conexion p {
+        .bloque-destacado-granate p {
             margin: 0;
             font-weight: 600;
-            color: #4A2E35;
+            color: #FDF8F5;
             font-style: italic;
-        }
-        .separador-seccion {
+            font-size: 1.2rem;
             text-align: center;
-            margin: 40px 0;
-            color: #4A2E35;
-            font-size: 1.5rem;
-            opacity: 0.5;
+            line-height: 1.6;
         }
     </style>
-        
-        /* NUEVO DISEÑO PARA LA COLUMNA DERECHA (SIDEBAR) */
-        .tarjeta-sidebar {
-            background-color: #4A2E35;
-            padding: 30px;
-            border-radius: 16px;
-            height: fit-content;
-            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15);
-        }
-        .tarjeta-sidebar h3 {
-            color: #FDF8F5;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-            border-bottom: 2px solid rgba(253, 248, 245, 0.3);
-            padding-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .tarjeta-sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .tarjeta-sidebar ul li {
-            background-color: rgba(253, 248, 245, 0.08);
-            margin-bottom: 14px;
-            font-size: 1.15rem;
-            color: #FDF8F5;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 16px;
-            border-radius: 8px;
-            line-height: 1.5;
-        }
-    </style>
-
 </head>
 <body>
 
-<!-- MENÚ DE NAVEGACIÓN ACTUALIZADO -->
+<!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
   <a href="index.html" class="nav-logo">
     Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
   </a>
   <ul class="nav-links">
-    <li><a href="sobremi.html">Sobre mí</a></li>
+    <li><a href="sobremi.html">La Psicóloga Koalificada</a></li>
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">Espacio Eucalipto</a></li>
-    <li><a href="recursos.html">Recursos koalificados</a></li>
+    <li><a href="trabajo.html">El Bosque de Eucalipto</a></li>
+    <li><a href="recursos.html">La Madriguera de Recursos</a></li>
+      <li><a href="contacto.html">Contactáme</a></li>
   </ul>
 </nav>
 
-<!-- INTRODUCCIÓN A LA FILOSOFÍA KOALA -->
+<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
 <main class="filosofia-contenedor">
-    <h1 class="filosofia-titulo">¿Por qué un espacio con Filosofía Koala?</h1>
     
-    <div class="filosofia-texto">
-        <p>Cuando decidí dar vida a este proyecto enfocado en la psicología educativa e infantil, supe que el <strong>koala</strong> sería mucho más que un logotipo entrañable; representa de manera exacta mi forma de entender y acompañar el desarrollo en la infancia. En el reino animal, las crías de koala nacen en un estado de alta vulnerabilidad y pasan sus primeros meses de vida resguardadas por completo en la bolsa de su madre, creciendo en un entorno de <strong>apego absoluto, calidez y máxima seguridad</strong>. Esta etapa inicial de protección no las hace dependientes, sino todo lo contrario: les proporciona la base emocional y la confianza necesarias para explorar el mundo exterior cuando están preparadas.</p>
-        
-        <p>La psicología infantil nos enseña que los niños y niñas funcionan bajo este mismo principio. Para desplegar sus alas, aprender a regular sus emociones y alcanzar sus hitos madurativos, necesitan primero un <em>refugio seguro</em>. Un espacio donde no existan las prisas, las etiquetas diagnósticas deterministas ni las presiones adultas por cumplir con ritmos estandarizados. Los koalas son también conocidos por sus tiempos pausados; respetan de manera estricta sus periodos de descanso y procesamiento de energía, recordándonos una premisa fundamental de la atención temprana: <strong>el desarrollo infantil no es una carrera de velocidad, sino un proceso biológico y respetuoso que requiere paciencia</strong>.</p>
-
-        <div class="bloque-conexion">
-            <p>"La Filosofía Koala nace para trasladar esa misma esencia a la terapia: construir un espacio clínico y educativo de protección y calma mutua, donde cada familia encuentre orientación y cada menor se sienta escuchado, seguro y profundamente respetado en su ritmo individual."</p>
+    <!-- CABECERA CON NUEVO TÍTULO E IMAGEN DEL KOALA EN LA MISMA LÍNEA -->
+    <div class="cabecera-filosofia-flexible">
+        <!-- Título con saltos de línea elegantes -->
+        <h1 style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0; line-height: 1.2;">
+            ¿Por qué un espacio<br>con filosofía<br>koala? 🌿
+        </h1>
+        <!-- Imagen del koala alineada a la derecha -->
+        <div style="text-align: center;">
+            <img src="img-koala.png" alt="Ilustración Koala" style="max-width: 100%; max-height: 180px; width: auto; border-radius: 12px;">
         </div>
     </div>
+    
+    <!-- TARJETA GENERAL CON FONDO ROSA SUAVE -->
+    <div class="tarjeta-rosa-filosofia">
+        <div class="texto-interior-filosofia">
+            <p style="margin-top: 0;">
+                🐨 Cuando decidí dar vida a este proyecto enfocado en la psicología educativa e infantil, supe que el <strong>koala</strong> sería mucho más que un logotipo entrañable; representa de manera exacta mi forma de entender y acompañar el desarrollo en la infancia. En el reino animal, las crías de koala nacen en un estado de alta vulnerabilidad y pasan sus primeros meses de vida resguardadas por completo en la bolsa de su madre, creciendo en un entorno de <strong>apego absoluto, calidez y máxima seguridad</strong>. Esta etapa inicial de protección no las hace dependientes, sino todo lo contrario: les proporciona la base emocional y la confianza necesarias para explorar el mundo exterior cuando están preparadas.
+            </p>
+            
+            <p>
+                🧩 La psicología infantil nos enseña que los niños y niñas funcionan bajo este mismo principio. Para desplegar sus alas, aprender a regular sus emociones y alcanzar sus hitos madurativos, necesitan primero un <em>refugio seguro</em>. Un espacio donde no existan las prisas, las etiquetas diagnósticas deterministas ni las presiones adultas por cumplir con ritmos estandarizados. Los koalas son también conocidos por sus tiempos pausados; respetan de manera estricta sus periodos de descanso y procesamiento de energía, recordándonos una premisa fundamental de la atención temprana: <strong>el desarrollo infantil no es una carrera de velocidad, sino un proceso biológico y respetuoso que requiere paciencia</strong>. ⏳
+            </p>
+
+            <!-- Bloque destacado interior en granate con letras blanco-crema -->
+            <div class="bloque-destacado-granate">
+                <p>
+                    "La Filosofía Koala nace para trasladar esa misma esencia a la terapia: construir un espacio clínico y educativo de protección y calma mutua, donde cada familia encuentre orientación y cada menor se siente escuchado, seguro y profundamente respetado en su ritmo individual." ✨
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Puntos decorativos finales -->
+    <div style="text-align: center; margin: 40px 0; color: #4A2E35; font-size: 1.5rem; opacity: 0.5;">✦ ✦ ✦</div>
+</main>
+
+</body>
+</html>
+
 
     <!-- Tres puntos decorativos para separar el texto introductorio de tus tarjetas -->
     <div class="separador-seccion">✦ ✦ ✦</div>
