@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Madriguera de Recursos - Sandra Carrera</title>
-    <!-- Vinculación correcta al archivo de estilos principal -->
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -25,11 +24,63 @@
             font-size: 1.15rem;
             margin-bottom: 40px;
         }
+        /* Estilos específicos para el formulario de contacto */
+        .seccion-contacto-recursos {
+            background-color: #FDF8F5;
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 60px;
+            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);
+            border-top: 4px solid #4A2E35;
+        }
+        .formulario-koala {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 600px;
+            margin: 30px auto 0 auto;
+        }
+        .campo-formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+        .campo-formulario label {
+            color: #4A2E35;
+            font-weight: 600;
+        }
+        .campo-formulario input, .campo-formulario textarea {
+            padding: 12px;
+            border: 1px solid rgba(74, 46, 53, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #ffffff;
+        }
+        .campo-formulario input:focus, .campo-formulario textarea:focus {
+            outline: none;
+            border-color: #4A2E35;
+            box-shadow: 0 0 0 3px rgba(74, 46, 53, 0.1);
+        }
+        .btn-enviar-koala {
+            background-color: #4A2E35;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-enviar-koala:hover {
+            background-color: #5d3b43;
+        }
     </style>
 </head>
 <body>
 
-<!-- MENÚ DE NAVEGACIÓN COMPLETO Y CORREGIDO -->
+<!-- MENÚ DE NAVEGACIÓN CORPORATIVO CON BOTÓN DE CONTACTO -->
 <nav class="nav-principal">
   <a href="index.html" class="nav-logo">
     Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
@@ -39,6 +90,8 @@
     <li><a href="valores.html">Filosofía Koala</a></li>
     <li><a href="trabajo.html">El Bosque de Eucalipto</a></li>
     <li><a href="recursos.html">La Madriguera de Recursos</a></li>
+    <!-- Enlace directo que baja al formulario de contacto -->
+    <li><a href="#contacto" style="background-color: #4A2E35; color: #ffffff !important; padding: 8px 16px; border-radius: 20px; font-weight: bold;">Contacto</a></li>
   </ul>
 </nav>
 
@@ -48,132 +101,99 @@
     <h1 class="recursos-titulo-principal">La Madriguera de Recursos</h1>
     <p class="recursos-subtitulo">Aquí encontrarás información y herramientas para acompañar el desarrollo de los más pequeños.</p>
 
-    <!-- Aquí debajo continúa tu bloque de AEPSIS y el contenedor de artículos que añadimos antes -->
+    <!-- BLOQUE DE AEPSIS -->
+    <section class="seccion-aepsis" style="padding: 30px; background-color: #FDF8F5; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05); text-align: center; margin-bottom: 50px;">
+        <h2 style="color: #4A2E35; font-size: 1.8rem; margin-bottom: 10px;">¡Apúntate gratis a un curso de AEPSIS!</h2>
+        <p style="color: #666; font-size: 1rem; margin-top: 0; margin-bottom: 25px;">(Asociación Española de Psicología Sanitaria)</p>
+        <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #4A2E35; text-align: left; line-height: 1.6; color: #4b4b4b;">
+            <p style="margin-top: 0;"><strong>¡Han añadido muchos nuevos cursos especializados!</strong></p>
+            <p>Introduce tus datos a través de nuestro enlace exclusivo, escoge tu formación preferida entre su amplio catálogo y dispondrás de un año entero para completarlo a tu ritmo.</p>
+            <p style="margin-bottom: 0;">🎁 <strong>Ventaja exclusiva:</strong> Además del curso gratuito, en el momento de tu primera matrícula podrás añadir cualquier otro curso adicional por solo 20€ en lugar de su precio real habitual.</p>
+        </div>
+        <a href="http://aepsis.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #4A2E35; color: #ffffff; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(74, 46, 53, 0.2);">
+            👉 Pulsa aquí para elegir tu curso gratis
+        </a>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 20px; margin-bottom: 0;">* La emisión del diploma oficial para tu currículum es opcional por solo 9€.</p>
+    </section>
 
-    <!-- SECCIÓN DE FORMACIÓN GRATUITA CON AEPSIS -->
-<section class="seccion-aepsis" style="max-width: 800px; margin: 40px auto; padding: 30px; background-color: #FDF8F5; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05); text-align: center; font-family: sans-serif;">
-    
-    <h2 style="color: #4A2E35; font-size: 1.8rem; margin-bottom: 10px;">¡Apúntate gratis a un curso de AEPSIS!</h2>
-    <p style="color: #666; font-size: 1rem; margin-top: 0; margin-bottom: 25px;">(Asociación Española de Psicología Sanitaria)</p>
-    
-    <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #4A2E35; text-align: left; line-height: 1.6; color: #4b4b4b;">
-        <p style="margin-top: 0;"><strong>¡Han añadido muchos nuevos cursos especializados!</strong></p>
-        <p>Introduce tus datos a través de este enlace exclusivo, escoge tu formación preferida entre su amplio catálogo y dispondrás de <strong>un año entero</strong> para completarlo a tu ritmo.</p>
-        <p style="margin-bottom: 0;">🎁 <strong>Ventaja exclusiva:</strong> Además del curso gratuito, en el momento de tu primera matrícula podrás añadir cualquier otro curso adicional por solo <strong>20€</strong> en lugar de su precio real habitual (de 55€ a 210€).</p>
-    </div>
-
-    <!-- BOTÓN DE ENLACE DE EMBAJADORA -->
-    <a href="http://www.aepsis.com/emb690" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #4A2E35; color: #ffffff; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(74, 46, 53, 0.2); transition: background 0.3s ease;">
-        👉 Pulsa aquí para elegir tu curso gratis
-    </a>
-
-    <p style="color: #888; font-size: 0.9rem; margin-top: 20px; margin-bottom: 0;">* Una vez finalizado el curso, la emisión y registro del diploma oficial para tu currículum es opcional por solo 9€.</p>
-</section>
-
-    
-     <!-- CONTENEDOR DE LOS RECURSOS -->
+    <!-- CONTENEDOR DE LOS RECURSOS (Corregido para tus imágenes con nombre .png.png) -->
     <div class="contenedor-articulos">
         
-               <!-- RECURSO 1: EL RINCÓN DE LA CALMA -->
-        <article class="tarjeta-recurso-amplia" style="margin-top: 40px;">
-            <h3 class="titulo-recurso-individual">El rincón de la calma en casa</h3>
-            <div class="bloque-texto-difuminado" style="display: grid; grid-template-columns: 1fr; gap: 25px; align-items: center;">
-                
-                <!-- Columna de texto adaptada a partir de la infografía -->
-                <div class="texto-recurso">
-                    <p>
-                        El rincón de la calma es un espacio seguro diseñado dentro del hogar para ayudar a los niños a regular sus emociones, descansar y recuperar el equilibrio cuando se sienten abrumados. No necesita ser una estructura perfecta ni compleja; lo fundamental es ubicarlo en un lugar tranquilo, de fácil acceso y con poco tránsito, evitando por completo la sobrecarga visual o auditiva. La clave de este rincón es su predictibilidad: debe estar siempre disponible para cuando el menor lo necesite de forma voluntaria.
-                    </p>
-                    <p>
-                        Para confeccionarlo, podemos recurrir a ideas de bajo coste utilizando elementos que ya tengamos en casa. Una base suave hecha con cojines, mantas, una alfombra cómoda o una caja de cartón decorada servirá para delimitar su espacio propio. Dentro de él, podemos incluir objetos reguladores como botellas sensoriales caseras (con agua, purpurina o arroz), auriculares de aislamiento de ruido, temporizadores visuales para anticipar los tiempos y juguetes sensoriales manipulativos como pelotas antiestrés o <em>pop its</em>, complementándolo con luces cálidas o elementos de la naturaleza para favorecer un ambiente de serenidad.
-                    </p>
-                    <p>
-                        La presentación de este espacio es crucial para su éxito: es un espacio de cuidado y bienestar, nunca un lugar de castigo o aislamiento forzado. Es importante explicarle previamente para qué sirve, enseñarle sus elementos y practicar juntos su uso en momentos de calma. Cada niño es único y tiene sus propias preferencias; respetar sus tiempos y ajustar los elementos a sus necesidades individuales nos demostrará que los pequeños cambios estructurales en el hogar generan una gran diferencia en la convivencia familiar.
-                    </p>
-                </div>
-
-                <!-- Columna para la imagen/infografía -->
-                <div class="imagen-recurso" style="text-align: center;">
-                    <img src="rincon-calma.png" alt="Infografía sobre cómo crear el rincón de la calma en casa" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
-                </div>
-
+        <!-- RECURSO 1: RESPETO AL RITMO -->
+        <article class="tarjeta-recurso-amplia">
+            <h3 class="titulo-recurso-individual">Respeto al ritmo</h3>
+            <div class="bloque-texto-difuminado">
+                <p>Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales de desarrollo, ofreciendo un espacio seguro donde avanzar paso a paso.</p>
             </div>
         </article>
 
-
-        <!-- RECURSO 2: LA MOCHILA SENSORIAL PARA EL COLEGIO -->
+        <!-- RECURSO 2: LA MOCHILA SENSORIAL -->
         <article class="tarjeta-recurso-amplia" style="margin-top: 40px;">
             <h3 class="titulo-recurso-individual">La mochila sensorial para el colegio</h3>
             <div class="bloque-texto-difuminado" style="display: grid; grid-template-columns: 1fr; gap: 25px; align-items: center;">
-                
-                <!-- Columna de texto adaptada a partir de la infografía -->
                 <div class="texto-recurso">
-                    <p>
-                        La mochila sensorial es una recopilación de herramientas sencillas y discretas que ayudan a los menores a autorregularse, mantener la concentración y sentirse mejor dentro del aula. Elementos como los audífonos de cancelación de ruido reducen las distracciones acústicas ambientales, mientras que los pequeños <em>fidget toys</em> silenciosos permiten canalizar la necesidad de movimiento y reducir los niveles de ansiedad de forma adaptativa.
-                    </p>
-                    <p>
-                        Además, incorporar herramientas propioceptivas (como bandas elásticas para las sillas o cojines con peso) ayuda a que su cuerpo encuentre el equilibrio postural y libere tensiones. Esto se complementa de forma óptima con apoyos visuales y organizativos, como temporizadores o tarjetas de secuenciación de tareas, que aportan una valiosa estructura, predictibilidad y seguridad ante la incertidumbre de la jornada escolar.
-                    </p>
-                    <p>
-                        Lo más importante es recordar que cada niño y niña es único: lo que funciona para uno puede no ser útil para otro. Por ello, resulta fundamental involucrar al menor en la elección de sus propias herramientas, enseñarle cuándo y cómo utilizarlas correctamente en clase, y revisar periódicamente el contenido de la mochila para ajustarlo a sus necesidades cambiantes del día a día.
-                    </p>
+                    <p><strong>Herramientas de autorregulación en el aula:</strong> Elementos discretos diseñados para mitigar la sobrecarga y mejorar la concentración en clase.</p>
+                    <ul style="padding-left: 20px; line-height: 1.8; color: #4b4b4b;">
+                        <li>🎧 <strong>Audífonos de cancelación:</strong> Reducen el ruido distractor externo.</li>
+                        <li>🧩 <strong>Fidget toys:</strong> Canalizan el movimiento y reducen la ansiedad.</li>
+                        <li>🎒 <strong>Apoyos visuales:</strong> Temporizadores que aportan predictibilidad.</li>
+                    </ul>
                 </div>
-
-                <!-- Columna para la imagen/infografía -->
-                <div class="imagen-recurso" style="text-align: center;">
-                    <img src="mochila-sensorial.png" alt="Infografía de la mochila sensorial para el colegio" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
+                <div class="imagen-recurso" style="text-align: center; overflow: hidden; width: 100%; max-width: 320px; height: 220px; margin: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
+                    <img src="mochila-sensorial.png.png" alt="Resumen Mochila Sensorial" style="width: 100%; height: 200%; object-fit: cover; object-position: top center;">
                 </div>
-
             </div>
         </article>
-        
-        <!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
+
+        <!-- RECURSO 3: EL RINCÓN DE LA CALMA -->
+        <article class="tarjeta-recurso-amplia" style="margin-top: 40px;">
+            <h3 class="titulo-recurso-individual">El rincón de la calma en casa</h3>
+            <div class="bloque-texto-difuminado" style="display: grid; grid-template-columns: 1fr; gap: 25px; align-items: center;">
+                <div class="texto-recurso">
+                    <p><strong>Un espacio seguro de regulación emocional:</strong> Un rincón predecible y siempre disponible en el hogar para volver al equilibrio en momentos de desborde.</p>
+                    <ul style="padding-left: 20px; line-height: 1.8; color: #4b4b4b;">
+                        <li>🏠 <strong>Ubicación:</strong> Un lugar tranquilo y libre de sobrecarga visual.</li>
+                        <li>📦 <strong>Bajo coste:</strong> Cojines, mantas y botellas sensoriales caseras.</li>
+                        <li>❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
+                    </ul>
+                </div>
+                <div class="imagen-recurso" style="text-align: center; overflow: hidden; width: 100%; max-width: 320px; height: 220px; margin: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
+                    <img src="rincon-calma.png.png" alt="Resumen Rincón de la Calma" style="width: 130%; height: 130%; object-fit: cover; object-position: top left;">
+                </div>
+            </div>
+        </article>
+
+        <!-- RECURSO 4: EL JUEGO COMO PRIMER LENGUAJE -->
         <article class="tarjeta-recurso-amplia" style="margin-top: 40px;">
             <h3 class="titulo-recurso-individual">El juego como el primer lenguaje</h3>
             <div class="bloque-texto-difuminado" style="display: grid; grid-template-columns: 1fr; gap: 25px; align-items: center;">
-                
-                <!-- Columna de texto adaptada a partir de la infografía -->
                 <div class="texto-recurso">
-                    <p>
-                        El juego es la herramienta natural más poderosa para la comunicación y el desarrollo infantil. Los juegos cotidianos no requieren dinámicas ni juguetes complicados; constituyen la oportunidad perfecta para compartir, conectar y comprender el mundo del menor. A través de actividades sencillas y lúdicas, podemos potenciar aspectos fundamentales como el contacto visual, aprendiendo a esperar su mirada espontánea, sonreír y celebrar juntos esos valiosos instantes de conexión afectiva. Dinámicas básicas como hacer burbujas o jugar al "¿Dónde está?" se convierten en grandes aliadas para guiar la atención mutua de forma divertida y sin presiones.
-                    </p>
-                    <p>
-                        Asimismo, el juego estructurado actúa como un excelente escenario para modelar y reforzar hitos comunicativos clave, como el gesto de señalar. Motivar al niño o niña a señalar los objetos de su interés aumenta significativamente su intención de comunicar y pedir lo que necesita; podemos guiar este proceso señalando nosotros primero como modelo y esperando pacientemente su respuesta. Del mismo modo, jugar introduciendo turnos (por ejemplo, al pasar una pelota, apilar bloques o hacer juego simbólico con coches y muñecos) enseña al menor habilidades esenciales de paciencia, atención sostenida y respeto hacia las acciones del otro.
-                    </p>
-                    <p>
-                        El camino hacia el desarrollo del lenguaje se construye mediante pequeños pasos que conllevan grandes logros. Es aconsejable comenzar siempre con turnos de juego muy cortos, siguiendo de cerca los intereses del menor para maximizar su motivación intrínseca, y celebrar con entusiasmo cada intento de participación, por pequeño que parezca. Al ser constantes y disfrutar del proceso de juego sin forzar objetivos rígidos, recordamos que cada pequeño gesto es una forma legítima de expresión. A través del juego constructivo, les brindamos a los niños la maravillosa oportunidad de decir muchísimo incluso antes de dominar las palabras.
-                    </p>
-                </div>
-
-                <!-- Columna para la imagen/infografía -->
-                <div class="imagen-recurso" style="text-align: center;">
-                    <img src="juego-lenguaje.png" alt="Infografía sobre el juego como primer lenguaje en la infancia" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
-                </div>
-
-            </div>
-        </article>
-
-                <!-- RECURSO 4: HITOS DEL DESARROLLO (RESUMIDO) -->
-        <article class="tarjeta-recurso-amplia" style="margin-top: 40px;">
-            <h3 class="titulo-recurso-individual">Hitos del desarrollo vs. ritmos individuales</h3>
-            <div class="bloque-texto-difuminado" style="display: grid; grid-template-columns: 1fr; gap: 25px; align-items: center;">
-                
-                <div class="texto-recurso">
-                    <p><strong>Una guía orientativa para el crecimiento:</strong> Los hitos del desarrollo son una referencia útil, pero nunca una regla rígida. Cada niño y niña evoluciona a su propio ritmo, requiriendo observación, oportunidades de aprendizaje y un acompañamiento respetuoso.</p>
+                    <p><strong>Conexión y comunicación natural:</strong> Herramienta idónea para interactuar, comprender y crear un vínculo afectivo sólido sin presiones.</p>
                     <ul style="padding-left: 20px; line-height: 1.8; color: #4b4b4b;">
-                        <li>💬 <strong>Lenguaje y Juego:</strong> Evolución desde las primeras palabras y el juego exploratorio (12 meses) hasta la creación de historias complejas con iguales (3-4 años).</li>
-                        <li>👣 <strong>Motricidad:</strong> Progresión natural desde el gateo inicial hasta correr, saltar con los dos pies, dibujar formas simples o pedalear un triciclo.</li>
-                        <li>🩺 <strong>Cuándo consultar:</strong> Es aconsejable buscar asesoramiento profesional si a los 18 meses no dice palabras, a los 2 años no camina ni combina palabras, o si se observa una pérdida de habilidades ya adquiridas.</li>
+                        <li>👀 <strong>Contacto visual:</strong> Conexión a través de burbujas o el juego.</li>
+                        <li>👉 <strong>Señalar y turnos:</strong> Modelar gestos y aprender a esperar pacientemente.</li>
+                        <li>🎈 <strong>Pequeños pasos:</strong> Seguir los intereses del menor genera grandes logros.</li>
                     </ul>
                 </div>
+        </form>
+    </section>
 
-                <!-- Vista resumida de la imagen (Muestra el cuadrante superior con el título e ilustración del Koala) -->
-                <div class="imagen-recurso" style="text-align: center; overflow: hidden; width: 100%; max-width: 320px; height: 220px; margin: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.1);">
-                    <img src="hitos-desarrollo.png" alt="Resumen Hitos del Desarrollo" style="width: 100%; height: 200%; object-fit: cover; object-position: top center;">
-                </div>
-            </div>
-        </article>
+</main> <!-- CIERRE CORRECTO DE LA COLA DEL CUERPO PRINCIPAL -->
 
-        
-    </div>
-</section>
+<!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
+<footer class="pie-contacto-final" style="margin-top: 80px;">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista">
+            <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
+            <li><span>📍 Santiago de Compostela</span></li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    📸 @psico.koalificada 
+                </a>
+            </li>
+        </ul>
+    </div> 
+</footer>
+
+</body>
+</html>
