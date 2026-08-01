@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Sandra Carrera</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sobre-mi-contenedor {
+            max-width: 900px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        @media (min-width: 768px) {
+            .sobre-mi-contenedor {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        .texto-presentacion h1 {
+            color: #4A2E35;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .texto-presentacion h2 {
+            color: #4A2E35;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .texto-presentacion p {
+            line-height: 1.8;
+            color: #4b4b4b;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .bloque-destacado {
+            background-color: #FDF8F5;
+            border-left: 4px solid #4A2E35;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .bloque-destacado p {
+            font-style: italic;
+            margin: 0;
+        }
+        .tarjeta-sidebar {
+            background-color: #FDF8F5;
+            padding: 25px;
+            border-radius: 12px;
+            height: fit-content;
+            box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05);
+        }
+        .tarjeta-sidebar h3 {
+            color: #4A2E35;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #4A2E35;
+            padding-bottom: 5px;
+        }
+        .tarjeta-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tarjeta-sidebar ul li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #4b4b4b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN COMPLETO -->
+<nav class="nav-principal">
+  <a href="index.html" class="nav-logo">
+    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
+  </a>
+  <ul class="nav-enlaces">
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="valores.html">Mis Valores</a></li>
+    <li><a href="trabajo.html">Cómo trabajo</a></li>
+    <li><a href="recursos.html">Recursos</a></li>
+  </ul>
+</nav>
+
+<!-- SECCIÓN PRINCIPAL -->
+<div class="sobre-mi-contenedor">
+    
+    <!-- COLUMNA IZQUIERDA: TEXTO REDACTADO -->
+    <article class="texto-presentacion">
+        <h1>Sobre mí</h1>
+        <p>¡Hola! Soy <strong>Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583. Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.</p>
+        
+        <p>Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong>atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>. Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.</p>
+
+        <div class="bloque-destacado">
+            <p>"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
+        </div>
+
+        <h2>Experiencia y Enfoque Profesional</h2>
+        <p>A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong>ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong>Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
+        
+        <p>Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo con codo junto a las familias y los centros educativos.</p>
+    </article>
+
+    <!-- COLUMNA DERECHA: SIDEBAR DE DATOS RÁPIDOS -->
+    <aside class="tarjeta-sidebar">
+        <h3>Formación Destacada</h3>
+        <ul>
+            <li>🎓 Grado en Psicología (USC)</li>
+            <li>🧩 Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</li>
+            <li>🏫 Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</li>
+            <li>❤️ Curso de Inteligencia Emocional (Universidad de Salamanca)</li>
+        </ul>
+
+        <h3 style="margin-top: 25px;">Áreas de Trabajo</h3>
+        <ul>
+            <li>👶 Atención Temprana (0-6 años)</li>
+            <li>🧠 Trastornos del Neurodesarrollo / TEA</li>
+            <li>🎨 Diseño de Material Adaptado</li>
+            <li>💬 Regulación Emocional y Habilidades</li>
+        </ul>
+    </aside>
+
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer class="pie-contacto-final">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista">
+            <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
+            <li><span>📍 Santiago de Compostela</span></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📸 @psico.koalificada</a></li>
+        </ul>
+    </div> 
+</footer>
+
+</body>
+</html>
+
