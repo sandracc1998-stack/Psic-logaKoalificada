@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,16 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .sobre-mi-contenedor {
-            max-width: 900px;
+            max-width: 1200px; /* Ampliado para dar más espacio a ambas columnas */
             margin: 120px auto 60px auto;
             padding: 0 20px;
             display: grid;
             grid-template-columns: 1fr;
             gap: 40px;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             .sobre-mi-contenedor {
-                grid-template-columns: 2fr 1fr;
+                grid-template-columns: 1fr 380px; /* Fija la columna derecha a un ancho óptimo y elegante */
             }
         }
         .texto-presentacion h1 {
@@ -48,13 +49,32 @@
             font-style: italic;
             margin: 0;
         }
-                /* NUEVO DISEÑO PARA LA COLUMNA DERECHA (SIDEBAR) */
+        
+        /* CONTENEDOR DE LA COLUMNA DERECHA: FOTO + TARJETA */
+        .columna-derecha-flexible {
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* Espacio de separación entre la foto y la tarjeta */
+        }
+
+        /* DISEÑO DE LA FOTO AJUSTADA */
+        .foto-perfil-sobremi {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.1);
+        }
+
+        /* TARJETA (SIDEBAR) */
         .tarjeta-sidebar {
             background-color: #4A2E35; /* Fondo granate corporativo principal */
             padding: 30px;
             border-radius: 16px;
             height: fit-content;
             box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15);
+            box-sizing: border-box;
+            width: 100%;
         }
         .tarjeta-sidebar h3 {
             color: #FDF8F5; /* Letra rosa crema clara para los títulos */
@@ -87,19 +107,20 @@
 </head>
 <body>
 
-<!-- MENÚ DE NAVEGACIÓN COMPLETO Y CORREGIDO -->
+<!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
-  <a href="index.html" class="nav-logo">
-    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
-  </a>
+<a href="index.html" class="nav-logo">
+  Sandra Carrera Castaño
+</a>
   <ul class="nav-links">
-    <li><a href="sobremi.html">La Psicóloga Koalificada</a></li>
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">El Bosque de Eucalipto</a></li>
-    <li><a href="recursos.html">La Madriguera de Recursos</a></li>
-      <li><a href="contacto.html">Contáctame</a></li>
+    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
+    <li><a href="recursos.html">Recursos Koalificados</a></li>
+       <li><a href="sobremi.html">Conóceme</a></li>
+      <li><a href="contacto.html">Contactáme</a></li>
   </ul>
 </nav>
+
 
 <!-- SECCIÓN PRINCIPAL -->
 <div class="sobre-mi-contenedor">
@@ -118,29 +139,40 @@
         <h2>Experiencia y Enfoque Profesional</h2>
         <p>A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong>ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong>Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
         
-        <p>Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo con codo junto a las familias y los centros educativos.</p>
+        <p>Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo codo junto a las familias y los centros educativos.</p>
     </article>
 
-    <!-- COLUMNA DERECHA: SIDEBAR DE DATOS RÁPIDOS -->
-    <aside class="tarjeta-sidebar">
-        <h3>Formación Destacada</h3>
-        <ul>
-            <li>🎓 Grado en Psicología (USC)</li>
-            <li>🧩 Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</li>
-            <li>🏫 Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</li>
-            <li>❤️ Curso de Inteligencia Emocional (Universidad de Salamanca)</li>
-        </ul>
+    <!-- COLUMNA DERECHA: FOTO DE SANDRA + SIDEBAR DE DATOS RÁPIDOS -->
+    <div class="columna-derecha-flexible">
+        
+        <!-- Tu imagen con el nombre exacto especificado -->
+        <img src="imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi">
 
-        <h3 style="margin-top: 25px;">Áreas de Trabajo</h3>
-        <ul>
-            <li>👶 Atención Temprana (0-6 años)</li>
-            <li>🧠 Trastornos del Neurodesarrollo / TEA</li>
-            <li>🎨 Diseño de Material Adaptado</li>
-            <li>💬 Regulación Emocional y Habilidades</li>
-        </ul>
-    </aside>
+        <aside class="tarjeta-sidebar">
+            <h3>Formación Destacada</h3>
+            <ul>
+                <li>🎓 Grado en Psicología (USC)</li>
+                <li>🧩 Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</li>
+                <li>🏫 Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</li>
+                <li>❤️ Curso de Inteligencia Emocional (Universidad de Salamanca)</li>
+            </ul>
+
+            <h3 style="margin-top: 25px;">Áreas de Trabajo</h3>
+            <ul>
+                <li>👶 Atención Temprana (0-6 años)</li>
+                <li>🧠 Trastornos del Neurodesarrollo / TEA</li>
+                <li>🎨 Diseño de Material Adaptado</li>
+                <li>💬 Regulación Emocional y Habilidades</li>
+            </ul>
+        </aside>
+        
+    </div>
 
 </div>
+
+</body>
+</html>
+
 
 <!-- PIE DE PÁGINA -->
 <footer class="pie-contacto-final">
