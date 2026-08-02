@@ -782,3 +782,8 @@ img[src*="abrazo-koala.png"] {
     -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
     mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
 }
+
+/* Unifica el fondo de todas las tarjetas de recursos al rosa/crema suave */
+.tarjeta-recurso-amplia {
+    background-color: #F7E1E5 !important;
+}
