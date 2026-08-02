@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Madriguera de Recursos - Sandra Carrera</title>
+    <title>Las Ramas del Aprendizaje - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -80,42 +80,42 @@
 </head>
 <body>
 
-<!-- MENÚ DE NAVEGACIÓN CORPORATIVO CON BOTÓN DE CONTACTO -->
+<!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
-  <a href="index.html" class="nav-logo">
-    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
-  </a>
+<a href="index.html" class="nav-logo">
+  Sandra Carrera Castaño
+</a>
   <ul class="nav-links">
-    <li><a href="sobremi.html">La Psicóloga Koalificada</a></li>
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">El Bosque de Eucalipto</a></li>
-    <li><a href="recursos.html">La Madriguera de Recursos</a></li>
-       <li><a href="contacto.html">Contáctame</a></li>
-    <!-- Enlace directo que baja al formulario de contacto -->
-    <li><a href="#contacto" style="background-color: #4A2E35; color: #ffffff !important; padding: 8px 16px; border-radius: 20px; font-weight: bold;">Contacto</a></li>
+    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
+    <li><a href="recursos.html">Recursos Koalificados</a></li>
+       <li><a href="sobremi.html">Conóceme</a></li>
+      <li><a href="contacto.html">Contactáme</a></li>
   </ul>
 </nav>
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="recursos-contenedor-pagina">
+<main class="recursos-contenedor-pagina" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
 
-    <h1 class="recursos-titulo-principal">La Madriguera de Recursos</h1>
-    <p class="recursos-subtitulo">Aquí encontrarás información y herramientas para acompañar el desarrollo de los más pequeños.</p>
-
-    <!-- BLOQUE DE AEPSIS -->
-    <section class="seccion-aepsis" style="padding: 30px; background-color: #FDF8F5; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05); text-align: center; margin-bottom: 50px;">
-        <h2 style="color: #4A2E35; font-size: 1.8rem; margin-bottom: 10px;">¡Apúntate gratis a un curso de AEPSIS!</h2>
-        <p style="color: #666; font-size: 1rem; margin-top: 0; margin-bottom: 25px;">(Asociación Española de Psicología Sanitaria)</p>
-        <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #4A2E35; text-align: left; line-height: 1.6; color: #4b4b4b;">
-            <p style="margin-top: 0;"><strong>¡Han añadido muchos nuevos cursos especializados!</strong></p>
-            <p>Introduce tus datos a través de nuestro enlace exclusivo, escoge tu formación preferida entre su amplio catálogo y dispondrás de un año entero para completarlo a tu ritmo.</p>
-            <p style="margin-bottom: 0;">🎁 <strong>Ventaja exclusiva:</strong> Además del curso gratuito, en el momento de tu primera matrícula podrás añadir cualquier otro curso adicional por solo 20€ en lugar de su precio real habitual.</p>
+    <!-- CONTENEDOR FLEXIBLE PARA TÍTULO E IMAGEN -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; margin-bottom: 30px;">
+        
+        <!-- Bloque de texto (Título y Subtítulo) -->
+        <div style="flex: 1; min-width: 280px;">
+            <h1 class="recursos-titulo-principal" style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 15px 0; line-height: 1.2;">
+                Las Ramas del Aprendizaje
+            </h1>
+            <p class="recursos-subtitulo" style="font-size: 1.15rem; line-height: 1.6; color: #4b4b4b; margin: 0;">
+                Aquí encontrarás información y herramientas para acompañar el desarrollo de los más pequeños.
+            </p>
         </div>
-        <a href="http://aepsis.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #4A2E35; color: #ffffff; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(74, 46, 53, 0.2);">
-            👉 Pulsa aquí para elegir tu curso gratis
-        </a>
-        <p style="color: #888; font-size: 0.9rem; margin-top: 20px; margin-bottom: 0;">* La emisión del diploma oficial para tu currículum es opcional por solo 9€.</p>
-    </section>
+
+        <!-- Imagen de las ramas a la derecha -->
+        <div style="flex-shrink: 0; text-align: center;">
+            <img src="ramasaprendizaje.png" alt="Las Ramas del Aprendizaje" style="max-width: 100%; max-height: 160px; width: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        </div>
+        
+    </div>
 
        <!-- CONTENEDOR DE LOS RECURSOS (IMÁGENES COMPLETAS) -->
     <div class="contenedor-articulos">
@@ -208,7 +208,21 @@
         </article>
 
     </div>
-
+    
+    <!-- BLOQUE DE AEPSIS -->
+    <section class="seccion-aepsis" style="padding: 30px; background-color: #FDF8F5; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05); text-align: center; margin-bottom: 50px;">
+        <h2 style="color: #4A2E35; font-size: 1.8rem; margin-bottom: 10px;">¡Apúntate gratis a un curso de AEPSIS!</h2>
+        <p style="color: #666; font-size: 1rem; margin-top: 0; margin-bottom: 25px;">(Asociación Española de Psicología Sanitaria)</p>
+        <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #4A2E35; text-align: left; line-height: 1.6; color: #4b4b4b;">
+            <p style="margin-top: 0;"><strong>¡Han añadido muchos nuevos cursos especializados!</strong></p>
+            <p>Introduce tus datos a través de nuestro enlace exclusivo, escoge tu formación preferida entre su amplio catálogo y dispondrás de un año entero para completarlo a tu ritmo.</p>
+            <p style="margin-bottom: 0;">🎁 <strong>Ventaja exclusiva:</strong> Además del curso gratuito, en el momento de tu primera matrícula podrás añadir cualquier otro curso adicional por solo 20€ en lugar de su precio real habitual.</p>
+        </div>
+        <a href="http://aepsis.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #4A2E35; color: #ffffff; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(74, 46, 53, 0.2);">
+            👉 Pulsa aquí para elegir tu curso gratis
+        </a>
+        <p style="color: #888; font-size: 0.9rem; margin-top: 20px; margin-bottom: 0;">* La emisión del diploma oficial para tu currículum es opcional por solo 9€.</p>
+    </section>
 
 <!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
 <footer class="pie-contacto-final" style="margin-top: 80px;">
