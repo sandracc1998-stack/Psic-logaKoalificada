@@ -70,7 +70,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
+    <li><a href="trabajo.html">Ramas de aprendizaje</a></li>
     <li><a href="recursos.html">Recursos Koalificados</a></li>
        <li><a href="sobremi.html">Conóceme</a></li>
       <li><a href="contacto.html">Contactáme</a></li>
@@ -80,15 +80,15 @@
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
 <main class="filosofia-contenedor">
     
-      <!-- CABECERA CON NUEVO TÍTULO E IMAGEN DEL KOALA EN LA MISMA LÍNEA -->
-    <div class="cabecera-filosofia-flexible">
-        <!-- Título con saltos de línea elegantes -->
-        <h1 style="color: #4A2E35; font-size: 3.3rem; font-weight: 800; margin: 0; line-height: 1.2;">
-            ¿Qué es la<br>filosofía koala<br>en la psicología<br>infantil? 🌿
+    <!-- CABECERA CON NUEVO TÍTULO E IMAGEN DEL KOALA EN LA MISMA LÍNEA -->
+    <div class="cabecera-filosofia-flexible" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; margin-bottom: 40px;">
+        <!-- Título forzado a dos líneas elegantes -->
+        <h1 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase; flex: 1; min-width: 320px;">
+            <span style="text-transform: capitalize;">¿Qué</span> es la filosofía koala<br>en la psicología infantil? 🌿
         </h1>
-        <!-- Imagen del koala alineada a la derecha -->
-        <div style="text-align: center;">
-            <img src="img-koala.png" alt="Ilustración Koala" style="max-width: 100%; max-height: 220px; width: auto; border-radius: 12px;">
+        <!-- Imagen del koala a la derecha y más grande -->
+        <div style="flex-shrink: 0; text-align: center;">
+            <img src="img-koala.png" alt="Ilustración Koala" style="max-width: 100%; max-height: 280px; width: auto; border-radius: 12px;">
         </div>
     </div>
 
@@ -113,54 +113,63 @@
         </div>
     </div>
 
-
-    <!-- Tres puntos decorativos para separar el texto introductorio de tus tarjetas -->
-    <div class="separador-seccion">✦ ✦ ✦</div>
-</main>
-
-
 <!-- 2. SECCIÓN MIS VALORES -->
-<section id="mis-valores">
+<section id="mis-valores" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
   <div class="section-inner">
-    <div class="seccion-valores-cabecera">
-      <!-- Título con la misma tipografía, grosor y color que la frase inicial -->
-<h1 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
-    <span style="text-transform: capitalize;">Mis valores
-</h1>
+    
+    <div class="seccion-valores-cabecera" style="text-align: center; margin-bottom: 40px;">
+      <!-- Título con la misma tipografía serif elegante y etiquetas correctamente cerradas -->
+      <h1 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
+        <span style="text-transform: capitalize;">Mis</span> valores
+      </h1>
+      <div class="linea-decorativa" style="width: 60px; height: 3px; background-color: #4A2E35; margin: 15px auto 0 auto; border-radius: 2px;"></div>
+    </div>
 
-
-        
+    <!-- CONTENEDOR EN CUADRÍCULA DE 2 COLUMNAS (Para hacer formato 4 cuadrados) -->
+    <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+      
       <!-- Tarjeta 1 -->
-      <div class="value-item" style="background-color: #F7E1E5; color: #FFFFFF; padding: 30px; border-radius: 16px; min-width: 250px; flex: 1 1 40%; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
-        <h3 class="value-name" style="color: #FFFFFF; font-size: 1.6rem; font-weight: 700; margin-top: 0; margin-bottom: 10px;">Empatía y escucha activa</h3>
-        <p class="value-desc" style="color: #FFFFFF; font-size: 1.1rem; line-height: 1.5; margin: 0;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
+          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+        </div>
       </div>
 
       <!-- Tarjeta 2 -->
-      <div class="value-item" style="background-color: #F7E1E5; color: #FFFFFF; padding: 30px; border-radius: 16px; min-width: 250px; flex: 1 1 40%; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
-        <h3 class="value-name" style="color: #FFFFFF; font-size: 1.6rem; font-weight: 700; margin-top: 0; margin-bottom: 10px;">Respeto al ritmo</h3>
-        <p class="value-desc" style="color: #FFFFFF; font-size: 1.1rem; line-height: 1.5; margin: 0;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
+          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
+          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+        </div>
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="value-item" style="background-color: #F7E1E5; color: #FFFFFF; padding: 30px; border-radius: 16px; min-width: 250px; flex: 1 1 40%; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
-        <h3 class="value-name" style="color: #FFFFFF; font-size: 1.6rem; font-weight: 700; margin-top: 0; margin-bottom: 10px;">Regulación emocional</h3>
-        <p class="value-desc" style="color: #FFFFFF; font-size: 1.1rem; line-height: 1.5; margin: 0;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
+          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
+          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+        </div>
       </div>
 
       <!-- Tarjeta 4 -->
-      <div class="value-item" style="background-color: #F7E1E5; color: #FFFFFF; padding: 30px; border-radius: 16px; min-width: 250px; flex: 1 1 40%; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
-        <h3 class="value-name" style="color: #FFFFFF; font-size: 1.6rem; font-weight: 700; margin-top: 0; margin-bottom: 10px;">Material adaptado</h3>
-        <p class="value-desc" style="color: #FFFFFF; font-size: 1.1rem; line-height: 1.5; margin: 0;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
+          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
+          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
+
+
    
 
 <!-- PIE DE PÁGINA FINAL -->
