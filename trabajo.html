@@ -1,104 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- CABECERA CON NUEVO TÍTULO E IMAGEN DEL KOALA EN LA MISMA LÍNEA -->
-    <div class="cabecera-filosofia-flexible">
-        <!-- Título con saltos de línea elegantes y tipografía estilo editorial/serif -->
-        <h1 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
-            <span style="text-transform: capitalize;">Cómo</span> trabajo 🌿
-        </h1>
-      </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Trabajo - Sandra Carrera</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajuste de diseño general de la página de trabajo */
+        .trabajo-pagina-contenedor {
+            max-width: 1100px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
+        }
+        
+        .cabecera-filosofia-flexible {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
 
-    
-<!-- MENÚ DE NAVEGACIÓN ACTUALIZADO -->
-<!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
+        .lista-tarjetas-horizontales {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .tarjeta-horizontal {
+            border-radius: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.08);
+        }
+
+        /* Bloque Izquierdo (Visual e Imagen) */
+        .bloque-izquierdo-visual {
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Bloque Derecho (Texto - Granate con letra blanca) */
+        .bloque-derecho-texto {
+            flex: 1.5;
+            min-width: 320px;
+            background-color: #4A2E35; /* Fondo granate corporativo */
+            padding: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bloque-derecho-texto ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-size: 1.15rem;
+            color: #FFFFFF; /* Letra blanca */
+            line-height: 1.6;
+        }
+
+        .bloque-derecho-texto ul li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .bloque-derecho-texto ul li strong {
+            color: #FDF8F5; /* Un tono crema claro para destacar las negritas */
+        }
+    </style>
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN CORPORATIVA (ESTILOS RESTAURADOS) -->
 <nav class="nav-principal">
-<a href="index.html" class="nav-logo">
-  Sandra Carrera Castaño
-</a>
+  <a href="index.html" class="nav-logo">
+    Sandra Carrera Castaño
+  </a>
   <ul class="nav-links">
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
+    <li><a href="trabajo.html">Ramas del aprendizaje</a></li>
     <li><a href="recursos.html">Recursos Koalificados</a></li>
-       <li><a href="sobremi.html">Conóceme</a></li>
-      <li><a href="contacto.html">Contactáme</a></li>
+    <li><a href="sobremi.html">Conóceme</a></li>
+    <li><a href="contacto.html">Contactáme</a></li>
   </ul>
 </nav>
- </div>
 
+<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
+<div class="trabajo-pagina-contenedor">
 
-<!-- 3. SECCIÓN CÓMO TRABAJO -->
-<section class="como-trabajo-contenedor-seccion" id="como-trabajo" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
-  <div class="como-trabajo-cabecera" style="margin-bottom: 40px; text-align: center;">
-    <h2 style="color: #4A2E35; font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Cómo trabajo</h2>
-    <div style="width: 60px; height: 3px; background-color: #4A2E35; margin: 0 auto; border-radius: 2px;"></div>
-  </div>
+<!-- CABECERA CORREGIDA (TÍTULO EN UNA SOLA LÍNEA E IMAGEN DEL KOALA A LA DERECHA) -->
+<div class="cabecera-filosofia-flexible" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; margin-bottom: 50px;">
+    <!-- Título configurado para fluir de manera natural en una línea -->
+    <h1 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase; white-space: nowrap;">
+        <span style="text-transform: capitalize;">Cómo</span> trabajo 🌿
+    </h1>
+    <!-- Imagen del koala alineada a la derecha -->
+    <div style="flex-shrink: 0; text-align: center;">
+        <img src="img-koala.png" alt="Ilustración Koala" style="max-width: 100%; max-height: 240px; width: auto; border-radius: 12px;">
+    </div>
+</div>
 
-  <!-- CONTENEDOR EN FORMATO LISTA VERTICAL -->
-  <div class="lista-tarjetas-horizontales" style="display: flex; flex-direction: column; gap: 35px;">     
+    <!-- LISTA DE TARJETAS HORIZONTALES CON TEXTO EN GRANATE -->
+    <div class="lista-tarjetas-horizontales">     
       
       <!-- Tarjeta 1: Espacio Eucalipto -->
-      <div class="tarjeta-horizontal" style="background-color: #F7E1E5; border-radius: 20px; display: flex; flex-wrap: wrap; overflow: hidden; box-shadow: 0 6px 20px rgba(74, 46, 53, 0.06);">
-        <!-- Bloque Izquierdo: Visual (Imagen y Títulos) -->
-        <div class="bloque-izquierdo-visual" style="flex: 1; min-width: 300px; max-width: 400px; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: rgba(255, 255, 255, 0.3); border-right: 1px solid rgba(74, 46, 53, 0.05);">
-          <span style="font-size: 1.1rem; font-weight: 800; color: #4A2E35; background: rgba(255,255,255,0.6); padding: 4px 12px; border-radius: 20px; margin-bottom: 15px;">1. ONLINE</span>
-          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 8px 0;">Espacio eucalipto</h3>
-          <p style="color: #4A2E35; font-size: 1rem; font-weight: 600; margin: 0 0 20px 0; opacity: 0.85;">Orientación y acompañamiento para familias</p>
+      <div class="tarjeta-horizontal" style="background-color: #F7E1E5;">
+        <!-- Izquierda: Rosa Suave -->
+        <div class="bloque-izquierdo-visual">
+          <span style="font-size: 1rem; font-weight: 800; color: #4A2E35; background: rgba(255,255,255,0.6); padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.5px;">1. ONLINE</span>
+          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 10px 0;">Espacio eucalipto</h3>
+          <p style="color: #4A2E35; font-size: 1.05rem; font-weight: 600; margin: 0 0 25px 0; opacity: 0.85;">Orientación y acompañamiento para familias</p>
           <img src="espacio-eucalipto.png" alt="Espacio Eucalipto" style="max-width: 180px; height: auto; border-radius: 12px;">
         </div>
-        <!-- Bloque Derecho: Texto explicativo -->
-        <div class="bloque-derecho-texto" style="flex: 1.5; min-width: 300px; padding: 40px; display: flex; align-items: center;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 1.1rem; color: #4A2E35; line-height: 1.5;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🌿</span> <div><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🌿</span> <div><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🌿</span> <div><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🌿</span> <div><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</div></li>
+        <!-- Derecha: Granate con Letra Blanca -->
+        <div class="bloque-derecho-texto">
+          <ul>
+            <li><span>🌿</span> <div><strong>Sesiones 100% online:</strong> videollamadas cómodas y flexibles desde tu hogar.</div></li>
+            <li><span>🌿</span> <div><strong>Orientación personalizada:</strong> estrategias adaptadas a cada caso.</div></li>
+            <li><span>🌿</span> <div><strong>Respuestas a dudas clave:</strong> gestión de emociones, límites, autonomía...</div></li>
+            <li><span>🌿</span> <div><strong>Herramientas prácticas:</strong> soluciones reales para aplicar en el día a día.</div></li>
           </ul>
         </div>
       </div>
 
       <!-- Tarjeta 2: El abrazo del Koala -->
-      <div class="tarjeta-horizontal" style="background-color: #FDF8F5; border-radius: 20px; display: flex; flex-wrap: wrap; overflow: hidden; box-shadow: 0 6px 20px rgba(74, 46, 53, 0.06); border: 1px solid rgba(74, 46, 53, 0.05);">
-        <!-- Bloque Izquierdo: Visual (Imagen y Títulos) -->
-        <div class="bloque-izquierdo-visual" style="flex: 1; min-width: 300px; max-width: 400px; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: rgba(74, 46, 53, 0.03); border-right: 1px solid rgba(74, 46, 53, 0.05);">
-          <span style="font-size: 1.1rem; font-weight: 800; color: #4A2E35; background: rgba(74, 46, 53, 0.06); padding: 4px 12px; border-radius: 20px; margin-bottom: 15px;">2. A DOMICILIO</span>
-          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 8px 0;">El abrazo del koala</h3>
-          <p style="color: #4A2E35; font-size: 1rem; font-weight: 600; margin: 0 0 20px 0; opacity: 0.85;">Acompañamiento al desarrollo infantil</p>
+      <div class="tarjeta-horizontal" style="background-color: #FDF8F5; border: 1px solid rgba(74, 46, 53, 0.05);">
+        <!-- Izquierda: Crema claro -->
+        <div class="bloque-izquierdo-visual" style="background-color: rgba(74, 46, 53, 0.01);">
+          <span style="font-size: 1rem; font-weight: 800; color: #4A2E35; background: rgba(74, 46, 53, 0.06); padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.5px;">2. A DOMICILIO</span>
+          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 10px 0;">El abrazo del koala</h3>
+          <p style="color: #4A2E35; font-size: 1.05rem; font-weight: 600; margin: 0 0 25px 0; opacity: 0.85;">Acompañamiento al desarrollo infantil</p>
           <img src="abrazo-koala.png" alt="El abrazo del koala" style="max-width: 180px; height: auto; border-radius: 12px;">
         </div>
-        <!-- Bloque Derecho: Texto explicativo -->
-        <div class="bloque-derecho-texto" style="flex: 1.5; min-width: 300px; padding: 40px; display: flex; align-items: center;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 1.1rem; color: #4B4B4B; line-height: 1.5;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🐨</span> <div><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🐨</span> <div><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🐨</span> <div><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🐨</span> <div><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</div></li>
+        <!-- Derecha: Granate con Letra Blanca -->
+        <div class="bloque-derecho-texto">
+          <ul>
+            <li><span>          🐨</span> <div><strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</div></li>
+            <li><span>          🐨</span> <div><strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</div></li>
+            <li><span>          🐨</span> <div><strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</div></li>
+            <li><span>          🐨</span> <div><strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</div></li>
           </ul>
         </div>
       </div>
 
       <!-- Tarjeta 3: EduKoala -->
-      <div class="tarjeta-horizontal" style="background-color: #F7E1E5; border-radius: 20px; display: flex; flex-wrap: wrap; overflow: hidden; box-shadow: 0 6px 20px rgba(74, 46, 53, 0.06);">
-        <!-- Bloque Izquierdo: Visual (Imagen y Títulos) -->
-        <div class="bloque-izquierdo-visual" style="flex: 1; min-width: 300px; max-width: 400px; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: rgba(255, 255, 255, 0.3); border-right: 1px solid rgba(74, 46, 53, 0.05);">
-          <span style="font-size: 1.1rem; font-weight: 800; color: #4A2E35; background: rgba(255,255,255,0.6); padding: 4px 12px; border-radius: 20px; margin-bottom: 15px;">3. NATURAL</span>
-          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 8px 0;">EduKoala</h3>
-          <p style="color: #4A2E35; font-size: 1rem; font-weight: 600; margin: 0 0 20px 0; opacity: 0.85;">Apoyo psicoeducativo en necesidades especiales</p>
+      <div class="tarjeta-horizontal" style="background-color: #F7E1E5;">
+        <!-- Izquierda: Rosa Suave -->
+        <div class="bloque-izquierdo-visual">
+          <span style="font-size: 1rem; font-weight: 800; color: #4A2E35; background: rgba(255,255,255,0.6); padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.5px;">3. NATURAL</span>
+          <h3 style="color: #4A2E35; font-size: 1.8rem; font-weight: 800; margin: 0 0 10px 0;">EduKoala</h3>
+          <p style="color: #4A2E35; font-size: 1.05rem; font-weight: 600; margin: 0 0 25px 0; opacity: 0.85;">Apoyo psicoeducativo en necesidades especiales</p>
           <img src="edu-koala.png" alt="EduKoala" style="max-width: 180px; height: auto; border-radius: 12px;">
         </div>
-        <!-- Bloque Derecho: Texto explicativo -->
-        <div class="bloque-derecho-texto" style="flex: 1.5; min-width: 300px; padding: 40px; display: flex; align-items: center;">
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 1.1rem; color: #4A2E35; line-height: 1.5;">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🍃</span> <div><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🍃</span> <div><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🍃</span> <div><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real.</div></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span>🍃</span> <div><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</div></li>
+        <!-- Derecha: Granate con Letra Blanca -->
+        <div class="bloque-derecho-texto">
+          <ul>
+            <li><span>🍃</span> <div><strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</div></li>
+            <li><span>🍃</span> <div><strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</div></li>
+            <li><span>🍃</span> <div><strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real.</div></li>
+            <li><span>🍃</span> <div><strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</div></li>
           </ul>
         </div>
       </div>
       
-  </div>
-</section>
+    </div>
+</div>
+
+</body>
+</html>
 
 <!-- PIE DE PÁGINA FINAL -->
 <footer class="pie-contacto-final">
