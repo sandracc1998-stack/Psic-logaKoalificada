@@ -10,53 +10,65 @@
 
 <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
-  <a href="index.html" class="nav-logo">
-    Sandra Carrera Castaño - <span class="colegiada">NºColegiada: G-07583</span>
-  </a>
+<a href="index.html" class="nav-logo">
+  Sandra Carrera Castaño
+</a>
   <ul class="nav-links">
-    <li><a href="sobremi.html">La Psicóloga Koalificada</a></li>
     <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">El Bosque de Eucalipto</a></li>
-    <li><a href="recursos.html">La Madriguera de Recursos</a></li>
+    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
+    <li><a href="recursos.html">Recursos Koalificados</a></li>
+       <li><a href="sobremi.html">Conóceme</a></li>
       <li><a href="contacto.html">Contactáme</a></li>
   </ul>
 </nav>
 
+
 <!-- 4. SECCIÓN CONTACTO -->
-<section id="contacto" class="seccion-formulario">
-    <div class="formulario-contacto">
+<section id="contacto" class="seccion-formulario" style="padding: 40px 20px; display: flex; justify-content: center;">
+    <!-- Tarjeta con fondo crema más destacado (subido de tono a #FDF3EE) -->
+    <div class="formulario-contacto" style="background-color: #FDF3EE; padding: 45px; border-radius: 24px; max-width: 800px; width: 100%; box-shadow: 0 8px 30px rgba(74, 46, 53, 0.05);">
         
-        <div class="formulario-cabecera">
-            <h2>¿Hablamos?</h2>
-            <p>Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
+        <div class="formulario-cabecera" style="text-align: center; margin-bottom: 35px;">
+            <!-- Título adaptado con el formato de letra serif elegante y minúsculas -->
+            <h2 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 10px 0; line-height: 1.25; text-transform: lowercase;">
+                <span style="text-transform: capitalize;">¿H</span>ablamos?
+            </h2>
+            <p style="font-size: 1.2rem; color: #4B4B4B; margin: 0; opacity: 0.9;">Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
         </div>
 
-        <form action="https://formspree.io/f/mnjkykly" method="POST" class="formulario-cuerpo">
+        <form action="https://formspree.io/f/mnjkykly" method="POST" class="formulario-cuerpo" style="display: flex; flex-direction: column; gap: 25px;">
             
-            <div class="formulario-fila-doble">
-                <div class="formulario-grupo">
-                    <label for="id-nombre">Nombre completo</label>
-                    <input type="text" id="id-nombre" name="nombre" required>
+            <div class="formulario-fila-doble" style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <!-- Nombre Completo (Tamaño de letra aumentado) -->
+                <div class="formulario-grupo" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+                    <label for="id-nombre" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">Nombre completo</label>
+                    <input type="text" id="id-nombre" name="nombre" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
                 </div>
-                <div class="formulario-grupo">
-                    <label for="id-email">Correo electrónico</label>
-                    <input type="email" id="id-email" name="email" required>
+                <!-- Correo Electrónico (Tamaño de letra aumentado) -->
+                <div class="formulario-grupo" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+                    <label for="id-email" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">Correo electrónico</label>
+                    <input type="email" id="id-email" name="email" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
                 </div>
             </div>
 
-            <div class="formulario-grupo ancho-completo">
-                <label for="id-asunto">¿En qué puedo ayudarte?</label>
-                <input type="text" id="id-asunto" name="asunto" required>
+            <!-- Mensaje / Asunto (Tamaño de letra aumentado) -->
+            <div class="formulario-grupo ancho-completo" style="display: flex; flex-direction: column; gap: 8px;">
+                <label for="id-asunto" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">¿En qué puedo ayudarte?</label>
+                <input type="text" id="id-asunto" name="asunto" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
             </div>
 
-            <div class="formulario-boton-contenedor">
-                <button type="submit" style="color: #ffffff !important;">Enviar mensaje</button>
+            <!-- Botón de Envío -->
+            <div class="formulario-boton-contenedor" style="text-align: center; margin-top: 15px;">
+                <button type="submit" style="color: #ffffff !important; background-color: #4A2E35; font-size: 1.2rem; font-weight: 700; padding: 14px 35px; border: none; border-radius: 50px; cursor: pointer; transition: background-color 0.3s ease;">
+                    Enviar mensaje
+                </button>
             </div>
 
         </form>
 
     </div>
 </section>
+
 <!-- PIE DE PÁGINA FINAL -->
 <footer class="pie-contacto-final">
     <div class="pie-contenedor">
