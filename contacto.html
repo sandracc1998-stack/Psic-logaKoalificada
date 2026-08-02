@@ -24,42 +24,42 @@
 
 
 <!-- 4. SECCIÓN CONTACTO -->
-<section id="contacto" class="seccion-formulario" style="padding: 40px 20px; display: flex; justify-content: center;">
-    <!-- Tarjeta con fondo crema más destacado (subido de tono a #FDF3EE) -->
-    <div class="formulario-contacto" style="background-color: #FDF3EE; padding: 45px; border-radius: 24px; max-width: 800px; width: 100%; box-shadow: 0 8px 30px rgba(74, 46, 53, 0.05);">
+<section id="contacto" class="seccion-formulario" style="padding: 60px 20px; display: flex; justify-content: center;">
+    <!-- Tarjeta con fondo rosado corporativo -->
+    <div class="formulario-contacto" style="background-color: #F7E1E5; padding: 45px; border-radius: 24px; max-width: 850px; width: 100%; box-shadow: 0 10px 30px rgba(74, 46, 53, 0.08);">
         
         <div class="formulario-cabecera" style="text-align: center; margin-bottom: 35px;">
-            <!-- Título adaptado con el formato de letra serif elegante y minúsculas -->
+            <!-- Título adaptado con el formato de letra serif elegante -->
             <h2 style="color: #4A2E35; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 10px 0; line-height: 1.25; text-transform: lowercase;">
                 <span style="text-transform: capitalize;">¿H</span>ablamos?
             </h2>
-            <p style="font-size: 1.2rem; color: #4B4B4B; margin: 0; opacity: 0.9;">Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
+            <p style="font-size: 1.2rem; color: #4A2E35; margin: 0; opacity: 0.9; font-weight: 500;">Cuéntame qué necesitas y nos pondremos en marcha juntos.</p>
         </div>
 
         <form action="https://formspree.io/f/mnjkykly" method="POST" class="formulario-cuerpo" style="display: flex; flex-direction: column; gap: 25px;">
             
-            <div class="formulario-fila-doble" style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <!-- Nombre Completo (Tamaño de letra aumentado) -->
-                <div class="formulario-grupo" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+            <div class="formulario-fila-doble" style="display: flex; flex-wrap: wrap; gap: 25px;">
+                <!-- Nombre Completo -->
+                <div class="formulario-grupo" style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 8px;">
                     <label for="id-nombre" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">Nombre completo</label>
-                    <input type="text" id="id-nombre" name="nombre" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
+                    <input type="text" id="id-nombre" name="nombre" required style="font-size: 1.15rem; padding: 14px; border: 2px solid #4A2E35; border-radius: 12px; width: 100%; box-sizing: border-box; background-color: #FFFFFF; box-shadow: inset 0 2px 4px rgba(74, 46, 53, 0.06); outline: none;">
                 </div>
-                <!-- Correo Electrónico (Tamaño de letra aumentado) -->
-                <div class="formulario-grupo" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px;">
+                <!-- Correo Electrónico -->
+                <div class="formulario-grupo" style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 8px;">
                     <label for="id-email" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">Correo electrónico</label>
-                    <input type="email" id="id-email" name="email" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
+                    <input type="email" id="id-email" name="email" required style="font-size: 1.15rem; padding: 14px; border: 2px solid #4A2E35; border-radius: 12px; width: 100%; box-sizing: border-box; background-color: #FFFFFF; box-shadow: inset 0 2px 4px rgba(74, 46, 53, 0.06); outline: none;">
                 </div>
             </div>
 
-            <!-- Mensaje / Asunto (Tamaño de letra aumentado) -->
-            <div class="formulario-grupo ancho-completo" style="display: flex; flex-direction: column; gap: 8px;">
+            <!-- ¿En qué puedo ayudarte? (Convertido a área de texto más alta y ancha) -->
+            <div class="formulario-grupo ancho-completo" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
                 <label for="id-asunto" style="font-size: 1.15rem; font-weight: 600; color: #4A2E35;">¿En qué puedo ayudarte?</label>
-                <input type="text" id="id-asunto" name="asunto" required style="font-size: 1.15rem; padding: 12px; border: 1px solid rgba(74, 46, 53, 0.2); border-radius: 10px; width: 100%; box-sizing: border-box; background-color: #FFFFFF;">
+                <textarea id="id-asunto" name="asunto" required rows="5" style="font-size: 1.15rem; padding: 14px; border: 2px solid #4A2E35; border-radius: 12px; width: 100%; box-sizing: border-box; background-color: #FFFFFF; box-shadow: inset 0 2px 4px rgba(74, 46, 53, 0.06); font-family: inherit; resize: vertical; outline: none;"></textarea>
             </div>
 
             <!-- Botón de Envío -->
             <div class="formulario-boton-contenedor" style="text-align: center; margin-top: 15px;">
-                <button type="submit" style="color: #ffffff !important; background-color: #4A2E35; font-size: 1.2rem; font-weight: 700; padding: 14px 35px; border: none; border-radius: 50px; cursor: pointer; transition: background-color 0.3s ease;">
+                <button type="submit" style="color: #ffffff !important; background-color: #4A2E35; font-size: 1.2rem; font-weight: 700; padding: 14px 45px; border: none; border-radius: 50px; cursor: pointer; transition: transform 0.2s ease, background-color 0.3s ease; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.2);">
                     Enviar mensaje
                 </button>
             </div>
