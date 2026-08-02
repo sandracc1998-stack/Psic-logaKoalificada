@@ -355,7 +355,12 @@ section {
   height: 90%; 
   object-fit: contain; 
   mix-blend-mode: multiply; 
+  
+  /* Máscara para crear el difuminado suave en los bordes */
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
 }
+
     
 .tarjeta-trasera { 
   background-color: var(--bark) !important; /* Marrón oscuro al girar */
