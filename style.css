@@ -764,3 +764,11 @@ img[src*="abrazo-koala.png"] {
     margin: 0;
     text-align: left;
 }
+/* Estilos para la nueva imagen de la sección */
+.imagen-cabecera-ramas {
+    width: 140px; /* Incrementa este valor si la quieres aún más grande */
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-left: 15px; /* Separa la imagen del título */
+}
