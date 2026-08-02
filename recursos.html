@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos koalificados - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
+
+<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
+<main class="recursos-contenedor-pagina">
+  
+  <!-- CONTENEDOR FLEX EN DOS COLUMNAS (Texto a la izquierda, Imagen a la derecha) -->
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 40px; margin-bottom: 50px; flex-wrap: wrap;">
+    
+    <!-- Columna Izquierda: Textos -->
+    <div style="flex: 1.2; text-align: left; display: flex; flex-direction: column; justify-content: center; min-width: 280px;">
+      <!-- Título principal -->
+      <h1 class="recursos-titulo-principal" style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 15px 0; line-height: 1.2;">
+    <title>Recursos koalificados - Sandra Carrera</title>
+    <link rel="stylesheet" href="style.css">
     
     <style>
         .recursos-contenedor-pagina {
@@ -12,6 +25,7 @@
             margin: 120px auto 60px auto;
             padding: 0 20px;
             font-family: sans-serif;
+            box-sizing: border-box;
         }
         .recursos-titulo-principal {
             color: #4A2E35;
@@ -24,57 +38,15 @@
             font-size: 1.15rem;
             margin-bottom: 40px;
         }
-        /* Estilos específicos para el formulario de contacto */
-        .seccion-contacto-recursos {
-            background-color: #FDF8F5;
-            padding: 40px;
-            border-radius: 16px;
-            margin-top: 60px;
-            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);
-            border-top: 4px solid #4A2E35;
-        }
-        .formulario-koala {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            max-width: 600px;
-            margin: 30px auto 0 auto;
-        }
-        .campo-formulario {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            text-align: left;
-        }
-        .campo-formulario label {
-            color: #4A2E35;
-            font-weight: 600;
-        }
-        .campo-formulario input, .campo-formulario textarea {
-            padding: 12px;
-            border: 1px solid rgba(74, 46, 53, 0.2);
-            border-radius: 8px;
-            font-size: 1rem;
-            background-color: #ffffff;
-        }
-        .campo-formulario input:focus, .campo-formulario textarea:focus {
-            outline: none;
-            border-color: #4A2E35;
-            box-shadow: 0 0 0 3px rgba(74, 46, 53, 0.1);
-        }
-        .btn-enviar-koala {
-            background-color: #4A2E35;
-            color: #ffffff;
-            border: none;
-            padding: 14px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn-enviar-koala:hover {
-            background-color: #5d3b43;
+        .contenedor-articulos {
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 60px; 
+            background: transparent;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -94,47 +66,33 @@
     </ul>
 </nav>
 
-
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="recursos-contenedor-pagina" style="max-width: 1100px; margin: 140px auto 40px auto; padding: 0 20px;">
+<main class="recursos-contenedor-pagina">
   
-  <!-- CONTENEDOR FLEX EN DOS COLUMNAS (Texto a la izquierda, Imagen a la derecha) -->
-  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 30px; margin-bottom: 50px;">
-    
-    <!-- Columna Izquierda: Textos -->
-    <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: center;">
-      <!-- Título principal -->
+  <!-- CABECERA: TEXTO + IMAGEN RAMAS -->
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 40px; margin-bottom: 50px; flex-wrap: wrap;">
+    <div style="flex: 1.2; text-align: left; display: flex; flex-direction: column; justify-content: center; min-width: 280px;">
       <h1 class="recursos-titulo-principal" style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 15px 0; line-height: 1.2;">
         Recursos koalificados
       </h1>
-      <!-- Subtítulo: Letra más grande y forzado a dos líneas -->
       <p class="recursos-subtitulo" style="font-size: 1.5rem; line-height: 1.5; color: #4b4b4b; margin: 0; opacity: 0.95; max-width: 550px;">
         Aquí encontrarás información y herramientas<br>para acompañar el desarrollo de los más pequeños.
       </p>
     </div>
-
-    <!-- Columna Derecha: Imagen que se adapta a la altura del texto -->
-    <div style="flex-shrink: 0; display: flex; align-items: center;">
-      <img src="img/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="height: 100%; max-height: 180px; width: auto; object-fit: contain; border-radius: 0;">
+    <div style="flex: 0.8; min-width: 200px; display: flex; justify-content: center; align-items: center;">
+      <img src="imagenes/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="width: 100%; max-width: 220px; height: auto; object-fit: contain; border-radius: 0;">
     </div>
-
   </div>
-<!-- ======================================================== -->
-<!-- CONTENEDOR DE LOS RECURSOS (IMÁGENES COMPLETAS) -->
-<!-- ======================================================== -->
-<div class="contenedor-articulos" style="max-width: 1100px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; gap: 60px; background: transparent;">
+
+  <!-- CONTENEDOR DE LOS RECURSOS -->
+  <div class="contenedor-articulos">
 
     <!-- RECURSO 1: LA MOCHILA SENSORIAL -->
     <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- 1) Título fuera de la tarjeta con fondo blanco de la página -->
         <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 0 0 20px 0; text-align: left; background: transparent;">
             La mochila sensorial para el colegio
         </h2>
-        
-        <!-- Contenedor de dos columnas alineadas en altura -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            
-            <!-- 2) Tarjeta Izquierda (Texto): Fondo rosado y bordes redondeados -->
             <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
                 <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Herramientas de autorregulación en el aula:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Elementos discretos diseñados para mitigar la sobrecarga y mejorar la concentración en clase.</p>
@@ -144,25 +102,18 @@
                     <li style="margin-bottom: 10px;">🎯 <strong>Apoyos visuales:</strong> Temporizadores que aportan predictibilidad.</li>
                 </ul>
             </div>
-            
-            <!-- 3) Tarjeta Derecha (Imagen): A la derecha y con el mismo alto que la del texto -->
             <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="img/mochila-sensorial.png" alt="Infografía Mochila Sensorial" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+                <img src="imagenes/mochila-sensorial.png" alt="Infografía Mochila Sensorial" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
             </div>
         </div>
     </article>
 
     <!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
     <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- 1) Título fuera de la tarjeta con fondo blanco de la página -->
         <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 0 0 20px 0; text-align: left; background: transparent;">
             El rincón de la calma en casa
         </h2>
-        
-        <!-- Contenedor de dos columnas alineadas en altura -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            
-            <!-- 2) Tarjeta Izquierda (Texto): Fondo rosado y bordes redondeados -->
             <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
                 <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Un refugio seguro para la corregulación emocional:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.</p>
@@ -172,27 +123,18 @@
                     <li style="margin-bottom: 10px;">❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
                 </ul>
             </div>
-            
-            <!-- 3) Tarjeta Derecha (Imagen): A la derecha y con el mismo alto que la del texto -->
             <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="img/rincon-calma.png" alt="Infografía Rincón de la Calma" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+                <img src="imagenes/rincon-calma.png" alt="Infografía Rincón de la Calma" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
             </div>
         </div>
     </article>
 
-</div>
-
     <!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
     <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- 1) Título fuera de la tarjeta con fondo blanco de la página -->
         <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 0 0 20px 0; text-align: left; background: transparent;">
             El juego como primer lenguaje
         </h2>
-        
-        <!-- Contenedor de dos columnas alineadas en altura -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            
-            <!-- 2) Tarjeta Izquierda (Texto): Fondo rosado y bordes redondeados -->
             <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
                 <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Estrategias naturales de comunicación:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.</p>
@@ -202,58 +144,19 @@
                     <li style="margin-bottom: 10px;">🌱 <strong>Pequeños pasos:</strong> Seguir los intereses del menor genera grandes logros.</li>
                 </ul>
             </div>
-            
-            <!-- 3) Tarjeta Derecha (Imagen): A la derecha y con el mismo alto que la del texto -->
             <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="img/juego-lenguaje.png" alt="Infografía Juego como Lenguaje" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+                <img src="imagenes/juego-lenguaje.png" alt="Infografía Juego como Lenguaje" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
             </div>
         </div>
     </article>
 
     <!-- RECURSO 4: HITOS DEL DESARROLLO -->
     <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- 1) Título fuera de la tarjeta con fondo blanco de la página -->
         <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 0 0 20px 0; text-align: left; background: transparent;">
             Hitos del desarrollo infantil
         </h2>
-        
-        <!-- Contenedor de dos columnas alineadas en altura -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            
-            <!-- 2) Tarjeta Izquierda (Texto): Fondo rosado y bordes redondeados -->
             <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
-                <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.</p>
-                <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
-                    <li style="margin-bottom: 10px;">🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordinación y movimientos finos.</li>
-                    <li style="margin-bottom: 10px;">💬 <strong>Área comunicativa:</strong> Evolución de la comprensión y la expresión verbal.</li>
-                    <li style="margin-bottom: 10px;">🤝 <strong>Área social:</strong> Respuestas emocionales, juego compartido e interacciones.</li>
-                </ul>
-            </div>
-            
-            <!-- 3) Tarjeta Derecha (Imagen): A la derecha y con el mismo alto que la del texto -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="img/hitos-desarrollo.png" alt="Infografía Hitos del Desarrollo" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
-            </div>
-        </div>
-    </article>
-
-    </div>
-    
-    <!-- BLOQUE DE AEPSIS -->
-    <section class="seccion-aepsis" style="padding: 30px; background-color: #FDF8F5; border-radius: 12px; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.05); text-align: center; margin-bottom: 50px;">
-        <h2 style="color: #4A2E35; font-size: 1.8rem; margin-bottom: 10px;">¡Apúntate gratis a un curso de AEPSIS!</h2>
-        <p style="color: #666; font-size: 1rem; margin-top: 0; margin-bottom: 25px;">(Asociación Española de Psicología Sanitaria)</p>
-        <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #4A2E35; text-align: left; line-height: 1.6; color: #4b4b4b;">
-            <p style="margin-top: 0;"><strong>¡Han añadido muchos nuevos cursos especializados!</strong></p>
-            <p>Introduce tus datos a través de nuestro enlace exclusivo, escoge tu formación preferida entre su amplio catálogo y dispondrás de un año entero para completarlo a tu ritmo.</p>
-            <p style="margin-bottom: 0;">🎁 <strong>Ventaja exclusiva:</strong> Además del curso gratuito, en el momento de tu primera matrícula podrás añadir cualquier otro curso adicional por solo 20€ en lugar de su precio real habitual.</p>
-        </div>
-        <a href="http://aepsis.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #4A2E35; color: #ffffff; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 10px rgba(74, 46, 53, 0.2);">
-            👉 Pulsa aquí para elegir tu curso gratis
-        </a>
-        <p style="color: #888; font-size: 0.9rem; margin-top: 20px; margin-bottom: 0;">* La emisión del diploma oficial para tu currículum es opcional por solo 9€.</p>
-    </section>
 
 <!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
 <footer class="pie-contacto-final" style="margin-top: 80px;">
