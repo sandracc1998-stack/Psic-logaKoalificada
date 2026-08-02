@@ -772,3 +772,13 @@ img[src*="abrazo-koala.png"] {
     vertical-align: middle;
     margin-left: 15px; /* Separa la imagen del título */
 }
+
+/* Difuminado suave para las imágenes de las tarjetas horizontales de servicios */
+.bloque-izquierdo-visual img, 
+.tarjeta-horizontal img {
+    mix-blend-mode: multiply; /* Fusiona los blancos de la imagen con el crema de fondo */
+    
+    /* Máscara de degradado radial para desvanecer los bordes */
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
+}
