@@ -6,86 +6,60 @@
     <title>Conóceme - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CONTENEDOR PRINCIPAL SEGURO */
         .sobre-mi-contenedor {
-            max-width: 1200px; 
-            margin: 120px auto 60px auto;
+            max-width: 1100px; 
+            margin: 140px auto 40px auto;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr; /* Una sola columna en móviles */
-            gap: 40px;
-        }
-        @media (min-width: 992px) {
-            .sobre-mi-contenedor {
-                /* Divide el espacio en dos columnas de ancho similar (55% y 45%) */
-                grid-template-columns: 1.2fr 1fr; 
-                align-items: start; /* Alinea los elementos arriba */
-            }
-        }
-        .texto-presentacion h1 {
-            color: #4A2E35;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .texto-presentacion h2 {
-            color: #4A2E35;
-            font-size: 1.4rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        .texto-presentacion p {
-            line-height: 1.7; /* Sutilmente ajustado para compactar el largo */
-            color: #4b4b4b;
-            font-size: 1.05rem; /* Letra un punto más pequeña para que el texto fluya más largo */
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        .bloque-destacado {
-            background-color: #FDF8F5;
-            border-left: 4px solid #4A2E35;
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-        .bloque-destacado p {
-            font-style: italic;
-            margin: 0;
-        }
-        
-        /* CONTENEDOR DE LA COLUMNA DERECHA: FOTO + TARJETA */
-        .columna-derecha-flexible {
-            display: flex;
-            flex-direction: column;
-            gap: 25px; 
+            box-sizing: border-box;
         }
 
-        /* DISEÑO DE LA FOTO AJUSTADA */
+        /* FILA SUPERIOR: FLEXBOX EN DOS COLUMNAS */
+        .fila-superior-flex {
+            display: flex; 
+            gap: 40px; 
+            align-items: stretch; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap;
+        }
+
+        /* COLUMNA FOTO DE SANDRA */
+        .contenedor-foto-reducida {
+            flex: 0.8; 
+            min-width: 250px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
         .foto-perfil-sobremi {
-            width: 100%;
-            height: auto;
-            border-radius: 16px;
+            width: 100%; 
+            max-width: 260px; 
+            height: auto; 
+            border-radius: 24px; 
             object-fit: cover;
             box-shadow: 0 8px 25px rgba(74, 46, 53, 0.1);
         }
 
-        /* TARJETA (SIDEBAR) */
+        /* COLUMNA TARJETA SIDEBAR GRANATE */
         .tarjeta-sidebar {
+            flex: 2; 
+            min-width: 320px; 
             background-color: #4A2E35; 
-            padding: 30px;
-            border-radius: 16px;
-            height: fit-content;
-            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15);
+            color: #ffffff; 
+            padding: 35px; 
+            border-radius: 24px; 
+            box-shadow: 0 8px 25px rgba(74, 46, 53, 0.1);
             box-sizing: border-box;
-            width: 100%;
         }
         .tarjeta-sidebar h3 {
-            color: #FDF8F5; 
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.4rem; 
-            border-bottom: 2px solid rgba(253, 248, 245, 0.3); 
+            color: #F7E1E5; 
+            font-size: 1.5rem; 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+            font-family: Georgia, serif;
+            border-bottom: 1px solid rgba(247, 225, 229, 0.2);
             padding-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         .tarjeta-sidebar ul {
             list-style: none;
@@ -93,16 +67,49 @@
             margin: 0;
         }
         .tarjeta-sidebar ul li {
-            background-color: rgba(253, 248, 245, 0.08); 
-            margin-bottom: 14px;
-            font-size: 1.05rem; /* Ajustado ligeramente para equilibrar visualmente */
-            color: #FDF8F5; 
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+            color: #ffffff;
             display: flex;
             align-items: flex-start;
-            gap: 12px;
-            padding: 12px 16px;
-            border-radius: 8px;
-            line-height: 1.5;
+            gap: 10px;
+        }
+
+        /* FILA INFERIOR: TEXTO DE PRESENTACIÓN BLOCKE COMPLETO */
+        .texto-presentacion {
+            width: 100%; 
+            text-align: left; 
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        .texto-presentacion p {
+            font-size: 1.15rem; 
+            line-height: 1.7; 
+            color: #4b4b4b; 
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .bloque-destacado {
+            background-color: #F7E1E5; 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-bottom: 40px; 
+            border-left: 6px solid #4A2E35;
+        }
+        .bloque-destacado p {
+            font-size: 1.25rem; 
+            font-style: italic; 
+            color: #4A2E35; 
+            margin: 0; 
+            line-height: 1.6;
+            text-align: left;
+        }
+        .texto-presentacion h2 {
+            color: #4A2E35; 
+            font-size: 2.1rem; 
+            font-family: Georgia, serif; 
+            margin: 40px 0 20px 0;
         }
     </style>
 </head>
@@ -122,57 +129,56 @@
     </ul>
 </nav>
 
-
 <!-- SECCIÓN PRINCIPAL -->
-<div class="sobre-mi-contenedor" style="max-width: 1100px; margin: 140px auto 40px auto; padding: 0 20px;">
+<div class="sobre-mi-contenedor">
     
     <!-- TÍTULO PRINCIPAL (Arriba del todo) -->
     <h1 style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 30px 0;">Sobre mí</h1>
 
     <!-- FILA SUPERIOR: FOTO PEQUEÑA + TARJETA GRANATE ENSANCHADA -->
-    <div style="display: flex; gap: 40px; align-items: stretch; margin-bottom: 40px; flex-wrap: wrap;">
+    <div class="fila-superior-flex">
         
         <!-- Foto de Sandra en tamaño reducido -->
-        <div style="flex: 0.8; min-width: 250px; display: flex; justify-content: center; align-items: center;">
-            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; max-width: 260px; height: auto; border-radius: 24px; object-fit: cover;">
+        <div class="contenedor-foto-reducida">
+            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi">
         </div>
 
         <!-- Tarjeta Granate más ancha ocupando el resto del espacio -->
-        <aside class="tarjeta-sidebar" style="flex: 2; min-width: 320px; background-color: #4A2E35; color: #ffffff; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.1);">
-            <h3 style="color: #F7E1E5; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px; font-family: Georgia, serif;">Formación Destacada</h3>
-            <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 25px;">
-                <li style="margin-bottom: 8px;">🎓 Grado en Psicología (USC)</li>
-                <li style="margin-bottom: 8px;">🧩 Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</li>
-                <li style="margin-bottom: 8px;">🏫 Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</li>
-                <li style="margin-bottom: 8px;">❤️ Curso de Inteligencia Emocional (Universidad de Salamanca)</li>
+        <aside class="tarjeta-sidebar">
+            <h3>Formación Destacada</h3>
+            <ul style="margin-bottom: 25px;">
+                <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+                <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
+                <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
+                <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
             </ul>
 
-            <h3 style="color: #F7E1E5; font-size: 1.5rem; margin-top: 0; margin-bottom: 15px; font-family: Georgia, serif;">Áreas de Trabajo</h3>
-            <ul style="padding-left: 20px; line-height: 1.8; margin-bottom: 0;">
-                <li style="margin-bottom: 8px;">👶 Atención Temprana (0-6 años)</li>
-                <li style="margin-bottom: 8px;">🧠 Trastornos del Neurodesarrollo / TEA</li>
-                <li style="margin-bottom: 8px;">🎨 Diseño de Material Adaptado</li>
-                <li style="margin-bottom: 8px;">💬 Regulación Emocional y Habilidades</li>
+            <h3>Áreas de Trabajo</h3>
+            <ul>
+                <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+                <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+                <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+                <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
             </ul>
         </aside>
         
     </div>
 
     <!-- FILA INFERIOR: TEXTO REDACTADO (Ocupando todo el ancho debajo) -->
-    <article class="texto-presentacion" style="width: 100%; text-align: left; margin-top: 20px;">
-        <p style="font-size: 1.15rem; line-height: 1.7; color: #4b4b4b; margin-bottom: 20px;">¡Hola! Soy <strong>Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583. Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.</p>
+    <article class="texto-presentacion">
+        <p>¡Hola! Soy <strong>Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583. Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.</p>
         
-        <p style="font-size: 1.15rem; line-height: 1.7; color: #4b4b4b; margin-bottom: 30px;">Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong>atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>. Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.</p>
+        <p>Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong>atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>. Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.</p>
 
         <!-- Bloque Destacado de la Cita -->
-        <div class="bloque-destacado" style="background-color: #F7E1E5; padding: 30px; border-radius: 20px; margin-bottom: 40px; border-left: 6px solid #4A2E35;">
-            <p style="font-size: 1.25rem; font-style: italic; color: #4A2E35; margin: 0; line-height: 1.6;">"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
+        <div class="bloque-destacado">
+            <p>"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
         </div>
 
-        <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 40px 0 20px 0;">Experiencia y Enfoque Profesional</h2>
-        <p style="font-size: 1.15rem; line-height: 1.7; color: #4b4b4b; margin-bottom: 20px;">A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong>ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong>Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
+        <h2>Experiencia y Enfoque Profesional</h2>
+        <p>A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong>ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong>Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
         
-        <p style="font-size: 1.15rem; line-height: 1.7; color: #4b4b4b; margin-bottom: 20px;">Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo codo junto a las familias y los centros educativos.</p>
+        <p>Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo codo junto a las familias y los centros educativos.</p>
     </article>
 
 </div>
