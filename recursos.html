@@ -2,27 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos koalificados - Sandra Carrera</title>
-    <link rel="stylesheet" href="style.css">
-
-<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="recursos-contenedor-pagina">
-  
-  <!-- CONTENEDOR FLEX EN DOS COLUMNAS (Texto a la izquierda, Imagen a la derecha) -->
-  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 40px; margin-bottom: 50px; flex-wrap: wrap;">
-    
-    <!-- Columna Izquierda: Textos -->
-    <div style="flex: 1.2; text-align: left; display: flex; flex-direction: column; justify-content: center; min-width: 280px;">
-      <!-- Título principal -->
-      <h1 class="recursos-titulo-principal" style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 15px 0; line-height: 1.2;">
     <title>Recursos koalificados - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
+        /* REPARACIÓN DEL MENÚ DE NAVEGACIÓN COMPACTO */
+        .nav-principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(74, 46, 53, 0.05);
+        }
+        .nav-logo {
+            color: #4A2E35;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: sans-serif;
+            max-width: 180px;
+            line-height: 1.2;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        .nav-links li {
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #4b4b4b;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: sans-serif;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #4A2E35;
+        }
+
+        /* DISEÑO DE LA PÁGINA DE RECURSOS */
         .recursos-contenedor-pagina {
             max-width: 1100px;
-            margin: 120px auto 60px auto;
+            margin: 140px auto 60px auto;
             padding: 0 20px;
             font-family: sans-serif;
             box-sizing: border-box;
@@ -80,7 +115,8 @@
       </p>
     </div>
     <div style="flex: 0.8; min-width: 200px; display: flex; justify-content: center; align-items: center;">
-      <img src="imagenes/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="width: 100%; max-width: 220px; height: auto; object-fit: contain; border-radius: 0;">
+      <!-- Corregido a tu ruta real: img/ramasaprendizaje.png -->
+      <img src="img/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="width: 100%; max-width: 220px; height: auto; object-fit: contain; border-radius: 0;">
     </div>
   </div>
 
@@ -103,7 +139,8 @@
                 </ul>
             </div>
             <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="imagenes/mochila-sensorial.png" alt="Infografía Mochila Sensorial" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+                <!-- Enlazado a tu archivo real: edu-koala.png -->
+                <img src="img/edu-koala.png" alt="Infografía Mochila Sensorial" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
             </div>
         </div>
     </article>
@@ -124,7 +161,8 @@
                 </ul>
             </div>
             <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="imagenes/rincon-calma.png" alt="Infografía Rincón de la Calma" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+                <!-- Enlazado a tu archivo real: img-koala.png -->
+                <img src="img/img-koala.png" alt="Infografía Rincón de la Calma" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
             </div>
         </div>
     </article>
@@ -140,23 +178,28 @@
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.</p>
                 <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
                     <li style="margin-bottom: 10px;">👀 <strong>Contacto visual:</strong> Conexión a través de burbujas o el juego interactivo.</li>
-                    <li style="margin-bottom: 10px;">🗣️ <strong>Señalar y turnos:</strong> Modelar gestos y aprender a esperar pacientemente.</li>
-                    <li style="margin-bottom: 10px;">🌱 <strong>Pequeños pasos:</strong> Seguir los intereses del menor genera grandes logros.</li>
-                </ul>
-            </div>
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <img src="imagenes/juego-lenguaje.png" alt="Infografía Juego como Lenguaje" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
-            </div>
-        </div>
-    </article>
 
-    <!-- RECURSO 4: HITOS DEL DESARROLLO -->
+      <!-- RECURSO 4: HITOS DEL DESARROLLO -->
     <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
         <h2 style="color: #4A2E35; font-size: 2.1rem; font-family: Georgia, serif; margin: 0 0 20px 0; text-align: left; background: transparent;">
             Hitos del desarrollo infantil
         </h2>
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
             <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
+                <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.</p>
+                <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
+                    <li style="margin-bottom: 10px;">🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordinación y movimientos finos.</li>
+                    <li style="margin-bottom: 10px;">💬 <strong>Área comunicativa:</strong> Evolución de la comprensión y la expresión verbal.</li>
+                    <li style="margin-bottom: 10px;">🤝 <strong>Área social:</strong> Respuestas emocionales, juego compartido e interacciones.</li>
+                </ul>
+            </div>
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
+                <!-- Vinculada a tu archivo real en la carpeta img -->
+                <img src="img/psicokoala.png" alt="Infografía Hitos del Desarrollo" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain;">
+            </div>
+        </div>
+    </article>
 
 <!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
 <footer class="pie-contacto-final" style="margin-top: 80px;">
