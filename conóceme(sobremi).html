@@ -1,23 +1,24 @@
-
  <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí - Sandra Carrera</title>
+    <title>Conóceme - Sandra Carrera</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .sobre-mi-contenedor {
-            max-width: 1200px; /* Ampliado para dar más espacio a ambas columnas */
+            max-width: 1200px; 
             margin: 120px auto 60px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr; /* Una sola columna en móviles */
             gap: 40px;
         }
         @media (min-width: 992px) {
             .sobre-mi-contenedor {
-                grid-template-columns: 1fr 380px; /* Fija la columna derecha a un ancho óptimo y elegante */
+                /* Divide el espacio en dos columnas de ancho similar (55% y 45%) */
+                grid-template-columns: 1.2fr 1fr; 
+                align-items: start; /* Alinea los elementos arriba */
             }
         }
         .texto-presentacion h1 {
@@ -32,9 +33,9 @@
             margin-bottom: 10px;
         }
         .texto-presentacion p {
-            line-height: 1.8;
+            line-height: 1.7; /* Sutilmente ajustado para compactar el largo */
             color: #4b4b4b;
-            font-size: 1.1rem;
+            font-size: 1.05rem; /* Letra un punto más pequeña para que el texto fluya más largo */
             margin-bottom: 15px;
             text-align: justify;
         }
@@ -54,7 +55,7 @@
         .columna-derecha-flexible {
             display: flex;
             flex-direction: column;
-            gap: 25px; /* Espacio de separación entre la foto y la tarjeta */
+            gap: 25px; 
         }
 
         /* DISEÑO DE LA FOTO AJUSTADA */
@@ -68,7 +69,7 @@
 
         /* TARJETA (SIDEBAR) */
         .tarjeta-sidebar {
-            background-color: #4A2E35; /* Fondo granate corporativo principal */
+            background-color: #4A2E35; 
             padding: 30px;
             border-radius: 16px;
             height: fit-content;
@@ -77,11 +78,11 @@
             width: 100%;
         }
         .tarjeta-sidebar h3 {
-            color: #FDF8F5; /* Letra rosa crema clara para los títulos */
+            color: #FDF8F5; 
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.4rem; /* Título más grande */
-            border-bottom: 2px solid rgba(253, 248, 245, 0.3); /* Línea difuminada rosa crema */
+            font-size: 1.4rem; 
+            border-bottom: 2px solid rgba(253, 248, 245, 0.3); 
             padding-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -92,10 +93,10 @@
             margin: 0;
         }
         .tarjeta-sidebar ul li {
-            background-color: rgba(253, 248, 245, 0.08); /* Fondo granate difuminado individual */
+            background-color: rgba(253, 248, 245, 0.08); 
             margin-bottom: 14px;
-            font-size: 1.15rem; /* Tamaño de letra más grande y legible */
-            color: #FDF8F5; /* Texto rosa crema suave */
+            font-size: 1.05rem; /* Ajustado ligeramente para equilibrar visualmente */
+            color: #FDF8F5; 
             display: flex;
             align-items: flex-start;
             gap: 12px;
@@ -109,13 +110,13 @@
 
 <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
-<a href="index.html" class="nav-logo">
-  Sandra Carrera Castaño
-</a>
+  <a href="index.html" class="nav-logo">
+    Sandra Carrera Castaño 
+  </a>
   <ul class="nav-links">
-    <li><a href="valores.html">Filosofía Koala</a></li>
-    <li><a href="trabajo.html">Las ramas del aprendizaje</a></li>
-    <li><a href="recursos.html">Recursos Koalificados</a></li>
+    <li><a href="valores.html">Filosofía koala</a></li>
+    <li><a href="trabajo.html">Ramas terapéuticas</a></li>
+    <li><a href="recursos.html">Recursos koalificados</a></li>
        <li><a href="sobremi.html">Conóceme</a></li>
       <li><a href="contacto.html">Contactáme</a></li>
   </ul>
