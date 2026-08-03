@@ -6,68 +6,66 @@
     <title>Sandra Carrera - Psicóloga Koalificada</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- Se añade flexbox al body para forzar al pie de página a tocar el fondo de forma estricta -->
+<body style="margin: 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
 
+<div>
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
+    <nav class="nav-principal">
+        <a href="index.html" class="nav-logo">
+            <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
+        </a>
+        <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Contáctame</a></li>
+        </ul>
+    </nav>
 
-<!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
-<nav class="nav-principal">
-    <a href="index.html" class="nav-logo">
-        <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
-    </a>
-    <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="filosofia.html">Filosofía koala</a></li>
-        <li><a href="terapia.html">Ramas terapéuticas</a></li>
-        <li><a href="recursos.html">Recursos koalificados</a></li>
-        <li><a href="conoceme.html">Conóceme</a></li>
-        <li><a href="contacto.html">Contáctame</a></li>
-    </ul>
-</nav>
-
-
-<!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
-<!-- Se reduce el padding superior a 90px y se añade un margen inferior negativo controlado para elevar el pie de página -->
-<section class="hero-seccion" style="padding-top: 90px; margin-bottom: -10px;">
-    <div class="hero-dos-columnas" style="align-items: center;">
-        <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
-        <div class="cabecera-titulo">
-            <!-- Nuevo título grande manteniendo tus estilos del tema principal -->
-            <h1 style="margin-bottom: 20px;">
-                Espacio de psicología educativa, infantil y acompañamiento familiar
-            </h1>
-            
-            <!-- Contenedor de las dos tarjetas inferiores ajustado a 20px de separación -->
-            <div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
-                <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
-                    <p style="color: #ffffff !important; margin: 0;">
-                        Creo en un acompañamiento cercano, respetuoso y personalizado.
-                    </p>
-                </div>
-                <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
-                    <p style="color: #ffffff !important; margin: 0;">
-                        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-                    </p>
+    <!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
+    <section class="hero-seccion" style="padding-top: 100px; margin-bottom: 20px;">
+        <div class="hero-dos-columnas" style="align-items: center;">
+            <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
+            <div class="cabecera-titulo">
+                <h1 style="margin-bottom: 20px;">
+                    Espacio de psicología educativa, infantil y acompañamiento familiar
+                </h1>
+                
+                <div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+                    <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
+                        <p style="color: #ffffff !important; margin: 0;">
+                            Creo en un acompañamiento cercano, respetuoso y personalizado.
+                    </div>
+                    <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
+                        <p style="color: #ffffff !important; margin: 0;">
+                            Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- COLUMNA DERECHA: IMAGEN REDUCIDA PARA QUE QUEPA TODO EN UNA PANTALLA -->
-        <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
-            <!-- Se reduce max-height de 520px a 440px para ganar espacio vertical libre -->
-            <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 440px; width: auto; object-fit: contain;">
+            <!-- COLUMNA DERECHA: IMAGEN REDUCIDA -->
+            <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
+                <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 420px; width: auto; object-fit: contain;">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
-<!-- PIE DE PÁGINA FINAL (CORREGIDA ETIQUETA <a> PARA ENTRAR EN LA LISTA UL) -->
-<footer class="pie-contacto-final">
+<!-- PIE DE PÁGINA FINAL (Empujado estrictamente al fondo de la pantalla) -->
+<footer class="pie-contacto-final" style="width: 100%; margin-top: auto;">
     <div class="pie-contenedor">
         <ul class="contacto-final-lista">
             <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
             <li><span>📍 Santiago de Compostela</span></li>
-            <li><a href="https://www.instagram.com/psico.koalificada" target="_blank" rel="noopener noreferrer">📸 @psico.koalificada</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📸 @psico.koalificada</a></li>
         </ul>
     </div> 
 </footer>
+
 </body>
 </html>
