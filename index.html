@@ -25,48 +25,47 @@
 </nav>
 
 
-<!-- ESTRUCTURA DE LA CABECERA (HERO) CON TU DISPOSICIÓN ORIGINAL -->
-<!-- Hemos aumentado el padding-top a 120px para generar más espacio en blanco -->
-<section class="hero-seccion" style="padding-top: 120px;">
-    <div class="hero-dos-columnas">
+<!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
+<!-- Se reduce el padding superior a 90px y se añade un margen inferior negativo controlado para elevar el pie de página -->
+<section class="hero-seccion" style="padding-top: 90px; margin-bottom: -10px;">
+    <div class="hero-dos-columnas" style="align-items: center;">
         <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
         <div class="cabecera-titulo">
             <!-- Nuevo título grande manteniendo tus estilos del tema principal -->
-            <h1>
+            <h1 style="margin-bottom: 20px;">
                 Espacio de psicología educativa, infantil y acompañamiento familiar
             </h1>
             
-            <!-- Contenedor de las dos tarjetas inferiores intactas -->
-            <div class="sub-tarjetas-container" style="margin-top: 30px;">
-                <div class="tarjeta-redondeada-cabecera">
-                    <p style="color: #ffffff !important;">
+            <!-- Contenedor de las dos tarjetas inferiores ajustado a 20px de separación -->
+            <div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+                <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
+                    <p style="color: #ffffff !important; margin: 0;">
                         Creo en un acompañamiento cercano, respetuoso y personalizado.
                     </p>
                 </div>
-                <div class="tarjeta-redondeada-cabecera">
-                    <p style="color: #ffffff !important;">
+                <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
+                    <p style="color: #ffffff !important; margin: 0;">
                         Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- COLUMNA DERECHA: NUEVA IMAGEN DEL KOALA -->
+        <!-- COLUMNA DERECHA: IMAGEN REDUCIDA PARA QUE QUEPA TODO EN UNA PANTALLA -->
         <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
-            <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 520px; width: auto; object-fit: contain;">
+            <!-- Se reduce max-height de 520px a 440px para ganar espacio vertical libre -->
+            <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 440px; width: auto; object-fit: contain;">
         </div>
     </div>
 </section>
 
-    <!-- PIE DE PÁGINA FINAL -->
+<!-- PIE DE PÁGINA FINAL (CORREGIDA ETIQUETA <a> PARA ENTRAR EN LA LISTA UL) -->
 <footer class="pie-contacto-final">
     <div class="pie-contenedor">
         <ul class="contacto-final-lista">
             <li><a href="mailto:psikoala@psikoala.com">✉ psikoala@psikoala.com</a></li>
             <li><span>📍 Santiago de Compostela</span></li>
-          <a href="https://www.instagram.com/psico.koalificada" target="_blank" rel="noopener noreferrer">
-  📸 @psico.koalificada
-</a>
+            <li><a href="https://www.instagram.com/psico.koalificada" target="_blank" rel="noopener noreferrer">📸 @psico.koalificada</a></li>
         </ul>
     </div> 
 </footer>
