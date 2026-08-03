@@ -132,37 +132,46 @@
 <!-- SECCIÓN PRINCIPAL -->
 <div class="sobre-mi-contenedor">
     
-    <!-- TÍTULO PRINCIPAL (Arriba del todo) -->
-    <h1 style="color: #4A2E35; font-size: 2.8rem; font-weight: 800; margin: 0 0 30px 0;">Sobre mí</h1>
+    <!-- 1) TÍTULO PRINCIPAL unificado en color (#6d4b53), fuente Georgia y tamaño 3.4rem -->
+    <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0;">Sobre mí</h1>
 
-    <!-- FILA SUPERIOR: FOTO PEQUEÑA + TARJETA GRANATE ENSANCHADA -->
-    <div class="fila-superior-flex">
+    <!-- FILA SUPERIOR: FOTO PEQUEÑA + DOS TARJETAS GRANATES SEPARADAS -->
+    <div class="fila-superior-flex" style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
         
-        <!-- Foto de Sandra en tamaño reducido -->
-        <div class="contenedor-foto-reducida">
-            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi">
+        <!-- 2) Foto de Sandra con tamaño explícitamente reducido -->
+        <div class="contenedor-foto-reducida" style="flex: 0.6; min-width: 180px; max-width: 220px;">
+            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
         </div>
 
-        <!-- Tarjeta Granate más ancha ocupando el resto del espacio -->
-        <aside class="tarjeta-sidebar">
-            <h3>Formación Destacada</h3>
-            <ul style="margin-bottom: 25px;">
-                <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
-                <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
-                <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
-                <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
-            </ul>
+        <!-- 3) Contenedor flexible para dividir la información en dos tarjetas independientes -->
+        <div class="bloque-tarjetas-dividido" style="flex: 2; display: flex; flex-direction: column; gap: 20px; min-width: 320px;">
+            
+            <!-- TARJETA 1: FORMACIÓN DESTACADA -->
+            <aside class="tarjeta-sidebar" style="margin: 0;">
+                <h3>Formación Destacada</h3>
+                <ul style="margin-bottom: 0;">
+                    <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+                    <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
+                    <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
+                    <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
+                </ul>
+            </aside>
 
-            <h3>Áreas de Trabajo</h3>
-            <ul>
-                <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
-                <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
-                <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
-                <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
-            </ul>
-        </aside>
+            <!-- TARJETA 2: ÁREAS DE TRABAJO -->
+            <aside class="tarjeta-sidebar" style="margin: 0;">
+                <h3>Áreas de Trabajo</h3>
+                <ul style="margin-bottom: 0;">
+                    <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+                    <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+                    <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+                    <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
+                </ul>
+            </aside>
+
+        </div>
         
     </div>
+</div>
 
     <!-- FILA INFERIOR: TEXTO REDACTADO (Ocupando todo el ancho debajo) -->
     <article class="texto-presentacion">
@@ -175,13 +184,17 @@
             <p>"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
         </div>
 
-        <h2>Experiencia y Enfoque Profesional</h2>
+        <!-- 1) Título secundario unificado en color (#6d4b53), fuente Georgia y tamaño 2.6rem -->
+        <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 40px 0 20px 0; text-align: left;">
+            Experiencia y Enfoque Profesional
+        </h2>
         <p>A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong>ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong>Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
         
         <p>Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo codo junto a las familias y los centros educativos.</p>
     </article>
 
 </div>
+
 
 
 <!-- PIE DE PÁGINA -->
