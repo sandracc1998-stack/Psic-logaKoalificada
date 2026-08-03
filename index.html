@@ -10,10 +10,13 @@
 
 <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
 <nav class="nav-principal">
+    <!-- El span evita saltos de línea indeseados en el nombre -->
     <a href="index.html" class="nav-logo">
-        Sandra Carrera Castaño
+        <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
     </a>
     <ul class="nav-links">
+        <!-- Añadido el botón Inicio apuntando a index.html -->
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="filosofia.html">Filosofía koala</a></li>
         <li><a href="terapia.html">Ramas terapéuticas</a></li>
         <li><a href="recursos.html">Recursos koalificados</a></li>
@@ -24,7 +27,8 @@
 
 
 <!-- ESTRUCTURA DE LA CABECERA (HERO) CON TU DISPOSICIÓN ORIGINAL -->
-<section class="hero-seccion">
+<!-- Se añade padding-top inline como medida de seguridad para que la letra no se corte -->
+<section class="hero-seccion" style="padding-top: 40px;">
     <div class="hero-dos-columnas">
         <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
         <div class="cabecera-titulo">
@@ -49,9 +53,10 @@
         </div>
 
         <!-- COLUMNA DERECHA: NUEVA IMAGEN DEL KOALA -->
-    <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
-        <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 520px; width: auto; object-fit: contain;">
-    </div>
+        <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
+            <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 520px; width: auto; object-fit: contain;">
+        </div>
+    </div> <!-- Se corrige la etiqueta de cierre que faltaba aquí -->
 </section>
 
 
@@ -72,4 +77,3 @@
 
 </body>
 </html>
-
