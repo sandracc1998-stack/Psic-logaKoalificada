@@ -104,34 +104,40 @@
 
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="recursos-contenedor-pagina">
+<main class="recursos-contenedor-pagina" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
   
   <!-- CABECERA SIN IMAGEN Y CON EL TÍTULO UNIFICADO -->
   <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 40px; margin-bottom: 50px; flex-wrap: wrap;">
     <div style="flex: 1.2; text-align: left; display: flex; flex-direction: column; justify-content: center; min-width: 280px;">
-      <!-- 1) Título principal igualado al resto de la web en color, fuente y tamaño -->
+      <!-- Título principal igualado al resto de la web -->
       <h1 class="recursos-titulo-principal" style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 15px 0; line-height: 1.25;">
         Recursos koalificados
       </h1>
-      <p class="recursos-subtitulo" style="font-size: 1.5rem; line-height: 1.5; color: #4b4b4b; margin: 0; opacity: 0.95; max-width: 550px;">
-        Aquí encontrarás información y herramientas<br>para acompañar el desarrollo de los más pequeños.
+      <!-- Subtítulo optimizado para que se lea estrictamente en dos líneas elegantes -->
+      <p class="recursos-subtitulo" style="font-size: 1.5rem; line-height: 1.5; color: #4b4b4b; margin: 0; opacity: 0.95; max-width: 600px;">
+        Aquí encontrarás información y herramientas para acompañar<br>el desarrollo de los más pequeños.
       </p>
     </div>
-    <!-- 2) Se ha eliminado por completo el bloque contenedor de la imagen del árbol de aprendizaje -->
   </div>
 
   <!-- CONTENEDOR DE LOS RECURSOS -->
-  <div class="contenedor-articulos">
+  <div class="contenedor-articulos" style="display: flex; flex-direction: column; gap: 50px;">
 
     <!-- RECURSO 1: LA MOCHILA SENSORIAL -->
-    <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- 3a) El título secundario se mantiene fuera de las tarjetas con la tipografía y color unificados -->
-        <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 0 0 20px 0; text-align: left; background: transparent;">
+    <!-- Se fuerza un background: transparent !important para romper el fondo rosa de la plantilla y sacar el título fuera -->
+    <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 0;">
+        
+        <!-- Título secundario completamente fuera, limpio sobre el fondo blanco de la web -->
+        <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 0 0 25px 0 !important; text-align: left !important; background: transparent !important;">
             La mochila sensorial para el colegio
         </h2>
+        
+        <!-- Contenedor interno donde empiezan las cajas de color rosa crema -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Herramientas de autorregulación en el aula:</p>
+            
+            <!-- Caja izquierda: Texto informativo -->
+            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.1rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Herramientas de autorregulación en el aula:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Elementos discretos diseñados para mitigar la sobrecarga y mejorar la concentración en clase.</p>
                 <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
                     <li style="margin-bottom: 10px;">🎧 <strong>Audífonos de cancelación:</strong> Reducen el ruido distractor externo.</li>
@@ -139,24 +145,34 @@
                     <li style="margin-bottom: 10px;">🎯 <strong>Apoyos visuales:</strong> Temporizadores que aportan predictibilidad.</li>
                 </ul>
             </div>
-            <!-- 3b) Caja de la derecha modificada para difuminar la imagen de forma armónica con el fondo -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <!-- Se añade mix-blend-mode y opacidad para integrarla visualmente en la tarjeta -->
-                <img src="img/edu-koala.png" alt="Infografía Mochila Sensorial" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.85;">
+            
+            <!-- Caja derecha: Imagen con fondo rosa integrado -->
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+                
+                <!-- ======================================================= -->
+                <!-- ¡RECURSO 1! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+                <!-- ======================================================= -->
+                <img src="img/edu-koala.png" 
+                     alt="Infografía Mochila Sensorial" 
+                     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.95;">
+                <!-- ======================================================= -->
+                
             </div>
         </div>
     </article>
 
 
-       <!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
-    <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- Título secundario unificado en color (#6d4b53), fuente Georgia y tamaño 2.6rem -->
-        <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 0 0 20px 0; text-align: left; background: transparent;">
+    <!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
+    <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
+    <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
+        <!-- Título secundario completamente fuera, limpio sobre el fondo de la web -->
+        <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 0 0 25px 0 !important; text-align: left !important; background: transparent !important;">
             El rincón de la calma en casa
         </h2>
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Un refugio seguro para la corregulación emocional:</p>
+            <!-- Caja de texto informativo -->
+            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.1rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Un refugio seguro para la corregulación emocional:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.</p>
                 <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
                     <li style="margin-bottom: 10px;">📍 <strong>Ubicación:</strong> Un lugar tranquilo y libre de sobrecarga visual.</li>
@@ -164,57 +180,87 @@
                     <li style="margin-bottom: 10px;">❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
                 </ul>
             </div>
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <!-- Se añade mix-blend-mode y opacidad para difuminar el fondo blanco del koala con el fondo rosa -->
-                <img src="img/img-koala.png" alt="Infografía Rincón de la Calma" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.85;">
+            <!-- Caja de imagen con fondo rosa integrado -->
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);;">
+                
+                <!-- ======================================================= -->
+                <!-- ¡RECURSO 2! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+                <!-- ======================================================= -->
+                <img src="img/img-koala.png" 
+                     alt="Infografía Rincón de la Calma" 
+                     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.95;">
+                <!-- ======================================================= -->
+                
             </div>
         </div>
     </article>
 
-      <!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
-    <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- Título secundario unificado en color (#6d4b53), fuente Georgia y tamaño 2.6rem -->
-        <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 0 0 20px 0; text-align: left; background: transparent;">
+
+    <!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
+    <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
+    <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
+        <!-- Título secundario completamente fuera, limpio sobre el fondo de la web -->
+        <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 0 0 25px 0 !important; text-align: left !important; background: transparent !important;">
             El juego como primer lenguaje
         </h2>
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Estrategias naturales de comunicación:</p>
+            <!-- Caja de texto informativo -->
+            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.1rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Estrategias naturales de comunicación:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.</p>
                 <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
                     <li style="margin-bottom: 10px;">👀 <strong>Contacto visual:</strong> Conexión a través de burbujas o el juego interactivo.</li>
                 </ul>
             </div>
-            <!-- Se añade el contenedor de imagen que faltaba para completar el recurso de forma idéntica -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <!-- Se añade mix-blend-mode y opacidad para difuminar el fondo de la imagen con la tarjeta rosa -->
-                <img src="img/img-koala.png" alt="Infografía Juego Primer Lenguaje" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.85;">
+            <!-- Caja de imagen con fondo rosa integrado -->
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+                
+                <!-- ======================================================= -->
+                <!-- ¡RECURSO 3! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+                <!-- ======================================================= -->
+                <img src="img/img-koala.png" 
+                     alt="Infografía Juego Primer Lenguaje" 
+                     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.95;">
+                <!-- ======================================================= -->
+                
             </div>
         </div>
     </article>
 
+
     <!-- RECURSO 4: HITOS DEL DESARROLLO -->
-    <article class="tarjeta-recurso-amplia" style="background: transparent; box-shadow: none; margin-bottom: 20px;">
-        <!-- Título secundario unificado en color (#6d4b53), fuente Georgia y tamaño 2.6rem -->
-        <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 0 0 20px 0; text-align: left; background: transparent;">
+    <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
+    <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
+        <!-- Título secundario completamente fuera, limpio sobre el fondo de la web -->
+        <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 0 0 25px 0 !important; text-align: left !important; background: transparent !important;">
             Hitos del desarrollo infantil
         </h2>
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.1rem; color: #4A2E35; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
+            <!-- Caja de texto informativo -->
+            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.1rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
                 <p style="color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.</p>
                 <ul style="padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
-                    <li style="margin-bottom: 10px;">🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordinación y movimientos finos.</li>
+                    <li style="margin-bottom: 10px;">🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordination y movimientos finos.</li>
                     <li style="margin-bottom: 10px;">💬 <strong>Área comunicativa:</strong> Evolución de la comprensión y la expresión verbal.</li>
                     <li style="margin-bottom: 10px;">🤝 <strong>Área social:</strong> Respuestas emocionales, juego compartido e interacciones.</li>
                 </ul>
             </div>
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.04);">
-                <!-- Se añade mix-blend-mode y opacidad para difuminar el fondo de la imagen con la tarjeta rosa -->
-                <img src="img/psicokoala.png" alt="Infografía Hitos del Desarrollo" style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.85;">
+            <!-- Caja de imagen con fondo rosa integrado -->
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+                
+                <!-- ======================================================= -->
+                <!-- ¡RECURSO 4! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+                <!-- ======================================================= -->
+                <img src="img/psicokoala.png" 
+                     alt="Infografía Hitos del Desarrollo" 
+                     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.95;">
+                <!-- ======================================================= -->
+                
             </div>
         </div>
     </article>
+
 
 <!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
 <footer class="pie-contacto-final" style="margin-top: 80px;">
