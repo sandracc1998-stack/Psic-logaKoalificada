@@ -138,95 +138,116 @@
     <!-- 1) TÍTULO PRINCIPAL unificado en color (#6d4b53), fuente Georgia y tamaño 3.4rem -->
     <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0;">Sobre mí</h1>
 
-    <!-- SECCIÓN DE PRESENTACIÓN REESTRUCTURADA EN DOS FILAS -->
-    <div class="bloque-sobre-mi-filas" style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
-        
-        <!-- PRIMERA LÍNEA: FOTO SANDRA GRADUACIÓN (IZQUIERDA) + FORMACIÓN DESTACADA (DERECHA) -->
-        <div class="fila-sobremi-1" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-            <!-- Foto de Sandra Graduación -->
-            <div class="contenedor-foto-reducida" style="flex: 0.6; min-width: 180px; max-width: 220px; display: flex; align-items: center;">
-                <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
-            </div>
-            <!-- TARJETA 1: FORMACIÓN DESTACADA -->
-            <aside class="tarjeta-sidebar" style="flex: 2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
-                <h3>Formación Destacada</h3>
-                <ul style="margin-bottom: 0;">
-                    <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
-                    <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
-                    <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
-                    <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
-                </ul>
-            </aside>
+ <!-- SECCIÓN DE PRESENTACIÓN REESTRUCTURADA EN DOS FILAS -->
+<div class="bloque-sobre-mi-filas" style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+    
+    <!-- PRIMERA LÍNEA: FOTO SANDRA GRADUACIÓN (IZQUIERDA) + FORMACIÓN DESTACADA (DERECHA) -->
+    <div class="fila-sobremi-1" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
+        <!-- Foto de Sandra Graduación -->
+        <div class="contenedor-foto-reducida" style="flex: 0.6; min-width: 180px; max-width: 220px; display: flex; align-items: center;">
+            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
         </div>
-
-        <!-- SEGUNDA LÍNEA: ÁREAS DE TRABAJO (IZQUIERDA) + NUEVA FOTO CON KOALA (DERECHA) -->
-        <div class="fila-sobremi-2" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap-reverse;">
-            <!-- TARJETA 2: ÁREAS DE TRABAJO -->
-            <aside class="tarjeta-sidebar" style="flex: 2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
-                <h3>Áreas de Trabajo</h3>
-                <ul style="margin-bottom: 0;">
-                    <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
-                    <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
-                    <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
-                    <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
-                </ul>
-            </aside>
-            <!-- Contenedor optimizado para tu nueva foto vertical con el koala -->
-            <div class="contenedor-foto-nueva" style="flex: 0.6; min-width: 180px; max-width: 220px; display: flex; align-items: center;">
-                <!-- Modificado con el nombre exacto de tu nueva imagen (.png) -->
-                <img src="img/imagen-sandra-koala.png" alt="Sandra Carrera y Psicokoala" style="width: 100%; height: 100%; min-height: 280px; border-radius: 24px; object-fit: cover;">
-            </div>
-        </div>
-        
+        <!-- TARJETA 1: FORMACIÓN DESTACADA -->
+        <aside class="tarjeta-sidebar" style="flex: 2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
+            <h3>Formación Destacada</h3>
+            <ul style="margin-bottom: 0;">
+                <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+                <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
+                <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
+                <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
+            </ul>
+        </aside>
     </div>
+
+    <!-- SEGUNDA LÍNEA: CAMBIO REALIZADO -> AMPLIAR IMAGEN Y REDUCIR TARJETA TEXTO -->
+    <div class="fila-sobremi-2" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap-reverse;">
+        <!-- TARJETA 2: ÁREAS DE TRABAJO (Reducida a flex: 1.2 para dar espacio a la imagen) -->
+        <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
+            <h3>Áreas de Trabajo</h3>
+            <ul style="margin-bottom: 0;">
+                <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+                <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+                <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+                <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
+            </ul>
+        </aside>
+        <!-- Contenedor ampliado para la foto con el koala (Aumentado a flex: 1.4 y max-width libre) -->
+        <div class="contenedor-foto-nueva" style="flex: 1.4; min-width: 280px; display: flex; align-items: center;">
+            <img src="img/imagen-sandra-koala.png" alt="Sandra Carrera y Psicokoala" style="width: 100%; height: 100%; min-height: 280px; border-radius: 24px; object-fit: cover;">
+        </div>
+    </div>
+    
 </div>
 
 
-        <!-- FILA INFERIOR: CONTENEDOR LIMITADO A 1100PX PARA ALINEAR CON EL BLOQUE SUPERIOR -->
-    <!-- Se añade margin-bottom de 80px y clear:both para evitar que se monte sobre el pie de página -->
-    <article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 40px auto 80px auto; padding: 0 20px; clear: both;">
-        
-        <!-- PRIMER BLOQUE DE TEXTO: Dividido en 2 tarjetas idénticas con fondo rosa crema -->
-        <div class="grupo-tarjetas-presentacion" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 35px;">
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53;">¡Hola! Soy <strong style="color: #6d4b53;">Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583.</p>
-            </div>
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53;">Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.</p>
-            </div>
+<!-- FILA INFERIOR: CONTENEDOR LIMITADO A 1100PX PARA ALINEAR CON EL BLOQUE SUPERIOR -->
+<article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 40px auto 80px auto; padding: 0 20px; clear: both;">
+    
+    <!-- TERCERA LÍNEA: CAMBIO REALIZADO -> ÚNICA TARJETA A LO LARGO DE TODA LA LÍNEA (FONT MÁS GRANDE Y OSCURA) -->
+    <div class="grupo-tarjetas-presentacion" style="margin-bottom: 35px;">
+        <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 40px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); width: 100%; box-sizing: border-box;">
+            <p style="margin: 0 0 20px 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                ¡Hola! Soy <strong style="color: #4a3036;">Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
+            </p>
+            <p style="margin: 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
+            </p>
         </div>
+    </div>
+    
+    <!-- OTRAS TARJETA DE TEXTO UNIFICADAS TAMBIÉN EN LÍNEA ÚNICA PARA MEJORAR LA CONTINUIDAD -->
+    <div class="grupo-tarjetas-presentacion" style="margin-bottom: 45px;">
+        <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 40px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); width: 100%; box-sizing: border-box;">
+            <p style="margin: 0 0 20px 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong style="color: #4a3036;">atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>.
+            </p>
+            <p style="margin: 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bloque Destacado de la Cita (MANTENIDO INTACTO Y ACOTADO) -->
+    <div class="bloque-destacado" style="font-style: italic; margin-bottom: 45px;">
+        <p>"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
+    </div>
+
+    <!-- Título secundario -->
+    <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 50px 0 30px 0 !important; text-align: left !important; background: transparent !important; display: block !important;">
+        Experiencia y Enfoque Profesional
+    </h2>
+
+    <!-- ÚLTIMA LÍNEA: CAMBIO REALIZADO -> REJILLA GRID DE 4 ELEMENTOS (2X2) -->
+    <div class="grid-cuatro-tarjetas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 40px;">
         
-        <!-- SEGUNDO BLOQUE DE TEXTO: Dividido en 2 tarjetas idénticas con fondo rosa crema -->
-        <div class="grupo-tarjetas-presentacion" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 45px;">
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53;">Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong style="color: #6d4b53;">atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>.</p>
-            </div>
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53;">Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.</p>
-            </div>
+        <!-- Tarjeta 1 (Arriba Izquierda): Texto de ASPANAES con más tamaño y contraste -->
+        <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; min-height: 250px;">
+            <p style="margin: 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong style="color: #4a3036;">ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong style="color: #4a3036;">Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación.
+            </p>
         </div>
 
-        <!-- Bloque Destacado de la Cita (MANTENIDO INTACTO Y ACOTADO) -->
-        <div class="bloque-destacado" style="font-style: italic; margin-bottom: 45px;">
-            <p>"Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."</p>
+        <!-- Tarjeta 2 (Arriba Derecha): Imagen ramasaprendizaje.png -->
+        <div class="tarjeta-imagen-grid" style="display: flex; align-items: center; justify-content: center; min-height: 250px;">
+            <img src="img/ramasaprendizaje.png" alt="Ramas del Aprendizaje" style="width: 100%; height: 100%; min-height: 250px; border-radius: 24px; object-fit: cover;">
         </div>
 
-        <!-- Título secundario forzado con estilos inline prioritarios (!important) -->
-        <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 50px 0 30px 0 !important; text-align: left !important; background: transparent !important; display: block !important;">
-            Experiencia y Enfoque Profesional
-        </h2>
-        
-        <!-- TERCER BLOQUE DE TEXTO: Dividido en 2 tarjetas idénticas con fondo rosa crema -->
-        <div class="grupo-tarjetas-presentacion" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 40px;">
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53; line-height: 1.65;">A lo largo de mi trayectoria, he tenido la oportunidad de trabajar en la primera línea de intervención infantil con entidades referentes de nuestro entorno, como <strong style="color: #6d4b53;">ASPANAES</strong> (Asociación de Padres de Personas con Trastorno del Espectro Autista) y la <strong style="color: #6d4b53;">Fundación Down Compostela</strong>. En estos espacios he diseñado e implementado programas individualizados de estimulación cognitiva y social, así como dinámicas grupales orientadas al desarrollo de habilidades sociales y la regulación emocional.</p>
-            </div>
-            <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <p style="margin: 0; color: #6d4b53; line-height: 1.65;">Asimismo, mi experiencia práctica como monitora de educación especial en DEPORTEA y profesora de educación infantil me ha permitido conectar con las infancias desde el juego y la afectividad, facilitando herramientas prácticas y materiales específicos adaptados a cada nivel de aprendizaje. Entiendo que la intervención nunca está completa sin un trabajo coordinado codo codo junto a las familias y los centros educativos.</p>
-            </div>
+        <!-- Tarjeta 3 (Abajo Izquierda): Imagen koalas-trabajo.png -->
+        <div class="tarjeta-imagen-grid" style="display: flex; align-items: center; justify-content: center; min-height: 250px;">
+            <img src="img/koalas-trabajo.png" alt="Koalas Trabajo" style="width: 100%; height: 100%; min-height: 250px; border-radius: 24px; object-fit: cover;">
         </div>
 
-    </article>
+        <!-- Tarjeta 4 (Abajo Derecha): Fondo rosa oscuro suave con el texto restante -->
+        <!-- Nota: Como tu mensaje se cortó en "regulación", añadí un cierre natural al texto. Modifícalo si lo requieres. -->
+        <div class="tarjeta-rosa-oscura-texto" style="background-color: #E2C0C7; padding: 35px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); display: flex; flex-direction: column; justify-content: center; min-height: 250px;">
+            <p style="margin: 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
+                Asimismo, mi experiencia profesional se centra en dotar a las familias de herramientas prácticas y pautas de actuación en el hogar, garantizando la continuidad de los aprendizajes y promoviendo un bienestar integral en el entorno diario del niño.
+            </p>
+        </div>
+
+    </div>
+</article>
+
  
 <!-- PIE DE PÁGINA -->
 <footer class="pie-contacto-final" style="clear: both; margin-top: 40px;">
