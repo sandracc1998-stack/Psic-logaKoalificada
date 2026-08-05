@@ -159,22 +159,23 @@
         </aside>
     </div>
 
-    <!-- SEGUNDA LÍNEA: CAMBIO REALIZADO -> AMPLIAR IMAGEN Y REDUCIR TARJETA TEXTO -->
-    <div class="fila-sobremi-2" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap-reverse;">
-        <!-- TARJETA 2: ÁREAS DE TRABAJO (Reducida a flex: 1.2 para dar espacio a la imagen) -->
-        <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Áreas de Trabajo</h3>
-            <ul style="margin-bottom: 0;">
-                <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
-                <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
-                <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
-                <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
-            </ul>
-        </aside>
-        <!-- Contenedor ampliado para la foto con el koala (Aumentado a flex: 1.4 y max-width libre) -->
-        <div class="contenedor-foto-nueva" style="flex: 1.4; min-width: 280px; display: flex; align-items: center;">
-            <img src="img/imagen-sandra-koala.png" alt="Sandra Carrera y Psicokoala" style="width: 100%; height: 100%; min-height: 280px; border-radius: 24px; object-fit: cover;">
-        </div>
+ <!-- ESTA ERA LA SEGUNDA LÍNEA, AHORA PASA A SER LA TERCERA MÁS ESTRECHA Y CENTRADA -->
+<div class="fila-sobremi-3-estrecha" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap-reverse; max-width: 900px; margin: 40px auto 0 auto; padding: 0 20px;">
+    
+    <!-- TARJETA: ÁREAS DE TRABAJO (Estrechada cambiando flex a 1) -->
+    <aside class="tarjeta-sidebar" style="flex: 1; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
+        <h3>Áreas de Trabajo</h3>
+        <ul style="margin-bottom: 0;">
+            <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+            <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+            <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+            <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
+        </ul>
+    </aside>
+
+    <!-- Contenedor de la foto con el koala (Estrechado limitando el max-width a 350px) -->
+    <div class="contenedor-foto-nueva" style="flex: 1; min-width: 280px; max-width: 350px; display: flex; align-items: center;">
+        <img src="img/imagen-sandra-koala.png" alt="Sandra Carrera y Psicokoala" style="width: 100%; height: 100%; min-height: 280px; border-radius: 24px; object-fit: cover;">
     </div>
     
 </div>
