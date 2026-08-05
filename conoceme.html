@@ -131,35 +131,43 @@
         </ul>
     </nav>
 
-
-<!-- SECCIÓN DE PRESENTACIÓN REESTRUCTURADA -->
-<div class="bloque-sobre-mi-filas" style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+<!-- PRIMERA LÍNEA UNIFICADA: SE CORRIGE EL MARGEN SUPERIOR Y SE AGRUPAN LOS 3 ELEMENTOS -->
+<div class="fila-superior-unificada" style="max-width: 1100px; margin: 40px auto 30px auto; padding: 0 20px; display: flex; gap: 20px; align-items: stretch; flex-wrap: wrap; box-sizing: border-box;">
     
-    <!-- PRIMERA LÍNEA: FOTO SANDRA GRADUACIÓN (IZQUIERDA) + FORMACIÓN DESTACADA (DERECHA) -->
-    <div class="fila-sobremi-1" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-        <!-- Foto de Sandra Graduación -->
-        <div class="contenedor-foto-reducida" style="flex: 0.6; min-width: 180px; max-width: 220px; display: flex; align-items: center;">
-            <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
-        </div>
-        <!-- TARJETA 1: FORMACIÓN DESTACADA -->
-        <aside class="tarjeta-sidebar" style="flex: 2; min-width: 320px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Formación Destacada</h3>
-            <ul style="margin-bottom: 0;">
-                <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
-                <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (Asociación Española de Psicología Sanitaria)</span></li>
-                <li><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas (Universidad de Nebrija)</span></li>
-                <li><span>❤️</span> <span>Curso de Inteligencia Emocional (Universidad de Salamanca)</span></li>
-            </ul>
-        </aside>
+    <!-- 1. FOTO SANDRA GRADUACIÓN (IZQUIERDA) -->
+    <div class="contenedor-foto-reducida" style="flex: 0.5; min-width: 150px; max-width: 180px; display: flex; align-items: center;">
+        <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
     </div>
+    
+    <!-- 2. TARJETA 1: FORMACIÓN DESTACADA (CENTRO - ESTRECHADA) -->
+    <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+        <h3>Formación Destacada</h3>
+        <ul style="margin-bottom: 0;">
+            <li><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+            <li><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA</span></li>
+            <li><span>🏫</span> <span>Curso en Detección e Intervención (Nebrija)</span></li>
+            <li><span>❤️</span> <span>Curso de Inteligencia Emocional (USAL)</span></li>
+        </ul>
+    </aside>
+
+    <!-- 3. TARJETA 2: ÁREAS DE TRABAJO (DERECHA - SUBIDA DESDE LA TERCERA LÍNEA) -->
+    <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
+        <h3>Áreas de Trabajo</h3>
+        <ul style="margin-bottom: 0;">
+            <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+            <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+            <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+            <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
+        </ul>
+    </aside>
 
 </div>
 
 
-<!-- FILA INFERIOR: CONTENEDOR PRINCIPAL DE TEXTOS Y NUEVAS LÍNEAS -->
-<article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 40px auto 80px auto; padding: 0 20px; clear: both;">
+<!-- FILA INFERIOR: CONTENEDOR PRINCIPAL DE TEXTOS -->
+<article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 30px auto 80px auto; padding: 0 20px; clear: both;">
     
-    <!-- SEGUNDA LÍNEA: NUEVA UBICACIÓN PARA LA TARJETA ÚNICA DE TEXTO -->
+    <!-- SEGUNDA LÍNEA: TARJETA ÚNICA DE TEXTO (SALUDO) -->
     <div class="grupo-tarjetas-presentacion" style="margin-bottom: 40px;">
         <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 40px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); width: 100%; box-sizing: border-box;">
             <p style="margin: 0 0 20px 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
@@ -171,27 +179,7 @@
         </div>
     </div>
 
-
-    <!-- TERCERA LÍNEA: MOVIDA AQUÍ Y ESTRECHADA (ÁREAS DE TRABAJO + FOTO KOALA) -->
-    <div class="fila-sobremi-3-estrecha" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap-reverse; max-width: 900px; margin: 0 auto 45px auto; box-sizing: border-box;">
-        <!-- TARJETA: ÁREAS DE TRABAJO -->
-        <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center;">
-            <h3>Áreas de Trabajo</h3>
-            <ul style="margin-bottom: 0;">
-                <li><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
-                <li><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
-                <li><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
-                <li><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
-            </ul>
-        </aside>
-        <!-- Contenedor estrechado de la foto con el koala -->
-        <div class="contenedor-foto-nueva" style="flex: 1; min-width: 280px; max-width: 350px; display: flex; align-items: center;">
-            <img src="img/imagen-sandra-koala.png" alt="Sandra Carrera y Psicokoala" style="width: 100%; height: 100%; min-height: 280px; border-radius: 24px; object-fit: cover;">
-        </div>
-    </div>
-
-
-    <!-- CUARTA LÍNEA: SEGUNDO BLOQUE DE TEXTO UNIFICADO -->
+    <!-- TERCERA LÍNEA: SEGUNDO BLOQUE DE TEXTO UNIFICADO -->
     <div class="grupo-tarjetas-presentacion" style="margin-bottom: 45px;">
         <div class="tarjeta-clara-texto" style="background-color: #F7E1E5; padding: 40px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.02); width: 100%; box-sizing: border-box;">
             <p style="margin: 0 0 20px 0; color: #4a3036; font-size: 1.35rem; line-height: 1.7;">
@@ -213,7 +201,7 @@
         Experiencia y Enfoque Profesional
     </h2>
 
-    <!-- QUINTA LÍNEA (REJILLA GRID 2X2 DE 4 ELEMENTOS) -->
+    <!-- CUARTA LÍNEA: REJILLA GRID 2X2 DE 4 ELEMENTOS -->
     <div class="grid-cuatro-tarjetas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 40px;">
         
         <!-- Tarjeta 1 (Arriba Izquierda): Texto de ASPANAES -->
@@ -242,6 +230,8 @@
 
     </div>
 </article>
+
+
 
  
 <!-- PIE DE PÁGINA -->
