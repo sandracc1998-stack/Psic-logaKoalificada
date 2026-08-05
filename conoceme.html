@@ -131,15 +131,18 @@
         </ul>
     </nav>
 
+<!-- CONTENEDOR DE AISLAMIENTO: FUERZA EL ESPACIADO CON EL MENÚ SUPERIOR -->
+<div style="clear: both; display: block; width: 100%; height: 1px; margin-top: 100px !important;"></div>
+
 <!-- PRIMERA LÍNEA UNIFICADA: SE CORRIGE EL MARGEN SUPERIOR Y SE AGRUPAN LOS 3 ELEMENTOS -->
-<div class="fila-superior-unificada" style="max-width: 1100px; margin: 40px auto 30px auto; padding: 0 20px; display: flex; gap: 20px; align-items: stretch; flex-wrap: wrap; box-sizing: border-box;">
+<div class="fila-superior-unificada" style="max-width: 1100px; margin: 0 auto 30px auto; padding: 0 20px; display: flex; gap: 20px; align-items: stretch; flex-wrap: wrap; box-sizing: border-box;">
     
     <!-- 1. FOTO SANDRA GRADUACIÓN (IZQUIERDA) -->
     <div class="contenedor-foto-reducida" style="flex: 0.5; min-width: 150px; max-width: 180px; display: flex; align-items: center;">
         <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-perfil-sobremi" style="width: 100%; height: auto; border-radius: 24px; object-fit: cover;">
     </div>
     
-    <!-- 2. TARJETA 1: FORMACIÓN DESTACADA (CENTRO - ESTRECHADA) -->
+    <!-- 2. TARJETA 1: FORMACIÓN DESTACADA (CENTRO) -->
     <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
         <h3>Formación Destacada</h3>
         <ul style="margin-bottom: 0;">
@@ -150,7 +153,7 @@
         </ul>
     </aside>
 
-    <!-- 3. TARJETA 2: ÁREAS DE TRABAJO (DERECHA - SUBIDA DESDE LA TERCERA LÍNEA) -->
+    <!-- 3. TARJETA 2: ÁREAS DE TRABAJO (DERECHA) -->
     <aside class="tarjeta-sidebar" style="flex: 1.2; min-width: 280px; margin: 0; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;">
         <h3>Áreas de Trabajo</h3>
         <ul style="margin-bottom: 0;">
@@ -165,7 +168,7 @@
 
 
 <!-- FILA INFERIOR: CONTENEDOR PRINCIPAL DE TEXTOS -->
-<article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 30px auto 80px auto; padding: 0 20px; clear: both;">
+<article class="texto-presentacion" style="font-family: Georgia, 'Times New Roman', serif; color: #6d4b53; font-size: 1.25rem; line-height: 1.6; max-width: 1100px; margin: 40px auto 80px auto; padding: 0 20px; clear: both;">
     
     <!-- SEGUNDA LÍNEA: TARJETA ÚNICA DE TEXTO (SALUDO) -->
     <div class="grupo-tarjetas-presentacion" style="margin-bottom: 40px;">
@@ -216,9 +219,9 @@
             <img src="img/ramasaprendizaje.png" alt="Ramas del Aprendizaje" style="width: 100%; height: 100%; min-height: 250px; border-radius: 24px; object-fit: cover;">
         </div>
 
-        <!-- Tarjeta 3 (Abajo Izquierda): Imagen koalas-trabajo.png -->
-        <div class="tarjeta-imagen-grid" style="display: flex; align-items: center; justify-content: center; min-height: 250px;">
-            <img src="img/koalas-trabajo.png" alt="Koalas Trabajo" style="width: 100%; height: 100%; min-height: 250px; border-radius: 24px; object-fit: cover;">
+        <!-- Tarjeta 3 (Abajo Izquierda): Imagen koalas-trabajo.png (Revisa mayúsculas/minúsculas si no carga) -->
+        <div class="tarjeta-imagen-grid" style="display: flex; align-items: center; justify-content: center; min-height: 250px; border-radius: 24px; overflow: hidden;">
+            <img src="img/koalas-trabajo.png" alt="Koalas Trabajo" style="width: 100%; height: 100%; min-height: 250px; object-fit: cover;">
         </div>
 
         <!-- Tarjeta 4 (Abajo Derecha): Fondo rosa oscuro suave con el texto restante -->
@@ -230,8 +233,6 @@
 
     </div>
 </article>
-
-
 
  
 <!-- PIE DE PÁGINA -->
