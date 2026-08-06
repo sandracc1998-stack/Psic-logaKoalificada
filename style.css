@@ -837,3 +837,64 @@ img[src*="abrazo-koala.png"] {
         .nav-links a:hover {
             color: #4A2E35;
         }
+
+/* ==========================================
+   ESTILOS BASE / REGLAS GENERALES PARA MÓVIL
+   ========================================== */
+
+/* Previene desbordamientos horizontales (scroll lateral no deseado) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hace que las imágenes y vídeos no se salgan de la pantalla */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   MEDIA QUERY PARA PANTALLAS PEQUEÑAS (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Contenedor principal: ajusta márgenes y rellenos */
+  body, container, main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Convierte distribuciones en fila (flex/grid) a una sola columna */
+  .row, .flex-container, .grid-container {
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ajusta el tamaño de los textos para pantallas pequeñas */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Botones más fáciles de pulsar con el pulgar */
+  button, .btn, a.button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+  }
+}
