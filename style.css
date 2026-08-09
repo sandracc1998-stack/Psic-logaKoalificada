@@ -913,3 +913,14 @@ img, video, iframe {
     overflow-y: auto; /* Permite scroll interno si los enlaces sobresalen */
   }
 }
+
+@media screen and (max-width: 480px) {
+  .nav-principal {
+    padding: 5px 15px !important; /* Reduce el espacio arriba y abajo */
+  }
+  
+  .nav-principal a {
+    padding: 5px 10px; /* Reduce también el espacio entre los enlaces */
+    font-size: 14px;   /* Achica un poco la letra si es necesario */
+  }
+}
