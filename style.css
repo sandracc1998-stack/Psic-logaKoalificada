@@ -898,64 +898,50 @@ img, video, iframe {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 480px) {
-  /* Tus cambios de formato móvil aquí */
-}
-@media screen and (max-width: 768px) {
-  .nav-principal { /* Cambia esto por la clase real de tu menú */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    
-    /* SOLUCIÓN: Limita el alto y evita que tape toda la pantalla */
-    max-height: 60px; /* Ajusta este número al tamaño real de tu barra */
-    overflow-y: auto; /* Permite scroll interno si los enlaces sobresalen */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .nav-principal {
-    padding: 5px 15px !important; /* Reduce el espacio arriba y abajo */
-  }
-  
-  .nav-principal a {
-    padding: 5px 10px; /* Reduce también el espacio entre los enlaces */
-    font-size: 14px;   /* Achica un poco la letra si es necesario */
-  }
-}
-
-/* REGLAS ESPECIALES PARA PANTALLAS MÓVILES */
+/* ==============================================
+   DISEÑO EXCLUSIVO PARA MÓVILES Y TABLETS (DEFINITIVO)
+   ============================================== */
 @media screen and (max-width: 768px) {
     
-    /* 1. Hacemos que el menú principal distribuya el logo y los enlaces de arriba a abajo */
-    .nav-principal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px !important;
-        position: static !important; /* Evita que flote tapando el contenido */
+    /* 1. Control del contenedor principal del menú */
+    nav.nav-principal {
+        display: flex !important;
+        flex-direction: column !important; /* Fuerza a poner el logo arriba y botones abajo */
+        align-items: center !important;
+        text-align: center !important;
+        padding: 10px 5px !important;    /* Reduce el grosor del menú al mínimo */
+        position: static !important;     /* Evita que flote tapando la pantalla */
+        width: 100% !important;
+        height: auto !important;         /* Evita que se estire a la mitad de la pantalla */
     }
 
-    /* 2. Reducimos el tamaño del nombre para que no ocupe dos líneas gigantes */
-    .nav-logo {
-        margin-bottom: 12px;
-        font-size: 1.1rem;
+    /* 2. Nombre de la marca / Logotipo */
+    nav.nav-principal .nav-logo {
+        margin-bottom: 12px !important;
+        font-size: 1.1rem !important;
+        display: inline-block !important;
     }
 
-    /* 3. ¡AQUÍ ESTÁ EL TRUCO! Forzamos a la lista de botones a envolverse 
-          o a ponerse en cuadrícula compacta para que no estiren la pantalla */
-    .nav-links {
-        flex-wrap: wrap; /* Si no caben en una fila, bajan ordenadamente a la siguiente */
-        justify-content: center;
-        gap: 8px !important; /* Reducimos la separación entre botones */
-        width: 100%;
+    /* 3. ¡CORRECCIÓN CLAVE! Organización de la lista de botones */
+    nav.nav-principal ul.nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;       /* Fuerza a los botones a saltar de línea si no caben */
+        justify-content: center !important;
+        gap: 8px !important;              /* Reduce la separación entre los botones */
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    /* 4. Achicamos ligeramente el tamaño y el relleno de los botones en el móvil */
-    .nav-links li a {
-        padding: 6px 12px !important; /* Menos espacio interno */
-        font-size: 0.8rem !important; /* Letra un poco más pequeña para que quepan mejor */
+    /* 4. ¡CORRECCIÓN CLAVE! Reducir los botones metidos inline en el HTML */
+    nav.nav-principal ul.nav-links li {
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    nav.nav-principal ul.nav-links li a {
+        padding: 6px 12px !important;    /* Hace los botones más pequeños y compactos */
+        font-size: 0.8rem !important;     /* Achica la letra para que quepan 2 o 3 por fila */
     }
 }
