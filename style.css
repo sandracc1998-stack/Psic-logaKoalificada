@@ -901,3 +901,15 @@ img, video, iframe {
 @media screen and (max-width: 480px) {
   /* Tus cambios de formato móvil aquí */
 }
+@media screen and (max-width: 768px) {
+  .nav-principal { /* Cambia esto por la clase real de tu menú */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* SOLUCIÓN: Limita el alto y evita que tape toda la pantalla */
+    max-height: 60px; /* Ajusta este número al tamaño real de tu barra */
+    overflow-y: auto; /* Permite scroll interno si los enlaces sobresalen */
+  }
+}
