@@ -924,3 +924,38 @@ img, video, iframe {
     font-size: 14px;   /* Achica un poco la letra si es necesario */
   }
 }
+
+/* REGLAS ESPECIALES PARA PANTALLAS MÓVILES */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Hacemos que el menú principal distribuya el logo y los enlaces de arriba a abajo */
+    .nav-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px !important;
+        position: static !important; /* Evita que flote tapando el contenido */
+    }
+
+    /* 2. Reducimos el tamaño del nombre para que no ocupe dos líneas gigantes */
+    .nav-logo {
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+    }
+
+    /* 3. ¡AQUÍ ESTÁ EL TRUCO! Forzamos a la lista de botones a envolverse 
+          o a ponerse en cuadrícula compacta para que no estiren la pantalla */
+    .nav-links {
+        flex-wrap: wrap; /* Si no caben en una fila, bajan ordenadamente a la siguiente */
+        justify-content: center;
+        gap: 8px !important; /* Reducimos la separación entre botones */
+        width: 100%;
+    }
+
+    /* 4. Achicamos ligeramente el tamaño y el relleno de los botones en el móvil */
+    .nav-links li a {
+        padding: 6px 12px !important; /* Menos espacio interno */
+        font-size: 0.8rem !important; /* Letra un poco más pequeña para que quepan mejor */
+    }
+}
