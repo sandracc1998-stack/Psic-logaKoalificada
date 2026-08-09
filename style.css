@@ -898,3 +898,6 @@ img, video, iframe {
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 480px) {
+  /* Tus cambios de formato móvil aquí */
+}
