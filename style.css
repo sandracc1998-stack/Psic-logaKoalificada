@@ -945,3 +945,53 @@ img, video, iframe {
         font-size: 0.8rem !important;     /* Achica la letra para que quepan 2 o 3 por fila */
     }
 }
+
+/* ==============================================
+   CORRECCIONES EXCLUSIVAS PARA OTRAS PÁGINAS (MÓVIL)
+   ============================================== */
+@media screen and (max-width: 768px) {
+
+    /* 1. SOLUCIÓN FILOSOFÍA: Evita que los textos/valores se corten por la derecha */
+    .valores-container, .seccion-valores, .valor-card { 
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Si tus valores usan listas o filas flex que no se envuelven */
+    .valores-row, .flex-valores {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* 2. SOLUCIÓN RECURSOS: Quita bordes duros y funde las imágenes con el fondo */
+    .recursos-container img, .seccion-recursos img, .tarjeta-recurso img {
+        background-color: transparent !important; /* Quita fondos blancos traseros */
+        mix-blend-mode: multiply !important;     /* Mezcla el fondo de la imagen con el rosa/crema de tu web */
+        border: none !important;                  /* Elimina bordes o marcos rectos */
+        box-shadow: none !important;              /* Quita sombras que marquen el cuadrado */
+        max-width: 100% !important;               /* Asegura que no se salgan de su sitio */
+        height: auto !important;
+    }
+
+    /* 3. SOLUCIÓN CONTACTO: Evita que el "¿Hablemos?" se salga por la derecha */
+    .tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
+        font-size: 1.8rem !important;  /* Achica un poco la letra para que quepa el texto entero con los interrogantes */
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important; /* Permite que si no cabe, baje el interrogante de línea en vez de cortarse */
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Asegura que la tarjeta de contacto misma tenga margen interno para respirar */
+    .tarjeta-contacto, .contacto-card {
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+}
