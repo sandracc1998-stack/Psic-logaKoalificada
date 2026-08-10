@@ -34,10 +34,15 @@
     
     <!-- COLUMNA IZQUIERDA: TÍTULO, SUBTÍTULO Y FORMULARIO -->
     <div style="flex: 1; min-width: 320px;">
+        <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS -->
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 40px; width: 100%;">
+    
+    <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETA CON EL SUBTÍTULO -->
+    <div style="flex: 1; min-width: 320px;">
         
-        <!-- TÍTULO GRANDE UNIFICADO -->
+        <!-- TÍTULO GRANDE MODIFICADO -->
         <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0; line-height: 1.25; text-transform: lowercase;">
-            <span style="text-transform: capitalize;">Cuéntame</span> lo que necesites
+            <span style="text-transform: capitalize;">Contáctame</span>
         </h1>
         
         <!-- TARJETA ROSA OSCURO CON EL SUBTÍTULO -->
@@ -47,6 +52,16 @@
             </p>
         </div>
         
+    </div>
+    
+    <!-- COLUMNA DERECHA: IMAGEN DE CONTACTO AÑADIDA -->
+    <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto;">
+        <img src="img/contacto.png" alt="Contacto" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    </div>
+    
+</div>
+
+     
         <!-- FORMULARIO DE CONTACTO -->
         <form action="https://formspree.io/f/mnjkykly" method="POST" class="formulario-cuerpo" style="display: flex; flex-direction: column; gap: 25px;">
             
