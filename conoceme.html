@@ -131,94 +131,95 @@
         </ul>
     </nav>
 
-<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="conoceme-contenedor-pagina" style="max-width: 1200px; margin: 0 auto; padding: 130px 20px 60px 20px; box-sizing: border-box;">
+ <!-- CUERPO PRINCIPAL DE LA PÁGINA (SOBRE MÍ / CONÓCEME) -->
+<main class="conoceme-contenedor-pagina" style="max-width: 1200px !important; margin: 0 auto !important; padding: 130px 20px 60px 20px !important; box-sizing: border-box !important; display: block !important;">
   
   <!-- LÍNEA 1: CABECERA EN DOS COLUMNAS -->
-  <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 40px; width: 100%;">
+  <div style="display: flex !important; flex-wrap: wrap !important; gap: 40px !important; align-items: flex-start !important; margin-bottom: 40px !important; width: 100% !important; box-sizing: border-box !important;">
     
-    <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETA EN ROSA OSCURO -->
-    <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 20px;">
-        <!-- TÍTULO AL ANCHO DEL RESTO -->
-        <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
-            <span style="text-transform: capitalize;">Sobre</span> mí
+    <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS OSCURAS -->
+    <div style="flex: 1 !important; min-width: 320px !important; display: flex !important; flex-direction: column !important; gap: 20px !important; box-sizing: border-box !important;">
+        
+        <!-- TÍTULO PRINCIPAL -->
+        <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
+            <span style="text-transform: capitalize !important;">Sobre</span> mí
         </h1>
         
-        <!-- PRIMERA TARJETA EN ROSA OSCURO -->
-        <div class="tarjeta-presentacion-oscura" style="background-color: #6d4b53; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15);">
-            <p style="margin: 0; color: #ffffff; font-family: Georgia, 'Times New Roman', serif; font-size: 1.25rem; line-height: 1.6; opacity: 0.95;">
+        <!-- TARJETA 1 -->
+        <div class="tarjeta-presentacion-oscura" style="background-color: #4A2E35 !important; padding: 30px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important; width: 100% !important;">
+            <p style="margin: 0 !important; color: #ffffff !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 1.25rem !important; line-height: 1.6 !important; opacity: 0.95 !important;">
                 ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
             </p>
         </div>
+
+        <!-- TARJETA 2: SALUDO EN ROSA OSCURO (#4A2E35) -->
+        <div class="tarjeta-clara-texto" style="background-color: #4A2E35 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important; width: 100% !important;">
+            <p style="margin: 0 0 20px 0 !important; color: #ffffff !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important; opacity: 0.95 !important;">
+                ¡Hola! Soy <strong style="color: #ffffff !important;">Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
+            </p>
+            <p style="margin: 0 !important; color: #ffffff !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important; opacity: 0.95 !important;">
+                Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
+            </p>
+        </div>
+        
     </div>
     
-    <!-- COLUMNA DERECHA: IMAGEN DE SANDRA -->
-    <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto; display: flex; align-items: center;">
-        <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); object-fit: cover;">
+    <!-- COLUMNA DERECHA: IMAGEN DE PERFIL MEDIANA -->
+    <div style="flex: 0 0 350px !important; min-width: 300px !important; margin: 0 auto !important; display: flex !important; align-items: center !important; box-sizing: border-box !important;">
+        <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100% !important; height: auto !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; object-fit: cover !important;">
     </div>
+    
   </div>
 
-  <!-- CONTENEDOR DE CONTENIDO INFERIOR: Fuerza a que todo lo de abajo mida exactamente lo mismo que la cabecera -->
-  <div style="max-width: 100%; box-sizing: border-box;">
+  <!-- LÍNEA 2: COMPETENCIAS EN PARALELO (Izquierda y Derecha, en su formato actual) -->
+  <div class="fila-bloques-competencias" style="display: flex !important; gap: 30px !important; flex-wrap: wrap !important; align-items: stretch !important; margin-bottom: 40px !important; width: 100% !important; box-sizing: border-box !important;">
+    
+    <!-- TARJETA Formación Destacada -->
+    <aside class="tarjeta-sidebar" style="flex: 1 !important; min-width: 300px !important; background-color: #4A2E35 !important; padding: 35px !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important;">
+        <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Formación Destacada</h3>
+        <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.05rem !important;">
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🏫</span> <span>Curso en Detección e Intervención (Nebrija)</span></li>
+            <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>❤️</span> <span>Curso de Inteligencia Emocional (USAL)</span></li>
+        </ul>
+    </aside>
 
-      <!-- LÍNEA 2: DOS TARJETAS EN PARALELO EN ROSA OSCURO -->
-      <div class="grupo-tarjetas-presentacion" style="display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 40px; width: 100%; box-sizing: border-box;">
-            <!-- Tarjeta rosa oscuro 1 -->
-            <div class="tarjeta-clara-texto" style="flex: 1; min-width: 300px; background-color: #6d4b53; padding: 35px; border-radius: 20px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15); box-sizing: border-box;">
-                <p style="margin: 0 0 20px 0; color: #ffffff; font-size: 1.25rem; line-height: 1.7; font-family: Georgia, serif; opacity: 0.95;">
-                    ¡Hola! Soy <strong style="color: #ffffff;">Sandra Carrera</strong>, psicóloga graduada por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
-                </p>
-                <p style="margin: 0; color: #ffffff; font-size: 1.25rem; line-height: 1.7; font-family: Georgia, serif; opacity: 0.95;">
-                    Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
-                </p>
-            </div>
-            
-            <!-- Tarjeta rosa oscuro 2 -->
-            <div class="tarjeta-clara-texto" style="flex: 1; min-width: 300px; background-color: #6d4b53; padding: 35px; border-radius: 20px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15); box-sizing: border-box;">
-                <p style="margin: 0 0 20px 0; color: #ffffff; font-size: 1.25rem; line-height: 1.7; font-family: Georgia, serif; opacity: 0.95;">
-                    Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong style="color: #ffffff;">atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>.
-                </p>
-                <p style="margin: 0; color: #ffffff; font-size: 1.25rem; line-height: 1.7; font-family: Georgia, serif; opacity: 0.95;">
-                    Cuentos con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.
-                </p>
-            </div>
+    <!-- TARJETA Áreas de Trabajo -->
+    <aside class="tarjeta-sidebar" style="flex: 1 !important; min-width: 300px !important; background-color: #4A2E35 !important; padding: 35px !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important;">
+        <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Áreas de Trabajo</h3>
+        <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.05rem !important;">
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
+            <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
+        </ul>
+    </aside>
+
+  </div>
+
+  <!-- LÍNEA 3: TARJETA DE TRAYECTORIA ACADÉMICA EXTENDIDA (Fondo claro y letra oscura #4a4a4a) -->
+  <div style="width: 100% !important; box-sizing: border-box !important; margin-bottom: 40px !important;">
+      <div class="tarjeta-clara-texto" style="background-color: #fff5f6 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.02) !important; box-sizing: border-box !important;">
+          <p style="margin: 0 0 20px 0 !important; color: #4a4a4a !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+              Mi trayectoria profesional y académica se ha volcado con especial entusiasmo en el ámbito de la <strong style="color: #6d4b53 !important;">atención temprana (de 0 a 6 años) y los trastornos del neurodesarrollo</strong>.
+          </p>
+          <p style="margin: 0 !important; color: #4a4a4a !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+              Cuento con una sólida formación especializada en la intervención y apoyo en el Trastorno del Espectro Autista (TEA), abarcando desde la detección temprana en entornos familiares hasta el diseño de estrategias adaptadas de apoyo educativo.
+          </p>
       </div>
+  </div>
 
-      <!-- LÍNEA 3: LAS DOS TARJETAS DE COMPETENCIAS (FORMACIÓN Y ÁREAS) -->
-      <div class="fila-bloques-competencias" style="display: flex; gap: 30px; flex-wrap: wrap; align-items: stretch; margin-bottom: 50px; width: 100%; box-sizing: border-box;">
-        <!-- TARJETA Formación Destacada -->
-        <aside class="tarjeta-sidebar" style="flex: 1; min-width: 300px; background-color: #6d4b53; padding: 35px; border-radius: 20px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15); box-sizing: border-box;">
-            <h3 style="color: #ffffff; font-family: Georgia, serif; font-size: 1.6rem; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Formación Destacada</h3>
-            <ul style="margin: 0; padding: 0; list-style: none; font-family: sans-serif; color: #ffffff; line-height: 1.8; font-size: 1.05rem;">
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA</span></li>
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>🏫</span> <span>Curso en Detección e Intervención (Nebrija)</span></li>
-                <li style="margin-bottom: 0; display: flex; gap: 10px; align-items: flex-start;"><span>❤️</span> <span>Curso de Inteligencia Emocional (USAL)</span></li>
-            </ul>
-        </aside>
-
-        <!-- TARJETA Áreas de Trabajo -->
-        <aside class="tarjeta-sidebar" style="flex: 1; min-width: 300px; background-color: #6d4b53; padding: 35px; border-radius: 20px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15); box-sizing: border-box;">
-            <h3 style="color: #ffffff; font-family: Georgia, serif; font-size: 1.6rem; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Áreas de Trabajo</h3>
-            <ul style="margin: 0; padding: 0; list-style: none; font-family: sans-serif; color: #ffffff; line-height: 1.8; font-size: 1.05rem;">
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>👶</span> <span>Atención Temprana (0-6 años)</span></li>
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>🧠</span> <span>Trastornos del Neurodesarrollo / TEA</span></li>
-                <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;"><span>🎨</span> <span>Diseño de Material Adaptado</span></li>
-                <li style="margin-bottom: 0; display: flex; gap: 10px; align-items: flex-start;"><span>💬</span> <span>Regulación Emocional y Habilidades</span></li>
-            </ul>
-        </aside>
-      </div>
-
-       <!-- TARJETA DE CITA (Estrechada, centrada y alineada) -->
-       <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 45px; box-sizing: border-box;">
-            <div class="bloque-destacado" style="background-color: #4a3036; padding: 30px 40px; border-radius: 24px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05); max-width: 850px; width: 100%; box-sizing: border-box; text-align: center;">
-                <p style="margin: 0; color: #F7E1E5; font-style: italic; font-size: 1.35rem; line-height: 1.7; font-weight: 500;">
-                    "Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."
-                </p>
-            </div>
+  <!-- TARJETA DE CITA CENTRADA (A partir de aquí todo igual) -->
+  <div style="width: 100% !important; display: flex !important; justify-content: center !important; margin-bottom: 45px !important; box-sizing: border-box !important;">
+       <div class="bloque-destacado" style="background-color: #4a3036 !important; padding: 30px 40px !important; border-radius: 24px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; max-width: 850px !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important;">
+           <p style="margin: 0 !important; color: #F7E1E5 !important; font-style: italic !important; font-size: 1.35rem !important; line-height: 1.7 !important; font-weight: 500 !important;">
+               "Creo firmemente que cada niño y niña es un mundo único, y que el éxito del acompañamiento radica en crear dinámicas lúdicas, estructuradas y personalizadas donde se sientan valorados y comprendidos."
+           </p>
        </div>
+  </div>
 
-        <!-- TÍTULO SECUNDARIO AJUSTADO -->
+  <!-- TÍTULO SECUNDARIO -->
         <h2 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 2.6rem !important; font-weight: 700 !important; margin: 50px 0 30px 0 !important; text-align: left !important;">
             Experiencia y Enfoque Profesional
         </h2>
