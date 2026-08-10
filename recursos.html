@@ -109,19 +109,19 @@
 <!-- Se mantiene el padding-top: 130px para evitar que el menú fijo tape el contenido -->
 <main class="recursos-contenedor-pagina" style="max-width: 1200px; margin: 0 auto; padding: 130px 20px 0 20px;">
   
-  <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS (Estructura idéntica a las páginas anteriores) -->
-  <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 50px;">
+  <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS -->
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch; margin-bottom: 50px;">
     
     <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETA SUBTÍTULO -->
-    <div style="flex: 1; min-width: 320px;">
+    <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
         
-        <!-- TÍTULO GRANDE UNIFICADO -->
-        <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0; line-height: 1.25; text-transform: lowercase;">
-            <span style="text-transform: capitalize;">Recursos</span> terapéuticos
+        <!-- TÍTULO GRANDE MODIFICADO -->
+        <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
+            <span style="text-transform: capitalize;">Recursos</span> koalificados
         </h1>
         
-        <!-- TARJETA DE SUBTÍTULO (Fondo granate corporativo) -->
-        <div class="tarjeta-subtitulo-oscura" style="background-color: #6d4b53; padding: 25px 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15);">
+        <!-- TARJETA DE SUBTÍTULO (Fondo rosa oscuro / granate corporativo unificado) -->
+        <div class="tarjeta-subtitulo-oscura" style="background-color: #6d4b53; padding: 25px 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15); flex-grow: 1; display: flex; align-items: center;">
             <p class="recursos-subtitulo" style="font-size: 1.35rem; line-height: 1.5; color: #ffffff; margin: 0; opacity: 0.95; font-family: Georgia, serif;">
                 Aquí encontrarás información y herramientas para acompañar el desarrollo de los más pequeños.
             </p>
@@ -129,12 +129,13 @@
         
     </div>
     
-    <!-- COLUMNA DERECHA: IMAGEN DE LA CABECERA -->
-    <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto;">
-        <img src="img/recursos.png" alt="Recursos" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+    <!-- COLUMNA DERECHA: IMAGEN QUE OCUPA TODA LA ALTURA (Desde el inicio del título al final de la tarjeta) -->
+    <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto; align-self: stretch; display: flex;">
+        <img src="img/recursos.png" alt="Recursos" style="width: 100%; height: 100%; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); object-fit: cover;">
     </div>
     
   </div>
+
 
   <!-- CONTENEDOR DE LOS RECURSOS -->
   <div class="contenedor-articulos" style="display: flex; flex-direction: column; gap: 50px; margin-top: 20px;">
