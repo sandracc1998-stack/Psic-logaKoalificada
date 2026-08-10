@@ -81,66 +81,103 @@
 
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="recursos-contenedor-pagina" style="max-width: 1200px; margin: 0 auto; padding: 130px 20px 0 20px;">
-  
-<!-- CUERPO PRINCIPAL DE LA PÁGINA -->
 <!-- Se añade padding-top: 130px para empujar todo el contenido hacia abajo del menú fijo -->
-<main class="filosofia-contenedor" style="max-width: 1200px; margin: 0 auto; padding: 130px 20px 0 20px;">
+<main class="filosofia-contenedor" style="max-width: 1200px; margin: 0 auto; padding: 130px 20px 0 20px; box-sizing: border-box;">
     
-    <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+    <!-- LÍNEA 1: CABECERA EN DOS COLUMNAS -->
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 50px; width: 100%;">
         
-        <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS (Ancho flexible, mínimo 60%) -->
-        <div style="flex: 1; min-width: 320px;">
+        <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS EN ROSA OSCURO / GRANATE -->
+        <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 20px;">
             
             <!-- TÍTULO GRANDE VISIBLE -->
-            <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0; line-height: 1.25; text-transform: lowercase;">
+            <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
                 <span style="text-transform: capitalize;">¿Qué</span> es la filosofía koala<br>en la psicología infantil? 🌿
             </h1>
+            
+            <!-- TARJETA 1: INTRODUCCIÓN -->
+            <div class="tarjeta-rosa-filosofia" style="background-color: #6d4b53; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15);">
+                <p style="margin: 0; color: #ffffff; font-family: sans-serif; line-height: 1.6; opacity: 0.95; font-size: 1.15rem;">
+                    🐨 Cuando decidí dar vida a este proyecto enfocado en la psicología educativa e infantil, supe que el <strong>koala</strong> sería mucho más que un logotipo entrañable; representa de manera exacta mi forma de entender y acompañar el desarrollo en la infancia.
+                </p>
+            </div>
+            
+            <!-- TARJETA 2: EXPLICACIÓN PAUSADA -->
+            <div class="tarjeta-rosa-filosofia" style="background-color: #6d4b53; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15);">
+                <p style="margin: 0; color: #ffffff; font-family: sans-serif; line-height: 1.6; opacity: 0.95; font-size: 1.15rem;">
+                    🧩 La psicología infantil nos enseña que los niños y niñas funcionan bajo este mismo principio. Para desplegar sus alas, aprender a regular sus emociones y alcanzar sus hitos madurativos, necesitan primero un <em>refugio seguro</em>. Los koalas son también conocidos por sus tiempos pausados; respetan de manera estricta sus periodos de descanso y procesamiento de energía, recordándonos una premisa fundamental de la atención temprana: <strong>el desarrollo infantil no es una carrera de velocidad, sino un proceso biológico y respetuoso que requiere paciencia</strong>. ⏳
+                </p>
+            </div>
 
-        <!-- CONTENEDOR EN CUADRÍCULA CONFIGURADO ESTRICTAMENTE A 2 COLUMNAS (2 arriba y 2 abajo) -->
-    <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); gap: 30px; width: 100%; box-sizing: border-box;">
-
-      <!-- Tarjeta 1 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
-        <div>
-          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
-          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
-          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+            <!-- TARJETA 3: DESTACADO CON CITA EN GRANATE -->
+            <div class="bloque-destacado-granate" style="background-color: #6d4b53; padding: 25px; border-radius: 15px; color: #fffaf6; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.15);">
+                <p style="margin: 0; font-family: Georgia, serif; font-style: italic; line-height: 1.6; font-size: 1.15rem; opacity: 0.95;">
+                    "La Filosofía Koala nace para trasladar esa misma esencia a la terapia: construir un espacio clínico y educativo de protección y calma mutua, donde cada familia encuentre orientación y cada menor se siente escuchado, seguro y profundamente respetado en su ritmo individual." ✨
+                </p>
+            </div>
+            
         </div>
-      </div>
-
-      <!-- Tarjeta 2 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
-        <div>
-          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
-          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
-          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+        
+        <!-- COLUMNA DERECHA: IMAGEN DE LA FILOSOFÍA KOALA -->
+        <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto; display: flex; align-items: center;">
+            <img src="img/filosofiakoala.png" alt="Ilustración Filosofía Koala" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         </div>
-      </div>
-
-      <!-- Tarjeta 3 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
-        <div>
-          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
-          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
-          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
-        </div>
-      </div>
-
-      <!-- Tarjeta 4 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
-        <div>
-          <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
-          <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
-          <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
-        </div>
-      </div>
-
+        
     </div>
-  </div>
-</section>
 
+    <!-- LÍNEA 2: SECCIÓN MIS VALORES (Ajustada al ancho global) -->
+    <section id="mis-valores" style="width: 100%; margin: 60px auto 40px auto; box-sizing: border-box;">
+        
+        <!-- CABECERA DE VALORES -->
+        <div class="seccion-valores-cabecera" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.6rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase;">
+                <span style="text-transform: capitalize;">Los</span> valores de la filosofía koala
+            </h2>
+            <div class="linea-decorativa" style="width: 60px; height: 3px; background-color: #6d4b53; margin: 15px 0 0 0; border-radius: 2px;"></div>
+        </div>
+
+        <!-- CUADRÍCULA CONFIGURADA PARA FORZAR SIMETRÍA: 2 ARRIBA Y 2 ABAJO -->
+        <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); gap: 30px; width: 100%; box-sizing: border-box;">
+
+            <!-- Tarjeta 1: Empatía -->
+            <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+                    <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
+                    <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Ritmo -->
+            <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
+                    <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
+                    <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Regulación Emocional -->
+            <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
+                    <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
+                    <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Material Adaptado -->
+            <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                <div>
+                    <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
+                    <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
+                    <p class="value-desc" style="color: #4A2E35; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.9;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
 
 
 <!-- PIE DE PÁGINA FINAL -->
