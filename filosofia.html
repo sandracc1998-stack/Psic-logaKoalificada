@@ -82,38 +82,50 @@
 
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA -->
-<main class="filosofia-contenedor">
+<main class="filosofia-contenedor" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
     
-    <!-- CABECERA CON NUEVO TÍTULO E IMAGEN DEL KOALA EN LA MISMA LÍNEA -->
-    <div class="cabecera-filosofia-flexible" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <!-- Título con el color corporativo corregido (#6d4b53) -->
-        <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0; line-height: 1.25; text-transform: lowercase; flex: 1; min-width: 320px;">
-            <span style="text-transform: capitalize;">¿Qué</span> es la filosofía koala<br>en la psicología infantil? 🌿
-        </h1>
-    <!-- Imagen del koala centrada debajo y mucho más grande -->
-<div style="width: 100%; text-align: center; margin-top: 40px; clear: both;">
-    <img src="img/img-koala.png" alt="Ilustración Koala" style="width: 100%; max-width: 600px; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-</div>
-    
-    <!-- TARJETA GENERAL CON FONDO ROSA SUAVE -->
-    <div class="tarjeta-rosa-filosofia">
-        <div class="texto-interior-filosofia">
-            <p style="margin-top: 0;">
-                🐨 Cuando decidí dar vida a este proyecto enfocado en la psicología educativa e infantil, supe que el <strong>koala</strong> sería mucho más que un logotipo entrañable; representa de manera exacta mi forma de entender y acompañar el desarrollo en la infancia. 
-            </p>
+    <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS -->
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+        
+        <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETAS (Ancho flexible, mínimo 60%) -->
+        <div style="flex: 1; min-width: 320px;">
             
-            <p>
-                🧩 La psicología infantil nos enseña que los niños y niñas funcionan bajo este mismo principio. Para desplegar sus alas, aprender a regular sus emociones y alcanzar sus hitos madurativos, necesitan primero un <em>refugio seguro</em>.  Los koalas son también conocidos por sus tiempos pausados; respetan de manera estricta sus periodos de descanso y procesamiento de energía, recordándonos una premisa fundamental de la atención temprana: <strong>el desarrollo infantil no es una carrera de velocidad, sino un proceso biológico y respetuoso que requiere paciencia</strong>. ⏳
-            </p>
+            <!-- TÍTULO GRANDE -->
+            <h1 style="color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 3.4rem; font-weight: 700; margin: 0 0 30px 0; line-height: 1.25; text-transform: lowercase;">
+                <span style="text-transform: capitalize;">¿Qué</span> es la filosofía koala<br>en la psicología infantil? 🌿
+            </h1>
+            
+            <!-- TARJETA 1 -->
+            <div class="tarjeta-rosa-filosofia" style="background-color: #fff5f6; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                <p style="margin: 0; color: #4a4a4a; font-family: sans-serif; line-height: 1.6;">
+                    🐨 Cuando decidí dar vida a este proyecto enfocado en la psicología educativa e infantil, supe que el <strong>koala</strong> sería mucho más que un logotipo entrañable; representa de manera exacta mi forma de entender y acompañar el desarrollo en la infancia.
+                </p>
+            </div>
+            
+            <!-- TARJETA 2 -->
+            <div class="tarjeta-rosa-filosofia" style="background-color: #fff5f6; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                <p style="margin: 0; color: #4a4a4a; font-family: sans-serif; line-height: 1.6;">
+                    🧩 La psicología infantil nos enseña que los niños y niñas funcionan bajo este mismo principio. Para desplegar sus alas, aprender a regular sus emociones y alcanzar sus hitos madurativos, necesitan primero un <em>refugio seguro</em>. Los koalas son también conocidos por sus tiempos pausados; respetan de manera estricta sus periodos de descanso y procesamiento de energía, recordándonos una premisa fundamental de la atención temprana: <strong>el desarrollo infantil no es una carrera de velocidad, sino un proceso biológico y respetuoso que requiere paciencia</strong>. ⏳
+                </p>
+            </div>
 
-            <!-- Bloque destacado interior en granate con letras blanco-crema -->
-            <div class="bloque-destacado-granate">
-                <p>
+            <!-- TARJETA 3: DESTACADO GRANATE -->
+            <div class="bloque-destacado-granate" style="background-color: #6d4b53; padding: 25px; border-radius: 15px; color: #fffaf6; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <p style="margin: 0; font-family: Georgia, serif; font-style: italic; line-height: 1.6; font-size: 1.1rem;">
                     "La Filosofía Koala nace para trasladar esa misma esencia a la terapia: construir un espacio clínico y educativo de protección y calma mutua, donde cada familia encuentre orientación y cada menor se siente escuchado, seguro y profundamente respetado en su ritmo individual." ✨
                 </p>
             </div>
+            
         </div>
+        
+        <!-- COLUMNA DERECHA: IMAGEN MEDIANA (Ancho fijo en pantallas grandes) -->
+        <div style="flex: 0 0 350px; min-width: 300px; margin: 0 auto;">
+            <img src="img/img-koala.png" alt="Ilustración Koala" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        </div>
+        
     </div>
+</main>
+
 
 <!-- 2. SECCIÓN MIS VALORES -->
 <section id="mis-valores" style="max-width: 1100px; margin: 60px auto; padding: 0 20px;">
