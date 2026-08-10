@@ -128,11 +128,11 @@
       <div class="linea-decorativa" style="width: 60px; height: 3px; background-color: #6d4b53; margin: 15px 0 0 0; border-radius: 2px;"></div>
     </div>
 
-    <!-- CONTENEDOR EN CUADRÍCULA DE 2 COLUMNAS (Para hacer formato 4 cuadrados) -->
-    <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+    <!-- CONTENEDOR EN CUADRÍCULA CORREGIDO PARA MÓVILES (Cambio a minmax(0, 1fr)) -->
+    <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%;">
 
       <!-- Tarjeta 1 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
           <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
           <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
@@ -141,7 +141,7 @@
       </div>
 
       <!-- Tarjeta 2 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
           <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
           <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
@@ -150,7 +150,7 @@
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
           <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
           <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
@@ -159,7 +159,7 @@
       </div>
 
       <!-- Tarjeta 4 -->
-      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="value-item" style="background-color: #F7E1E5; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
           <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
           <h3 class="value-name" style="color: #4A2E35; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
@@ -170,6 +170,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- PIE DE PÁGINA FINAL -->
 <footer class="pie-contacto-final">
