@@ -28,37 +28,47 @@
         </ul>
     </nav>
 
-    <!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
-    <section class="hero-seccion" style="padding-top: 100px; margin-bottom: 20px;">
-        <div class="hero-dos-columnas" style="align-items: center;">
-            <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
-            <div class="cabecera-titulo">
-                <h1 style="margin-bottom: 20px;">
-                    Espacio de psicología educativa, infantil y acompañamiento familiar
-                </h1>
+  <!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
+<!-- Se cambia padding-top a 130px para que el menú de arriba no pise el título principal -->
+<section class="hero-seccion" style="padding-top: 130px; margin-bottom: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; box-sizing: border-box;">
+    <div class="hero-dos-columnas" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        
+        <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
+        <div class="cabecera-titulo" style="flex: 1; min-width: 320px; box-sizing: border-box;">
+            <h1 style="margin: 0 0 25px 0; color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25;">
+                Espacio de psicología educativa, infantil y acompañamiento familiar
+            </h1>
+            
+            <!-- CONTENEDOR DE LAS TARJETAS (Alineadas de forma limpia en fila o columna según quepan) -->
+            <div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; width: 100%;">
                 
-                <div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
-                    <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
-                <div style="background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 35px; border-radius: 20px; box-sizing: border-box; width: 100%;">
-    <p style="margin: 0; font-size: 1.25rem; line-height: 1.7;">
-                            Creo en un acompañamiento cercano, respetuoso y personalizado.
-                    </div>
-                    <div class="tarjeta-redondeada-cabecera" style="margin: 0; padding: 15px 20px;">
-                        <div style="background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 35px; border-radius: 20px; box-sizing: border-box; width: 100%;">
-    <p style="margin: 0; font-size: 1.25rem; line-height: 1.7;">
-                            Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-                        </p>
-                    </div>
+                <!-- Tarjeta 1 (Etiquetas reparadas correctamente) -->
+                <div style="flex: 1; min-width: 250px; background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 25px; border-radius: 20px; box-sizing: border-box;">
+                    <p style="margin: 0; font-size: 1.15rem; line-height: 1.6;">
+                        Creo en un acompañamiento cercano, respetuoso y personalizado.
+                    </p>
                 </div>
-            </div>
+                
+                <!-- Tarjeta 2 (Alineada perfectamente con la anterior) -->
+                <div style="flex: 1; min-width: 250px; background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 25px; border-radius: 20px; box-sizing: border-box;">
+                    <p style="margin: 0; font-size: 1.15rem; line-height: 1.6;">
+                        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+                    </p>
+                </div>
 
-            <!-- COLUMNA DERECHA: IMAGEN REDUCIDA -->
-            <div class="columna-derecha-imagen" style="display: flex; align-items: center; justify-content: center;">
-                <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 420px; width: auto; object-fit: contain;">
             </div>
         </div>
-    </section>
-</div>
+
+        <!-- COLUMNA DERECHA: IMAGEN REDUCIDA -->
+        <div class="columna-derecha-imagen" style="flex: 0 0 350px; min-width: 300px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <img src="img/psicokoala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 420px; width: auto; object-fit: contain;">
+        </div>
+
+    </div>
+</section>
+
+<!-- BLOQUE DE SEPARACIÓN Y LIMPIEZA ANTES DEL PIE DE PÁGINA -->
+<div style="clear: both !important; display: block !important; width: 100% !important; height: 1px !important; margin-top: 60px !important;"></div>
 
 <!-- PIE DE PÁGINA FINAL (Empujado estrictamente al fondo de la pantalla) -->
 <footer class="pie-contacto-final" style="width: 100%; margin-top: auto;">
