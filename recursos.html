@@ -113,7 +113,8 @@
   <div style="display: flex !important; flex-wrap: wrap !important; gap: 40px !important; align-items: stretch !important; margin: 0 auto 50px auto !important; max-width: 1100px !important; width: 100% !important; box-sizing: border-box !important;">
     
     <!-- COLUMNA IZQUIERDA: TÍTULO Y TARJETA MÁS PEQUEÑA -->
-    <div style="flex: 1 !important; min-width: 320px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; gap: 20px !important; box-sizing: border-box !important;">
+    <!-- Se cambia justify-content a flex-start para eliminar el hueco en blanco entre el título y la tarjeta -->
+    <div style="flex: 1 !important; min-width: 320px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; gap: 20px !important; box-sizing: border-box !important;">
         
         <!-- TÍTULO GRANDE MODIFICADO -->
         <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
@@ -151,21 +152,21 @@
         <!-- CONTENEDOR INFERIOR DE DOS COLUMNAS (Texto e Imagen) -->
         <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
             
-            <!-- 2) TEXTO ABAJO (A LA IZQUIERDA) -->
-            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
-                <p style="font-size: 1.3rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px; margin-top: 0;">Herramientas de autorregulación en el aula:</p>
+            <!-- 2) TEXTO ABAJO (A LA IZQUIERDA) - COLORES INVERTIDOS -->
+            <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #6d4b53; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+                <p style="font-size: 1.3rem; color: #F7E1E5; font-weight: 600; margin-bottom: 15px; margin-top: 0;">Herramientas de autorregulación en el aula:</p>
                 
-                <p style="font-size: 1.3rem; color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Elementos discretos diseñados para mitigar la sobrecarga y mejorar la concentración en clase.</p>
+                <p style="font-size: 1.3rem; color: #fdf8f9; line-height: 1.6; margin-bottom: 20px;">Elementos discretos diseñados para mitigar la sobrecarga y mejorar la concentración en clase.</p>
                 
-                <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
+                <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #fdf8f9; list-style-type: none; margin: 0;">
                     <li style="margin-bottom: 10px;">🎧 <strong>Audífonos de cancelación:</strong> Reducen el ruido distractor externo.</li>
                     <li style="margin-bottom: 10px;">🧩 <strong>Fidget toys:</strong> Canalizan el movimiento y reducen la ansiedad.</li>
                     <li style="margin-bottom: 10px;">🎯 <strong>Apoyos visuales:</strong> Temporizadores que aportan predictibilidad.</li>
                 </ul>
             </div>
 
-            <!-- 3) IMAGEN A LA DERECHA -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+            <!-- 3) IMAGEN A LA DERECHA - COLORES INVERTIDOS -->
+            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #6d4b53; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
                 <img src="img/mochila-sensorial.png" 
                      alt="Infografía Mochila Sensorial" 
                      style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
@@ -174,12 +175,7 @@
         </div>
     </article>
 
-    <!-- AQUÍ PUEDES SEGUIR PEGANDO EL RECURSO 2, 3 Y 4 ABAJO -->
-
-  </div>
-</main>
-
-    <!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
+<!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
 <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
 <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
     <!-- Título secundario: Cambiado de 2.6rem a 2.8rem -->
@@ -187,39 +183,39 @@
         El rincón de la calma en casa
     </h2>
     <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-        <!-- Caja de texto informativo -->
-        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+        <!-- Caja de texto informativo - COLORES INVERTIDOS -->
+        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #6d4b53; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
             
             <!-- Cambiado de 1.1rem a 1.3rem -->
-            <p style="font-size: 1.3rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Un refugio seguro para la corregulación emocional:</p>
+            <p style="font-size: 1.3rem; color: #F7E1E5; font-weight: 600; margin-bottom: 15px;">Un refugio seguro para la corregulación emocional:</p>
             
             <!-- Añadido font-size: 1.3rem -->
-            <p style="font-size: 1.3rem; color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.</p>
+            <p style="font-size: 1.3rem; color: #fdf8f9; line-height: 1.6; margin-bottom: 20px;">Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.</p>
             
             <!-- Añadido font-size: 1.3rem a la lista completa -->
-            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
+            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #fdf8f9; list-style-type: none; margin: 0;">
                 <li style="margin-bottom: 10px;">📍 <strong>Ubicación:</strong> Un lugar tranquilo y libre de sobrecarga visual.</li>
                 <li style="margin-bottom: 10px;">🧸 <strong>Bajo coste:</strong> Cojines, mantas y botellas sensoriales caseras.</li>
                 <li style="margin-bottom: 10px;">❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
             </ul>
         </div>
 
-            <!-- Caja de imagen con fondo rosa integrado -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);;">
-                
+        <!-- Caja de imagen con fondo rosa integrado - COLORES INVERTIDOS -->
+        <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #6d4b53; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
             <!-- ======================================================= -->
-                <!-- ¡RECURSO 2! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
-                <!-- ======================================================= -->
-                <!-- Se cambia mix-blend-mode por un filtro de opacidad suave para una integración perfecta del fondo -->
-                <img src="img/rincon-calma.png" 
-                     alt="Infografía Rincon Calma" 
-                     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
-                <!-- ======================================================= -->
+            <!-- ¡RECURSO 2! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+            <!-- ======================================================= -->
+            <!-- Se cambia mix-blend-mode por un filtro de opacidad suave para una integración perfecta del fondo -->
+            <img src="img/rincon-calma.png" 
+                 alt="Infografía Rincon Calma" 
+                 style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
+            <!-- ======================================================= -->
         </div>
-    </article>
+    </div>
+</article>
 
 
-    <!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
+<!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
 <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
 <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
     <!-- Título secundario: Cambiado de 2.6rem a 2.8rem -->
@@ -227,39 +223,36 @@
         El juego como primer lenguaje
     </h2>
     <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-        <!-- Caja de texto informativo -->
-        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+        <!-- Caja de texto informativo - COLORES INVERTIDOS -->
+        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #6d4b53; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
             
             <!-- Cambiado de 1.1rem a 1.3rem -->
-            <p style="font-size: 1.3rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Estrategias naturales de comunicación:</p>
+            <p style="font-size: 1.3rem; color: #F7E1E5; font-weight: 600; margin-bottom: 15px;">Estrategias naturales de comunicación:</p>
             
             <!-- Añadido font-size: 1.3rem -->
-            <p style="font-size: 1.3rem; color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.</p>
+            <p style="font-size: 1.3rem; color: #fdf8f9; line-height: 1.6; margin-bottom: 20px;">Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.</p>
             
             <!-- Añadido font-size: 1.3rem a la lista completa -->
-            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
+            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #fdf8f9; list-style-type: none; margin: 0;">
                 <li style="margin-bottom: 10px;">👀 <strong>Contacto visual:</strong> Conexión a través de burbujas o el juego interactivo.</li>
             </ul>
         </div>
 
-            <!-- Caja de imagen con fondo rosa integrado -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
-                
-                <!-- ======================================================= -->
-                <!-- ¡RECURSO 3! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
-                <!-- ======================================================= -->
-               <img src="img/juego-lenguaje.png" 
-     alt="Infografía Juego Primer Lenguaje" 
-     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
-
-                <!-- ======================================================= -->
-                
-            </div>
+        <!-- Caja de imagen con fondo rosa integrado - COLORES INVERTIDOS -->
+        <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #6d4b53; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+            <!-- ======================================================= -->
+            <!-- ¡RECURSO 3! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+            <!-- ======================================================= -->
+            <img src="img/juego-lenguaje.png" 
+                 alt="Infografía Juego Primer Lenguaje" 
+                 style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
+            <!-- ======================================================= -->
         </div>
-    </article>
+    </div>
+</article>
 
 
-   <!-- RECURSO 4: HITOS DEL DESARROLLO -->
+<!-- RECURSO 4: HITOS DEL DESARROLLO -->
 <!-- Se fuerza background: transparent para romper el fondo rosa de la plantilla y sacar el título fuera -->
 <article class="tarjeta-recurso-amplia" style="background: transparent !important; box-shadow: none !important; padding: 0 !important; margin-bottom: 50px;">
     <!-- Título secundario: Cambiado de 2.6rem a 2.8rem -->
@@ -267,38 +260,35 @@
         Hitos del desarrollo infantil
     </h2>
     <div class="contenido-recurso" style="display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
-        <!-- Caja de texto informativo -->
-        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #F7E1E5; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
+        <!-- Caja de texto informativo - COLORES INVERTIDOS -->
+        <div class="texto-recurso" style="flex: 1.2; min-width: 280px; background-color: #6d4b53; padding: 35px; border-radius: 24px; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04); display: flex; flex-direction: column; justify-content: center;">
             
             <!-- Cambiado de 1.1rem a 1.3rem -->
-            <p style="font-size: 1.3rem; color: #6d4b53; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
+            <p style="font-size: 1.3rem; color: #F7E1E5; font-weight: 600; margin-bottom: 15px;">Guía de orientación evolutiva:</p>
             
             <!-- Añadido font-size: 1.3rem -->
-            <p style="font-size: 1.3rem; color: #4b4b4b; line-height: 1.6; margin-bottom: 20px;">Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.</p>
+            <p style="font-size: 1.3rem; color: #fdf8f9; line-height: 1.6; margin-bottom: 20px;">Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.</p>
             
             <!-- Añadido font-size: 1.3rem a la lista completa -->
-            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #4b4b4b; list-style-type: none; margin: 0;">
+            <ul style="font-size: 1.3rem; padding: 0 0 0 20px; line-height: 1.8; color: #fdf8f9; list-style-type: none; margin: 0;">
                 <li style="margin-bottom: 10px;">🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordination y movimientos finos.</li>
                 <li style="margin-bottom: 10px;">💬 <strong>Área comunicativa:</strong> Evolución de la comprensión y la expresión verbal.</li>
                 <li style="margin-bottom: 10px;">🤝 <strong>Área social:</strong> Respuestas emocionales, juego compartido e interacciones.</li>
             </ul>
         </div>
 
-            <!-- Caja de imagen con fondo rosa integrado -->
-            <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #F7E1E5; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
-                
-                <!-- ======================================================= -->
-                <!-- ¡RECURSO 4! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
-                <!-- ======================================================= -->
-               <img src="img/hitos-desarrollo.png" 
-     alt="Infografía Hitos del Desarrollo" 
-     style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
-
-                <!-- ======================================================= -->
-                
-            </div>
+        <!-- Caja de imagen con fondo rosa integrado - COLORES INVERTIDOS -->
+        <div class="imagen-recurso" style="flex: 0.8; min-width: 280px; background-color: #6d4b53; padding: 20px; border-radius: 24px; display: flex; justify-content: center; align-items: center; box-shadow: 0 8px 25px rgba(109, 75, 83, 0.04);">
+            <!-- ======================================================= -->
+            <!-- ¡RECURSO 4! PON AQUÍ ABAJO EL NOMBRE DE TU IMAGEN CORRECTA -->
+            <!-- ======================================================= -->
+            <img src="img/hitos-desarrollo.png" 
+                 alt="Infografía Hitos del Desarrollo" 
+                 style="width: 100%; height: 100%; max-height: 340px; border-radius: 16px; object-fit: contain; opacity: 0.88; filter: contrast(1.02);">
+            <!-- ======================================================= -->
         </div>
-    </article>
+    </div>
+</article>
 
 
 <!-- PIE DE PÁGINA CORPORATIVO UNIFICADO -->
