@@ -556,6 +556,13 @@ section {
 /* --- ADAPTACIÓN ESPECÍFICA PARA MÓVILES (Menos de 768px) --- */
 @media (max-width: 768px) {
 
+  /* Prevenir desbordamiento horizontal global */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
   /* 1. Menú de navegación */
   .nav-principal {
     display: flex !important;
@@ -596,17 +603,15 @@ section {
   [class*="hero"] {
     display: flex !important;
     flex-direction: column !important;
-    grid-template-columns: 1fr !important;
     align-items: center !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* Asegura que la imagen de Sandra se ponga en su propia fila centrada */
+  /* Ajuste de imágenes generales */
   .hero img, 
   .hero-image img, 
   .presentacion img, 
-  section img,
   header + main img {
     width: 100% !important;
     max-width: 320px !important;
@@ -626,29 +631,62 @@ section {
   .cards-grid, 
   .valores-grid, 
   .trabajo-grid,
-  .contacto-final-lista {
+  .contacto-final-lista,
+  .lista-tarjetas-horizontales {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 1.5rem !important;
     width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
-  /* Ajuste para tarjetas */
+  /* Ajuste para todas las tarjetas (incluyendo tarjeta-horizontal) */
   .card-valor, 
   .card-trabajo, 
   .card-hero, 
-  .card {
+  .card,
+  .tarjeta-horizontal {
+    display: flex !important;
+    flex-direction: column !important; /* Apila imagen arriba y texto abajo en móvil */
     max-width: 100% !important;
     width: 100% !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .bloque-izquierdo-visual,
+  .bloque-derecho-texto {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 25px 15px !important;
+  }
+
+  .bloque-izquierdo-visual img {
+    max-width: 220px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Títulos largos dentro de las tarjetas */
+  .tarjeta-horizontal h2, 
+  .tarjeta-horizontal h3 {
+    word-break: break-word !important;
+    hyphens: auto !important;
+    font-size: 1.4rem !important;
   }
 }
+
 /* --- COLOR CREMA PARA EL TEXTO DE LAS TARJETAS --- */
 .card-hero, 
 .card-hero p {
   color: #fffdd0 !important; /* Color crema */
 }
+
 /* ==========================================================
    CAMBIOS GENERALES (ORDENADOR Y MÓVIL)
    ========================================================== */
