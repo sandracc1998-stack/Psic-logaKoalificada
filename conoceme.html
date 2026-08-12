@@ -131,49 +131,47 @@
         </ul>
     </nav>
  
- 
-<!-- CUERPO PRINCIPAL DE LA PÁGINA (SOBRE MÍ) -->
+ <!-- CUERPO PRINCIPAL DE LA PÁGINA (SOBRE MÍ) -->
 <!-- Se añade el padding-top: 130px para evitar que el menú fijo tape el título "Sobre mí" -->
 <main class="conoceme-contenedor-pagina" style="max-width: 1200px !important; margin: 0 auto !important; padding: 130px 20px 0 20px !important; box-sizing: border-box !important; display: block !important;">
 
-  <!-- LÍNEA 1: CABECERA EN DOS COLUMNAS (Ancho unificado a 1100px para encajar perfectamente en la pantalla) -->
-  <div style="display: flex !important; flex-wrap: wrap !important; gap: 40px !important; align-items: stretch !important; margin: 0 auto 40px auto !important; max-width: 1100px !important; width: 100% !important; box-sizing: border-box !important;">
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div style="display: flex !important; flex-direction: column !important; gap: 20px !important; margin: 0 auto 40px auto !important; max-width: 1100px !important; width: 100% !important; box-sizing: border-box !important;">
     
-    <!-- COLUMNA IZQUIERDA: AGRUPA EL TÍTULO Y LAS DOS PRIMERAS TARJETAS AHORA CLARAS -->
-    <div style="flex: 1 !important; min-width: 320px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; gap: 20px !important; box-sizing: border-box !important;">
-        
-        <div>
-            <!-- TÍTULO PRINCIPAL -->
-            <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 0 20px 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
-                <span style="text-transform: capitalize !important;">Sobre</span> mí
-            </h1>
-            
-            <!-- TARJETA 1 (Fondo Claro e Invertido) -->
-            <div class="tarjeta-presentacion-oscura" style="background-color: #F7E1E5 !important; padding: 30px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; width: 100% !important; box-sizing: border-box !important;">
-                <p style="margin: 0 !important; color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 1.25rem !important; line-height: 1.6 !important;">
-                    ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
-                </p>
-            </div>
-        </div>
+    <!-- 1. TÍTULO PRINCIPAL -->
+    <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 0 10px 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
+        <span style="text-transform: capitalize !important;">Sobre</span> mí
+    </h1>
 
-      <!-- TARJETA 2 (Fondo Claro e Invertido) -->
-      <div class="tarjeta-clara-texto" style="background-color: #F7E1E5 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; width: 100% !important; box-sizing: border-box !important; flex-grow: 1 !important; display: flex !important; flex-direction: column !important; justify-content: center !important;">
-          <p style="margin: 0 0 20px 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+    <!-- 2. NUEVA IMAGEN: Entre el título y la primera tarjeta -->
+    <div style="width: 100% !important; max-width: 320px !important; margin: 0 auto !important; display: flex !important; justify-content: center !important;">
+        <img src="img/conoceme-koala.png" alt="Conóceme Koala" style="width: 100% !important; height: auto !important; display: block !important; mix-blend-mode: multiply !important;">
+    </div>
+    
+    <!-- 3. TARJETA 1 -->
+    <div class="tarjeta-presentacion-oscura" style="background-color: #F7E1E5 !important; padding: 30px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; width: 100% !important; box-sizing: border-box !important;">
+        <p style="margin: 0 !important; color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 1.25rem !important; line-height: 1.6 !important;">
+            ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
+        </p>
+    </div>
+
+    <!-- 4. IMAGEN DE SANDRA: Movida aquí entre la tarjeta 1 y la tarjeta 2 -->
+    <div style="width: 100% !important; max-width: 350px !important; margin: 10px auto !important; display: flex !important; justify-content: center !important;">
+        <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100% !important; height: auto !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; object-fit: cover !important;">
+    </div>
+
+    <!-- 5. TARJETA 2 -->
+    <div class="tarjeta-clara-texto" style="background-color: #F7E1E5 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; width: 100% !important; box-sizing: border-box !important;">
+        <p style="margin: 0 0 20px 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
             Soy <strong style="color: #6d4b53 !important;">psicóloga graduada</strong> por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
-          </p>
-          <p style="margin: 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
-              Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
-          </p>
-      </div>
+        </p>
+        <p style="margin: 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+            Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
+        </p>
+    </div>
       
   </div>
-  
-  <!-- COLUMNA DERECHA: LA IMAGEN ALINEADA EN EL LATERAL DERECHO CON SU ANCHO CORRECTO -->
-  <div style="flex: 0 0 350px !important; min-width: 300px !important; margin: 0 auto !important; display: flex !important; box-sizing: border-box !important;">
-      <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100% !important; height: 100% !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; object-fit: cover !important;">
-  </div>
-  
-</div>
+
 
 
 <!-- LÍNEA 2: COMPETENCIAS EN PARALELO (Mantienen su fondo oscuro para generar contraste) -->
