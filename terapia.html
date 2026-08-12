@@ -127,37 +127,37 @@
         </ul>
     </nav>
 
-    
 <!-- CUERPO PRINCIPAL DE LA PÁGINA (RAMAS TERAPÉUTICAS) -->
 <!-- El padding-top de 130px evita que el menú fijo superior corte el contenido -->
 <main class="trabajo-pagina-contenedor" style="max-width: 1200px !important; margin: 0 auto !important; padding: 130px 20px 60px 20px !important; box-sizing: border-box !important; display: block !important;">
     
-    <!-- CONTENEDOR PRINCIPAL EN DOS COLUMNAS (Cabecera) -->
-    <div style="display: flex !important; flex-wrap: wrap !important; gap: 40px !important; align-items: flex-start !important; margin-bottom: 50px !important; width: 100% !important; box-sizing: border-box !important;">
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div style="display: flex !important; flex-direction: column !important; gap: 25px !important; margin-bottom: 50px !important; width: 100% !important; box-sizing: border-box !important;">
         
-        <!-- COLUMNA IZQUIERDA: AGRUPA EL TÍTULO Y LA TARJETA -->
-        <div style="flex: 1 !important; min-width: 320px !important; display: flex !important; flex-direction: column !important; gap: 25px !important; box-sizing: border-box !important;">
+        <!-- 1. TÍTULO GRANDE VISIBLE -->
+        <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
+            <span style="text-transform: capitalize !important;">Ramas</span> terapéuticas
+        </h1>
+        
+        <!-- BLOQUE FLEXIBLE: Mantiene la tarjeta a la izquierda y la imagen a la derecha en PC, pero coloca la imagen ARRIBA de la tarjeta en Móvil -->
+        <div style="display: flex !important; flex-wrap: wrap-reverse !important; gap: 30px !important; align-items: center !important; width: 100% !important; box-sizing: border-box !important;">
             
-            <!-- TÍTULO GRANDE VISIBLE -->
-            <h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
-                <span style="text-transform: capitalize !important;">Ramas</span> terapéuticas
-            </h1>
-            
-            <!-- TARJETA INTRODUCTORIA: CAMBIADA AL COLOR ROSA OSCURO EXACTO DE TU INICIO (#4A2E35) -->
-            <div style="background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 35px; border-radius: 20px; box-sizing: border-box; width: 100%;">
-    <p style="margin: 0; font-size: 1.25rem; line-height: 1.7;">
+            <!-- TARJETA INTRODUCTORIA -->
+            <div style="flex: 1 1 400px !important; background-color: #F7E1E5 !important; color: #4a3036 !important; border: 1px solid rgba(109, 75, 83, 0.1) !important; padding: 35px !important; border-radius: 20px !important; box-sizing: border-box !important;">
+                <p style="margin: 0 !important; font-size: 1.25rem !important; line-height: 1.7 !important;">
                     En esta sección puedes conocer en detalle las diferentes modalidades y metodologías de intervención que pongo a tu disposición. Cada una de estas ramas está diseñada para adaptarse por completo a las necesidades específicas de tu familia, garantizando un entorno de apoyo cómodo, seguro y eficaz.
                 </p>
             </div>
-            
-        </div>
-        
-        <!-- COLUMNA DERECHA: IMAGEN MEDIANA ALINEADA -->
-        <div style="flex: 0 0 350px !important; min-width: 300px !important; margin: 0 auto !important; display: flex !important; align-items: center !important; box-sizing: border-box !important;">
-            <img src="img/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="width: 100% !important; height: auto !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;">
+
+            <!-- IMAGEN MEDIANA ALINEADA (Se muestra arriba de la tarjeta en móvil gracias a wrap-reverse) -->
+            <div style="flex: 0 0 350px !important; max-width: 100% !important; margin: 0 auto !important; display: flex !important; justify-content: center !important; align-items: center !important; box-sizing: border-box !important;">
+                <img src="img/ramasaprendizaje.png" alt="Ramas de Aprendizaje" style="width: 100% !important; max-width: 350px !important; height: auto !important; display: block !important; mix-blend-mode: multiply !important;">
+            </div>
+
         </div>
         
     </div>
+
 
       <!-- SECCIÓN DE BLOQUES DE TERAPIA -->
 <div class="contenedor-bloques-terapia" style="display: flex !important; flex-direction: column !important; gap: 40px !important; margin-top: 40px !important; width: 100% !important; box-sizing: border-box !important;">
@@ -186,31 +186,34 @@
         
     </div>
 </div>
-
-        <!-- Tarjeta 2: El abrazo del Koala -->
-        <div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
-            
-            <!-- Mini-columna izquierda identificativa -->
-            <div style="flex: 1 1 300px !important; max-width: 100% !important; background-color: #fff5f6 !important; padding: 35px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
-                <h3 style="color: #4A2E35 !important; font-family: Georgia, serif !important; font-size: 2.2rem !important; margin: 0 0 14px 0 !important; font-weight: 700 !important;">El abrazo del koala</h3>
-                <p style="color: #8a636c !important; font-size: 1.15rem !important; margin: 0 0 25px 0 !important; font-family: sans-serif !important; font-weight: 500 !important;">Acompañamiento al desarrollo infantil</p>
-                <!-- Ilustración con fondo integrado -->
-                <img src="img/abrazo-koala.png" alt="El abrazo del koala" style="width: 300px !important; max-width: 100% !important; height: auto !important; display: block !important; mix-blend-mode: multiply !important;">
-            </div>
-            
-            <!-- Contenido derecho -->
-            <div style="flex: 1 1 300px !important; max-width: 100% !important; padding: 35px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important;">
-                <span style="color: #ffffff !important; text-transform: uppercase !important; font-weight: 800 !important; letter-spacing: 1px !important; font-size: 1rem !important; margin-bottom: 20px !important; font-family: sans-serif !important;">A domicilio</span>
-                <ul style="color: #ffffff !important; list-style: none !important; padding: 0 !important; margin: 0 !important; font-family: sans-serif !important; line-height: 1.8 !important; font-size: 1.2rem !important;">
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</li>
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
-                    <li style="margin-bottom: 0 !important;">🌿 <strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</li>
-                </ul>
-            </div>
-            
+<!-- Tarjeta 2: El abrazo del Koala -->
+<div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
+    
+    <!-- Mini-columna izquierda identificativa -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; background-color: #fff5f6 !important; padding: 35px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
+        <h3 style="color: #4A2E35 !important; font-family: Georgia, serif !important; font-size: 2.2rem !important; margin: 0 0 14px 0 !important; font-weight: 700 !important;">El abrazo del koala</h3>
+        <p style="color: #8a636c !important; font-size: 1.15rem !important; margin: 0 0 25px 0 !important; font-family: sans-serif !important; font-weight: 500 !important;">Acompañamiento al desarrollo infantil</p>
+        
+        <!-- Ilustración con máscara de degradado en los bordes para difuminado perfecto -->
+        <div style="width: 300px !important; max-width: 100% !important; overflow: hidden !important; display: flex !important; justify-content: center !important; align-items: center !important;">
+            <img src="img/abrazo-koala.png" alt="El abrazo del koala" style="width: 100% !important; height: auto !important; display: block !important; -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mix-blend-mode: multiply !important;">
         </div>
+    </div>
+    
+    <!-- Contenido derecho -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; padding: 35px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important;">
+        <span style="color: #ffffff !important; text-transform: uppercase !important; font-weight: 800 !important; letter-spacing: 1px !important; font-size: 1rem !important; margin-bottom: 20px !important; font-family: sans-serif !important;">A domicilio</span>
+        <ul style="color: #ffffff !important; list-style: none !important; padding: 0 !important; margin: 0 !important; font-family: sans-serif !important; line-height: 1.8 !important; font-size: 1.2rem !important;">
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Intervención en el entorno real:</strong> Analizo las dinámicas familiares y de conducta directamente donde ocurren.</li>
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Máxima comodidad para la familia:</strong> Sin desplazamientos, sin prisas y sin alterar las rutinas de tus hij@s.</li>
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Herramientas de aplicación inmediata:</strong> Diseño pautas adaptadas al espacio físico de tu casa y a vuestros objetos cotidianos.</li>
+            <li style="margin-bottom: 0 !important;">🌿 <strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</li>
+        </ul>
+    </div>
+    
+</div>
 
+        
         <!-- Tarjeta 3: EduKoala -->
         <div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
             
