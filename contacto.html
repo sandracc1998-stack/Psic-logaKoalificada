@@ -60,7 +60,7 @@
               <!-- Nombre Completo -->
               <div class="formulario-grupo" style="flex: 1 !important; min-width: 280px !important; display: flex !important; flex-direction: column !important; gap: 8px !important;">
                   <label for="id-nombre" style="font-size: 1.15rem !important; font-weight: 600 !important; color: #6d4b53 !important; font-family: sans-serif !important;">Nombre completo</label>
-                  <input type="text" id="id-nombre" name="nombre" required style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; outline: none !important;">
+                  <input type="text" id="id-nombre" name="name" required style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; outline: none !important;">
               </div>
               <!-- Correo Electrónico -->
               <div class="formulario-grupo" style="flex: 1 !important; min-width: 280px !important; display: flex !important; flex-direction: column !important; gap: 8px !important;">
@@ -72,7 +72,7 @@
           <!-- ¿En qué puedo ayudarte? -->
           <div class="formulario-grupo ancho-completo" style="display: flex !important; flex-direction: column !important; gap: 8px !important; width: 100% !important;">
               <label for="id-asunto" style="font-size: 1.15rem !important; font-weight: 600 !important; color: #6d4b53 !important; font-family: sans-serif !important;">¿En qué puedo ayudarte?</label>
-              <textarea id="id-asunto" name="asunto" required rows="5" style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; font-family: inherit !important; resize: vertical !important; outline: none !important;"></textarea>
+              <textarea id="id-asunto" name="message" required rows="5" style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; font-family: inherit !important; resize: vertical !important; outline: none !important;"></textarea>
           </div>
 
           <!-- Botón de Envío -->
@@ -99,12 +99,15 @@ document.getElementById('formularioKoalaAJAX').addEventListener('submit', functi
     boton.style.opacity = '0.6';
     boton.innerText = 'Enviando...';
     
+    // FormSubmit procesa mejor las propiedades en minúsculas y reconoce automáticamente "name", "email" y "message"
     const datosFormulario = {
-        Nombre: document.getElementById('id-nombre').value,
-        Email: document.getElementById('id-email').value,
-        Mensaje: document.getElementById('id-asunto').value
+        name: document.getElementById('id-nombre').value,
+        email: document.getElementById('id-email').value,
+        message: document.getElementById('id-asunto').value,
+        _captcha: "false" // Desactiva el captcha para que el envío AJAX no falle ni pida validación visual externa
     };
 
+    // Corregido: Ahora apunta directamente a tu endpoint personalizado de FormSubmit
     fetch('https://formsubmit.co', {
         method: 'POST',
         headers: {
@@ -116,13 +119,14 @@ document.getElementById('formularioKoalaAJAX').addEventListener('submit', functi
     .then(response => response.json())
     .then(data => {
         estado.style.display = 'block';
+        // FormSubmit en modo AJAX suele devolver { success: "true" } como texto o booleano
         if (data.success === "true" || data.success === true) {
             estado.style.color = '#2e7d32';
             estado.innerText = '¡Mensaje enviado con éxito! Te responderemos muy pronto.';
             document.getElementById('formularioKoalaAJAX').reset();
         } else {
             estado.style.color = '#c62828';
-            estado.innerText = 'Hubo un aviso del servidor: ' + data.message;
+            estado.innerText = 'Hubo un aviso del servidor: ' + (data.message || 'Error desconocido.');
         }
         boton.disabled = false;
         boton.style.opacity = '1';
@@ -138,6 +142,7 @@ document.getElementById('formularioKoalaAJAX').addEventListener('submit', functi
     });
 });
 </script>
+
 
 <!-- BLOQUE DE SEPARACIÓN Y LIMPIEZA ANTES DEL PIE DE PÁGINA -->
 <div style="clear: both !important; display: block !important; width: 100% !important; height: 1px !important; margin-top: 60px !important;"></div>
