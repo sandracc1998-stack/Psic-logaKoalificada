@@ -53,14 +53,8 @@
 
 <!-- CONTENEDOR INFERIOR PARA EL FORMULARIO (Ocupa todo el ancho por debajo) -->
 <div style="width: 100% !important; box-sizing: border-box !important;">
-      <!-- FORMULARIO DE CONTACTO ACTUALIZADO CON FORMSUBMIT -->
-      <form action="https://formsubmit.co" method="POST" class="formulario-cuerpo" style="display: flex !important; flex-direction: column !important; gap: 25px !important; width: 100% !important; box-sizing: border-box !important;">
-          
-          <!-- Evita que los usuarios salgan de tu web tras enviar el formulario -->
-          <input type="hidden" name="_next" value="https://psikoala.com">
-          
-          <!-- Campo trampa antispam (invisible para usuarios, bloquea bots) -->
-          <input type="text" name="_honey" style="display:none">
+      <!-- FORMULARIO DIRECTO CON CONTROL DE JAVASCRIPT -->
+      <form id="formularioKoalaAJAX" class="formulario-cuerpo" style="display: flex !important; flex-direction: column !important; gap: 25px !important; width: 100% !important; box-sizing: border-box !important;">
           
           <div class="formulario-fila-doble" style="display: flex !important; flex-wrap: wrap !important; gap: 25px !important; width: 100% !important;">
               <!-- Nombre Completo -->
@@ -83,16 +77,67 @@
 
           <!-- Botón de Envío -->
           <div class="formulario-boton-contenedor" style="text-align: left !important; margin-top: 15px !important; width: 100% !important;">
-              <button type="submit" style="color: #ffffff !important; background-color: #6d4b53 !important; font-size: 1.2rem !important; font-weight: 700 !important; padding: 14px 45px !important; border: none !important; border-radius: 50px !important; cursor: pointer !important; transition: transform 0.2s ease, background-color 0.3s ease !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.2) !important;">
+              <button type="submit" id="btnEnviarKoala" style="color: #ffffff !important; background-color: #6d4b53 !important; font-size: 1.2rem !important; font-weight: 700 !important; padding: 14px 45px !important; border: none !important; border-radius: 50px !important; cursor: pointer !important; transition: transform 0.2s ease, background-color 0.3s ease !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.2) !important;">
                   Enviar mensaje
               </button>
           </div>
-
+          
+          <!-- Texto informativo del estado del envío -->
+          <p id="textoEstadoKoala" style="display: none; font-size: 1.2rem; font-weight: bold; margin-top: 15px; font-family: sans-serif;"></p>
       </form>
 </div>
-</main>
 
+<!-- SCRIPT DE PROGRAMACIÓN PARA EL ENVÍO INVISIBLE -->
+<script>
+document.getElementById('formularioKoalaAJAX').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const boton = document.getElementById('btnEnviarKoala');
+    const estado = document.getElementById('textoEstadoKoala');
+    
+    boton.disabled = true;
+    boton.style.opacity = '0.6';
+    boton.innerText = 'Enviando...';
+    
+    const datosFormulario = {
+        Nombre: document.getElementById('id-nombre').value,
+        Email: document.getElementById('id-email').value,
+        Mensaje: document.getElementById('id-asunto').value
+    };
 
+    fetch('https://formsubmit.co', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(datosFormulario)
+    })
+    .then(response => response.json())
+    .then(data => {
+        estado.style.display = 'block';
+        if (data.success === "true" || data.success === true) {
+            estado.style.color = '#2e7d32';
+            estado.innerText = '¡Mensaje enviado con éxito! Te responderemos muy pronto.';
+            document.getElementById('formularioKoalaAJAX').reset();
+        } else {
+            estado.style.color = '#c62828';
+            estado.innerText = 'Hubo un aviso del servidor: ' + data.message;
+        }
+        boton.disabled = false;
+        boton.style.opacity = '1';
+        boton.innerText = 'Enviar mensaje';
+    })
+    .catch(error => {
+        estado.style.display = 'block';
+        estado.style.color = '#c62828';
+        estado.innerText = 'Error al conectar. Por favor, inténtalo de nuevo.';
+        boton.disabled = false;
+        boton.style.opacity = '1';
+        boton.innerText = 'Enviar mensaje';
+    });
+});
+</script>
 
 <!-- BLOQUE DE SEPARACIÓN Y LIMPIEZA ANTES DEL PIE DE PÁGINA -->
 <div style="clear: both !important; display: block !important; width: 100% !important; height: 1px !important; margin-top: 60px !important;"></div>
