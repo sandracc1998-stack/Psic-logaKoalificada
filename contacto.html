@@ -51,97 +51,28 @@
   </div>
 
 
-<!-- CONTENEDOR INFERIOR PARA EL FORMULARIO (Ocupa todo el ancho por debajo) -->
-<div style="width: 100% !important; box-sizing: border-box !important;">
-      <!-- FORMULARIO DIRECTO CON CONTROL DE JAVASCRIPT -->
-      <form id="formularioKoalaAJAX" class="formulario-cuerpo" style="display: flex !important; flex-direction: column !important; gap: 25px !important; width: 100% !important; box-sizing: border-box !important;">
-          
-          <div class="formulario-fila-doble" style="display: flex !important; flex-wrap: wrap !important; gap: 25px !important; width: 100% !important;">
-              <!-- Nombre Completo -->
-              <div class="formulario-grupo" style="flex: 1 !important; min-width: 280px !important; display: flex !important; flex-direction: column !important; gap: 8px !important;">
-                  <label for="id-nombre" style="font-size: 1.15rem !important; font-weight: 600 !important; color: #6d4b53 !important; font-family: sans-serif !important;">Nombre completo</label>
-                  <input type="text" id="id-nombre" name="name" required style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; outline: none !important;">
-              </div>
-              <!-- Correo Electrónico -->
-              <div class="formulario-grupo" style="flex: 1 !important; min-width: 280px !important; display: flex !important; flex-direction: column !important; gap: 8px !important;">
-                  <label for="id-email" style="font-size: 1.15rem !important; font-weight: 600 !important; color: #6d4b53 !important; font-family: sans-serif !important;">Correo electrónico</label>
-                  <input type="email" id="id-email" name="email" required style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; outline: none !important;">
-              </div>
-          </div>
+<!-- CONTENEDOR DE CONTACTO DIRECTO -->
+<div style="width: 100% !important; box-sizing: border-box !important; padding: 20px 0 !important;">
+    <div class="contacto-koala-tarjeta" style="display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 20px !important; width: 100% !important; padding: 30px !important; background-color: #FFFFFF !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.06) !important; box-sizing: border-box !important;">
+        
+        <!-- ICONO DE BUZÓN / SOBRE (SVG Vectorial, no pesa y se ve nítido) -->
+        <div style="flex-shrink: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 60px; height: 60px; background-color: rgba(109, 75, 83, 0.1) !important; border-radius: 50% !important;">
+            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#6d4b53" style="width: 32px; height: 32px;">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a1.75 1.75 0 01-1.844 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a.25.25 0 00.272 0L22.5 6.908z" />
+            </svg>
+        </div>
 
-          <!-- ¿En qué puedo ayudarte? -->
-          <div class="formulario-grupo ancho-completo" style="display: flex !important; flex-direction: column !important; gap: 8px !important; width: 100% !important;">
-              <label for="id-asunto" style="font-size: 1.15rem !important; font-weight: 600 !important; color: #6d4b53 !important; font-family: sans-serif !important;">¿En qué puedo ayudarte?</label>
-              <textarea id="id-asunto" name="message" required rows="5" style="font-size: 1.15rem !important; padding: 14px !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; width: 100% !important; box-sizing: border-box !important; background-color: #FFFFFF !important; box-shadow: inset 0 2px 4px rgba(109, 75, 83, 0.06) !important; font-family: inherit !important; resize: vertical !important; outline: none !important;"></textarea>
-          </div>
+        <!-- TEXTO Y ENLACE DEL CORREO -->
+        <div style="display: flex !important; flex-direction: column !important; gap: 4px !important; min-width: 250px !important; font-family: sans-serif !important;">
+            <span style="font-size: 1.1rem !important; font-weight: 600 !important; color: #6d4b53 !important; opacity: 0.8 !important;">Escríbeme directamente a:</span>
+            <a href="mailto:psikoala@psikoala.com" style="font-size: 1.4rem !important; font-weight: 700 !important; color: #6d4b53 !important; text-decoration: none !important; border-bottom: 2px solid transparent !important; transition: border-color 0.2s ease !important;" onmouseover="this.style.borderColor='#6d4b53'" onmouseout="this.style.borderColor='transparent'">
+                psikoala@psikoala.com
+            </a>
+        </div>
 
-          <!-- Botón de Envío -->
-          <div class="formulario-boton-contenedor" style="text-align: left !important; margin-top: 15px !important; width: 100% !important;">
-              <button type="submit" id="btnEnviarKoala" style="color: #ffffff !important; background-color: #6d4b53 !important; font-size: 1.2rem !important; font-weight: 700 !important; padding: 14px 45px !important; border: none !important; border-radius: 50px !important; cursor: pointer !important; transition: transform 0.2s ease, background-color 0.3s ease !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.2) !important;">
-                  Enviar mensaje
-              </button>
-          </div>
-          
-          <!-- Texto informativo del estado del envío -->
-          <p id="textoEstadoKoala" style="display: none; font-size: 1.2rem; font-weight: bold; margin-top: 15px; font-family: sans-serif;"></p>
-      </form>
+    </div>
 </div>
-
-<!-- SCRIPT DE PROGRAMACIÓN PARA EL ENVÍO INVISIBLE -->
-<script>
-document.getElementById('formularioKoalaAJAX').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const boton = document.getElementById('btnEnviarKoala');
-    const estado = document.getElementById('textoEstadoKoala');
-    
-    boton.disabled = true;
-    boton.style.opacity = '0.6';
-    boton.innerText = 'Enviando...';
-    
-    // FormSubmit procesa mejor las propiedades en minúsculas y reconoce automáticamente "name", "email" y "message"
-    const datosFormulario = {
-        name: document.getElementById('id-nombre').value,
-        email: document.getElementById('id-email').value,
-        message: document.getElementById('id-asunto').value,
-        _captcha: "false" // Desactiva el captcha para que el envío AJAX no falle ni pida validación visual externa
-    };
-
-    // Corregido: Ahora apunta directamente a tu endpoint personalizado de FormSubmit
-    fetch('https://formsubmit.co', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(datosFormulario)
-    })
-    .then(response => response.json())
-    .then(data => {
-        estado.style.display = 'block';
-        // FormSubmit en modo AJAX suele devolver { success: "true" } como texto o booleano
-        if (data.success === "true" || data.success === true) {
-            estado.style.color = '#2e7d32';
-            estado.innerText = '¡Mensaje enviado con éxito! Te responderemos muy pronto.';
-            document.getElementById('formularioKoalaAJAX').reset();
-        } else {
-            estado.style.color = '#c62828';
-            estado.innerText = 'Hubo un aviso del servidor: ' + (data.message || 'Error desconocido.');
-        }
-        boton.disabled = false;
-        boton.style.opacity = '1';
-        boton.innerText = 'Enviar mensaje';
-    })
-    .catch(error => {
-        estado.style.display = 'block';
-        estado.style.color = '#c62828';
-        estado.innerText = 'Error al conectar. Por favor, inténtalo de nuevo.';
-        boton.disabled = false;
-        boton.style.opacity = '1';
-        boton.innerText = 'Enviar mensaje';
-    });
-});
-</script>
 
 
 <!-- BLOQUE DE SEPARACIÓN Y LIMPIEZA ANTES DEL PIE DE PÁGINA -->
