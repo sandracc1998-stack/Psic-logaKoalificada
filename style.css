@@ -1035,42 +1035,23 @@ img, video, iframe {
 }
 
 
-
-
-/* Ajuste responsive para la tarjeta */
-.contenedor-tarjeta {
-  display: flex;
-  flex-direction: column-reverse; /* En móvil: imagen arriba, texto abajo */
-  align-items: center;
-  gap: 1.5rem; /* Espacio entre la imagen y el texto */
-  width: 100%;
-}
-
-.contenedor-tarjeta img {
-  max-width: 250px; /* Tamaño adecuado de la imagen en móvil */
-  width: 100%;
-  height: auto;
-}
-
-/* En pantallas de ordenador (más de 768px de ancho) */
-@media (min-width: 768px) {
-  .contenedor-tarjeta {
-    flex-direction: row; /* En PC: texto a la izquierda, imagen a la derecha */
-    justify-content: space-between;
-  }
-}
-
-/* Forzar en móviles para todos los contenedores de recursos */
+/* REGULA GLOBAL RESPONSIVE PARA MÓVILES (hasta 767px) */
 @media (max-width: 767px) {
-  /* Aplica tanto si usas la clase como si tienen flex-direction inline */
-  div[style*="display: flex"][style*="gap: 30px"],
-  .tarjeta-recurso {
+  /* 1. Captura la clase personalizada Y cualquier div flex con row en inline */
+  .tarjeta-recurso,
+  div[style*="display: flex"][style*="flex-direction: row"],
+  div[style*="display:flex"][style*="flex-direction:row"],
+  div[style*="display: flex"][style*="gap: 30px"] {
     flex-direction: column-reverse !important;
   }
 
-  div[style*="display: flex"][style*="gap: 30px"] > div,
-  .tarjeta-recurso > div {
+  /* 2. Hace que los hijos ocupen todo el ancho y no se aplasten */
+  .tarjeta-recurso > div,
+  div[style*="display: flex"][style*="flex-direction: row"] > div,
+  div[style*="display:flex"][style*="flex-direction:row"] > div,
+  div[style*="display: flex"][style*="gap: 30px"] > div {
     flex: none !important;
     width: 100% !important;
   }
 }
+
