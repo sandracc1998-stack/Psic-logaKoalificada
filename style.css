@@ -1059,9 +1059,18 @@ img, video, iframe {
     justify-content: space-between;
   }
 }
-/* Ajuste automático para todas las tarjetas */
+
+/* Forzar en móviles para todos los contenedores de recursos */
 @media (max-width: 767px) {
+  /* Aplica tanto si usas la clase como si tienen flex-direction inline */
+  div[style*="display: flex"][style*="gap: 30px"],
   .tarjeta-recurso {
     flex-direction: column-reverse !important;
+  }
+
+  div[style*="display: flex"][style*="gap: 30px"] > div,
+  .tarjeta-recurso > div {
+    flex: none !important;
+    width: 100% !important;
   }
 }
