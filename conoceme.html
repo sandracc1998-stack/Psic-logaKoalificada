@@ -148,42 +148,52 @@
     <span style="text-transform: capitalize !important;">Sobre</span> mí
 </h1>
 
-<!-- CONTENEDOR FLEX EN FILA (TEXTO IZQUIERDA, IMAGEN DERECHA ADAPTADA AL ALTO) -->
+<!-- ================= SECCIÓN 1: SOBRE MÍ (KOALA) ================= -->
+
+<!-- 1. TÍTULO PRINCIPAL -->
+<h1 style="color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 3.4rem !important; font-weight: 700 !important; margin: 0 0 25px 0 !important; line-height: 1.25 !important; text-transform: lowercase !important;">
+    <span style="text-transform: capitalize !important;">Sobre</span> mí
+</h1>
+
+<!-- CONTENEDOR FLEX EN FILA -->
 <div style="display: flex !important; flex-direction: row !important; gap: 30px !important; align-items: stretch !important; width: 100% !important; box-sizing: border-box !important;">
     
-    <!-- 2. TARJETA 1 - IZQUIERDA -->
-    <div class="tarjeta-presentacion-oscura" style="flex: 1.2 !important; background-color: #F7E1E5 !important; padding: 30px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; justify-content: center !important;">
-        <p style="margin: 0 !important; color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 1.25rem !important; line-height: 1.6 !important;">
+    <!-- 2. TARJETA 1 - IZQUIERDA (LETRA MÁS GRANDE) -->
+    <div class="tarjeta-presentacion-oscura" style="flex: 1.2 !important; background-color: #F7E1E5 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; justify-content: center !important;">
+        <p style="margin: 0 !important; color: #6d4b53 !important; font-family: Georgia, 'Times New Roman', serif !important; font-size: 1.4rem !important; line-height: 1.65 !important;">
             ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
         </p>
     </div>
 
-    <!-- 3. IMAGEN KOALA - DERECHA (MÁS GRANDE Y AL MISMO ALTO) -->
+    <!-- 3. IMAGEN KOALA - DERECHA -->
     <div style="flex: 1 !important; max-width: 400px !important; display: flex !important;">
         <img src="img/conoceme-koala.png.PNG" alt="Conóceme Koala" style="width: 100% !important; height: 100% !important; display: block !important; mix-blend-mode: multiply !important; object-fit: contain !important;">
     </div>
 
 </div>
 
-<!-- CONTENEDOR FLEX EN FILA (IMAGEN IZQUIERDA, TEXTO DERECHA) -->
-<div style="display: flex !important; flex-direction: row !important; gap: 30px !important; align-items: stretch !important; width: 100% !important; box-sizing: border-box !important; margin-top: 30px !important;">
+
+<!-- ================= SECCIÓN 2: BIOGRAFÍA (SANDRA) ================= -->
+
+<!-- CONTENEDOR FLEX EN FILA -->
+<div style="display: flex !important; flex-direction: row !important; gap: 30px !important; align-items: stretch !important; width: 100% !important; box-sizing: border-box !important; margin-top: 35px !important;">
     
-    <!-- 4. IMAGEN DE SANDRA - IZQUIERDA (ADAPTADA AL ALTO DE LA TARJETA) -->
+    <!-- 4. IMAGEN DE SANDRA - IZQUIERDA -->
     <div style="flex: 1 !important; max-width: 300px !important; display: flex !important;">
         <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100% !important; height: 100% !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; object-fit: cover !important;">
     </div>
 
-    <!-- 5. TARJETA 2 - DERECHA -->
+    <!-- 5. TARJETA 2 - DERECHA (LETRA MÁS GRANDE) -->
     <div class="tarjeta-clara-texto" style="flex: 2 !important; background-color: #F7E1E5 !important; padding: 35px !important; border-radius: 15px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; justify-content: center !important;">
-        <p style="margin: 0 0 20px 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+        <p style="margin: 0 0 20px 0 !important; color: #6d4b53 !important; font-size: 1.4rem !important; line-height: 1.75 !important; font-family: Georgia, serif !important;">
             Soy <strong style="color: #6d4b53 !important;">psicóloga graduada</strong> por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
         </p>
-        <p style="margin: 0 !important; color: #6d4b53 !important; font-size: 1.25rem !important; line-height: 1.7 !important; font-family: Georgia, serif !important;">
+        <p style="margin: 0 !important; color: #6d4b53 !important; font-size: 1.4rem !important; line-height: 1.75 !important; font-family: Georgia, serif !important;">
             Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
         </p>
     </div>
 
-  </div>
+</div>
 
 <!-- LÍNEA 2: COMPETENCIAS EN PARALELO (Mantienen su fondo oscuro para generar contraste) -->
 <div class="fila-bloques-competencias" style="display: flex !important; gap: 30px !important; flex-wrap: wrap !important; align-items: stretch !important; margin: 0 auto 40px auto !important; max-width: 1100px !important; width: 100% !important; box-sizing: border-box !important;">
