@@ -1033,3 +1033,29 @@ img, video, iframe {
         max-width: 100% !important;
     }
 }
+
+
+
+
+/* Ajuste responsive para la tarjeta */
+.contenedor-tarjeta {
+  display: flex;
+  flex-direction: column-reverse; /* En móvil: imagen arriba, texto abajo */
+  align-items: center;
+  gap: 1.5rem; /* Espacio entre la imagen y el texto */
+  width: 100%;
+}
+
+.contenedor-tarjeta img {
+  max-width: 250px; /* Tamaño adecuado de la imagen en móvil */
+  width: 100%;
+  height: auto;
+}
+
+/* En pantallas de ordenador (más de 768px de ancho) */
+@media (min-width: 768px) {
+  .contenedor-tarjeta {
+    flex-direction: row; /* En PC: texto a la izquierda, imagen a la derecha */
+    justify-content: space-between;
+  }
+}
