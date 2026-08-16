@@ -1059,3 +1059,9 @@ img, video, iframe {
     justify-content: space-between;
   }
 }
+/* Ajuste automático para todas las tarjetas */
+@media (max-width: 767px) {
+  .tarjeta-recurso {
+    flex-direction: column-reverse !important;
+  }
+}
