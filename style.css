@@ -1,10 +1,10 @@
 /* ==========================================================================
-   1. VARIABLES CORPORATIVAS (TU COLOR CREMA DEFECTO)
+   1. VARIABLES CORPORATIVAS (PALETA PASTEL UNIFICADA)
    ========================================================================== */
 :root {
     --ff-display: 'Playfair Display', serif, sans-serif;
     --bark: #4a2e2b;          /* Marrón oscuro corporativo */
-    --cream: #FDFBF7;         /* Tu nuevo crema suave, limpio y pastel */
+    --cream: #FDFBF7;         /* Crema suave, limpio y pastel */
     --white: #ffffff;         /* Blanco puro */
     --blush: #f5e1da;         /* Rosa / Carne suave */
     --rose: #d97d64;          /* Coral / Rosa viejo */
@@ -13,12 +13,25 @@
     --radius-md: 20px;
     --radius-lg: 30px;
     --shadow: 0 10px 30px rgba(74, 46, 43, 0.08);
+    
+    /* Nuevos colores de contraste para tarjetas de recursos */
+    --bg-dark-resource: #523138; /* Rosa granate muy oscuro */
+    --text-light-resource: #fdfbf7; /* Crema muy claro */
+    --text-muted-resource: #e5dadc; /* Texto secundario claro */
 }
 
-/* Base de la página */
+/* ==========================================================================
+   2. REGLAS DE SOPORTE GENERAL (ORDENADOR Y MÓVIL)
+   ========================================================================== */
+* {
+    box-sizing: border-box; /* Previene desbordamientos horizontales */
+}
+
 body {
     margin: 0;
-    padding: 0;
+    padding-top: 75px; /* Deja espacio arriba para que el menú fijo no tape el contenido */
+    width: 100%;
+    overflow-x: hidden;
     font-family: sans-serif;
     color: var(--text);
     background-color: var(--white);
@@ -27,45 +40,71 @@ body {
 section { 
     padding: 5rem 2rem; 
 }
+
 .section-inner { 
     max-width: 1100px; 
     margin: 0 auto; 
 }
 
+/* Hace que todas las imágenes y vídeos sean responsivos por defecto */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* ==========================================================================
-   2. ESTILOS DE MENÚ DE NAVEGACIÓN ESTÁNDAR (VISTA ORDENADOR)
+   3. MENÚ DE NAVEGACIÓN COMPACTO Y FIJO (VISTA ORDENADOR)
    ========================================================================== */
 .nav-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 15px 40px;
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(74, 46, 53, 0.05);
 }
 
 .nav-logo {
     font-family: var(--ff-display);
-    font-size: 1.25rem;
-    color: #6e2c3e;
+    color: var(--bark);
+    font-size: 1.1rem;
+    font-weight: 700;
     text-decoration: none;
-    font-style: italic;
-    font-weight: bold;
+    max-width: 180px;
+    line-height: 1.2;
 }
 
 .nav-links {
     display: flex;
-    align-items: center;
-    gap: 2rem;
     list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
     margin: 0;
     padding: 0;
 }
 
 .nav-links a {
-    color: var(--text);
     text-decoration: none;
+    color: var(--muted);
+    font-size: 1rem;
     font-weight: 500;
+    font-family: sans-serif;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--bark);
 }
 
 .boton-nav {
@@ -75,15 +114,21 @@ section {
     border-radius: 50px;
 }
 
+/* Enlaces del menú navegación oscuros a juego */
+.nav-links a.btn-contacto,
+.nav-links a[href="#contacto"] {
+  color: #2c2223 !important;
+  background: transparent !important; 
+}
+
 /* ==========================================================================
-   3. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR)
+   4. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR)
    ========================================================================== */
 .hero-seccion {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    box-sizing: border-box;
 }
 
 .hero-dos-columnas {
@@ -135,7 +180,7 @@ section {
 }
 
 .tarjeta-redondeada-cabecera p {
-    color: #fffdd0 !important; /* Forzar el color crema en las letras */
+    color: #ffffff !important; /* Forzado a blanco puro final solicitado */
     font-size: 1.05rem;
     margin: 0;
     line-height: 1.6;
@@ -143,11 +188,15 @@ section {
     text-align: center;
 }
 
+.card-hero, .card-hero p, .hero-cards div, .hero-cards p {
+  color: #ffffff !important;
+}
+
 .columna-derecha-imagen {
     grid-column: 2;
     grid-row: 1 / span 2;
     display: flex;
-    min-width: 290px;
+    max-width: 100%;
 }
 
 .imagen-sandra-koala-nueva {
@@ -159,15 +208,17 @@ section {
 }
 
 /* ==========================================================================
-   4. SECCIÓN MIS VALORES (PANTALLA COMPLETA EN CUADRÍCULA PERFECTA)
+   5. SECCIÓN MIS VALORES (VERDE PASTEL SUAVE)
    ========================================================================== */
 #mis-valores { 
     background: var(--white); 
 }
+
 .seccion-valores-cabecera { 
     text-align: center; 
     margin-bottom: 3rem; 
 }
+
 .valores-titulo { 
     font-family: var(--ff-display); 
     font-size: 2.2rem; 
@@ -175,6 +226,7 @@ section {
     font-weight: 600; 
     margin-bottom: 0.5rem; 
 }
+
 .linea-decorativa { 
     width: 60px; 
     height: 3px; 
@@ -183,16 +235,16 @@ section {
     border-radius: 2px; 
 }
 
-/* Cuadrícula fija para que midan exactamente lo mismo */
 .values-list { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
     gap: 1.25rem; 
     width: 100%; 
 }
-.value-item { 
-    background-color: var(--cream); 
-    border: 1px solid var(--blush); 
+
+.value-item, #mis-valores .card-valor, #mis-valores .card, .section-valores .card-valor, .valores-grid .card, .card-valor { 
+    background-color: #eaf3ed !important; /* Nuevo color verde pastel suave solicitado */
+    border: 1px solid #d8e6db !important; /* Borde a juego */
     border-radius: var(--radius-md); 
     padding: 2rem 1.5rem; 
     box-shadow: var(--shadow); 
@@ -202,14 +254,17 @@ section {
     align-items: flex-start; 
     box-sizing: border-box;
 }
+
 .value-item:hover { 
     transform: translateY(-4px); 
     box-shadow: 0 12px 36px rgba(92,61,61,.12); 
 }
+
 .value-icon { 
     font-size: 2rem; 
     margin-bottom: 1rem; 
 }
+
 .value-name { 
     font-family: var(--ff-display); 
     font-size: 1.25rem; 
@@ -217,6 +272,7 @@ section {
     color: var(--bark); 
     margin-bottom: .5rem; 
 }
+
 .value-desc { 
     font-size: .9rem; 
     color: var(--muted); 
@@ -224,7 +280,7 @@ section {
 }
 
 /* ==========================================================================
-   5. SECCIÓN CÓMO TRABAJO Y TARJETAS GIRATORIAS (FONDOS REPARADOS)
+   6. SECCIÓN CÓMO TRABAJO Y TARJETAS ESTÁTICAS CONTINUAS
    ========================================================================== */
 .como-trabajo-contenedor-seccion { 
     background: var(--cream);
@@ -261,797 +317,429 @@ section {
     border-radius: 2px;
 }
 
-.tarjetas-giratorias-contenedor {
+.tarjetas-grid-contenedor, .tarjetas-giratorias-contenedor {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: stretch; /* Alturas idénticas en ordenador */
+    gap: 30px; 
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
-.tarjeta-giratoria { 
-    flex: 0 1 340px !important; 
-    min-width: 280px; 
-    height: 440px; 
-    background-color: transparent; 
-}
-.tarjeta-interno { 
-    position: relative; 
-    width: 100%; 
-    height: 100%; 
-    text-align: left; 
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
-    transform-style: preserve-3d; 
-    box-shadow: var(--shadow); 
+.tarjeta-giratoria, .card-trabajo-estatica { 
+    flex: 1 1 340px !important; 
+    max-width: 100%;
+    background-color: var(--blush); 
     border-radius: var(--radius-md); 
-}
-.tarjeta-giratoria:hover .tarjeta-interno { 
-    transform: rotateY(180deg); 
-}
-
-.tarjeta-frontal, .tarjeta-trasera { 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden; 
-    border-radius: var(--radius-md); 
-    box-sizing: border-box; 
-}
-
-.tarjeta-frontal { 
-  background-color: var(--blush); /* Fondo color carne suave */
-  padding: 24px 20px 0 20px; 
+    box-shadow: var(--shadow);
+    padding: 30px 24px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contenido-frontal { 
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
-  justify-content: space-between; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    gap: 20px;
 }
 
 .bloque-texto-frontal { 
-  text-align: center; 
-  margin-bottom: 15px; 
+    text-align: center; 
 }
 
 .tarjeta-frontal h3 { 
-  font-family: var(--ff-display); 
-  color: var(--bark); 
-  font-size: 1.6rem; 
-  font-weight: 600; 
-  letter-spacing: 0.5px; 
-  margin: 0 0 10px 0; 
-  text-align: center; 
+    font-family: var(--ff-display); 
+    color: var(--bark); 
+    font-size: 1.6rem; 
+    font-weight: 600; 
+    letter-spacing: 0.5px; 
+    margin: 0 0 10px 0; 
+    text-align: center; 
 }
 
 .subtitulo-frontal { 
-  color: var(--text); 
-  font-size: 0.95rem; 
-  line-height: 1.4; 
-  margin: 0; 
-  text-align: center; 
-  opacity: 0.9;
+    color: var(--text); 
+    font-size: 0.95rem; 
+    line-height: 1.5; 
+    margin: 0; 
+    text-align: center; 
+    opacity: 0.9;
 }
 
 .bloque-imagen-frontal { 
-  flex: 1; 
-  display: flex; 
-  align-items: flex-end; 
-  justify-content: center; 
-  overflow: hidden; 
-  border-bottom-left-radius: var(--radius-md); 
-  border-bottom-right-radius: var(--radius-md); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+    width: 100%;
 }
 
 .imagen-frontal-tarjeta { 
-  width: 100%; 
-  height: 90%; 
-  object-fit: contain; 
-  mix-blend-mode: multiply; 
-  
-  /* Máscara para crear el difuminado suave en los bordes */
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
-  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 95%);
-}
-
-    
-.tarjeta-trasera { 
-  background-color: var(--bark) !important; /* Marrón oscuro al girar */
-  color: var(--cream) !important; /* Letras crema */
-  transform: rotateY(180deg) !important; 
-  display: flex !important; 
-  align-items: flex-start !important; 
-  border: 2px solid var(--cream) !important; 
-  overflow-y: auto !important; 
-  padding: 28px 24px !important; 
-}
-
-.contenido-trasero { 
-  width: 100% !important; 
-  display: flex !important; 
-  flex-direction: column !important; 
-  gap: 16px !important; 
-}
-
-.titulo-trasero { 
-  font-family: var(--ff-display) !important; 
-  color: var(--cream) !important; 
-  font-size: 1.2rem !important; 
-  font-weight: bold !important; 
-  margin: 0 !important; 
-  letter-spacing: 1px !important; 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important; 
-  padding-bottom: 8px !important; 
-  text-align: center !important; 
-}
-
-.tarjeta-trasera ul { 
-  list-style-type: none !important; 
-  padding: 0 !important; 
-  margin: 0 !important; 
-}
-
-.tarjeta-trasera li { 
-  font-size: 0.85rem !important; 
-  line-height: 1.45 !important; 
-  margin-bottom: 12px !important; 
-  position: relative !important; 
-  padding-left: 15px !important; 
-  text-align: left !important;
-  color: var(--cream) !important; 
-}
-
-.tarjeta-trasera li strong {
-  color: var(--white) !important;
-}
-
-.tarjeta-trasera li::before { 
-  content: "•" !important; 
-  color: var(--rose) !important; 
-  position: absolute !important; 
-  left: 0 !important; 
-  top: 0 !important; 
-  font-weight: bold !important; 
+    width: 100%; 
+    height: auto; 
+    max-height: 250px; 
+    object-fit: contain; 
 }
 
 /* ==========================================================================
-   6. SECCIÓN FORMULARIO DE CONTACTO Y PIE DE PÁGINA (ESTILOS DEFINITIVOS)
+   7. TARJETAS DE RECURSOS AMPLIAS (FONDOS OSCUROS DE ALTO CONTRASTE)
    ========================================================================== */
-.seccion-formulario {
-    width: 100%;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Esta es la tarjeta contenedora que ahora sí envolverá todo el formulario */
-.formulario-contacto {
-    background-color: #fdf8f5; /* Color de fondo de la tarjeta */
-    padding: 50px;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(110, 44, 62, 0.05);
-    box-sizing: border-box;
-    max-width: 800px; 
-    margin: 0 auto; /* Centra la tarjeta en la pantalla */
-}
-
-.formulario-cabecera {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.formulario-cabecera h2 {
-    color: #6e2c3e;
-    font-size: 2.2rem;
-    margin: 0 0 0.5rem 0;
-    font-family: var(--ff-display);
-}
-
-.formulario-cabecera p {
-    color: rgba(110, 44, 62, 0.8);
-    font-size: 1.05rem;
-    margin: 0;
-}
-
-.formulario-cuerpo {
+.tarjeta-recurso-amplia {
+    max-width: 1000px; 
+    margin: 0 auto 50px auto; 
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row; 
+    align-items: stretch; 
+    gap: 30px; 
     width: 100%;
+    background-color: transparent !important;
 }
 
-.formulario-fila-doble {
-    display: flex;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.formulario-grupo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.formulario-grupo.ancho-completo {
-    width: 100%;
-}
-
-.formulario-grupo label {
-    color: #6e2c3e;
-    font-weight: 500;
-    font-size: 0.95rem;
-    text-align: left;
-}
-
-.formulario-grupo input {
-    width: 100%;
-    padding: 14px 20px;
-    border-radius: 14px;
-    border: 1px solid rgba(110, 44, 62, 0.2);
-    background-color: #fff;
-    color: #333;
-    font-size: 1rem;
-    box-sizing: border-box;
-    outline: none;
-}
-
-.formulario-boton-contenedor {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.formulario-boton-contenedor button {
-    background-color: #6e2c3e;
-    color: #fffdd0;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(110, 44, 62, 0.2);
-    transition: all 0.3s ease;
-}
-
-/* Pie de página */
-.pie-contacto-final {
-    width: 100%;
-    background-color: #6e2c3e;
-    padding: 25px 0;
-    margin-top: 60px;
-}
-
-.pie-contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.contacto-final-lista {
+.tarjeta-recurso-amplia .contenedor-imagen-amplia {
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.contacto-final-lista a, .contacto-final-lista span {
-    color: #fffdd0;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-/* --- ADAPTACIÓN ESPECÍFICA PARA MÓVILES (Menos de 768px) --- */
-@media (max-width: 768px) {
-
-  /* Prevenir desbordamiento horizontal global */
-  html, body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
-  /* 1. Menú de navegación */
-  .nav-principal {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .nav-logo {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .nav-logo .colegiada {
-    font-size: 0.85em !important;
-    margin-top: 3px;
-  }
-
-  .nav-links {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.8rem;
+.tarjeta-recurso-amplia .contenedor-imagen-amplia img {
     width: 100%;
-    padding: 0;
-  }
-
-  /* 2, 3 y 4. FIX ESPECÍFICO PARA LA CABECERA E INICIO */
-  header, 
-  main, 
-  section, 
-  .hero, 
-  .hero-container, 
-  .hero-content, 
-  .presentacion,
-  [class*="hero"] {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Ajuste de imágenes generales */
-  .hero img, 
-  .hero-image img, 
-  .presentacion img, 
-  header + main img {
-    width: 100% !important;
-    max-width: 320px !important;
-    height: auto !important;
-    margin: 1rem auto !important;
-    display: block !important;
-  }
-
-  /* Ajuste de título */
-  h1, .hero h1, .titulo-principal {
-    text-align: center !important;
-    font-size: 1.8rem !important;
-    width: 100% !important;
-  }
-
-  /* 5 y 6. Tarjetas de Valores y Cómo Trabajo en vertical */
-  .cards-grid, 
-  .valores-grid, 
-  .trabajo-grid,
-  .contacto-final-lista,
-  .lista-tarjetas-horizontales {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    width: 100% !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Ajuste para todas las tarjetas (incluyendo tarjeta-horizontal) */
-  .card-valor, 
-  .card-trabajo, 
-  .card-hero, 
-  .card,
-  .tarjeta-horizontal {
-    display: flex !important;
-    flex-direction: column !important; /* Apila imagen arriba y texto abajo en móvil */
-    max-width: 100% !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-
-  .bloque-izquierdo-visual,
-  .bloque-derecho-texto {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 25px 15px !important;
-  }
-
-  .bloque-izquierdo-visual img {
-    max-width: 220px !important;
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 auto !important;
-  }
-
-  /* Títulos largos dentro de las tarjetas */
-  .tarjeta-horizontal h2, 
-  .tarjeta-horizontal h3 {
-    word-break: break-word !important;
-    hyphens: auto !important;
-    font-size: 1.4rem !important;
-  }
+    height: 100%;
+object-fit: cover;
+border-radius: 16px;
 }
-
-/* --- COLOR CREMA PARA EL TEXTO DE LAS TARJETAS --- */
-.card-hero, 
-.card-hero p {
-  color: #fffdd0 !important; /* Color crema */
+.bloque-texto-difuminado {
+flex: 1;
+background-color: var(--bg-dark-resource) !important; /* Fondo rosa granate muy oscuro solicitado */
+border-radius: 16px;
+padding: 30px 40px;
+box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
-
-/* ==========================================================
-   CAMBIOS GENERALES (ORDENADOR Y MÓVIL)
-   ========================================================== */
-
-/* 1. ELIMINAR ESPACIO BLANCO LATERAL (Scroll horizontal) */
-html, body {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
+.titulo-recurso-individual {
+color: var(--text-light-resource) !important; /* Letras crema muy claras solicitadas */
+font-size: 2.2rem;
+font-weight: bold;
+margin-bottom: 20px;
+text-align: left;
 }
-
-/* 2. CAMBIAR TEXTO SOBRE FONDO GRANATE A ROSA CREMA PASTEL */
-/* Afecta a las dos tarjetas del inicio, botón de envío y pie de página */
-.card-hero,
-.card-hero p,
-.hero-cards div,
-.hero-cards p,
-.btn-submit,
-.btn-contacto,
-footer,
-footer p,
-footer a,
-.footer,
-.footer p,
-.footer a,
-.contacto-final-lista a,
-.contacto-final-lista span {
-  color: #fbebe8 !important; /* Tono rosa crema suave */
+.bloque-texto-difuminado p {
+color: var(--text-muted-resource) !important;
+font-size: 1.15rem;
+line-height: 1.7;
+margin: 0;
+text-align: left;
 }
-
-/* 3. CAMBIAR FONDO DE LAS TARJETAS "MIS VALORES" A VERDE SUAVE PASTEL */
-#mis-valores .card-valor,
-#mis-valores .card,
-.section-valores .card-valor,
-.valores-grid .card,
-.card-valor {
-  background-color: #eaf3ed !important; /* Verde pastel suave */
-  border: 1px solid #d8e6db !important; /* Borde sutil a juego */
+.imagen-cabecera-ramas {
+width: 140px;
+height: auto;
+object-fit: contain;
+vertical-align: middle;
+margin-left: 15px;
 }
-/* ==========================================================
-   NUEVOS AJUSTES (ORDENADOR Y MÓVIL)
-   ========================================================== */
-
-/* 1. Letra en color blanco para las tarjetas debajo de la imagen principal */
-.card-hero,
-.card-hero p,
-.hero-cards div,
-.hero-cards p {
-  color: #ffffff !important;
+/* ==========================================================================
+8. ESTILOS GENERALES DE RECURSOS CUATRO BLOQUES (INFOGRAFÍAS PRINCIPALES)
+========================================================================== */
+.contenedor-articulos {
+max-width: 900px;
+margin: 0 auto;
+padding: 20px;
+box-sizing: border-box;
+background: transparent !important;
 }
-
-/* 2. Integrar la imagen de la tarjeta "El abrazo del koala" con el fondo */
+.recurso-bloque {
+margin-bottom: 60px;
+display: flex;
+flex-direction: column;
+gap: 25px;
+background: none !important;
+border: none !important;
+padding: 0 !important;
+}
+.titulo-recurso {
+color: #6d4b53;
+font-family: Georgia, serif;
+font-size: 2.2rem;
+font-weight: 700;
+text-align: center;
+margin: 0;
+}
+.tarjeta-recurso {
+display: flex;
+gap: 30px;
+align-items: stretch;
+width: 100%;
+}
+.contenedor-imagen {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.contenedor-imagen img {
+width: 100%;
+max-width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 20px;
+display: block;
+}
+.tarjeta-texto {
+flex: 1;
+background-color: var(--bg-dark-resource) !important; /* Fondo rosa granate muy oscuro unificado /
+color: var(--text-light-resource) !important; / Letras crema muy claras */
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.subtitulo-recurso {
+font-size: 1.25rem;
+font-weight: 700;
+margin-top: 0;
+margin-bottom: 10px;
+color: var(--text-light-resource) !important;
+font-family: Georgia, serif;
+}
+.descripcion-recurso {
+margin-bottom: 20px;
+line-height: 1.6;
+color: var(--text-muted-resource) !important;
+}
+.lista-recurso {
+list-style: none;
+padding-left: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 12px;
+line-height: 1.5;
+color: var(--text-light-resource) !important;
+}
+.lista-recurso strong {
+color: #ffffff !important; /* Blanco puro para remarcar términos clave */
+}
+/* ==========================================================================
+9. FUSIÓN INTEGRAL DE TODAS LAS IMÁGENES DE LA WEB (MULTIPLY)
+========================================================================== /
 .card-trabajo img,
 .trabajo-grid img,
-#como-trabajo img {
-  mix-blend-mode: multiply !important; /* Difumina el fondo blanco de la imagen */
-  border-radius: 12px;
+#como-trabajo img,
+.contenedor-imagen img,
+.tarjeta-recurso img,
+.recursos-container img,
+.seccion-recursos img,
+.bloque-izquierdo-visual img,
+.tarjeta-horizontal img,
+.contenedor-imagen-amplia img,
+img[src="abrazo-koala.png"] {
+mix-blend-mode: multiply !important; /* Elimina fondos blancos fantasmas */
+background-color: transparent !important;
+border-radius: 16px !important;
+box-shadow: none !important;
+border: none !important;
 }
-
-/* 3. Enlace "Contacto" del menú con el mismo color oscuro que los otros botones */
-.nav-links a.btn-contacto,
-.nav-links a[href="#contacto"] {
-  color: #2c2223 !important; /* Mismo tono oscuro que Mis Valores y Cómo Trabajo */
-  background: transparent !important; /* Quita fondos o sombreados si los tuviera */
+/* ==========================================================================
+10. PIE DE PÁGINA CORPORATIVO
+========================================================================== */
+.pie-contacto-final {
+width: 100%;
+background-color: #6e2c3e;
+padding: 25px 0;
+margin-top: 60px;
 }
-
-/* 4. Texto del botón "Enviar mensaje" en color blanco */
-.btn-submit,
-button[type="submit"],
-form button,
-.formulario-contacto button {
-  color: #ffffff !important;
+.pie-contenedor {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+box-sizing: border-box;
 }
-/* --- DIFUMINAR SOLAMENTE LA IMAGEN "ABRAZO KOALA" --- */
-img[src*="abrazo-koala.png"] {
-  mix-blend-mode: multiply !important;
-  background-color: transparent !important;
-  border-radius: 16px !important;
+.contacto-final-lista {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3rem;
+list-style: none;
+margin: 0;
+padding: 0;
 }
-/* ==========================================
-   TARJETAS DE RECURSOS AMPLIAS
-   ========================================== */
-
-/* Contenedor individual de cada recurso */
+footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, .contacto-final-lista a, .contacto-final-lista span {
+color: #fbebe8 !important; /* Tono rosa crema claro y legible para fondos granates */
+text-decoration: none;
+font-size: 0.95rem;
+font-weight: 500;
+}
+/* ==========================================================================
+11. CONSULTA DE MEDIOS (MEDIA QUERY DEFINITIVA RESPONSIVA < 768PX)
+========================================================================== */
+@media screen and (max-width: 768px) {
+/* Prevenir desbordamiento horizontal global en teléfonos */
+html, body {
+width: 100% !important;
+max-width: 100% !important;
+overflow-x: hidden !important;
+}
+body, container, main {
+padding-left: 15px !important;
+padding-right: 15px !important;
+}
+/* Convierte grids antiguos a una sola columna */
+.row, .flex-container, .grid-container {
+flex-direction: column !important;
+grid-template-columns: 1fr !important;
+}
+/* Fuentes adaptativas */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+p { font-size: 1rem; line-height: 1.5; }
+button, .btn, a.button {
+width: 100%;
+padding: 12px 20px;
+margin-bottom: 10px;
+}
+/* --- MENÚ DE NAVEGACIÓN MÓVIL COMPACTO --- /
+nav.nav-principal {
+display: flex !important;
+flex-direction: column !important;
+align-items: center !important;
+text-align: center !important;
+padding: 10px 5px !important;
+position: static !important; / Flujo normal para que no tape nada en móvil */
+width: 100% !important;
+height: auto !important;
+}
+nav.nav-principal .nav-logo {
+margin-bottom: 12px !important;
+font-size: 1.1rem !important;
+display: flex !important;
+flex-direction: column !important;
+align-items: center !important;
+}
+nav.nav-principal .nav-logo .colegiada {
+font-size: 0.85em !important;
+margin-top: 3px;
+}
+nav.nav-principal ul.nav-links {
+display: flex !important;
+flex-direction: row !important;
+flex-wrap: wrap !important; /* Permite botones en varias filas compactas */
+justify-content: center !important;
+gap: 8px !important;
+width: 100% !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+nav.nav-principal ul.nav-links li {
+display: inline-block !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+nav.nav-principal ul.nav-links li a {
+padding: 6px 12px !important;
+font-size: 0.8rem !important;
+}
+/* --- HERO MÓVIL --- */
+.hero-dos-columnas {
+display: flex !important;
+flex-direction: column !important;
+gap: 2rem !important;
+}
+.columna-derecha-imagen {
+order: -1; /* Sube la foto del Hero arriba del título principal */
+justify-content: center !important;
+}
+.imagen-sandra-koala-nueva {
+max-width: 320px !important;
+height: auto !important;
+margin: 0 auto !important;
+}
+h1, .hero h1, .titulo-principal {
+text-align: center !important;
+width: 100% !important;
+}
+/* --- CONTROL ESTRICTO DE INFOGRAFÍAS (TÍTULO -> IMAGEN -> TEXTO) --- */
+.tarjeta-recurso {
+flex-direction: column !important;
+gap: 20px !important;
+}
+/* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba */
+.recurso-bloque:nth-child(2) .tarjeta-recurso,
+.recurso-bloque:nth-child(3) .tarjeta-recurso,
+.recurso-bloque:nth-child(4) .tarjeta-recurso {
+flex-direction: column-reverse !important;
+}
+.titulo-recurso { font-size: 1.8rem !important; }
+.tarjeta-texto { padding: 20px !important; }
+/* --- SECCIÓN RECURSOS AMPLIAS MÓVIL --- /
 .tarjeta-recurso-amplia {
-    max-width: 1000px; /* Ocupa casi toda la pantalla de forma elegante */
-    margin: 0 auto 50px auto; /* Centra la tarjeta y da espacio con la siguiente */
+flex-direction: column !important; / Apila imagen arriba y tarjeta abajo */
+gap: 20px !important;
 }
-
-/* Título del recurso igual al formato de la imagen */
-.titulo-recurso-individual {
-    color: #4A2E35; /* Granate oscuro */
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left; /* Alineado a la izquierda como en tu sección de valores */
-}
-
-/* Tarjeta amplia con fondo rosa crema clarito y efecto difuminado suave */
+.tarjeta-recurso-amplia .contenedor-imagen-amplia,
 .bloque-texto-difuminado {
-    background-color: #FDF8F5; /* Tono rosa crema muy clarito y cálido */
-    border-radius: 16px; /* Bordes redondeados sutiles */
-    padding: 30px 40px; /* Espacio interno generoso para el texto */
-    box-shadow: 0 4px 20px rgba(74, 46, 53, 0.04); /* Sombra muy suave para dar efecto difuminado */
+width: 100% !important;
+flex: none !important;
 }
-
-/* Formato del texto dentro de la tarjeta */
-.bloque-texto-difuminado p {
-    color: #4A2E35; /* Letra color granate oscuro solicitado */
-    font-size: 1.15rem;
-    line-height: 1.7; /* Separación de líneas para facilitar la lectura */
-    margin: 0;
-    text-align: left;
+.bloque-texto-difuminado { padding: 25px 20px !important; }
+.titulo-recurso-individual { font-size: 1.6rem !important; text-align: center !important; }
+/* --- OTRAS SECCIONES (VALORES, CONTACTO SIMPLE Y PIE) --- */
+.valores-container, .seccion-valores, .valor-card {
+width: 100% !important;
+max-width: 100% !important;
+box-sizing: border-box !important;
+padding-left: 15px !important;
+padding-right: 15px !important;
+overflow-x: hidden !important;
 }
-/* Estilos para la nueva imagen de la sección */
-.imagen-cabecera-ramas {
-    width: 140px; /* Incrementa este valor si la quieres aún más grande */
-    height: auto;
-    object-fit: contain;
-    vertical-align: middle;
-    margin-left: 15px; /* Separa la imagen del título */
+.valores-row, .flex-valores { flex-direction: column !important; width: 100% !important; }
+.cards-grid, .valores-grid, .trabajo-grid, .contacto-final-lista, .lista-tarjetas-horizontales {
+display: flex !important;
+flex-direction: column !important;
+align-items: center !important;
+gap: 1.5rem !important;
+width: 100% !important;
+padding: 0 !important;
 }
-
-/* Difuminado suave para las imágenes de las tarjetas horizontales de servicios */
-.bloque-izquierdo-visual img, 
-.tarjeta-horizontal img {
-    mix-blend-mode: multiply; /* Fusiona los blancos de la imagen con el crema de fondo */
-    
-    /* Máscara de degradado radial para desvanecer los bordes */
-    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
-    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
+.card-valor, .card-trabajo, .card-hero, .card, .tarjeta-horizontal {
+display: flex !important;
+flex-direction: column !important;
+max-width: 100% !important;
+width: 100% !important;
+overflow: hidden !important;
 }
-
-/* Unifica el fondo de todas las tarjetas de recursos al rosa/crema suave */
-.tarjeta-recurso-amplia {
-    background-color: #F7E1E5 !important;
+.bloque-izquierdo-visual, .bloque-derecho-texto {
+width: 100% !important;
+min-width: 0 !important;
+max-width: 100% !important;
+padding: 25px 15px !important;
 }
-
-        /* ======================================================== */
-        /* REPARACIÓN DEL MENÚ DE NAVEGACIÓN COMPACTO */
-        /* ======================================================== */
-        .nav-principal {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-            background-color: #ffffff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            box-sizing: border-box;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(74, 46, 53, 0.05);
-        }
-        .nav-logo {
-            color: #4A2E35;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            font-family: sans-serif;
-            max-width: 180px;
-            line-height: 1.2;
-        }
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }
-        .nav-links li {
-            margin: 0;
-            padding: 0;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #4b4b4b;
-            font-size: 1rem;
-            font-weight: 500;
-            font-family: sans-serif;
-            transition: color 0.2s ease;
-        }
-        .nav-links a:hover {
-            color: #4A2E35;
-        }
-
-/* ==========================================
-   ESTILOS BASE / REGLAS GENERALES PARA MÓVIL
-   ========================================== */
-
-/* Previene desbordamientos horizontales (scroll lateral no deseado) */
-* {
-  box-sizing: border-box;
+.bloque-izquierdo-visual img { max-width: 220px !important; width: 100% !important; margin: 0 auto !important; }
+.tarjeta-horizontal h2, .tarjeta-horizontal h3 { word-break: break-word; hyphens: auto; font-size: 1.4rem !important; }
+.tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
+font-size: 1.8rem !important;
+word-wrap: break-word !important;
+overflow-wrap: break-word !important;
+white-space: normal !important;
+display: block !important;
+width: 100% !important;
+text-align: center !important;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
+.tarjeta-contacto, .contacto-card { padding: 20px 15px !important; max-width: 100% !important; }
+/* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos */
+.bloque-izquierdo-visual img, .tarjeta-horizontal img {
+-webkit-mask-image: none !important;
+mask-image: none !important;
 }
-
-/* Hace que las imágenes y vídeos no se salgan de la pantalla */
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ==========================================
-   MEDIA QUERY PARA PANTALLAS PEQUEÑAS (MÓVILES)
-   ========================================== */
-@media (max-width: 768px) {
-  /* Contenedor principal: ajusta márgenes y rellenos */
-  body, container, main {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  /* Convierte distribuciones en fila (flex/grid) a una sola columna */
-  .row, .flex-container, .grid-container {
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Ajusta el tamaño de los textos para pantallas pequeñas */
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* Botones más fáciles de pulsar con el pulgar */
-  button, .btn, a.button {
-    width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-  }
-}
-/* ==============================================
-   DISEÑO EXCLUSIVO PARA MÓVILES Y TABLETS (DEFINITIVO)
-   ============================================== */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Control del contenedor principal del menú */
-    nav.nav-principal {
-        display: flex !important;
-        flex-direction: column !important; /* Fuerza a poner el logo arriba y botones abajo */
-        align-items: center !important;
-        text-align: center !important;
-        padding: 10px 5px !important;    /* Reduce el grosor del menú al mínimo */
-        position: static !important;     /* Evita que flote tapando la pantalla */
-        width: 100% !important;
-        height: auto !important;         /* Evita que se estire a la mitad de la pantalla */
-    }
-
-    /* 2. Nombre de la marca / Logotipo */
-    nav.nav-principal .nav-logo {
-        margin-bottom: 12px !important;
-        font-size: 1.1rem !important;
-        display: inline-block !important;
-    }
-
-    /* 3. ¡CORRECCIÓN CLAVE! Organización de la lista de botones */
-    nav.nav-principal ul.nav-links {
-        display: flex !important;
-        flex-wrap: wrap !important;       /* Fuerza a los botones a saltar de línea si no caben */
-        justify-content: center !important;
-        gap: 8px !important;              /* Reduce la separación entre los botones */
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* 4. ¡CORRECCIÓN CLAVE! Reducir los botones metidos inline en el HTML */
-    nav.nav-principal ul.nav-links li {
-        display: inline-block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    nav.nav-principal ul.nav-links li a {
-        padding: 6px 12px !important;    /* Hace los botones más pequeños y compactos */
-        font-size: 0.8rem !important;     /* Achica la letra para que quepan 2 o 3 por fila */
-    }
-}
-
-/* ==============================================
-   CORRECCIONES EXCLUSIVAS PARA OTRAS PÁGINAS (MÓVIL)
-   ============================================== */
-@media screen and (max-width: 768px) {
-
-    /* 1. SOLUCIÓN FILOSOFÍA: Evita que los textos/valores se corten por la derecha */
-    .valores-container, .seccion-valores, .valor-card { 
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        overflow-x: hidden !important;
-    }
-    
-    /* Si tus valores usan listas o filas flex que no se envuelven */
-    .valores-row, .flex-valores {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-
-    /* 2. SOLUCIÓN RECURSOS: Quita bordes duros y funde las imágenes con el fondo */
-    .recursos-container img, .seccion-recursos img, .tarjeta-recurso img {
-        background-color: transparent !important; /* Quita fondos blancos traseros */
-        mix-blend-mode: multiply !important;     /* Mezcla el fondo de la imagen con el rosa/crema de tu web */
-        border: none !important;                  /* Elimina bordes o marcos rectos */
-        box-shadow: none !important;              /* Quita sombras que marquen el cuadrado */
-        max-width: 100% !important;               /* Asegura que no se salgan de su sitio */
-        height: auto !important;
-    }
-
-    /* 3. SOLUCIÓN CONTACTO: Evita que el "¿Hablemos?" se salga por la derecha */
-    .tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
-        font-size: 1.8rem !important;  /* Achica un poco la letra para que quepa el texto entero con los interrogantes */
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important; /* Permite que si no cabe, baje el interrogante de línea en vez de cortarse */
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-    
-    /* Asegura que la tarjeta de contacto misma tenga margen interno para respirar */
-    .tarjeta-contacto, .contacto-card {
-        padding: 20px 15px !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-    }
-}
-
-
-/* REGULA GLOBAL RESPONSIVE PARA MÓVILES (hasta 767px) */
-@media (max-width: 767px) {
-  /* 1. Captura la clase personalizada Y cualquier div flex con row en inline */
-  .tarjeta-recurso,
-  div[style*="display: flex"][style*="flex-direction: row"],
-  div[style*="display:flex"][style*="flex-direction:row"],
-  div[style*="display: flex"][style*="gap: 30px"] {
-    flex-direction: column-reverse !important;
-  }
-
-  /* 2. Hace que los hijos ocupen todo el ancho y no se aplasten */
-  .tarjeta-recurso > div,
-  div[style*="display: flex"][style*="flex-direction: row"] > div,
-  div[style*="display:flex"][style*="flex-direction:row"] > div,
-  div[style*="display: flex"][style*="gap: 30px"] > div {
-    flex: none !important;
-    width: 100% !important;
-  }
 }
 
