@@ -554,7 +554,7 @@ img, video, iframe {
     color: var(--white) !important; /* Blanco puro para destacar términos clave */
 }
 /* ==========================================================================
-   9. FUSIÓN INTEGRAL DE TODAS LAS IMÁGENES DE LA WEB (MULTIPLY)
+   9. CONFIGURACIÓN DE IMÁGENES DE LA WEB (RESTAURADA)
    ========================================================================== */
 .card-trabajo img,
 .trabajo-grid img,
@@ -565,13 +565,13 @@ img, video, iframe {
 .bloque-izquierdo-visual img,
 .tarjeta-horizontal img,
 .contenedor-imagen-amplia img,
-img[src*="koala"] {
-    mix-blend-mode: multiply !important; /* Elimina fondos blancos fantasmas */
+.imagen-sandra-koala-nueva {
     background-color: transparent !important;
     border-radius: 16px !important;
     box-shadow: none !important;
     border: none !important;
 }
+
 
 /* ==========================================================================
    10. PIE DE PÁGINA CORPORATIVO
