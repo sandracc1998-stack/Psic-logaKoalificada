@@ -51,27 +51,33 @@
   </div>
 
 
-<!-- CONTENEDOR DE CONTACTO DIRECTO -->
-<div style="width: 100% !important; box-sizing: border-box !important; padding: 20px 0 !important;">
-    <div class="contacto-koala-tarjeta" style="display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 20px !important; width: 100% !important; padding: 30px !important; background-color: #FFFFFF !important; border: 2px solid #6d4b53 !important; border-radius: 12px !important; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.06) !important; box-sizing: border-box !important;">
-        
-        <!-- ICONO DE BUZÓN / SOBRE (SVG Vectorial, no pesa y se ve nítido) -->
-        <div style="flex-shrink: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 60px; height: 60px; background-color: rgba(109, 75, 83, 0.1) !important; border-radius: 50% !important;">
-            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="#6d4b53" style="width: 32px; height: 32px;">
-                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a1.75 1.75 0 01-1.844 0L1.5 8.67z" />
-                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a.25.25 0 00.272 0L22.5 6.908z" />
-            </svg>
-        </div>
+<!-- Inicio del Formulario de Contacto -->
+<form action="https://formspree.io" method="POST" style="max-width: 450px; margin: 30px auto; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 25px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);">
+  
+  <!-- Campo: Nombre -->
+  <div style="margin-bottom: 18px;">
+    <label for="nombre" style="display: block; margin-bottom: 6px; font-weight: 600; color: #1a202c; font-size: 14px;">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 15px; color: #334155;">
+  </div>
 
-        <!-- TEXTO Y ENLACE DEL CORREO -->
-        <div style="display: flex !important; flex-direction: column !important; gap: 4px !important; min-width: 250px !important; font-family: sans-serif !important;">
-            <span style="font-size: 1.1rem !important; font-weight: 600 !important; color: #6d4b53 !important; opacity: 0.8 !important;">Escríbeme directamente a:</span>
-            <a href="mailto:psikoala@psikoala.com" style="font-size: 1.4rem !important; font-weight: 700 !important; color: #6d4b53 !important; text-decoration: none !important; border-bottom: 2px solid transparent !important; transition: border-color 0.2s ease !important;" onmouseover="this.style.borderColor='#6d4b53'" onmouseout="this.style.borderColor='transparent'">
-                psikoala@psikoala.com
-            </a>
-        </div>
+  <!-- Campo: Correo electrónico -->
+  <div style="margin-bottom: 18px;">
+    <label for="email" style="display: block; margin-bottom: 6px; font-weight: 600; color: #1a202c; font-size: 14px;">Correo electrónico</label>
+    <input type="email" id="email" name="email" required placeholder="tu@email.com" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 15px; color: #334155;">
+  </div>
 
-    </div>
+  <!-- Campo: Qué necesitas -->
+  <div style="margin-bottom: 22px;">
+    <label for="mensaje" style="display: block; margin-bottom: 6px; font-weight: 600; color: #1a202c; font-size: 14px;">¿Qué necesitas?</label>
+    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntame detalladamente en qué puedo ayudarte..." style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 15px; color: #334155; resize: vertical; min-height: 100px;"></textarea>
+  </div>
+
+  <!-- Botón de enviar -->
+  <button type="submit" style="width: 100%; padding: 12px; background-color: #2563eb; color: #ffffff; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; transition: background-color 0.2s ease;">Enviar mensaje</button>
+
+</form>
+<!-- Fin del Formulario de Contacto -->
+
 </div>
 
 
