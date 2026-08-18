@@ -115,21 +115,26 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
-    <nav class="nav-principal">
-        <a href="index.html" class="nav-logo">
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
+    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
+        
+        <!-- Nombre/Logo a la izquierda -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
             <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
         </a>
-        <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
-            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
-            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
-            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
-            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Recursos koalificados</a></li>
-            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Conóceme</a></li>
-            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Contáctame</a></li>
+        
+        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
+        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
         </ul>
     </nav>
+</div>
+
  
  <!-- CUERPO PRINCIPAL DE LA PÁGINA (SOBRE MÍ) -->
 <main class="conoceme-contenedor-pagina" style="max-width: 1200px !important; margin: 0 auto !important; padding: 130px 20px 0 20px !important; box-sizing: border-box !important; display: block !important;">
@@ -142,7 +147,7 @@
         <span style="text-transform: capitalize !important;">Sobre</span> mí
     </h1>
 
-    <!-- 1. SECCIÓN: PRESENTACIÓN -->
+      <!-- 1. SECCIÓN: PRESENTACIÓN (Mantiene el Koala a la izquierda) -->
     <div class="tarjeta-recurso" style="display: flex; gap: 30px; align-items: stretch; width: 100%; box-sizing: border-box;">
         
         <!-- A. IMAGEN KOALA (PRIMERO) -->
@@ -150,7 +155,7 @@
             <img src="img/conoceme-koala.png.PNG" alt="Conóceme Koala" style="width: 100%; height: 100%; display: block; mix-blend-mode: multiply; object-fit: contain;">
         </div>
 
-        <!-- B. TARJETA DE TEXTO "HOLA SOY SANDRA..." (SEGUNDO) -->
+        <!-- B. TARJETA DE TEXTO "HOLA SOY SANDRA..." -->
         <div class="tarjeta-presentacion-oscura" style="flex: 1.2; background-color: #F7E1E5; padding: 35px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
             <p style="margin: 0; color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 1.4rem; line-height: 1.65;">
                 ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
@@ -159,15 +164,15 @@
 
     </div>
 
-    <!-- 2. SECCIÓN: BIOGRAFÍA (SANDRA) -->
-    <div class="tarjeta-recurso" style="display: flex; gap: 30px; align-items: stretch; width: 100%; box-sizing: border-box; margin-top: 35px;">
+    <!-- 2. SECCIÓN: BIOGRAFÍA (Se añade row-reverse para mandar la foto a la derecha) -->
+    <div class="tarjeta-recurso" style="display: flex; flex-direction: row-reverse; gap: 30px; align-items: stretch; width: 100%; box-sizing: border-box; margin-top: 35px;">
         
-        <!-- C. IMAGEN DE SANDRA (TERCERO) -->
+        <!-- C. IMAGEN DE SANDRA (Visualmente saldrá a la derecha en PC) -->
         <div style="flex: 1; max-width: 300px; display: flex;">
             <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" style="width: 100%; height: 100%; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); object-fit: cover; display: block;">
         </div>
 
-        <!-- D. TARJETA DE TEXTO "SOY PSICÓLOGA..." (CUARTO) -->
+        <!-- D. TARJETA DE TEXTO "SOY PSICÓLOGA..." (Visualmente saldrá a la izquierda en PC) -->
         <div class="tarjeta-clara-texto" style="flex: 2; background-color: #F7E1E5; padding: 35px; border-radius: 15px; box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
             <p style="margin: 0 0 20px 0; color: #6d4b53; font-size: 1.4rem; line-height: 1.75; font-family: Georgia, serif;">
                 Soy <strong style="color: #6d4b53;">psicóloga graduada</strong> por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
@@ -176,6 +181,8 @@
                 Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
             </p>
         </div>
+
+    </div>
 
     </div>
 
@@ -243,7 +250,6 @@
         </ul>
     </div>
 </footer>
-
 
 </body>
 </html>
