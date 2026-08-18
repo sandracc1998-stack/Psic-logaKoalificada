@@ -584,162 +584,177 @@ font-weight: 500;
 11. CONSULTA DE MEDIOS (MEDIA QUERY DEFINITIVA RESPONSIVA < 768PX)
 ========================================================================== */
 @media screen and (max-width: 768px) {
-/* Prevenir desbordamiento horizontal global en teléfonos */
-html, body {
-width: 100% !important;
-max-width: 100% !important;
-overflow-x: hidden !important;
+    /* Prevenir desbordamiento horizontal global en teléfonos */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    body, container, main {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    /* Convierte grids antiguos a una sola columna */
+    .row, .flex-container, .grid-container {
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+    }
+    /* Fuentes adaptativas */
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; line-height: 1.5; }
+    button, .btn, a.button {
+        width: 100%;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+    }
+    /* --- MENÚ DE NAVEGACIÓN MÓVIL COMPACTO --- */ 
+    nav.nav-principal {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 10px 5px !important;
+        position: relative !important; /* Cambiado a relative para que empuje el contenido de forma limpia */
+        width: 100% !important;
+        height: auto !important;
+    }
+    nav.nav-principal .nav-logo {
+        margin-bottom: 12px !important;
+        font-size: 1.1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    nav.nav-principal .nav-logo .colegiada {
+        font-size: 0.85em !important;
+        margin-top: 3px;
+    }
+    nav.nav-principal ul.nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* Permite botones en varias filas compactas */
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    nav.nav-principal ul.nav-links li {
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    nav.nav-principal ul.nav-links li a {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+    }
+    /* --- HERO MÓVIL --- */
+    .hero-seccion {
+        padding-top: 20px !important; /* Evita huecos gigantes arriba en el móvil */
+    }
+    .hero-dos-columnas {
+        display: flex !important;
+        flex-direction: column-reverse !important; /* Cambiado a column-reverse para que el koala suba sobre el título */
+        gap: 20px !important;
+    }
+    .columna-derecha-imagen {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .imagen-sandra-koala-nueva {
+        max-width: 260px !important; /* Un poco más pequeño para que luzca perfecto en pantallas estrechas */
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+    h1, .hero h1, .titulo-principal {
+        text-align: center !important;
+        width: 100% !important;
+    }
+    /* --- CONTROL ESTRICTO DE INFOGRAFÍAS (TÍTULO -> IMAGEN -> TEXTO) --- */
+    .tarjeta-recurso {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    /* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba */
+    .recurso-bloque:nth-child(2) .tarjeta-recurso,
+    .recurso-bloque:nth-child(3) .tarjeta-recurso,
+    .recurso-bloque:nth-child(4) .tarjeta-recurso {
+        flex-direction: column-reverse !important;
+    }
+    .titulo-recurso { font-size: 1.8rem !important; }
+    .tarjeta-texto { padding: 20px !important; }
+    /* --- SECCIÓN RECURSOS AMPLIAS MÓVIL --- */
+    .tarjeta-recurso-amplia {
+        flex-direction: column !important; /* Apila imagen arriba y tarjeta abajo */
+        gap: 20px !important;
+    }
+    .tarjeta-recurso-amplia .contenedor-imagen-amplia,
+    .bloque-texto-difuminado {
+        width: 100% !important;
+        flex: none !important;
+    }
+    .bloque-texto-difuminado { padding: 25px 20px !important; }
+    .titulo-recurso-individual { font-size: 1.6rem !important; text-align: center !important; }
+    /* --- OTRAS SECCIONES (VALORES, CONTACTO SIMPLE Y PIE) --- */
+    .valores-container, .seccion-valores, .valor-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        overflow-x: hidden !important;
+    }
+    .valores-row, .flex-valores { flex-direction: column !important; width: 100% !important; }
+    .cards-grid, .valores-grid, .trabajo-grid, .lista-tarjetas-horizontales {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Mantenemos el pie de página horizontal en móviles si hay espacio, o fluido */
+    .contacto-final-lista {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .card-valor, .card-trabajo, .card-hero, .card, .tarjeta-horizontal {
+        display: flex !important;
+        flex-direction: column !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    .bloque-izquierdo-visual, .bloque-derecho-texto {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        padding: 25px 15px !important;
+    }
+    .bloque-izquierdo-visual img { max-width: 220px !important; width: 100% !important; margin: 0 auto !important; }
+    .tarjeta-horizontal h2, .tarjeta-horizontal h3 { word-break: break-word; hyphens: auto; font-size: 1.4rem !important; }
+    .tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
+        font-size: 1.8rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .tarjeta-contacto, .contacto-card { padding: 20px 15px !important; max-width: 100% !important; }
+    /* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos */
+    .bloque-izquierdo-visual img, .tarjeta-horizontal img {
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
 }
-body, container, main {
-padding-left: 15px !important;
-padding-right: 15px !important;
-}
-/* Convierte grids antiguos a una sola columna */
-.row, .flex-container, .grid-container {
-flex-direction: column !important;
-grid-template-columns: 1fr !important;
-}
-/* Fuentes adaptativas */
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.5rem; }
-p { font-size: 1rem; line-height: 1.5; }
-button, .btn, a.button {
-width: 100%;
-padding: 12px 20px;
-margin-bottom: 10px;
-}
-/* --- MENÚ DE NAVEGACIÓN MÓVIL COMPACTO --- /
-nav.nav-principal {
-display: flex !important;
-flex-direction: column !important;
-align-items: center !important;
-text-align: center !important;
-padding: 10px 5px !important;
-position: static !important; / Flujo normal para que no tape nada en móvil */
-width: 100% !important;
-height: auto !important;
-}
-nav.nav-principal .nav-logo {
-margin-bottom: 12px !important;
-font-size: 1.1rem !important;
-display: flex !important;
-flex-direction: column !important;
-align-items: center !important;
-}
-nav.nav-principal .nav-logo .colegiada {
-font-size: 0.85em !important;
-margin-top: 3px;
-}
-nav.nav-principal ul.nav-links {
-display: flex !important;
-flex-direction: row !important;
-flex-wrap: wrap !important; /* Permite botones en varias filas compactas */
-justify-content: center !important;
-gap: 8px !important;
-width: 100% !important;
-padding: 0 !important;
-margin: 0 !important;
-}
-nav.nav-principal ul.nav-links li {
-display: inline-block !important;
-margin: 0 !important;
-padding: 0 !important;
-}
-nav.nav-principal ul.nav-links li a {
-padding: 6px 12px !important;
-font-size: 0.8rem !important;
-}
-/* --- HERO MÓVIL --- */
-.hero-dos-columnas {
-display: flex !important;
-flex-direction: column !important;
-gap: 2rem !important;
-}
-.columna-derecha-imagen {
-order: -1; /* Sube la foto del Hero arriba del título principal */
-justify-content: center !important;
-}
-.imagen-sandra-koala-nueva {
-max-width: 320px !important;
-height: auto !important;
-margin: 0 auto !important;
-}
-h1, .hero h1, .titulo-principal {
-text-align: center !important;
-width: 100% !important;
-}
-/* --- CONTROL ESTRICTO DE INFOGRAFÍAS (TÍTULO -> IMAGEN -> TEXTO) --- */
-.tarjeta-recurso {
-flex-direction: column !important;
-gap: 20px !important;
-}
-/* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba */
-.recurso-bloque:nth-child(2) .tarjeta-recurso,
-.recurso-bloque:nth-child(3) .tarjeta-recurso,
-.recurso-bloque:nth-child(4) .tarjeta-recurso {
-flex-direction: column-reverse !important;
-}
-.titulo-recurso { font-size: 1.8rem !important; }
-.tarjeta-texto { padding: 20px !important; }
-/* --- SECCIÓN RECURSOS AMPLIAS MÓVIL --- /
-.tarjeta-recurso-amplia {
-flex-direction: column !important; / Apila imagen arriba y tarjeta abajo */
-gap: 20px !important;
-}
-.tarjeta-recurso-amplia .contenedor-imagen-amplia,
-.bloque-texto-difuminado {
-width: 100% !important;
-flex: none !important;
-}
-.bloque-texto-difuminado { padding: 25px 20px !important; }
-.titulo-recurso-individual { font-size: 1.6rem !important; text-align: center !important; }
-/* --- OTRAS SECCIONES (VALORES, CONTACTO SIMPLE Y PIE) --- */
-.valores-container, .seccion-valores, .valor-card {
-width: 100% !important;
-max-width: 100% !important;
-box-sizing: border-box !important;
-padding-left: 15px !important;
-padding-right: 15px !important;
-overflow-x: hidden !important;
-}
-.valores-row, .flex-valores { flex-direction: column !important; width: 100% !important; }
-.cards-grid, .valores-grid, .trabajo-grid, .contacto-final-lista, .lista-tarjetas-horizontales {
-display: flex !important;
-flex-direction: column !important;
-align-items: center !important;
-gap: 1.5rem !important;
-width: 100% !important;
-padding: 0 !important;
-}
-.card-valor, .card-trabajo, .card-hero, .card, .tarjeta-horizontal {
-display: flex !important;
-flex-direction: column !important;
-max-width: 100% !important;
-width: 100% !important;
-overflow: hidden !important;
-}
-.bloque-izquierdo-visual, .bloque-derecho-texto {
-width: 100% !important;
-min-width: 0 !important;
-max-width: 100% !important;
-padding: 25px 15px !important;
-}
-.bloque-izquierdo-visual img { max-width: 220px !important; width: 100% !important; margin: 0 auto !important; }
-.tarjeta-horizontal h2, .tarjeta-horizontal h3 { word-break: break-word; hyphens: auto; font-size: 1.4rem !important; }
-.tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
-font-size: 1.8rem !important;
-word-wrap: break-word !important;
-overflow-wrap: break-word !important;
-white-space: normal !important;
-display: block !important;
-width: 100% !important;
-text-align: center !important;
-}
-.tarjeta-contacto, .contacto-card { padding: 20px 15px !important; max-width: 100% !important; }
-/* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos */
-.bloque-izquierdo-visual img, .tarjeta-horizontal img {
--webkit-mask-image: none !important;
-mask-image: none !important;
-}
-}
-
