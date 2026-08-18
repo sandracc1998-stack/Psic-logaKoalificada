@@ -2,22 +2,22 @@
    1. VARIABLES CORPORATIVAS (PALETA PASTEL UNIFICADA)
    ========================================================================== */
 :root {
-    --ff-display: 'Playfair Display', serif, sans-serif;
-    --bark: #4a2e2b;          /* Marrón oscuro corporativo */
-    --cream: #FDFBF7;         /* Crema suave, limpio y pastel */
-    --white: #ffffff;         /* Blanco puro */
-    --blush: #f5e1da;         /* Rosa / Carne suave */
-    --rose: #d97d64;          /* Coral / Rosa viejo */
-    --muted: #7a6b68;         /* Texto secundario apagado */
-    --text: #332221;          /* Texto principal oscuro */
+    --ff-display: 'Georgia', 'Playfair Display', serif, sans-serif;
+    --bark: #6D4B53;                 /* Granate oscuro corporativo oficial */
+    --cream: #FFFBF2;                /* Crema claro suave de contraste oficial */
+    --white: #ffffff;                /* Blanco puro */
+    --blush: #F7E1E5;                /* Rosa pastel de los botones del menú */
+    --rose: #A36D77;                 /* Rosa viejo de las tarjetas del inicio */
+    --muted: #8a636c;                /* Texto secundario apagado */
+    --text: #332221;                 /* Texto principal oscuro */
     --radius-md: 20px;
     --radius-lg: 30px;
-    --shadow: 0 10px 30px rgba(74, 46, 43, 0.08);
+    --shadow: 0 10px 30px rgba(109, 75, 83, 0.08);
     
-    /* Nuevos colores de contraste para tarjetas de recursos */
-    --bg-dark-resource: #523138; /* Rosa granate muy oscuro */
-    --text-light-resource: #fdfbf7; /* Crema muy claro */
-    --text-muted-resource: #e5dadc; /* Texto secundario claro */
+    /* Colores unificados para tarjetas de recursos y valores */
+    --bg-dark-resource: #4A2E35;     /* Fondo ciruela oscuro */
+    --text-light-resource: #FFFBF2;  /* Letras crema claro */
+    --text-muted-resource: #e5dadc;  /* Texto secundario claro */
 }
 
 /* ==========================================================================
@@ -29,21 +29,23 @@
 
 body {
     margin: 0;
-    padding-top: 75px; /* Deja espacio arriba para que el menú fijo no tape el contenido */
+    padding: 0;
     width: 100%;
     overflow-x: hidden;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
     background-color: var(--white);
 }
 
 section { 
-    padding: 5rem 2rem; 
+    padding: 4rem 2rem; 
 }
 
 .section-inner { 
     max-width: 1100px; 
     margin: 0 auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Hace que todas las imágenes y vídeos sean responsivos por defecto */
@@ -52,7 +54,6 @@ img, video, iframe {
     height: auto;
     display: block;
 }
-
 /* ==========================================================================
    3. MENÚ DE NAVEGACIÓN COMPACTO Y FIJO (VISTA ORDENADOR)
    ========================================================================== */
@@ -62,28 +63,27 @@ img, video, iframe {
     align-items: center;
     padding: 15px 40px;
     background-color: var(--white);
-    position: fixed;
+    position: sticky; /* Cambiado a sticky para que no pise el contenido superior */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(74, 46, 53, 0.05);
+    box-shadow: 0 2px 15px rgba(109, 75, 83, 0.05);
 }
 
 .nav-logo {
     font-family: var(--ff-display);
     color: var(--bark);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
-    max-width: 180px;
     line-height: 1.2;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 12px; /* Espaciado ajustado para tus botones en óvalo */
     margin: 0;
     padding: 0;
     align-items: center;
@@ -96,187 +96,192 @@ img, video, iframe {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--muted);
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: sans-serif;
-    transition: color 0.2s ease;
+    background-color: var(--blush); /* Fondo rosa pastel oficial */
+    color: var(--bark);             /* Letra granate oficial */
+    font-family: var(--ff-display); /* Tipografía Georgia unificada */
+    padding: 8px 16px;
+    border-radius: 20px;            /* Bordes redondeados perfectos */
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Efecto visual cuando pasas el ratón por encima de las pestañas */
 .nav-links a:hover {
-    color: var(--bark);
+    background-color: var(--bark);
+    color: var(--cream);
 }
 
+/* Clase de soporte para destacar un botón si lo necesitas en el futuro */
 .boton-nav {
-    background-color: #6e2c3e;
+    background-color: var(--bark) !important;
     color: var(--cream) !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
+    padding: 8px 16px;
+    border-radius: 20px;
 }
 
-/* Enlaces del menú navegación oscuros a juego */
 .nav-links a.btn-contacto,
-.nav-links a[href="#contacto"] {
-  color: #2c2223 !important;
-  background: transparent !important; 
+.nav-links a[href="contacto.html"] {
+    font-weight: 700; /* Le da un ligero realce a la pestaña de contacto */
 }
-
 /* ==========================================================================
-   4. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR)
+   4. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR REORGANIZADA)
    ========================================================================== */
 .hero-seccion {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 20px 60px 20px;
+    box-sizing: border-box;
 }
 
+/* Contenedor flexible vertical continuo para título -> koala -> tarjetas */
 .hero-dos-columnas {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .cabecera-titulo {
-    grid-column: 1;
     width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    box-sizing: border-box;
 }
 
 .cabecera-titulo h1 {
     margin: 0;
-    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
     font-family: var(--ff-display);
-    color: #6e2c3e;
-    line-height: 1.2;
-    font-weight: bold;
+    color: var(--bark); /* Granate corporativo unificado */
+    line-height: 1.25;
+    font-weight: 700;
 }
 
-.cabecera-titulo h1 span {
-    display: inline-block;
-    color: #6e2c3e;
-}
-
-.sub-tarjetas-container {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+/* Columna adaptada para centrar la ilustración del koala */
+.columna-derecha-imagen {
     width: 100%;
-}
-
-.tarjeta-redondeada-cabecera {
-    background-color: rgba(110, 44, 62, 0.75) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    padding: 25px;
-    border-radius: 30px;
-    border: 1px solid rgba(110, 44, 62, 0.5);
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.tarjeta-redondeada-cabecera p {
-    color: #ffffff !important; /* Forzado a blanco puro final solicitado */
-    font-size: 1.05rem;
-    margin: 0;
-    line-height: 1.6;
-    font-weight: 400;
-    text-align: center;
-}
-
-.card-hero, .card-hero p, .hero-cards div, .hero-cards p {
-  color: #ffffff !important;
-}
-
-.columna-derecha-imagen {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    display: flex;
-    max-width: 100%;
+    margin-bottom: 35px;
+    box-sizing: border-box;
 }
 
 .imagen-sandra-koala-nueva {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(110, 44, 62, 0.15);
+    max-width: 100%;
+    max-height: 320px;
+    width: auto;
+    object-fit: contain; /* Garantiza que el dibujo no se recorte de forma fea */
+    display: block;
 }
 
+/* Contenedor de las dos tarjetas de texto inferiores */
+.sub-tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo unificado para tus dos tarjetas de inicio */
+.tarjeta-redondeada-cabecera {
+    background-color: var(--rose) !important; /* Rosa viejo corporativo */
+    padding: 20px 25px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(109, 75, 83, 0.05);
+}
+
+.tarjeta-redondeada-cabecera p {
+    color: var(--cream) !important; /* Letras crema de alto contraste unificadas */
+    font-family: var(--ff-display);
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: left;
+}
 /* ==========================================================================
-   5. SECCIÓN MIS VALORES (VERDE PASTEL SUAVE)
+   5. SECCIÓN MIS VALORES (GRANATE OSCURO Y LETRA CREMA UNIFICADO)
    ========================================================================== */
 #mis-valores { 
     background: var(--white); 
 }
 
 .seccion-valores-cabecera { 
-    text-align: center; 
-    margin-bottom: 3rem; 
+    text-align: left; /* Alineado a la izquierda según tu HTML definitivo */
+    margin-bottom: 40px; 
 }
 
 .valores-titulo { 
     font-family: var(--ff-display); 
-    font-size: 2.2rem; 
+    font-size: 2.6rem; 
     color: var(--bark); 
-    font-weight: 600; 
-    margin-bottom: 0.5rem; 
+    font-weight: 700; 
+    margin: 0;
+    line-height: 1.25;
 }
 
 .linea-decorativa { 
     width: 60px; 
     height: 3px; 
-    background-color: var(--rose); 
-    margin: 0 auto; 
+    background-color: var(--bark); 
+    margin: 15px 0 0 0; 
     border-radius: 2px; 
 }
 
+/* Cuadrícula de simetría forzada: 2 arriba y 2 abajo en pantallas grandes */
 .values-list { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 1.25rem; 
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    gap: 30px; 
     width: 100%; 
+    box-sizing: border-box;
 }
 
 .value-item, #mis-valores .card-valor, #mis-valores .card, .section-valores .card-valor, .valores-grid .card, .card-valor { 
-    background-color: #eaf3ed !important; /* Nuevo color verde pastel suave solicitado */
-    border: 1px solid #d8e6db !important; /* Borde a juego */
-    border-radius: var(--radius-md); 
-    padding: 2rem 1.5rem; 
-    box-shadow: var(--shadow); 
+    background-color: var(--bg-dark-resource) !important; /* Forzado a tu granate oficial */
+    border: none !important;
+    border-radius: 20px; 
+    padding: 35px; 
+    box-shadow: 0 6px 18px rgba(109, 75, 83, 0.08); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     display: flex; 
     flex-direction: column; 
-    align-items: flex-start; 
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
 .value-item:hover { 
     transform: translateY(-4px); 
-    box-shadow: 0 12px 36px rgba(92,61,61,.12); 
+    box-shadow: 0 12px 36px rgba(109, 75, 83, 0.15); 
 }
 
 .value-icon { 
-    font-size: 2rem; 
-    margin-bottom: 1rem; 
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
 }
 
 .value-name { 
-    font-family: var(--ff-display); 
-    font-size: 1.25rem; 
-    font-weight: 600; 
-    color: var(--bark); 
-    margin-bottom: .5rem; 
+    font-family: var(--ff-display) !important; 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--text-light-resource) !important; /* Letras crema claro */
+    margin-top: 0;
+    margin-bottom: 12px; 
 }
 
 .value-desc { 
-    font-size: .9rem; 
-    color: var(--muted); 
+    font-size: 1.1rem; 
+    color: var(--text-light-resource) !important; 
     line-height: 1.6; 
+    margin: 0;
+    opacity: 0.95;
 }
 
 /* ==========================================================================
@@ -284,7 +289,7 @@ img, video, iframe {
    ========================================================================== */
 .como-trabajo-contenedor-seccion { 
     background: var(--cream);
-    padding: 100px 0 60px 0;
+    padding: 60px 0;
     width: 100%;
 }
 
@@ -297,7 +302,7 @@ img, video, iframe {
 .como-trabajo-cabecera h2 {
     font-family: var(--ff-display) !important;
     font-size: clamp(2.4rem, 4vw, 3.2rem) !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     color: var(--bark);
     margin: 0;
     padding-bottom: 15px;
@@ -313,7 +318,7 @@ img, video, iframe {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #d97d64;
+    background-color: var(--rose);
     border-radius: 2px;
 }
 
@@ -321,22 +326,23 @@ img, video, iframe {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
-    align-items: stretch; /* Alturas idénticas en ordenador */
+    align-items: stretch; /* Mantiene alturas idénticas de tarjetas en PC */
     gap: 30px; 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     flex-wrap: wrap; 
+    box-sizing: border-box;
 }
 
 .tarjeta-giratoria, .card-trabajo-estatica { 
-    flex: 1 1 340px !important; 
+    flex: 1 1 320px !important; 
     max-width: 100%;
-    background-color: var(--blush); 
-    border-radius: var(--radius-md); 
+    background-color: var(--blush); /* Fondo rosa suave */
+    border-radius: 20px; 
     box-shadow: var(--shadow);
-    padding: 30px 24px; 
+    padding: 35px 24px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -348,6 +354,7 @@ img, video, iframe {
     flex-direction: column; 
     height: 100%; 
     gap: 20px;
+    justify-content: space-between;
 }
 
 .bloque-texto-frontal { 
@@ -358,18 +365,15 @@ img, video, iframe {
     font-family: var(--ff-display); 
     color: var(--bark); 
     font-size: 1.6rem; 
-    font-weight: 600; 
-    letter-spacing: 0.5px; 
+    font-weight: 700; 
     margin: 0 0 10px 0; 
-    text-align: center; 
 }
 
 .subtitulo-frontal { 
     color: var(--text); 
-    font-size: 0.95rem; 
+    font-size: 1rem; 
     line-height: 1.5; 
     margin: 0; 
-    text-align: center; 
     opacity: 0.9;
 }
 
@@ -384,10 +388,10 @@ img, video, iframe {
 .imagen-frontal-tarjeta { 
     width: 100%; 
     height: auto; 
-    max-height: 250px; 
+    max-height: 220px; 
     object-fit: contain; 
+    display: block;
 }
-
 /* ==========================================================================
    7. TARJETAS DE RECURSOS AMPLIAS (FONDOS OSCUROS DE ALTO CONTRASTE)
    ========================================================================== */
@@ -412,127 +416,146 @@ img, video, iframe {
 .tarjeta-recurso-amplia .contenedor-imagen-amplia img {
     width: 100%;
     height: 100%;
-object-fit: cover;
-border-radius: 16px;
+    object-fit: cover;
+    border-radius: 16px;
 }
+
 .bloque-texto-difuminado {
-flex: 1;
-background-color: var(--bg-dark-resource) !important; /* Fondo rosa granate muy oscuro solicitado */
-border-radius: 16px;
-padding: 30px 40px;
-box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
-display: flex;
-flex-direction: column;
-justify-content: center;
+    flex: 1;
+    background-color: var(--bg-dark-resource) !important; /* Fondo granate oscuro */
+    border-radius: 16px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .titulo-recurso-individual {
-color: var(--text-light-resource) !important; /* Letras crema muy claras solicitadas */
-font-size: 2.2rem;
-font-weight: bold;
-margin-bottom: 20px;
-text-align: left;
+    color: var(--text-light-resource) !important; /* Letras crema claras */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
 }
+
 .bloque-texto-difuminado p {
-color: var(--text-muted-resource) !important;
-font-size: 1.15rem;
-line-height: 1.7;
-margin: 0;
-text-align: left;
+    color: var(--text-muted-resource) !important;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
 }
+
 .imagen-cabecera-ramas {
-width: 140px;
-height: auto;
-object-fit: contain;
-vertical-align: middle;
-margin-left: 15px;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-left: 15px;
 }
+
 /* ==========================================================================
-8. ESTILOS GENERALES DE RECURSOS CUATRO BLOQUES (INFOGRAFÍAS PRINCIPALES)
-========================================================================== */
+   8. ESTILOS GENERALES DE RECURSOS CUATRO BLOQUES (INFOGRAFÍAS PRINCIPALES)
+   ========================================================================== */
 .contenedor-articulos {
-max-width: 900px;
-margin: 0 auto;
-padding: 20px;
-box-sizing: border-box;
-background: transparent !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: transparent !important;
 }
+
 .recurso-bloque {
-margin-bottom: 60px;
-display: flex;
-flex-direction: column;
-gap: 25px;
-background: none !important;
-border: none !important;
-padding: 0 !important;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
 }
+
 .titulo-recurso {
-color: #6d4b53;
-font-family: Georgia, serif;
-font-size: 2.2rem;
-font-weight: 700;
-text-align: center;
-margin: 0;
+    color: var(--bark);
+    font-family: var(--ff-display);
+    激font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
 }
+
+/* Forzamos altura fija simétrica en pantallas de PC para unificar tamaños */
 .tarjeta-recurso {
-display: flex;
-gap: 30px;
-align-items: stretch;
-width: 100%;
+    display: flex !important;
+    gap: 0 !important; /* Mantiene la unión perfecta entre texto e imagen */
+    background-color: var(--bg-dark-resource) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    height: 380px !important; /* Altura idéntica unificada solicitada */
+    width: 100%;
+    box-sizing: border-box !important;
 }
+
 .contenedor-imagen {
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
+    flex: 1 !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
+
 .contenedor-imagen img {
-width: 100%;
-max-width: 100%;
-height: auto;
-object-fit: cover;
-border-radius: 20px;
-display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Evita que las imágenes se deformen al estirarse */
+    display: block !important;
 }
+
 .tarjeta-texto {
-flex: 1;
-background-color: var(--bg-dark-resource) !important; /* Fondo rosa granate muy oscuro unificado /
-color: var(--text-light-resource) !important; / Letras crema muy claras */
-padding: 30px;
-border-radius: 20px;
-box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
-display: flex;
-flex-direction: column;
-justify-content: center;
+    flex: 1 !important;
+    background-color: var(--bg-dark-resource) !important; /* Color granate corporativo */
+    color: var(--text-light-resource) !important;        /* Letras crema unificadas */
+    padding: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important; /* Añade soporte por si un texto es muy largo */
 }
+
 .subtitulo-recurso {
-font-size: 1.25rem;
-font-weight: 700;
-margin-top: 0;
-margin-bottom: 10px;
-color: var(--text-light-resource) !important;
-font-family: Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-light-resource) !important;
+    font-family: var(--ff-display);
 }
+
 .descripcion-recurso {
-margin-bottom: 20px;
-line-height: 1.6;
-color: var(--text-muted-resource) !important;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--text-muted-resource) !important;
 }
+
 .lista-recurso {
-list-style: none;
-padding-left: 0;
-margin: 0;
-display: flex;
-flex-direction: column;
-gap: 12px;
-line-height: 1.5;
-color: var(--text-light-resource) !important;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.5;
+    color: var(--text-light-resource) !important;
 }
+
 .lista-recurso strong {
-color: #ffffff !important; /* Blanco puro para remarcar términos clave */
+    color: var(--white) !important; /* Blanco puro para destacar términos clave */
 }
 /* ==========================================================================
-9. FUSIÓN INTEGRAL DE TODAS LAS IMÁGENES DE LA WEB (MULTIPLY)
-========================================================================== /
+   9. FUSIÓN INTEGRAL DE TODAS LAS IMÁGENES DE LA WEB (MULTIPLY)
+   ========================================================================== */
 .card-trabajo img,
 .trabajo-grid img,
 #como-trabajo img,
@@ -543,46 +566,54 @@ color: #ffffff !important; /* Blanco puro para remarcar términos clave */
 .bloque-izquierdo-visual img,
 .tarjeta-horizontal img,
 .contenedor-imagen-amplia img,
-img[src="abrazo-koala.png"] {
-mix-blend-mode: multiply !important; /* Elimina fondos blancos fantasmas */
-background-color: transparent !important;
-border-radius: 16px !important;
-box-shadow: none !important;
-border: none !important;
+img[src*="koala"] {
+    mix-blend-mode: multiply !important; /* Elimina fondos blancos fantasmas */
+    background-color: transparent !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+    border: none !important;
 }
+
 /* ==========================================================================
-10. PIE DE PÁGINA CORPORATIVO
-========================================================================== */
+   10. PIE DE PÁGINA CORPORATIVO
+   ========================================================================== */
 .pie-contacto-final {
-width: 100%;
-background-color: #6e2c3e;
-padding: 25px 0;
-margin-top: 60px;
+    width: 100% !important;
+    background-color: var(--bark) !important; /* Granate oficial corporativo */
+    padding: 15px 0 !important;
+    margin-top: 60px !important; /* Margen fijo unificado para despegarlo */
+    box-sizing: border-box !important;
 }
+
 .pie-contenedor {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-box-sizing: border-box;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
 }
+
 .contacto-final-lista {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 3rem;
-list-style: none;
-margin: 0;
-padding: 0;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
+
 footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, .contacto-final-lista a, .contacto-final-lista span {
-color: #fbebe8 !important; /* Tono rosa crema claro y legible para fondos granates */
-text-decoration: none;
-font-size: 0.95rem;
-font-weight: 500;
+    color: var(--cream) !important; /* Tono crema claro oficial y legible */
+    text-decoration: none !important;
+    font-family: var(--ff-display) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
 }
+
 /* ==========================================================================
-11. CONSULTA DE MEDIOS (MEDIA QUERY DEFINITIVA RESPONSIVA < 768PX)
-========================================================================== */
+   11. CONSULTA DE MEDIOS (MEDIA QUERY DEFINITIVA RESPONSIVA < 768PX)
+   ========================================================================== */
 @media screen and (max-width: 768px) {
     /* Prevenir desbordamiento horizontal global en teléfonos */
     html, body {
@@ -590,24 +621,35 @@ font-weight: 500;
         max-width: 100% !important;
         overflow-x: hidden !important;
     }
+    
     body, container, main {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+    
     /* Convierte grids antiguos a una sola columna */
     .row, .flex-container, .grid-container {
         flex-direction: column !important;
         grid-template-columns: 1fr !important;
     }
-    /* Fuentes adaptativas */
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    p { font-size: 1rem; line-height: 1.5; }
-    button, .btn, a.button {
-        width: 100%;
-        padding: 12px 20px;
-        margin-bottom: 10px;
+    
+    /* Fuentes adaptativas corregidas para evitar cortes de palabras largos */
+    h1 { 
+        font-size: 1.65rem !important; 
+        word-wrap: break-word !important;
+        text-align: center !important;
+        width: 100% !important;
     }
+    
+    h2 { font-size: 1.5rem !important; }
+    p { font-size: 1rem !important; line-height: 1.5 !important; }
+    
+    button, .btn, a.button {
+        width: 100% !important;
+        padding: 12px 20px !important;
+        margin-bottom: 10px !important;
+    }
+    
     /* --- MENÚ DE NAVEGACIÓN MÓVIL COMPACTO --- */ 
     nav.nav-principal {
         display: flex !important;
@@ -615,10 +657,11 @@ font-weight: 500;
         align-items: center !important;
         text-align: center !important;
         padding: 10px 5px !important;
-        position: relative !important; /* Cambiado a relative para que empuje el contenido de forma limpia */
+        position: relative !important; /* Cambiado a relative para fluir en vertical sin pisar nada */
         width: 100% !important;
         height: auto !important;
     }
+    
     nav.nav-principal .nav-logo {
         margin-bottom: 12px !important;
         font-size: 1.1rem !important;
@@ -626,76 +669,118 @@ font-weight: 500;
         flex-direction: column !important;
         align-items: center !important;
     }
+    
     nav.nav-principal .nav-logo .colegiada {
         font-size: 0.85em !important;
         margin-top: 3px;
     }
+    
     nav.nav-principal ul.nav-links {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: wrap !important; /* Permite botones en varias filas compactas */
+        flex-wrap: wrap !important; /* Botones ordenados en filas adaptativas */
         justify-content: center !important;
         gap: 8px !important;
         width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
     }
+    
     nav.nav-principal ul.nav-links li {
         display: inline-block !important;
         margin: 0 !important;
         padding: 0 !important;
     }
+    
     nav.nav-principal ul.nav-links li a {
         padding: 6px 12px !important;
         font-size: 0.8rem !important;
     }
-    /* --- HERO MÓVIL --- */
+
+    /* --- AJUSTE DE INFOGRAFÍAS Y RECURSOS EN MÓVIL --- */
     .hero-seccion {
-        padding-top: 20px !important; /* Evita huecos gigantes arriba en el móvil */
+        padding-top: 20px !important;
     }
+    
     .hero-dos-columnas {
         display: flex !important;
-        flex-direction: column-reverse !important; /* Cambiado a column-reverse para que el koala suba sobre el título */
+        flex-direction: column-reverse !important; /* El koala sube encima del título */
         gap: 20px !important;
     }
+    
+    .tarjeta-recurso {
+        height: auto !important; /* Elimina la altura fija de 380px en el móvil */
+        display: flex !important;
+        flex-direction: column !important; /* Apila texto arriba e imagen abajo */
+    }
+    
+    .tarjeta-texto {
+        height: auto !important;
+        overflow-y: visible !important;
+        padding: 20px !important;
+    }
+    
+    .contenedor-imagen {
+        height: auto !important;
+        max-height: 300px !important;
+        width: 100% !important;
+    }
+    
+    .contenedor-imagen img {
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+    }
+    /* --- HERO MÓVIL --- */
     .columna-derecha-imagen {
         display: flex !important;
         justify-content: center !important;
     }
+    
     .imagen-sandra-koala-nueva {
-        max-width: 260px !important; /* Un poco más pequeño para que luzca perfecto en pantallas estrechas */
+        max-width: 260px !important; /* Escala perfecta para pantallas de smartphones */
         height: auto !important;
         margin: 0 auto !important;
     }
+    
     h1, .hero h1, .titulo-principal {
         text-align: center !important;
         width: 100% !important;
     }
+    
     /* --- CONTROL ESTRICTO DE INFOGRAFÍAS (TÍTULO -> IMAGEN -> TEXTO) --- */
-    .tarjeta-recurso {
-        flex-direction: column !important;
-        gap: 20px !important;
-    }
-    /* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba */
+    /* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba del texto de forma simétrica */
     .recurso-bloque:nth-child(2) .tarjeta-recurso,
     .recurso-bloque:nth-child(3) .tarjeta-recurso,
     .recurso-bloque:nth-child(4) .tarjeta-recurso {
         flex-direction: column-reverse !important;
     }
-    .titulo-recurso { font-size: 1.8rem !important; }
-    .tarjeta-texto { padding: 20px !important; }
+    
+    .titulo-recurso { 
+        font-size: 1.8rem !important; 
+    }
+    
     /* --- SECCIÓN RECURSOS AMPLIAS MÓVIL --- */
     .tarjeta-recurso-amplia {
-        flex-direction: column !important; /* Apila imagen arriba y tarjeta abajo */
+        flex-direction: column !important; /* Apila imagen arriba y tarjeta abajo en teléfonos */
         gap: 20px !important;
     }
+    
     .tarjeta-recurso-amplia .contenedor-imagen-amplia,
     .bloque-texto-difuminado {
         width: 100% !important;
         flex: none !important;
     }
-    .bloque-texto-difuminado { padding: 25px 20px !important; }
-    .titulo-recurso-individual { font-size: 1.6rem !important; text-align: center !important; }
+    
+    .bloque-texto-difuminado { 
+        padding: 25px 20px !important; 
+    }
+    
+    .titulo-recurso-individual { 
+        font-size: 1.6rem !important; 
+        text-align: center !important; 
+    }
+    
     /* --- OTRAS SECCIONES (VALORES, CONTACTO SIMPLE Y PIE) --- */
     .valores-container, .seccion-valores, .valor-card {
         width: 100% !important;
@@ -705,7 +790,12 @@ font-weight: 500;
         padding-right: 15px !important;
         overflow-x: hidden !important;
     }
-    .valores-row, .flex-valores { flex-direction: column !important; width: 100% !important; }
+    
+    .valores-row, .flex-valores { 
+        flex-direction: column !important; 
+        width: 100% !important; 
+    }
+    
     .cards-grid, .valores-grid, .trabajo-grid, .lista-tarjetas-horizontales {
         display: flex !important;
         flex-direction: column !important;
@@ -715,7 +805,7 @@ font-weight: 500;
         padding: 0 !important;
     }
     
-    /* Mantenemos el pie de página horizontal en móviles si hay espacio, o fluido */
+    /* Mantenemos el pie de página fluido en móviles para que quepa en el ancho */
     .contacto-final-lista {
         display: flex !important;
         flex-direction: row !important;
@@ -734,14 +824,26 @@ font-weight: 500;
         width: 100% !important;
         overflow: hidden !important;
     }
+    
     .bloque-izquierdo-visual, .bloque-derecho-texto {
         width: 100% !important;
         min-width: 0 !important;
         max-width: 100% !important;
         padding: 25px 15px !important;
     }
-    .bloque-izquierdo-visual img { max-width: 220px !important; width: 100% !important; margin: 0 auto !important; }
-    .tarjeta-horizontal h2, .tarjeta-horizontal h3 { word-break: break-word; hyphens: auto; font-size: 1.4rem !important; }
+    
+    .bloque-izquierdo-visual img { 
+        max-width: 220px !important; 
+        width: 100% !important; 
+        margin: 0 auto !important; 
+    }
+    
+    .tarjeta-horizontal h2, .tarjeta-horizontal h3 { 
+        word-break: break-word; 
+        hyphens: auto; 
+        font-size: 1.4rem !important; 
+    }
+    
     .tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
         font-size: 1.8rem !important;
         word-wrap: break-word !important;
@@ -751,10 +853,39 @@ font-weight: 500;
         width: 100% !important;
         text-align: center !important;
     }
-    .tarjeta-contacto, .contacto-card { padding: 20px 15px !important; max-width: 100% !important; }
-    /* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos */
+    
+    .tarjeta-contacto, .contacto-card { 
+        padding: 20px 15px !important; 
+        max-width: 100% !important; 
+    }
+    
+    /* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos visuales */
     .bloque-izquierdo-visual img, .tarjeta-horizontal img {
         -webkit-mask-image: none !important;
         mask-image: none !important;
     }
-}
+} /* Fin de la consulta de medios móvil */
+    /* --- ARREGLO DE INFOGRAFÍAS EN MÓVIL (QUITA LA ALTURA FIJA) --- */
+    .tarjeta-recurso {
+        height: auto !important; /* Elimina los 380px para que la caja crezca con el texto */
+        display: flex !important;
+        flex-direction: column !important; /* Pone el texto arriba y la imagen abajo en una sola fila */
+    }
+
+    .tarjeta-texto {
+        height: auto !important;
+        overflow-y: visible !important; /* Quita las barras de scroll internas */
+        padding: 20px !important; /* Reduce un poco el espacio interno para que quepa mejor */
+    }
+
+    .contenedor-imagen {
+        height: auto !important;
+        max-height: 300px !important; /* Controla que el dibujo del koala no se haga gigante */
+        width: 100% !important;
+    }
+
+    .contenedor-imagen img {
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important; /* Evita que el koala se estire o se deforme */
+    }
