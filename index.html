@@ -3,64 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psikoala - En mantenimiento</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #FDF8F5; /* El fondo crema suave de tu paleta */
-            color: #4A2E35; /* Tu color granate corporativo */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-            text-align: center;
-        }
-        .contenedor-mantenimiento {
-            max-width: 500px;
-            padding: 40px 30px;
-            background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(74, 46, 53, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .icono-koala {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-            opacity: 0.85;
-        }
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        p {
-            color: #666666;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-    </style>
+    <title>Sandra Carrera - Psicóloga Koalificada</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="contenedor-mantenimiento">
-        <!-- Reutilizamos el logotipo del koala que tienes subido en tu carpeta -->
-        <img src="img/psicokoala.png" alt="Psikoala Logo" class="icono-koala">
+ <div>
+<div>
+    
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
+    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
         
-        <h1>Trabajando para mejorar la web</h1>
+        <!-- Nombre/Logo a la izquierda -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
+            <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
+        </a>
         
-        <p>Estamos haciendo unos pequeños ajustes en el diseño para ofrecerte una mejor experiencia. ¡Volvemos muy pronto!</p>
+        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
+        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN VERTICAL -->
+<section class="hero-seccion" style="padding-top: 30px; margin-bottom: 60px; max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; box-sizing: border-box;">
+    
+    <!-- 1. TÍTULO PRINCIPAL (Ocupa todo el ancho) -->
+    <div class="cabecera-titulo" style="width: 100%; box-sizing: border-box; margin-bottom: 30px; text-align: center;">
+        <h1 style="margin: 0; color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25;">
+            Espacio de psicología educativa, infantil y acompañamiento familiar
+        </h1>
     </div>
+
+    <!-- 2. IMAGEN DEL KOALA (Ubicada al centro, entre el título y las tarjetas) -->
+    <div class="columna-derecha-imagen" style="width: 100%; display: flex; align-items: center; justify-content: center; box-sizing: border-box; margin-bottom: 35px;">
+        <img src="img/psico-koala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 320px; width: auto; object-fit: contain; display: block;">
+    </div>
+
+    <!-- 3. CONTENEDOR DE LAS TARJETAS (Alineadas abajo de la imagen) -->
+    <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 15px; width: 100%; box-sizing: border-box;">
+        
+        <!-- Tarjeta 1 -->
+        <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box; width: 100%;">
+            Creo en un acompañamiento cercano, respetuoso y personalizado.
+        </div>
+        
+        <!-- Tarjeta 2 -->
+        <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box; width: 100%;">
+            Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BLOQUE DE SEPARACIÓN ANTES DEL PIE DE PÁGINA -->
+<div style="clear: both; display: block; width: 100%; height: 1px; margin-top: 60px;"></div>
+
+<!-- PIE DE PÁGINA FINAL HORIZONTAL EN UNA SOLA LÍNEA -->
+<footer class="pie-contacto-final" style="background-color: #6D4B53 !important; padding: 15px 0 !important; margin-top: 60px !important; width: 100% !important; box-sizing: border-box !important;">
+    <div class="pie-contenedor" style="max-width: 1100px !important; margin: 0 auto !important; padding: 0 20px !important; box-sizing: border-box !important;">
+        
+        <ul class="contacto-final-lista" style="list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 40px !important;">
+            
+            <!-- Email -->
+            <li style="display: inline-block !important; margin: 0 !important;">
+                <a href="mailto:psikoala@psikoala.com" style="text-decoration: none !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important;">
+                    📩 psikoala@psikoala.com
+                </a>
+            </li>
+            
+            <!-- Ubicación -->
+            <li style="display: inline-block !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important; margin: 0 !important;">
+                📍 Santiago de Compostela
+            </li>
+            
+            <!-- Instagram (Enlace corregido a tu perfil) -->
+            <li style="display: inline-block !important; margin: 0 !important;">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important; font-weight: 600 !important;">
+                    📸 @psico.koalificada
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
