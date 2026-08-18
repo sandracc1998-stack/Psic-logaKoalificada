@@ -88,21 +88,27 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
-    <nav class="nav-principal">
-        <a href="index.html" class="nav-logo">
+<div>
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
+    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
+        
+        <!-- Nombre/Logo a la izquierda -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
             <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
         </a>
-        <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
-            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
-            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
-            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
-            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Recursos koalificados</a></li>
-            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Conóceme</a></li>
-            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Contáctame</a></li>
+        
+        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
+        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
         </ul>
     </nav>
+</div>
+
 
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA (RECURSOS KOALIFICADOS) -->
@@ -176,116 +182,111 @@
 
     </div>
 
-    <!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
-    <div class="recurso-bloque">
-        
-        <!-- 1. TÍTULO FUERA Y CENTRADO -->
-        <h2 class="titulo-recurso">
-            El rincón de la calma en casa
-        </h2>
-        
-        <!-- CONTENEDOR FLEX -->
-        <div class="tarjeta-recurso">
-            
-            <!-- TARJETA CON EL TEXTO -->
-            <div class="tarjeta-texto">
-                <p class="subtitulo-recurso">
-                    Un refugio seguro para la corregulación emocional:
-                </p>
-                <p class="descripcion-recurso">
-                    Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.
-                </p>
-                <ul class="lista-recurso">
-                    <li>📍 <strong>Ubicación:</strong> Un lugar tranquilo y libre de sobrecarga visual.</li>
-                    <li>🧸 <strong>Bajo coste:</strong> Cojines, mantas y botellas sensoriales caseras.</li>
-                    <li>❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
-                </ul>
-            </div>
-
-            <!-- IMAGEN -->
-            <div class="contenedor-imagen">
-                <img src="img/rincon-calma.png" alt="Infografía Rincon Calma">
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE -->
-<div class="recurso-bloque">
+<!-- RECURSO 2: EL RINCÓN DE LA CALMA -->
+<div class="recurso-bloque" style="margin-bottom: 50px;">
     
     <!-- 1. TÍTULO FUERA Y CENTRADO -->
-    <h2 class="titulo-recurso">
-        El juego como primer lenguaje
+    <h2 class="titulo-recurso" style="text-align: center; margin-bottom: 20px;">
+        El rincón de la calma en casa
     </h2>
     
-    <!-- CONTENEDOR FLEX -->
-   <div class="tarjeta-recurso">
+    <!-- CONTENEDOR FLEX CON ALTURA FIJA UNIFICADA -->
+    <div class="tarjeta-recurso" style="display: flex !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; height: 380px !important; box-sizing: border-box !important;">
         
-        <!-- 2. TARJETA CON EL TEXTO -->
-        <div class="tarjeta-texto">
-            <p class="subtitulo-recurso">
-                Estrategias naturales de comunicación:
+        <!-- TARJETA CON EL TEXTO -->
+        <div class="tarjeta-texto" style="flex: 1 !important; padding: 30px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important; overflow-y: auto !important;">
+            <p class="subtitulo-recurso" style="margin-top: 0;">
+                Un refugio seguro para la corregulación emocional:
             </p>
             <p class="descripcion-recurso">
-                Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día.
-                Los juegos cotidianos son una oportunidad perfecta para comunicarse. Jugar es compartir, conectar y comprender.
+                Espacio físico diseñado dentro del hogar para ayudar a los niños a volver a su estado de calma en momentos de desregulación.
             </p>
-            <ul class="lista-recurso">
-                <li>👀 <strong>Contacto visual:</strong> A través del juego, esperar su mirada, sonreír y celebrar esos momentos de conexión.</li>
-                <li>💡 <strong>Ideas de bajo coste:</strong> Cajas de cartón, luces cálidas, botellas sensoriales o alfombras de goma.</li>
-                <li>🔄 <strong>Turnos:</strong> Aprender a esperar y compartir. Se enseña la paciencia, atención y respeto por el otro.</li>
-                <li>🫧 <strong>Juegos cotidianos que comunican:</strong> Burbujas, escondite, pasar la pelota o juego simbólico.</li>
+            <ul class="lista-recurso" style="margin-bottom: 0;">
+                <li>📍 <strong>Ubicación:</strong> Un lugar tranquilo y libre de sobrecarga visual.</li>
+                <li>🧸 <strong>Bajo coste:</strong> Cojines, mantas y botellas sensoriales caseras.</li>
+                <li>❤️ <strong>Enfoque positivo:</strong> Un espacio de cuidado respetuoso, nunca de castigo.</li>
             </ul>
         </div>
 
-        <!-- 3. IMAGEN DIRECTA -->
-        <div class="contenedor-imagen">
-            <img src="img/juego-lenguaje.png" alt="Infografía Juego Primer Lenguaje">
+        <!-- IMAGEN ADAPTADA -->
+        <div class="contenedor-imagen" style="flex: 1 !important; height: 100% !important; display: flex !important;">
+            <img src="img/rincon-calma.png" alt="Infografía Rincon Calma" style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;">
         </div>
 
     </div>
 
 </div>
 
-<!-- RECURSO 4: HITOS DEL DESARROLLO -->
-<div class="recurso-bloque">
+<!-- RECURSO 3: EL JUEGO COMO PRIMER LENGUAJE (CORREGIDO) -->
+<div class="recurso-bloque" style="margin-bottom: 50px;">
     
     <!-- 1. TÍTULO FUERA Y CENTRADO -->
-    <h2 class="titulo-recurso">
+    <h2 class="titulo-recurso" style="text-align: center; margin-bottom: 20px;">
+        El juego como primer lenguaje
+    </h2>
+    
+    <!-- CONTENEDOR FLEX CON ALTURA FIJA UNIFICADA -->
+    <div class="tarjeta-recurso" style="display: flex !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; height: 380px !important; box-sizing: border-box !important;">
+        
+        <!-- 2. TARJETA CON EL TEXTO -->
+        <div class="tarjeta-texto" style="flex: 1 !important; padding: 30px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important; overflow-y: auto !important;">
+            <p class="subtitulo-recurso" style="margin-top: 0;">
+                Estrategias naturales de comunicación:
+            </p>
+            <p class="descripcion-recurso" style="font-size: 0.95rem !important; line-height: 1.4 !important;">
+                Herramientas clave para potenciar el habla y la interacción a través de las dinámicas lúdicas del día a día. Jugar es compartir, conectar y comprender.
+            </p>
+            <ul class="lista-recurso" style="margin-bottom: 0; font-size: 0.95rem !important;">
+                <li>👀 <strong>Contacto visual:</strong> Esperar su mirada, sonreír y celebrar la conexión.</li>
+                <li>💡 <strong>Ideas de bajo coste:</strong> Cajas de cartón, luces cálidas o alfombras.</li>
+                <li>🔄 <strong>Turnos:</strong> Aprender a esperar. Se enseña paciencia y atención.</li>
+                <li>🫧 <strong>Juegos cotidianos:</strong> Burbujas, escondite o juego simbólico.</li>
+            </ul>
+        </div>
+
+        <!-- 3. IMAGEN ADAPTADA -->
+        <div class="contenedor-imagen" style="flex: 1 !important; height: 100% !important; display: flex !important;">
+            <img src="img/juego-lenguaje.png" alt="Infografía Juego Primer Lenguaje" style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;">
+        </div>
+
+    </div>
+
+</div>
+
+<!-- RECURSO 4: HITOS DEL DESARROLLO (CORREGIDO) -->
+<div class="recurso-bloque" style="margin-bottom: 50px;">
+    
+    <!-- 1. TÍTULO FUERA Y CENTRADO -->
+    <h2 class="titulo-recurso" style="text-align: center; margin-bottom: 20px;">
         Hitos del desarrollo infantil
     </h2>
     
-    <!-- CONTENEDOR FLEX -->
-   <div class="tarjeta-recurso">
+    <!-- CONTENEDOR FLEX CON ALTURA FIJA UNIFICADA -->
+    <div class="tarjeta-recurso" style="display: flex !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; height: 380px !important; box-sizing: border-box !important;">
         
         <!-- 2. TARJETA CON EL TEXTO -->
-        <div class="tarjeta-texto">
-            <p class="subtitulo-recurso">
+        <div class="tarjeta-texto" style="flex: 1 !important; padding: 30px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important; overflow-y: auto !important;">
+            <p class="subtitulo-recurso" style="margin-top: 0;">
                 Guía de orientación evolutiva:
             </p>
             <p class="descripcion-recurso">
                 Indicadores clave para comprender y realizar un seguimiento respetuoso de la evolución motriz, social y cognitiva de los más pequeños.
             </p>
-            <ul class="lista-recurso">
+            <ul class="lista-recurso" style="margin-bottom: 0;">
                 <li>🏃‍♂️ <strong>Área motora:</strong> Seguimiento del equilibrio, coordinación y movimientos finos.</li>
                 <li>💬 <strong>Área comunicativa:</strong> Evolución de la comprensión y la expresión verbal.</li>
                 <li>🤝 <strong>Área social:</strong> Respuestas emocionales, juego compartido e interacciones.</li>
             </ul>
         </div>
 
-        <!-- 3. IMAGEN DIRECTA -->
-        <div class="contenedor-imagen">
-            <img src="img/hitos-desarrollo.png" alt="Infografía Hitos del Desarrollo">
+        <!-- 3. IMAGEN ADAPTADA -->
+        <div class="contenedor-imagen" style="flex: 1 !important; height: 100% !important; display: flex !important;">
+            <img src="img/hitos-desarrollo.png" alt="Infografía Hitos del Desarrollo" style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;">
         </div>
 
     </div>
 
 </div>
-
-    </div>
 
 </div>
 
