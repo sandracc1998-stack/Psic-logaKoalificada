@@ -110,22 +110,27 @@
 </head>
 <body>
 
-
-    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
-    <nav class="nav-principal">
-        <a href="index.html" class="nav-logo">
+<div>
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
+    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
+        
+        <!-- Nombre/Logo a la izquierda -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
             <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
         </a>
-        <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
-            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
-            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
-            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
-            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Recursos koalificados</a></li>
-            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Conóceme</a></li>
-            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Contáctame</a></li>
+        
+        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
+        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
         </ul>
     </nav>
+</div>
+
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA (RAMAS TERAPÉUTICAS) -->
 <!-- El padding-top de 130px evita que el menú fijo superior corte el contenido -->
@@ -210,35 +215,54 @@
             <li style="margin-bottom: 0 !important;">🌿 <strong>Acompañamiento en directo:</strong> Te guío y apoyo sobre la marcha mientras interactúas con tus hij@s.</li>
         </ul>
     </div>
-    
 </div>
 
+<!-- Tarjeta 3: EduKoala (CORREGIDA EN TAMAÑO Y ESTRUCTURA) -->
+<div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
+    
+    <!-- Mini-columna izquierda identificativa -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; background-color: #fff5f6 !important; padding: 35px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
+        <h3 style="color: #4A2E35 !important; font-family: Georgia, serif !important; font-size: 2.2rem !important; margin: 0 0 14px 0 !important; font-weight: 700 !important;">EduKoala</h3>
+        <p style="color: #8a636c !important; font-size: 1.15rem !important; margin: 0 0 25px 0 !important; font-family: sans-serif !important; font-weight: 500 !important;">Apoyo psicoeducativo en necesidades especiales</p>
         
-        <!-- Tarjeta 3: EduKoala -->
-        <div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
-            
-            <!-- Mini-columna izquierda identificativa -->
-            <div style="flex: 1 1 300px !important; max-width: 100% !important; background-color: #fff5f6 !important; padding: 35px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
-                <h3 style="color: #4A2E35 !important; font-family: Georgia, serif !important; font-size: 2.2rem !important; margin: 0 0 14px 0 !important; font-weight: 700 !important;">EduKoala</h3>
-                <p style="color: #8a636c !important; font-size: 1.15rem !important; margin: 0 0 25px 0 !important; font-family: sans-serif !important; font-weight: 500 !important;">Apoyo psicoeducativo en necesidades especiales</p>
-                <!-- Ilustración con fondo integrado -->
-                <img src="img/edu-koala.png" alt="EduKoala" style="width: 300px !important; max-width: 100% !important; height: auto !important; display: block !important; mix-blend-mode: multiply !important;">
-            </div>
-            
-            <!-- Contenido derecho -->
-            <div style="flex: 1 1 300px !important; max-width: 100% !important; padding: 35px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important;">
-                <span style="color: #ffffff !important; text-transform: uppercase !important; font-weight: 800 !important; letter-spacing: 1px !important; font-size: 1rem !important; margin-bottom: 20px !important; font-family: sans-serif !important;">En espacios naturales</span>
-                <ul style="color: #ffffff !important; list-style: none !important; padding: 0 !important; margin: 0 !important; font-family: sans-serif !important; line-height: 1.8 !important; font-size: 1.2rem !important;">
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</li>
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</li>
-                    <li style="margin-bottom: 14px !important;">🌿 <strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real.</li>
-                    <li style="margin-bottom: 0 !important;">🌿 <strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</li>
-                </ul>
-            </div>
-        </div>
+        <!-- Contenedor con máscara de degradado idéntico al de la Tarjeta 2 -->
+        <div style="width: 300px !important; max-width: 100% !important; overflow: hidden !important; display: flex !important; justify-content: center !important; align-items: center !important;">
+            <img src="img/edu-koala.png" alt="EduKoala" style="width: 100% !important; height: auto !important; display: block !important; -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mix-blend-mode: multiply !important;">
         </div>
     </div>
-</main>
+    
+    <!-- Contenido derecho -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; padding: 35px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important;">
+        <span style="color: #ffffff !important; text-transform: uppercase !important; font-weight: 800 !important; letter-spacing: 1px !important; font-size: 1rem !important; margin-bottom: 20px !important; font-family: sans-serif !important;">En espacios naturales</span>
+        <ul style="color: #ffffff !important; list-style: none !important; padding: 0 !important; margin: 0 !important; font-family: sans-serif !important; line-height: 1.8 !important; font-size: 1.2rem !important;">
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Intervención in situ:</strong> Trabajamos juntos directamente en los espacios cotidianos donde surgen las dificultades.</li>
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Entrenamiento y guía en tiempo real:</strong> Te acompaño y te doy pautas de actuación en el mismo instante en que tu hij@ presenta una dificultad.</li>
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Generalización del aprendizaje:</strong> El niño aprende a regularse y a cumplir los límites en el mundo real.</li>
+            <li style="margin-bottom: 0 !important;">🌿 <strong>Análisis del entorno social:</strong> Evalúo cómo influyen los estímulos de la calle en el comportamiento de tus hij@s.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Tarjeta 4: Recursos Koalificados (CORREGIDA EN TAMAÑO Y SIMETRÍA) -->
+<div class="bloque-terapia-item" style="display: flex !important; flex-wrap: wrap !important; gap: 0 !important; background-color: #4A2E35 !important; border-radius: 20px !important; overflow: hidden !important; box-shadow: 0 8px 25px rgba(74, 46, 53, 0.15) !important; margin-bottom: 40px !important;">
+    
+    <!-- Mini-columna izquierda identificativa -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; background-color: #fff5f6 !important; padding: 35px 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;">
+        <h3 style="color: #4A2E35 !important; font-family: Georgia, serif !important; font-size: 2.2rem !important; margin: 0 0 14px 0 !important; font-weight: 700 !important;">Recursos Koalificados</h3>
+        <p style="color: #8a636c !important; font-size: 1.15rem !important; margin: 0 0 25px 0 !important; font-family: sans-serif !important; font-weight: 500 !important;">Materiales personalizados y dinámicas prácticas</p>
+        
+        <!-- Contenedor con máscara de degradado idéntico al de la Tarjeta 2 -->
+        <div style="width: 300px !important; max-width: 100% !important; overflow: hidden !important; display: flex !important; justify-content: center !important; align-items: center !important;">
+            <img src="img/recursos-koala.png" alt="Recursos Koalificados" style="width: 100% !important; height: auto !important; display: block !important; -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 88%) !important; mix-blend-mode: multiply !important;">
+        </div>
+    </div>
+    
+    <!-- Contenido derecho -->
+    <div style="flex: 1 1 300px !important; max-width: 100% !important; padding: 35px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-sizing: border-box !important;">
+        <span style="color: #ffffff !important; text-transform: uppercase !important; font-weight: 800 !important; letter-spacing: 1px !important; font-size: 1rem !important; margin-bottom: 20px !important; font-family: sans-serif !important;">Herramientas personalizadas</span>
+        <ul style="color: #ffffff !important; list-style: none !important; padding: 0 !important; margin: 0 !important; font-family: sans-serif !important; line-height: 1.8 !important; font-size: 1.2rem !important;">
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Agendas visuales a medida:</strong> Creación de herramientas estructuradas para anticipar rutinas y reducir la ansiedad.</li>
+            <li style="margin-bottom: 14px !important;">🌿 <strong>Adaptación de materiales escolares:</strong> Modificación de contenidos didácticos según los intereses y el estilo de aprendizaje del menor.</li>
 
 <!-- PIE DE PÁGINA FINAL HORIZONTAL EN UNA SOLA LÍNEA -->
 <footer class="pie-contacto-final" style="background-color: #6D4B53 !important; padding: 15px 0 !important; margin-top: 60px !important; width: 100% !important; box-sizing: border-box !important;">
@@ -268,7 +292,5 @@
         </ul>
     </div>
 </footer>
-
-
 </body>
 </html>
