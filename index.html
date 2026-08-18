@@ -15,7 +15,6 @@
             <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
         </a>
         <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
             <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
             <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
             <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
@@ -26,43 +25,73 @@
     </nav>
  </div>
 
-<!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA EN ESPACIOS -->
-<!-- Se cambia padding-top a 30px para eliminar el gran espacio en blanco de arriba -->
-<section class="hero-seccion" style="padding-top: 30px; margin-bottom: 20px; max-width: 1100px; margin-left: auto; margin-right: auto; box-sizing: border-box;">
-    <div class="hero-dos-columnas" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+<!-- ESTRUCTURA DE LA CABECERA (HERO) OPTIMIZADA -->
+<section class="hero-seccion" style="padding-top: 30px; margin-bottom: 60px; max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; box-sizing: border-box;">
+    
+    <!-- FILA SUPERIOR: TÍTULO A LA IZQUIERDA E IMAGEN A LA DERECHA -->
+    <div class="hero-dos-columnas" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin-bottom: 30px;">
         
-        <!-- COLUMNA IZQUIERDA: TEXTOS Y TARJETAS -->
+        <!-- COLUMNA IZQUIERDA: TITULAR -->
         <div class="cabecera-titulo" style="flex: 1; min-width: 320px; box-sizing: border-box;">
-            <h1 style="margin: 0 0 25px 0; color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25;">
+            <h1 style="margin: 0; color: #6d4b53; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25;">
                 Espacio de psicología educativa, infantil y acompañamiento familiar
             </h1>
         </div>
+
+        <!-- COLUMNA DERECHA: IMAGEN DEL KOALA -->
+        <div class="columna-derecha-imagen" style="flex: 0 0 350px; min-width: 300px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+            <img src="img/psico-koala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 280px; width: auto; object-fit: contain;">
+        </div>
+
     </div>
+
+    <!-- FILA INFERIOR: CONTENEDOR DE LAS TARJETAS (Ancho alineado perfectamente) -->
+    <div class="sub-tarjetas-container" style="display: flex; flex-direction: column; gap: 15px; width: 100%; box-sizing: border-box;">
+        
+        <!-- Tarjeta 1 -->
+        <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box; width: 100%;">
+            Creo en un acompañamiento cercano, respetuoso y personalizado.
+        </div>
+        
+        <!-- Tarjeta 2 -->
+        <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box; width: 100%;">
+            Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
+        </div>
+
+    </div>
+
 </section>
+
+<!-- BLOQUE DE SEPARACIÓN ANTES DEL PIE DE PÁGINA -->
+<div style="clear: both; display: block; width: 100%; height: 1px; margin-top: 60px;"></div>
+
+<!-- PIE DE PÁGINA FINAL -->
+<footer class="pie-contacto-final" style="margin-top: auto; padding: 30px 20px; border-top: 1px solid #f0f0f0;">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; align-items: center;">
+            
+            <!-- Email -->
+            <li>
+                <a href="mailto:psikoala@psikoala.com" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-size: 1rem; font-weight: 500;">
+                    📩 psikoala@psikoala.com
+                </a>
+            </li>
+            
+            <!-- Ubicación -->
+            <li style="color: #6d4b53; font-family: Georgia, serif; font-size: 1rem; font-weight: 500;">
+                📍 Santiago de Compostela
+            </li>
+            
+            <!-- Instagram -->
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-size: 1rem; font-weight: 600;">
+                    📸 @psico.koalificada
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
-
-<!-- CONTENEDOR DE LAS TARJETAS (Alineadas de forma limpia en fila o columna según quepan) -->
-<div class="sub-tarjetas-container" style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px; width: 100%;">
-
-    <!-- Tarjeta 1 -->
-    <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box;">
-        Creo en un acompañamiento cercano, respetuoso y personalizado.
-    </div>
-
-    <!-- Tarjeta 2 -->
-    <div style="background-color: #A36D77; color: #FFFBF2; font-family: Georgia, serif; padding: 20px 25px; border-radius: 12px; font-size: 1.1rem; line-height: 1.5; box-sizing: border-box;">
-        Cada niñ@ es un mundo y cada familia tiene su historia. Estoy aquí para acompañaros en este camino.
-    </div>
-
-</div>
-        </div>
-
-        <!-- COLUMNA DERECHA: IMAGEN REDUCIDA -->
-        <div class="columna-derecha-imagen" style="flex: 0 0 350px; min-width: 300px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
-            <img src="img/psico-koala.png" alt="Espacio de Psicología Infantil" class="imagen-sandra-koala-nueva" style="max-width: 100%; max-height: 420px; width: auto; object-fit: contain;">
-        </div>
-
-    </div>
-</section>
