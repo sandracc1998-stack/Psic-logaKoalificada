@@ -63,22 +63,27 @@
     </style>
 </head>
 <body>
-
-    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA DEFINITIVA -->
-    <nav class="nav-principal">
-        <a href="index.html" class="nav-logo">
+<div>
+    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
+    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
+        
+        <!-- Nombre/Logo a la izquierda -->
+        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
             <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
         </a>
-        <ul class="nav-links" style="display: flex; gap: 10px; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <!-- Botones del menú con fondo rosa, bordes redondeados y tipografía Georgia -->
-            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Inicio</a></li>
-            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Filosofía koala</a></li>
-            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Ramas terapéuticas</a></li>
-            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Recursos koalificados</a></li>
-            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Conóceme</a></li>
-            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.95rem;">Contáctame</a></li>
+        
+        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
+        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
+            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
+            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
+            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
+            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
+            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
         </ul>
     </nav>
+</div>
+
 
 
 <!-- CUERPO PRINCIPAL DE LA PÁGINA (FILOSOFÍA KOALA) -->
@@ -134,7 +139,7 @@
 
 
 
-    <!-- LÍNEA 2: SECCIÓN MIS VALORES (Ajustada al ancho global) -->
+  <!-- LÍNEA 2: SECCIÓN MIS VALORES (Ajustada al ancho global) -->
     <section id="mis-valores" style="width: 100%; margin: 60px auto 40px auto; box-sizing: border-box;">
         
         <!-- CABECERA DE VALORES -->
@@ -148,41 +153,44 @@
      <!-- CUADRÍCULA CONFIGURADA PARA FORZAR SIMETRÍA: 2 ARRIBA Y 2 ABAJO -->
 <div class="values-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); gap: 30px; width: 100%; box-sizing: border-box;">
 
-    <!-- Tarjeta 1: Empatía - COLORES INVERTIDOS -->
-    <div class="value-item" style="background-color: #4A2E35; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+    <!-- Tarjeta 1: Empatía -->
+    <div class="value-item" style="background-color: #6D4B53 !important; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(109, 75, 83, 0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
             <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
-            <h3 class="value-name" style="color: #F7E1E5; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
-            <p class="value-desc" style="color: #F7E1E5; font-size: 1.1rem; line-height: 1.6; margin: 0;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
+            <h3 class="value-name" style="color: #FFFBF2 !important; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Empatía y escucha activa</h3>
+            <p class="value-desc" style="color: #FFFBF2 !important; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.95;">Espacio seguro y libre de juicios donde cada sesión se adapta a las necesidades emocionales de la persona y su familia.</p>
         </div>
     </div>
 
-    <!-- Tarjeta 2: Ritmo - COLORES INVERTIDOS -->
-    <div class="value-item" style="background-color: #4A2E35; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+    <!-- Tarjeta 2: Ritmo -->
+    <div class="value-item" style="background-color: #6D4B53 !important; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(109, 75, 83, 0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
             <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">⏳</div>
-            <h3 class="value-name" style="color: #F7E1E5; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
-            <p class="value-desc" style="color: #F7E1E5; font-size: 1.1rem; line-height: 1.6; margin: 0;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
+            <h3 class="value-name" style="color: #FFFBF2 !important; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Respeto al ritmo</h3>
+            <p class="value-desc" style="color: #FFFBF2 !important; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.95;">Sin presiones ni objetivos forzados. Cada intervención respeta los tiempos individuales para lograr avances sólidos.</p>
         </div>
     </div>
 
-    <!-- Tarjeta 3: Regulación Emocional - COLORES INVERTIDOS -->
-    <div class="value-item" style="background-color: #4A2E35; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+    <!-- Tarjeta 3: Regulación Emocional -->
+    <div class="value-item" style="background-color: #6D4B53 !important; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(109, 75, 83, 0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
             <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
-            <h3 class="value-name" style="color: #F7E1E5; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
-            <p class="value-desc" style="color: #F7E1E5; font-size: 1.1rem; line-height: 1.6; margin: 0;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
+            <h3 class="value-name" style="color: #FFFBF2 !important; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Regulación emocional</h3>
+            <p class="value-desc" style="color: #FFFBF2 !important; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.95;">Enseño a niñ@s a identificar lo que sienten, ponerle nombre y usar técnicas para recuperar la calma por sí mismos.</p>
         </div>
     </div>
 
-    <!-- Tarjeta 4: Material Adaptado - COLORES INVERTIDOS -->
-    <div class="value-item" style="background-color: #4A2E35; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(74, 46, 53, 0.04); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+    <!-- Tarjeta 4: Material Adaptado -->
+    <div class="value-item" style="background-color: #6D4B53 !important; padding: 35px; border-radius: 20px; box-shadow: 0 6px 18px rgba(109, 75, 83, 0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
         <div>
             <div class="value-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🧩</div>
-            <h3 class="value-name" style="color: #F7E1E5; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
-            <p class="value-desc" style="color: #F7E1E5; font-size: 1.1rem; line-height: 1.6; margin: 0;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
+            <h3 class="value-name" style="color: #FFFBF2 !important; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Material adaptado</h3>
+            <p class="value-desc" style="color: #FFFBF2 !important; font-size: 1.1rem; line-height: 1.6; margin: 0; opacity: 0.95;">Diseño de recursos visuales, agendas y actividades personalizadas bajo metodologías específicas para TEA y NEE.</p>
         </div>
     </div>
+
+</div>
+
 
 </div>
 
@@ -215,6 +223,7 @@
         </ul>
     </div>
 </footer>
+
 
 
 </body>
