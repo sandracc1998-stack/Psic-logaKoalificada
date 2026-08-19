@@ -864,27 +864,40 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         mask-image: none !important;
     }
 } /* Fin de la consulta de medios móvil */
-    /* --- ARREGLO DE INFOGRAFÍAS EN MÓVIL (QUITA LA ALTURA FIJA) --- */
+       /* --- ARREGLO DE INFOGRAFÍAS EN MÓVIL (QUITA LA ALTURA FIJA) --- */
     .tarjeta-recurso {
-        height: auto !important; /* Elimina los 380px para que la caja crezca con el texto */
+        height: auto !important; 
         display: flex !important;
-        flex-direction: column !important; /* Pone el texto arriba y la imagen abajo en una sola fila */
+        flex-direction: column !important; /* Por defecto: Elemento 1 (Imagen Koala) arriba, Elemento 2 (Texto) abajo */
     }
 
-    .tarjeta-texto {
-        height: auto !important;
-        overflow-y: visible !important; /* Quita las barras de scroll internas */
-        padding: 20px !important; /* Reduce un poco el espacio interno para que quepa mejor */
+    /* Como en la Biografía pusimos el Texto primero en el HTML, lo invertimos en móvil para que la foto de la chica suba arriba */
+    .tarjeta-recurso:nth-of-type(2) {
+        flex-direction: column-reverse !important;
     }
 
-    .contenedor-imagen {
+    .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
         height: auto !important;
-        max-height: 300px !important; /* Controla que el dibujo del koala no se haga gigante */
+        overflow-y: visible !important; 
+        padding: 25px 20px !important; /* Reduce un poco el espacio interno en móviles */
+    }
+
+    /* Aplica el control de tamaño al contenedor del Koala y a la foto de Sandra */
+    .tarjeta-recurso > div[style*="max-width: 400px"] {
+        height: auto !important;
+        max-height: 300px !important; 
         width: 100% !important;
     }
 
-    .contenedor-imagen img {
+    .tarjeta-recurso img {
         height: auto !important;
-        max-height: 300px !important;
-        object-fit: contain !important; /* Evita que el koala se estire o se deforme */
+        max-height: 280px !important;
+        object-fit: contain !important; /* Evita que las imágenes se deformen */
+        margin: 0 auto !important;
+    }
+           /* Asegura que el texto de la tarjeta del Koala se mantenga claro en móvil */
+    .tarjeta-presentacion-oscura p {
+        color: #FFFBF2 !important;
+    }
+
     }
