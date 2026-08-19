@@ -461,8 +461,9 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   8. ESTILOS GENERALES DE RECURSOS CUATRO BLOQUES (INFOGRAFÍAS PRINCIPALES)
+   8 y 9. CORRECCIÓN DEFINITIVA: SEPARACIÓN DE IMÁGENES Y TARJETAS INDEPENDIENTES
    ========================================================================== */
+
 .contenedor-articulos {
     max-width: 1100px;
     margin: 0 auto;
@@ -483,49 +484,94 @@ img, video, iframe {
 .titulo-recurso {
     color: var(--bark);
     font-family: var(--ff-display);
-    font-size: 2.2rem; /* Corregido caracter extraño '激' anterior */
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     margin: 0;
 }
 
-/* CORREGIDO: Eliminada la altura fija y adaptado para PC con imágenes independientes fuera de la tarjeta */
+/* 1. Limpieza absoluta del contenedor que une los dos elementos */
 .tarjeta-recurso {
     display: flex !important;
     flex-direction: row !important;
-    gap: 30px !important; /* Espacio elegante entre la imagen exterior y la tarjeta de texto */
-    align-items: stretch !important; /* Sincroniza la altura de la imagen con la de la caja de texto de forma automática */
-    width: 100%;
-    background-color: transparent !important; /* Quita el bloque granate de fondo que las unía */
+    gap: 40px !important;            /* Espacio amplio para separar la imagen del texto */
+    align-items: stretch !important;  /* Mantiene alturas alineadas en PC */
+    width: 100% !important;
+    background-color: transparent !important; 
+    background: transparent !important;       
+    border: none !important;                  
+    box-shadow: none !important;              
+    overflow: visible !important;             
+    height: auto !important;                  /* Elimina la altura fija de 380px en PC */
 }
 
-.contenedor-imagen {
+/* 2. Forzamos a que el contenedor de la imagen y la etiqueta img sean 100% transparentes */
+.contenedor-imagen, 
+.tarjeta-recurso > div[style*="max-width: 400px"] {
     flex: 1 !important;
-    max-width: 400px !important; /* Evita que las ilustraciones se deformen o crezcan de más */
+    max-width: 400px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    background-color: transparent !important; 
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.contenedor-imagen img {
+.card-trabajo img,
+.trabajo-grid img,
+#como-trabajo img,
+.contenedor-imagen img,
+.recursos-container img,
+.seccion-recursos img,
+.bloque-izquierdo-visual img,
+.tarjeta-horizontal img,
+.contenedor-imagen-amplia img,
+.imagen-sandra-koala-nueva,
+.tarjeta-recurso img {
+    background-color: transparent !important; /* CORRECCIÓN: Evita el fondo gris/granate en las fotos */
+    background: transparent !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+    border: none !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important; /* Cambiado a contain para que los koalas se vean nítidos y enteros sin recortes */
+    object-fit: contain !important; /* Muestra los koalas completos y nítidos */
     display: block !important;
 }
 
+/* Asegura que la foto real de Sandra en Conóceme cubra su espacio sin deformarse */
+.tarjeta-recurso img[src*="imagensandra"] {
+    object-fit: cover !important; 
+}
+
+/* 3. El fondo granate y los bordes ahora pertenecen ÚNICAMENTE a la caja de texto */
 .tarjeta-texto {
     flex: 1.5 !important;
-    background-color: var(--bg-dark-resource) !important; /* Mantiene la tarjeta de información con el color granate */
+    background-color: var(--bg-dark-resource) !important; /* Aplica el granate ciruela en Recursos */
     color: var(--text-light-resource) !important;        
-    padding: 35px !important;
-    border-radius: 20px !important; /* El redondeado ahora vive en la tarjeta de información */
+    padding: 40px !important;                 
+    border-radius: 20px !important;           
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important;
+    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12) !important; 
 }
 
+/* El texto de la sección "Sobre mí" rosa oscuro también se estila de forma idéntica */
+.tarjeta-presentacion-oscura {
+    flex: 1.5 !important;
+    background-color: var(--bark) !important; /* Granate oficial en Sobre Mí */
+    padding: 40px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12) !important;
+}
+
+/* Clases de apoyo para las descripciones */
 .subtitulo-recurso {
     font-size: 1.25rem;
     font-weight: 700;
@@ -554,25 +600,6 @@ img, video, iframe {
 
 .lista-recurso strong {
     color: var(--white) !important; 
-}
-
-/* ==========================================================================
-   9. CONFIGURACIÓN DE IMÁGENES DE LA WEB (RESTAURADA)
-   ========================================================================== */
-.card-trabajo img,
-.trabajo-grid img,
-#como-trabajo img,
-.contenedor-imagen img,
-.recursos-container img,
-.seccion-recursos img,
-.bloque-izquierdo-visual img,
-.tarjeta-horizontal img,
-.contenedor-imagen-amplia img,
-.imagen-sandra-koala-nueva {
-    background-color: transparent !important;
-    border-radius: 16px !important;
-    box-shadow: none !important;
-    border: none !important;
 }
 
 
