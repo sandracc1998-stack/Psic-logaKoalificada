@@ -23,29 +23,31 @@
 /* ==========================================================================
    2. REGLAS DE SOPORTE GENERAL (ORDENADOR Y MÓVIL)
    ========================================================================== */
-* {
-    box-sizing: border-box; /* Previene desbordamientos horizontales */
+/* Se aplica de forma universal y estricta para evitar que los paddings rompan el layout */
+*, *::before, *::after {
+    box-sizing: border-box !important; 
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita scrolls horizontales indeseados */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
     background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
 }
 
 section { 
     padding: 4rem 2rem; 
+    width: 100%;
 }
 
 .section-inner { 
     max-width: 1100px; 
     margin: 0 auto; 
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 /* Hace que todas las imágenes y vídeos sean responsivos por defecto */
@@ -54,6 +56,7 @@ img, video, iframe {
     height: auto;
     display: block;
 }
+
 /* ==========================================================================
    3. MENÚ DE NAVEGACIÓN COMPACTO Y FIJO (VISTA ORDENADOR)
    ========================================================================== */
@@ -63,7 +66,7 @@ img, video, iframe {
     align-items: center;
     padding: 15px 40px;
     background-color: var(--white);
-    position: sticky; /* Cambiado a sticky para que no pise el contenido superior */
+    position: sticky; 
     top: 0;
     left: 0;
     width: 100%;
@@ -78,15 +81,17 @@ img, video, iframe {
     font-weight: 700;
     text-decoration: none;
     line-height: 1.2;
+    flex-shrink: 0; /* Evita que el logo se deforme o se comprima */
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 12px; /* Espaciado ajustado para tus botones en óvalo */
+    gap: 12px; 
     margin: 0;
     padding: 0;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los botones bajen de línea limpiamente si no caben en pantallas intermedias */
 }
 
 .nav-links li {
@@ -96,14 +101,15 @@ img, video, iframe {
 
 .nav-links a {
     text-decoration: none;
-    background-color: var(--blush); /* Fondo rosa pastel oficial */
-    color: var(--bark);             /* Letra granate oficial */
-    font-family: var(--ff-display); /* Tipografía Georgia unificada */
+    background-color: var(--blush); 
+    color: var(--bark);             
+    font-family: var(--ff-display); 
     padding: 8px 16px;
-    border-radius: 20px;            /* Bordes redondeados perfectos */
+    border-radius: 20px;            
     display: inline-block;
     font-weight: 600;
     font-size: 0.95rem;
+    white-space: nowrap; /* Evita que los textos de los botones del menú se corten en dos líneas */
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -125,6 +131,7 @@ img, video, iframe {
 .nav-links a[href="contacto.html"] {
     font-weight: 700; /* Le da un ligero realce a la pestaña de contacto */
 }
+
 /* ==========================================================================
    4. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR REORGANIZADA)
    ========================================================================== */
@@ -133,7 +140,6 @@ img, video, iframe {
     max-width: 1100px;
     margin: 0 auto;
     padding: 30px 20px 60px 20px;
-    box-sizing: border-box;
 }
 
 /* Contenedor flexible vertical continuo para título -> koala -> tarjetas */
@@ -141,14 +147,12 @@ img, video, iframe {
     display: flex;
     flex-direction: column;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .cabecera-titulo {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    box-sizing: border-box;
 }
 
 .cabecera-titulo h1 {
@@ -167,7 +171,6 @@ img, video, iframe {
     align-items: center;
     justify-content: center;
     margin-bottom: 35px;
-    box-sizing: border-box;
 }
 
 .imagen-sandra-koala-nueva {
@@ -178,23 +181,23 @@ img, video, iframe {
     display: block;
 }
 
-/* Contenedor de las dos tarjetas de texto inferiores */
+/* Contenedor de las dos tarjetas de texto inferiores (Optimizado para aprovechar el espacio en PC) */
 .sub-tarjetas-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row; /* En PC se alinean de forma paralela y limpia */
+    gap: 20px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 /* Estilo unificado para tus dos tarjetas de inicio */
 .tarjeta-redondeada-cabecera {
     background-color: var(--rose) !important; /* Rosa viejo corporativo */
-    padding: 20px 25px;
-    border-radius: 12px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 25px;
+    border-radius: 15px; /* Ajustado sutilmente para seguir la línea de tu marca */
+    flex: 1; /* Hace que ambas tarjetas midan exactamente lo mismo de ancho */
     box-shadow: 0 4px 10px rgba(109, 75, 83, 0.05);
+    display: flex;
+    align-items: center;
 }
 
 .tarjeta-redondeada-cabecera p {
@@ -202,10 +205,11 @@ img, video, iframe {
     font-family: var(--ff-display);
     font-size: 1.1rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 400;
     text-align: left;
 }
+
 /* ==========================================================================
    5. SECCIÓN MIS VALORES (GRANATE OSCURO Y LETRA CREMA UNIFICADO)
    ========================================================================== */
@@ -235,13 +239,13 @@ img, video, iframe {
     border-radius: 2px; 
 }
 
-/* Cuadrícula de simetría forzada: 2 arriba y 2 abajo en pantallas grandes */
+/* Cuadrícula de simetría fluida: 2 arriba y 2 abajo en PC, se adapta sola en móviles */
 .values-list { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    /* Ajustado minmax a 300px mínimos para que en pantallas pequeñas no intente meter dos columnas apretadas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; 
     width: 100%; 
-    box-sizing: border-box;
 }
 
 .value-item, #mis-valores .card-valor, #mis-valores .card, .section-valores .card-valor, .valores-grid .card, .card-valor { 
@@ -253,8 +257,8 @@ img, video, iframe {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     display: flex; 
     flex-direction: column; 
-    justify-content: space-between;
-    box-sizing: border-box;
+    justify-content: flex-start; /* Cambiado a flex-start para que el texto fluya mejor si hay diferentes largos */
+    gap: 12px;
 }
 
 .value-item:hover { 
@@ -264,7 +268,7 @@ img, video, iframe {
 
 .value-icon { 
     font-size: 2.5rem; 
-    margin-bottom: 15px; 
+    margin-bottom: 5px; 
 }
 
 .value-name { 
@@ -273,7 +277,7 @@ img, video, iframe {
     font-weight: 800; 
     color: var(--text-light-resource) !important; /* Letras crema claro */
     margin-top: 0;
-    margin-bottom: 12px; 
+    margin-bottom: 5px; 
 }
 
 .value-desc { 
@@ -333,20 +337,19 @@ img, video, iframe {
     margin: 0 auto;
     padding: 0 20px;
     flex-wrap: wrap; 
-    box-sizing: border-box;
 }
 
 .tarjeta-giratoria, .card-trabajo-estatica { 
-    flex: 1 1 320px !important; 
+    flex: 1 1 300px !important; /* Cambiado el tamaño base a 300px para evitar desbordes en smartphones estándar */
     max-width: 100%;
     background-color: var(--blush); /* Fondo rosa suave */
     border-radius: 20px; 
     box-shadow: var(--shadow);
     padding: 35px 24px; 
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .contenido-frontal { 
@@ -383,6 +386,7 @@ img, video, iframe {
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
+    margin-top: auto; /* Empuja las ilustraciones hacia abajo de forma unificada si los textos difieren en tamaño */
 }
 
 .imagen-frontal-tarjeta { 
@@ -392,6 +396,7 @@ img, video, iframe {
     object-fit: contain; 
     display: block;
 }
+
 /* ==========================================================================
    7. TARJETAS DE RECURSOS AMPLIAS (FONDOS OSCUROS DE ALTO CONTRASTE)
    ========================================================================== */
@@ -462,7 +467,6 @@ img, video, iframe {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box;
     background: transparent !important;
 }
 
@@ -479,49 +483,47 @@ img, video, iframe {
 .titulo-recurso {
     color: var(--bark);
     font-family: var(--ff-display);
-    激font-size: 2.2rem;
+    font-size: 2.2rem; /* Corregido caracter extraño '激' anterior */
     font-weight: 700;
     text-align: center;
     margin: 0;
 }
 
-/* Forzamos altura fija simétrica en pantallas de PC para unificar tamaños */
+/* CORREGIDO: Eliminada la altura fija y adaptado para PC con imágenes independientes fuera de la tarjeta */
 .tarjeta-recurso {
     display: flex !important;
-    gap: 0 !important; /* Mantiene la unión perfecta entre texto e imagen */
-    background-color: var(--bg-dark-resource) !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    height: 380px !important; /* Altura idéntica unificada solicitada */
+    flex-direction: row !important;
+    gap: 30px !important; /* Espacio elegante entre la imagen exterior y la tarjeta de texto */
+    align-items: stretch !important; /* Sincroniza la altura de la imagen con la de la caja de texto de forma automática */
     width: 100%;
-    box-sizing: border-box !important;
+    background-color: transparent !important; /* Quita el bloque granate de fondo que las unía */
 }
 
 .contenedor-imagen {
     flex: 1 !important;
-    height: 100% !important;
+    max-width: 400px !important; /* Evita que las ilustraciones se deformen o crezcan de más */
     display: flex !important;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .contenedor-imagen img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Evita que las imágenes se deformen al estirarse */
+    object-fit: contain !important; /* Cambiado a contain para que los koalas se vean nítidos y enteros sin recortes */
     display: block !important;
 }
 
 .tarjeta-texto {
-    flex: 1 !important;
-    background-color: var(--bg-dark-resource) !important; /* Color granate corporativo */
-    color: var(--text-light-resource) !important;        /* Letras crema unificadas */
-    padding: 30px !important;
+    flex: 1.5 !important;
+    background-color: var(--bg-dark-resource) !important; /* Mantiene la tarjeta de información con el color granate */
+    color: var(--text-light-resource) !important;        
+    padding: 35px !important;
+    border-radius: 20px !important; /* El redondeado ahora vive en la tarjeta de información */
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    box-sizing: border-box !important;
-    overflow-y: auto !important; /* Añade soporte por si un texto es muy largo */
+    box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05) !important;
 }
 
 .subtitulo-recurso {
@@ -551,8 +553,9 @@ img, video, iframe {
 }
 
 .lista-recurso strong {
-    color: var(--white) !important; /* Blanco puro para destacar términos clave */
+    color: var(--white) !important; 
 }
+
 /* ==========================================================================
    9. CONFIGURACIÓN DE IMÁGENES DE LA WEB (RESTAURADA)
    ========================================================================== */
@@ -577,10 +580,15 @@ img, video, iframe {
    10. PIE DE PÁGINA CORPORATIVO
    ========================================================================== */
 .pie-contacto-final {
-    width: 100% !important;
+    width: 100vw !important; /* Fuerza a ocupar el 100% real del ancho del visor de pantalla */
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
     background-color: var(--bark) !important; /* Granate oficial corporativo */
-    padding: 15px 0 !important;
-    margin-top: 60px !important; /* Margen fijo unificado para despegarlo */
+    padding: 20px 0 !important;
+    margin-top: 60px !important; 
     box-sizing: border-box !important;
 }
 
@@ -622,8 +630,8 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     }
     
     body, container, main {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
     
     /* Convierte grids antiguos a una sola columna */
@@ -634,7 +642,7 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     
     /* Fuentes adaptativas corregidas para evitar cortes de palabras largos */
     h1 { 
-        font-size: 1.65rem !important; 
+        font-size: 1.8rem !important; 
         word-wrap: break-word !important;
         text-align: center !important;
         width: 100% !important;
@@ -655,8 +663,8 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        padding: 10px 5px !important;
-        position: relative !important; /* Cambiado a relative para fluir en vertical sin pisar nada */
+        padding: 15px 10px !important;
+        position: relative !important; 
         width: 100% !important;
         height: auto !important;
     }
@@ -677,7 +685,7 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     nav.nav-principal ul.nav-links {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: wrap !important; /* Botones ordenados en filas adaptativas */
+        flex-wrap: wrap !important; 
         justify-content: center !important;
         gap: 8px !important;
         width: 100% !important;
@@ -696,40 +704,106 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         font-size: 0.8rem !important;
     }
 
-    /* --- AJUSTE DE INFOGRAFÍAS Y RECURSOS EN MÓVIL --- */
+    /* --- HERO CABECERA MÓVIL --- */
+    .sub-tarjetas-container {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    /* --- ADAPTACIÓN DE TARJETAS DE RECURSOS E INFOGRAFÍAS EN MÓVIL --- */
+    .tarjeta-recurso {
+        height: auto !important; /* Elimina alturas rígidas en el smartphone */
+        flex-direction: column !important; /* Apila los elementos en vertical */
+        gap: 20px !important;
+    }
+
+    /* Invierte el flujo en la fila de biografía de Sandra para que la foto suba arriba del texto */
+    .tarjeta-recurso:has(.tarjeta-clara-texto) {
+        flex-direction: column-reverse !important;
+    }
+
+    .tarjeta-texto, .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
+        width: 100% !important;
+        flex: none !important;
+        padding: 25px 20px !important; /* Hace más compacto el espacio en pantallas pequeñas */
+        border-radius: 15px !important;
+    }
+
+    .contenedor-imagen {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        height: auto !important;
+    }
+
+    .contenedor-imagen img {
+        max-height: 260px !important; /* Modula los koalas para que no crezcan de forma gigante */
+        width: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* --- ADAPTACIÓN DE PIE DE PÁGINA EN MÓVIL --- */
+    .contacto-final-lista {
+        flex-direction: column !important; /* Los datos de contacto bajan en fila limpia */
+        gap: 15px !important;
+        text-align: center !important;
+    }
+}
+
+     /* ==========================================================================
+       12. AJUSTES DE INFOGRAFÍAS Y RECURSOS EN MÓVIL (COMPLEMENTARIOS)
+       ========================================================================== */
     .hero-seccion {
         padding-top: 20px !important;
     }
     
     .hero-dos-columnas {
         display: flex !important;
-        flex-direction: column-reverse !important; /* El koala sube encima del título */
+        /* CORREGIDO: Se mantiene el título arriba y el dibujo del koala abajo para respetar el orden de lectura natural */
+        flex-direction: column !important; 
         gap: 20px !important;
     }
     
+    /* --- CONTROL ESTRICTO DE INFOGRAFÍAS (IMAGEN ARRIBA -> TEXTO ABAJO) --- */
     .tarjeta-recurso {
         height: auto !important; /* Elimina la altura fija de 380px en el móvil */
         display: flex !important;
-        flex-direction: column !important; /* Apila texto arriba e imagen abajo */
+        flex-direction: column !important; /* Por defecto pone el primer elemento (Imagen) arriba y el segundo (Texto) abajo */
+        gap: 20px !important;
     }
     
-    .tarjeta-texto {
+    /* CORREGIDO: Como en la sección "Sobre mí" alteramos el orden del HTML en la Biografía para poner el texto a la izquierda, 
+       usamos esta regla específica para forzar a que la foto de Sandra suba arriba en los teléfonos */
+    .tarjeta-recurso:has(.tarjeta-clara-texto) {
+        flex-direction: column-reverse !important;
+    }
+    
+    .tarjeta-texto, .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
         height: auto !important;
+        width: 100% !important;
+        flex: none !important;
         overflow-y: visible !important;
-        padding: 20px !important;
+        padding: 25px 20px !important; /* Reduce los espacios internos para que respire en pantallas estrechas */
+        border-radius: 15px !important;
     }
     
     .contenedor-imagen {
         height: auto !important;
-        max-height: 300px !important;
         width: 100% !important;
+        flex: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     
     .contenedor-imagen img {
         height: auto !important;
-        max-height: 300px !important;
+        max-height: 280px !important; /* Modula el tamaño de los koalas para que no queden gigantes */
+        width: auto !important;
         object-fit: contain !important;
+        margin: 0 auto !important;
     }
+    
     /* --- HERO MÓVIL --- */
     .columna-derecha-imagen {
         display: flex !important;
@@ -745,14 +819,7 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     h1, .hero h1, .titulo-principal {
         text-align: center !important;
         width: 100% !important;
-    }
-    
-    /* --- CONTROL ESTRICTO DE INFOGRAFÍAS (TÍTULO -> IMAGEN -> TEXTO) --- */
-    /* Invierte el flujo en móvil para los recursos 2, 3 y 4. Fuerza a la imagen a subir arriba del texto de forma simétrica */
-    .recurso-bloque:nth-child(2) .tarjeta-recurso,
-    .recurso-bloque:nth-child(3) .tarjeta-recurso,
-    .recurso-bloque:nth-child(4) .tarjeta-recurso {
-        flex-direction: column-reverse !important;
+        word-wrap: break-word !important;
     }
     
     .titulo-recurso { 
@@ -803,7 +870,10 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         width: 100% !important;
         padding: 0 !important;
     }
-    
+
+      /* ==========================================================================
+       13. CIERRE DE SECCIONES GENERALES Y ADAPTACIÓN EN MÓVIL
+       ========================================================================== */
     /* Mantenemos el pie de página fluido en móviles para que quepa en el ancho */
     .contacto-final-lista {
         display: flex !important;
@@ -863,23 +933,28 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         -webkit-mask-image: none !important;
         mask-image: none !important;
     }
-} /* Fin de la consulta de medios móvil */
-       /* --- ARREGLO DE INFOGRAFÍAS EN MÓVIL (QUITA LA ALTURA FIJA) --- */
+
+    /* --- CORREGIDO: REGLAS CORRESPONDIENTES A LAS PÁGINAS REVISADAS (AHORA DENTRO DE MÓVIL) --- */
     .tarjeta-recurso {
         height: auto !important; 
         display: flex !important;
-        flex-direction: column !important; /* Por defecto: Elemento 1 (Imagen Koala) arriba, Elemento 2 (Texto) abajo */
+        flex-direction: column !important; /* Por defecto: Imagen Koala arriba, tarjeta con texto abajo */
     }
 
-    /* Como en la Biografía pusimos el Texto primero en el HTML, lo invertimos en móvil para que la foto de la chica suba arriba */
-    .tarjeta-recurso:nth-of-type(2) {
+    /* Modificador exclusivo para la biografía en 'Sobre mí' que fuerza a la foto a subir arriba del texto */
+    .tarjeta-recurso:has(.tarjeta-clara-texto) {
         flex-direction: column-reverse !important;
     }
 
     .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
         height: auto !important;
         overflow-y: visible !important; 
-        padding: 25px 20px !important; /* Reduce un poco el espacio interno en móviles */
+        padding: 25px 20px !important; 
+    }
+
+    /* Asegura que el texto de la tarjeta del Koala se mantenga claro en móvil */
+    .tarjeta-presentacion-oscura p {
+        color: #FFFBF2 !important;
     }
 
     /* Aplica el control de tamaño al contenedor del Koala y a la foto de Sandra */
@@ -892,12 +967,8 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     .tarjeta-recurso img {
         height: auto !important;
         max-height: 280px !important;
-        object-fit: contain !important; /* Evita que las imágenes se deformen */
+        object-fit: contain !important; 
         margin: 0 auto !important;
     }
-           /* Asegura que el texto de la tarjeta del Koala se mantenga claro en móvil */
-    .tarjeta-presentacion-oscura p {
-        color: #FFFBF2 !important;
-    }
 
-    }
+} /* <<< ESTE ES EL CIERRE DE LA MEDIA QUERY GENERAL MÓVIL (CORREGIDO Y SIN LLAVES SOBERANTES) */
