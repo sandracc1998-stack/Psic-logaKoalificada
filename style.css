@@ -899,9 +899,11 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     }
 
       /* ==========================================================================
-       13. CIERRE DE SECCIONES GENERALES Y ADAPTACIÓN EN MÓVIL
-       ========================================================================== */
-    /* Mantenemos el pie de página fluido en móviles para que quepa en el ancho */
+   13. CIERRE DE SECCIONES GENERALES Y ADAPTACIÓN EN MÓVIL
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Pie de página fluido */
     .contacto-final-lista {
         display: flex !important;
         flex-direction: row !important;
@@ -955,20 +957,23 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         max-width: 100% !important; 
     }
     
-    /* El difuminado radial con máscara se ajusta en móviles para evitar parpadeos visuales */
+    /* Quitar máscaras en móviles */
     .bloque-izquierdo-visual img, .tarjeta-horizontal img {
         -webkit-mask-image: none !important;
         mask-image: none !important;
     }
 
-    /* --- CORREGIDO: REGLAS CORRESPONDIENTES A LAS PÁGINAS REVISADAS (AHORA DENTRO DE MÓVIL) --- */
-    .tarjeta-recurso {
+    /* Adaptación de tarjetas y recursos */
+    .tarjeta-recurso, 
+    .contenedor-mochila {
         height: auto !important; 
         display: flex !important;
-        flex-direction: column !important; /* Por defecto: Imagen Koala arriba, tarjeta con texto abajo */
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
     }
 
-    /* Modificador exclusivo para la biografía en 'Sobre mí' que fuerza a la foto a subir arriba del texto */
+    /* Invierte el orden solo en la biografía si contiene la tarjeta clara */
     .tarjeta-recurso:has(.tarjeta-clara-texto) {
         flex-direction: column-reverse !important;
     }
@@ -979,40 +984,23 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         padding: 25px 20px !important; 
     }
 
-    /* Asegura que el texto de la tarjeta del Koala se mantenga claro en móvil */
     .tarjeta-presentacion-oscura p {
         color: #FFFBF2 !important;
     }
 
-    /* Aplica el control de tamaño al contenedor del Koala y a la foto de Sandra */
     .tarjeta-recurso > div[style*="max-width: 400px"] {
         height: auto !important;
         max-height: 300px !important; 
         width: 100% !important;
     }
 
-    .tarjeta-recurso img {
+    .tarjeta-recurso img,
+    .contenedor-mochila img {
+        width: 100% !important;
+        max-width: 220px !important;
         height: auto !important;
-        max-height: 280px !important;
         object-fit: contain !important; 
-        margin: 0 auto !important;
+        margin: 0 auto 15px auto !important;
     }
-@media (max-width: 768px) {
-  /* Forzamos a que el contenedor cambie de fila a columna */
-  .tarjeta-recurso, 
-  .contenedor-mochila { 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
 
-  /* Ajustamos la imagen para que se ponga arriba y centrada */
-  .tarjeta-recurso img,
-  .contenedor-mochila img {
-    width: 120px; /* Ajusta el tamaño de la ilustración */
-    height: auto;
-    margin-bottom: 15px; /* Espacio entre la imagen y la tarjeta */
-  }
-}
-} /* <<< ESTE ES EL CIERRE DE LA MEDIA QUERY GENERAL MÓVIL (CORREGIDO Y SIN LLAVES SOBERANTES) */
+} /* Fin de la @media query */
