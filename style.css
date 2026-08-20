@@ -692,20 +692,20 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
    ========================================================================== */
 @media screen and (min-width: 1024px) {
   
-  /* Forzamos a que las columnas se alineen arriba y no se estiren */
-  .tarjeta-recurso {
-    display: flex !important;
-    flex-direction: row !important; /* Asegura que se pongan de lado */
-    align-items: flex-start !important; 
-    height: auto !important;
-    min-height: 0 !important;
-  }
+    /* Forzamos a que las columnas se alineen arriba y no se estiren */
+    .tarjeta-recurso {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important; 
+        height: auto !important;
+        min-height: 0 !important;
+    }
 
-  /* Forzamos a que los bloques de texto midan solo su contenido */
-  .tarjeta-presentacion-oscura, 
-  .tarjeta-clara-texto {
-    height: auto !important;
-    min-height: 0 !important;
-    align-self: flex-start !important;
-  }
+    /* Forzamos a que los bloques de texto midan solo su contenido */
+    .tarjeta-presentacion-oscura, 
+    .tarjeta-clara-texto {
+        height: auto !important;
+        min-height: 0 !important;
+        align-self: flex-start !important;
+    }
 }
