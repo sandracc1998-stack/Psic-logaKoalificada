@@ -692,13 +692,25 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
    ========================================================================== */
 @media screen and (min-width: 1024px) {
   
-    /* Forzamos a que las columnas se alineen arriba y no se estiren */
+    /* Forzamos a que las dos columnas se alineen al techo y no se estiren */
     .tarjeta-recurso {
         display: flex !important;
         flex-direction: row !important;
         align-items: flex-start !important; 
         height: auto !important;
         min-height: 0 !important;
+    }
+
+    /* Evita que el fondo blanco de la imagen se estire verticalmente */
+    .contenedor-imagen-recurso {
+        height: auto !important;
+        align-self: flex-start !important;
+    }
+
+    /* Asegura que las imágenes mantengan su proporción original sin deformarse */
+    .contenedor-imagen-recurso img {
+        height: auto !important;
+        object-fit: contain !important;
     }
 
     /* Forzamos a que los bloques de texto midan solo su contenido */
