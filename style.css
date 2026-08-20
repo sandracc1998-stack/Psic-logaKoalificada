@@ -664,18 +664,20 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
 /* CORRECCIÓN PARA LA VISTA DE ORDENADOR (Bloque Marrón) */
 @media (min-width: 1024px) {
   
-  /* 1. Evita que las dos columnas se estiren entre sí */
+  /* 1. Forzamos un diseño flexible simple en ordenador y alineamos arriba */
   .tarjeta-recurso {
     display: flex !important;
+    grid-template-columns: none !important; /* Desactiva Grid si estuviera activo */
     align-items: flex-start !important; 
     height: auto !important;
     min-height: 0 !important;
   }
 
-  /* 2. Resetea la altura de los bloques de texto */
+  /* 2. Forzamos a que las cajas de texto midan SOLO lo que ocupe su contenido */
   .tarjeta-presentacion-oscura, 
   .tarjeta-clara-texto {
     height: auto !important;
     min-height: 0 !important;
+    align-self: flex-start !important; /* Refuerza que se quede arriba y no se estire */
   }
 }
