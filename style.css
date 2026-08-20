@@ -549,17 +549,12 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   8. PIE DE PÁGINA CORPORATIVO
+   8. PIE DE PÁGINA CORPORATIVO (ORDENADOR)
    ========================================================================== */
 .pie-contacto-final {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
+    width: 100% !important;
     background-color: var(--bark) !important;
-    padding: 20px 0 !important;
+    padding: 30px 20px !important;
     margin-top: 60px !important; 
     box-sizing: border-box !important;
 }
@@ -567,7 +562,8 @@ img, video, iframe {
 .pie-contenedor {
     max-width: 1100px !important;
     margin: 0 auto !important;
-    padding: 0 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .contacto-final-lista {
@@ -575,10 +571,19 @@ img, video, iframe {
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 40px !important;
+    gap: 30px !important;
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
+}
+
+.contacto-final-lista li {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    word-break: break-word !important; /* Evita que correos largos se salgan */
 }
 
 footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista a, .contacto-final-lista span {
@@ -597,6 +602,7 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
     /* Adaptación general de layout */
     html, body {
         overflow-x: hidden !important;
+        width: 100% !important;
     }
     
     h1 { 
@@ -659,10 +665,25 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
         border-radius: 15px !important;
     }
 
-    /* Pie de página Móvil */
+    /* Pie de página Móvil (Ajustado) */
+    .pie-contacto-final {
+        padding: 30px 15px !important;
+        left: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
     .contacto-final-lista {
         flex-direction: column !important;
-        gap: 15px !important;
+        gap: 20px !important;
         text-align: center !important;
+        width: 100% !important;
+    }
+
+    .contacto-final-lista li {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
+
