@@ -1002,5 +1002,60 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         object-fit: contain !important; 
         margin: 0 auto 15px auto !important;
     }
+/* FORZAR APILADO VERTICAL EN MÓVILES */
+@media (max-width: 768px) {
+  
+  /* 1. SECCIÓN CONÓCEME */
+  .fila-superior-flex {
+    display: flex !important;
+    flex-direction: column !important; /* Pone los elementos uno debajo de otro */
+    align-items: center !important;
+    width: 100% !important;
+  }
 
+  .contenedor-foto-reducida {
+    order: 1 !important; /* Fuerza a la foto a ir ARRIBA */
+    width: 100% !important;
+    margin-bottom: 25px !important;
+  }
+
+  .contenedor-foto-reducida img,
+  .foto-perfil-sobremi {
+    width: 100% !important;
+    max-width: 240px !important; /* Tamaño visible y centrado de la foto */
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .tarjeta-sidebar {
+    order: 2 !important; /* Fuerza a la tarjeta a ir DEBAJO de la foto */
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 2. SECCIÓN RECURSOS (MOCHILA SENSORAL) */
+  .tarjeta-recurso,
+  div[class*="recurso"],
+  main > div {
+    display: flex !important;
+    flex-direction: column !important; /* Imagen arriba, tarjeta abajo */
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .tarjeta-recurso img,
+  div[class*="recurso"] img {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 200px !important; /* Tamaño grande de la ilustración de la mochila */
+    height: auto !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .tarjeta-presentacion-oscura,
+  .tarjeta-clara-texto {
+    order: 2 !important;
+    width: 100% !important;
+  }
+}
 } /* Fin de la @media query */
