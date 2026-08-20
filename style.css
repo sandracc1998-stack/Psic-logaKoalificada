@@ -692,32 +692,38 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
    ========================================================================== */
 @media screen and (min-width: 1024px) {
   
-    /* Forzamos a que las dos columnas se alineen al techo y no se estiren */
+    /* EL CAMBIO CLAVE: Limitamos el ancho de las secciones y las centramos en la pantalla */
     .tarjeta-recurso {
         display: flex !important;
         flex-direction: row !important;
         align-items: flex-start !important; 
-        height: auto !important;
-        min-height: 0 !important;
+        justify-content: flex-start !important;
+        
+        max-width: 1100px !important;    /* <--- Evita que se estiren hasta los bordes del monitor */
+        width: 90% !important;           /* Deja un margen de cortesía a los lados */
+        margin: 0 auto 50px auto !important; /* <--- El 'auto' de los lados centra la sección por completo */
+        gap: 40px !important;            /* Separa de forma limpia la foto del cuadro de texto */
     }
 
-    /* Evita que el fondo blanco de la imagen se estire verticalmente */
+    /* Ajustamos el tamaño del bloque de la imagen en ordenador */
     .contenedor-imagen-recurso {
+        flex-shrink: 0 !important;
+        width: 300px !important;         /* Le da un tamaño fijo idóneo a la columna de la foto */
         height: auto !important;
-        align-self: flex-start !important;
     }
 
-    /* Asegura que las imágenes mantengan su proporción original sin deformarse */
     .contenedor-imagen-recurso img {
+        width: 100% !important;
         height: auto !important;
-        object-fit: contain !important;
+        display: block !important;
+        border-radius: 15px !important;  /* Aplica un sutil redondeado si tus fotos lo requieren */
     }
 
-    /* Forzamos a que los bloques de texto midan solo su contenido */
+    /* Ajustamos las tarjetas de texto para que rellenen el espacio central restante */
     .tarjeta-presentacion-oscura, 
     .tarjeta-clara-texto {
+        flex-grow: 1 !important;
         height: auto !important;
-        min-height: 0 !important;
-        align-self: flex-start !important;
+        min-height: unset !important;
     }
 }
