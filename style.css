@@ -23,7 +23,6 @@
 /* ==========================================================================
    2. REGLAS DE SOPORTE GENERAL (ORDENADOR Y MÓVIL)
    ========================================================================== */
-/* Se aplica de forma universal y estricta para evitar que los paddings rompan el layout */
 *, *::before, *::after {
     box-sizing: border-box !important; 
 }
@@ -32,7 +31,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Evita scrolls horizontales indeseados */
+    overflow-x: hidden;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: var(--text);
     background-color: var(--white);
@@ -50,7 +49,6 @@ section {
     padding: 0 20px;
 }
 
-/* Hace que todas las imágenes y vídeos sean responsivos por defecto */
 img, video, iframe {
     max-width: 100%;
     height: auto;
@@ -58,7 +56,7 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   3. MENÚ DE NAVEGACIÓN COMPACTO Y FIJO (VISTA ORDENADOR)
+   3. MENÚ DE NAVEGACIÓN COMPACTO Y FIJO (ORDENADOR)
    ========================================================================== */
 .nav-principal {
     display: flex;
@@ -81,7 +79,7 @@ img, video, iframe {
     font-weight: 700;
     text-decoration: none;
     line-height: 1.2;
-    flex-shrink: 0; /* Evita que el logo se deforme o se comprima */
+    flex-shrink: 0;
 }
 
 .nav-links {
@@ -91,7 +89,7 @@ img, video, iframe {
     margin: 0;
     padding: 0;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los botones bajen de línea limpiamente si no caben en pantallas intermedias */
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -109,17 +107,15 @@ img, video, iframe {
     display: inline-block;
     font-weight: 600;
     font-size: 0.95rem;
-    white-space: nowrap; /* Evita que los textos de los botones del menú se corten en dos líneas */
+    white-space: nowrap;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Efecto visual cuando pasas el ratón por encima de las pestañas */
 .nav-links a:hover {
     background-color: var(--bark);
     color: var(--cream);
 }
 
-/* Clase de soporte para destacar un botón si lo necesitas en el futuro */
 .boton-nav {
     background-color: var(--bark) !important;
     color: var(--cream) !important;
@@ -129,11 +125,11 @@ img, video, iframe {
 
 .nav-links a.btn-contacto,
 .nav-links a[href="contacto.html"] {
-    font-weight: 700; /* Le da un ligero realce a la pestaña de contacto */
+    font-weight: 700;
 }
 
 /* ==========================================================================
-   4. HERO / CABECERA PRINCIPAL (VISTA ORDENADOR REORGANIZADA)
+   4. HERO / CABECERA PRINCIPAL (ORDENADOR)
    ========================================================================== */
 .hero-seccion {
     width: 100%;
@@ -142,7 +138,6 @@ img, video, iframe {
     padding: 30px 20px 60px 20px;
 }
 
-/* Contenedor flexible vertical continuo para título -> koala -> tarjetas */
 .hero-dos-columnas {
     display: flex;
     flex-direction: column;
@@ -159,12 +154,11 @@ img, video, iframe {
     margin: 0;
     font-size: clamp(2.2rem, 4vw, 2.8rem);
     font-family: var(--ff-display);
-    color: var(--bark); /* Granate corporativo unificado */
+    color: var(--bark);
     line-height: 1.25;
     font-weight: 700;
 }
 
-/* Columna adaptada para centrar la ilustración del koala */
 .columna-derecha-imagen {
     width: 100%;
     display: flex;
@@ -177,31 +171,29 @@ img, video, iframe {
     max-width: 100%;
     max-height: 320px;
     width: auto;
-    object-fit: contain; /* Garantiza que el dibujo no se recorte de forma fea */
+    object-fit: contain;
     display: block;
 }
 
-/* Contenedor de las dos tarjetas de texto inferiores (Optimizado para aprovechar el espacio en PC) */
 .sub-tarjetas-container {
     display: flex;
-    flex-direction: row; /* En PC se alinean de forma paralela y limpia */
+    flex-direction: row;
     gap: 20px;
     width: 100%;
 }
 
-/* Estilo unificado para tus dos tarjetas de inicio */
 .tarjeta-redondeada-cabecera {
-    background-color: var(--rose) !important; /* Rosa viejo corporativo */
+    background-color: var(--rose) !important;
     padding: 25px;
-    border-radius: 15px; /* Ajustado sutilmente para seguir la línea de tu marca */
-    flex: 1; /* Hace que ambas tarjetas midan exactamente lo mismo de ancho */
+    border-radius: 15px;
+    flex: 1;
     box-shadow: 0 4px 10px rgba(109, 75, 83, 0.05);
     display: flex;
     align-items: center;
 }
 
 .tarjeta-redondeada-cabecera p {
-    color: var(--cream) !important; /* Letras crema de alto contraste unificadas */
+    color: var(--cream) !important;
     font-family: var(--ff-display);
     font-size: 1.1rem;
     margin: 0;
@@ -211,14 +203,14 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   5. SECCIÓN MIS VALORES (GRANATE OSCURO Y LETRA CREMA UNIFICADO)
+   5. SECCIÓN MIS VALORES
    ========================================================================== */
 #mis-valores { 
     background: var(--white); 
 }
 
 .seccion-valores-cabecera { 
-    text-align: left; /* Alineado a la izquierda según tu HTML definitivo */
+    text-align: left;
     margin-bottom: 40px; 
 }
 
@@ -239,17 +231,15 @@ img, video, iframe {
     border-radius: 2px; 
 }
 
-/* Cuadrícula de simetría fluida: 2 arriba y 2 abajo en PC, se adapta sola en móviles */
 .values-list { 
     display: grid;
-    /* Ajustado minmax a 300px mínimos para que en pantallas pequeñas no intente meter dos columnas apretadas */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; 
     width: 100%; 
 }
 
 .value-item, #mis-valores .card-valor, #mis-valores .card, .section-valores .card-valor, .valores-grid .card, .card-valor { 
-    background-color: var(--bg-dark-resource) !important; /* Forzado a tu granate oficial */
+    background-color: var(--bg-dark-resource) !important;
     border: none !important;
     border-radius: 20px; 
     padding: 35px; 
@@ -257,7 +247,7 @@ img, video, iframe {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     display: flex; 
     flex-direction: column; 
-    justify-content: flex-start; /* Cambiado a flex-start para que el texto fluya mejor si hay diferentes largos */
+    justify-content: flex-start;
     gap: 12px;
 }
 
@@ -275,7 +265,7 @@ img, video, iframe {
     font-family: var(--ff-display) !important; 
     font-size: 1.5rem; 
     font-weight: 800; 
-    color: var(--text-light-resource) !important; /* Letras crema claro */
+    color: var(--text-light-resource) !important;
     margin-top: 0;
     margin-bottom: 5px; 
 }
@@ -289,7 +279,7 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   6. SECCIÓN CÓMO TRABAJO Y TARJETAS ESTÁTICAS CONTINUAS
+   6. SECCIÓN CÓMO TRABAJO
    ========================================================================== */
 .como-trabajo-contenedor-seccion { 
     background: var(--cream);
@@ -330,7 +320,7 @@ img, video, iframe {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center;
-    align-items: stretch; /* Mantiene alturas idénticas de tarjetas en PC */
+    align-items: stretch;
     gap: 30px; 
     width: 100%;
     max-width: 1100px;
@@ -340,9 +330,9 @@ img, video, iframe {
 }
 
 .tarjeta-giratoria, .card-trabajo-estatica { 
-    flex: 1 1 300px !important; /* Cambiado el tamaño base a 300px para evitar desbordes en smartphones estándar */
+    flex: 1 1 300px !important;
     max-width: 100%;
-    background-color: var(--blush); /* Fondo rosa suave */
+    background-color: var(--blush);
     border-radius: 20px; 
     box-shadow: var(--shadow);
     padding: 35px 24px; 
@@ -386,7 +376,7 @@ img, video, iframe {
     justify-content: center; 
     overflow: hidden; 
     width: 100%;
-    margin-top: auto; /* Empuja las ilustraciones hacia abajo de forma unificada si los textos difieren en tamaño */
+    margin-top: auto;
 }
 
 .imagen-frontal-tarjeta { 
@@ -398,72 +388,8 @@ img, video, iframe {
 }
 
 /* ==========================================================================
-   7. TARJETAS DE RECURSOS AMPLIAS (FONDOS OSCUROS DE ALTO CONTRASTE)
+   7. TARJETAS DE RECURSOS (BASE EN ORDENADOR)
    ========================================================================== */
-.tarjeta-recurso-amplia {
-    max-width: 1000px; 
-    margin: 0 auto 50px auto; 
-    display: flex;
-    flex-direction: row; 
-    align-items: stretch; 
-    gap: 30px; 
-    width: 100%;
-    background-color: transparent !important;
-}
-
-.tarjeta-recurso-amplia .contenedor-imagen-amplia {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tarjeta-recurso-amplia .contenedor-imagen-amplia img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.bloque-texto-difuminado {
-    flex: 1;
-    background-color: var(--bg-dark-resource) !important; /* Fondo granate oscuro */
-    border-radius: 16px;
-    padding: 30px 40px;
-    box-shadow: 0 6px 20px rgba(52, 29, 34, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.titulo-recurso-individual {
-    color: var(--text-light-resource) !important; /* Letras crema claras */
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.bloque-texto-difuminado p {
-    color: var(--text-muted-resource) !important;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin: 0;
-    text-align: left;
-}
-
-.imagen-cabecera-ramas {
-    width: 140px;
-    height: auto;
-    object-fit: contain;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-
-/* ==========================================================================
-   8 y 9. CORRECCIÓN DEFINITIVA: SEPARACIÓN DE IMÁGENES Y TARJETAS INDEPENDIENTES
-   ========================================================================== */
-
 .contenedor-articulos {
     max-width: 1100px;
     margin: 0 auto;
@@ -490,575 +416,7 @@ img, video, iframe {
     margin: 0;
 }
 
-/* 1. Limpieza absoluta del contenedor que une los dos elementos */
-.tarjeta-recurso {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 40px !important;            /* Espacio amplio para separar la imagen del texto */
-    align-items: stretch !important;  /* Mantiene alturas alineadas en PC */
-    width: 100% !important;
-    background-color: transparent !important; 
-    background: transparent !important;       
-    border: none !important;                  
-    box-shadow: none !important;              
-    overflow: visible !important;             
-    height: auto !important;                  /* Elimina la altura fija de 380px en PC */
-}
-
-/* 2. Forzamos a que el contenedor de la imagen y la etiqueta img sean 100% transparentes */
-.contenedor-imagen, 
-.tarjeta-recurso > div[style*="max-width: 400px"] {
-    flex: 1 !important;
-    max-width: 400px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background-color: transparent !important; 
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.card-trabajo img,
-.trabajo-grid img,
-#como-trabajo img,
-.contenedor-imagen img,
-.recursos-container img,
-.seccion-recursos img,
-.bloque-izquierdo-visual img,
-.tarjeta-horizontal img,
-.contenedor-imagen-amplia img,
-.imagen-sandra-koala-nueva,
-.tarjeta-recurso img {
-    background-color: transparent !important; /* CORRECCIÓN: Evita el fondo gris/granate en las fotos */
-    background: transparent !important;
-    border-radius: 16px !important;
-    box-shadow: none !important;
-    border: none !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* Muestra los koalas completos y nítidos */
-    display: block !important;
-}
-
-/* Asegura que la foto real de Sandra en Conóceme cubra su espacio sin deformarse */
-.tarjeta-recurso img[src*="imagensandra"] {
-    object-fit: cover !important; 
-}
-
-/* 3. El fondo granate y los bordes ahora pertenecen ÚNICAMENTE a la caja de texto */
-.tarjeta-texto {
-    flex: 1.5 !important;
-    background-color: var(--bg-dark-resource) !important; /* Aplica el granate ciruela en Recursos */
-    color: var(--text-light-resource) !important;        
-    padding: 40px !important;                 
-    border-radius: 20px !important;           
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12) !important; 
-}
-
-/* El texto de la sección "Sobre mí" rosa oscuro también se estila de forma idéntica */
-.tarjeta-presentacion-oscura {
-    flex: 1.5 !important;
-    background-color: var(--bark) !important; /* Granate oficial en Sobre Mí */
-    padding: 40px !important;
-    border-radius: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12) !important;
-}
-
-/* Clases de apoyo para las descripciones */
-.subtitulo-recurso {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: var(--text-light-resource) !important;
-    font-family: var(--ff-display);
-}
-
-.descripcion-recurso {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: var(--text-muted-resource) !important;
-}
-
-.lista-recurso {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    line-height: 1.5;
-    color: var(--text-light-resource) !important;
-}
-
-.lista-recurso strong {
-    color: var(--white) !important; 
-}
-
-
-/* ==========================================================================
-   10. PIE DE PÁGINA CORPORATIVO
-   ========================================================================== */
-.pie-contacto-final {
-    width: 100vw !important; /* Fuerza a ocupar el 100% real del ancho del visor de pantalla */
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
-    background-color: var(--bark) !important; /* Granate oficial corporativo */
-    padding: 20px 0 !important;
-    margin-top: 60px !important; 
-    box-sizing: border-box !important;
-}
-
-.pie-contenedor {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    padding: 0 20px !important;
-    box-sizing: border-box !important;
-}
-
-.contacto-final-lista {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 40px !important;
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, .contacto-final-lista a, .contacto-final-lista span {
-    color: var(--cream) !important; /* Tono crema claro oficial y legible */
-    text-decoration: none !important;
-    font-family: var(--ff-display) !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-}
-
-/* ==========================================================================
-   11. CONSULTA DE MEDIOS (MEDIA QUERY DEFINITIVA RESPONSIVA < 768PX)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    /* Prevenir desbordamiento horizontal global en teléfonos */
-    html, body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-    
-    body, container, main {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    
-    /* Convierte grids antiguos a una sola columna */
-    .row, .flex-container, .grid-container {
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important;
-    }
-    
-    /* Fuentes adaptativas corregidas para evitar cortes de palabras largos */
-    h1 { 
-        font-size: 1.8rem !important; 
-        word-wrap: break-word !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-    
-    h2 { font-size: 1.5rem !important; }
-    p { font-size: 1rem !important; line-height: 1.5 !important; }
-    
-    button, .btn, a.button {
-        width: 100% !important;
-        padding: 12px 20px !important;
-        margin-bottom: 10px !important;
-    }
-    
-    /* --- MENÚ DE NAVEGACIÓN MÓVIL COMPACTO --- */ 
-    nav.nav-principal {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 15px 10px !important;
-        position: relative !important; 
-        width: 100% !important;
-        height: auto !important;
-    }
-    
-    nav.nav-principal .nav-logo {
-        margin-bottom: 12px !important;
-        font-size: 1.1rem !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    
-    nav.nav-principal .nav-logo .colegiada {
-        font-size: 0.85em !important;
-        margin-top: 3px;
-    }
-    
-    nav.nav-principal ul.nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important; 
-        justify-content: center !important;
-        gap: 8px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    nav.nav-principal ul.nav-links li {
-        display: inline-block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    nav.nav-principal ul.nav-links li a {
-        padding: 6px 12px !important;
-        font-size: 0.8rem !important;
-    }
-
-    /* --- HERO CABECERA MÓVIL --- */
-    .sub-tarjetas-container {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-
-    /* --- ADAPTACIÓN DE TARJETAS DE RECURSOS E INFOGRAFÍAS EN MÓVIL --- */
-    .tarjeta-recurso {
-        height: auto !important; /* Elimina alturas rígidas en el smartphone */
-        flex-direction: column !important; /* Apila los elementos en vertical */
-        gap: 20px !important;
-    }
-
-    /* Invierte el flujo en la fila de biografía de Sandra para que la foto suba arriba del texto */
-    .tarjeta-recurso:has(.tarjeta-clara-texto) {
-        flex-direction: column-reverse !important;
-    }
-
-    .tarjeta-texto, .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
-        width: 100% !important;
-        flex: none !important;
-        padding: 25px 20px !important; /* Hace más compacto el espacio en pantallas pequeñas */
-        border-radius: 15px !important;
-    }
-
-    .contenedor-imagen {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        height: auto !important;
-    }
-
-    .contenedor-imagen img {
-        max-height: 260px !important; /* Modula los koalas para que no crezcan de forma gigante */
-        width: auto !important;
-        margin: 0 auto !important;
-    }
-
-    /* --- ADAPTACIÓN DE PIE DE PÁGINA EN MÓVIL --- */
-    .contacto-final-lista {
-        flex-direction: column !important; /* Los datos de contacto bajan en fila limpia */
-        gap: 15px !important;
-        text-align: center !important;
-    }
-}
-
-     /* ==========================================================================
-       12. AJUSTES DE INFOGRAFÍAS Y RECURSOS EN MÓVIL (COMPLEMENTARIOS)
-       ========================================================================== */
-    .hero-seccion {
-        padding-top: 20px !important;
-    }
-    
-    .hero-dos-columnas {
-        display: flex !important;
-        /* CORREGIDO: Se mantiene el título arriba y el dibujo del koala abajo para respetar el orden de lectura natural */
-        flex-direction: column !important; 
-        gap: 20px !important;
-    }
-    
-    /* --- CONTROL ESTRICTO DE INFOGRAFÍAS (IMAGEN ARRIBA -> TEXTO ABAJO) --- */
-    .tarjeta-recurso {
-        height: auto !important; /* Elimina la altura fija de 380px en el móvil */
-        display: flex !important;
-        flex-direction: column !important; /* Por defecto pone el primer elemento (Imagen) arriba y el segundo (Texto) abajo */
-        gap: 20px !important;
-    }
-    
-    /* CORREGIDO: Como en la sección "Sobre mí" alteramos el orden del HTML en la Biografía para poner el texto a la izquierda, 
-       usamos esta regla específica para forzar a que la foto de Sandra suba arriba en los teléfonos */
-    .tarjeta-recurso:has(.tarjeta-clara-texto) {
-        flex-direction: column-reverse !important;
-    }
-    
-    .tarjeta-texto, .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
-        height: auto !important;
-        width: 100% !important;
-        flex: none !important;
-        overflow-y: visible !important;
-        padding: 25px 20px !important; /* Reduce los espacios internos para que respire en pantallas estrechas */
-        border-radius: 15px !important;
-    }
-    
-    .contenedor-imagen {
-        height: auto !important;
-        width: 100% !important;
-        flex: none !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-    
-    .contenedor-imagen img {
-        height: auto !important;
-        max-height: 280px !important; /* Modula el tamaño de los koalas para que no queden gigantes */
-        width: auto !important;
-        object-fit: contain !important;
-        margin: 0 auto !important;
-    }
-    
-    /* --- HERO MÓVIL --- */
-    .columna-derecha-imagen {
-        display: flex !important;
-        justify-content: center !important;
-    }
-    
-    .imagen-sandra-koala-nueva {
-        max-width: 260px !important; /* Escala perfecta para pantallas de smartphones */
-        height: auto !important;
-        margin: 0 auto !important;
-    }
-    
-    h1, .hero h1, .titulo-principal {
-        text-align: center !important;
-        width: 100% !important;
-        word-wrap: break-word !important;
-    }
-    
-    .titulo-recurso { 
-        font-size: 1.8rem !important; 
-    }
-    
-    /* --- SECCIÓN RECURSOS AMPLIAS MÓVIL --- */
-    .tarjeta-recurso-amplia {
-        flex-direction: column !important; /* Apila imagen arriba y tarjeta abajo en teléfonos */
-        gap: 20px !important;
-    }
-    
-    .tarjeta-recurso-amplia .contenedor-imagen-amplia,
-    .bloque-texto-difuminado {
-        width: 100% !important;
-        flex: none !important;
-    }
-    
-    .bloque-texto-difuminado { 
-        padding: 25px 20px !important; 
-    }
-    
-    .titulo-recurso-individual { 
-        font-size: 1.6rem !important; 
-        text-align: center !important; 
-    }
-    
-    /* --- OTRAS SECCIONES (VALORES, CONTACTO SIMPLE Y PIE) --- */
-    .valores-container, .seccion-valores, .valor-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        overflow-x: hidden !important;
-    }
-    
-    .valores-row, .flex-valores { 
-        flex-direction: column !important; 
-        width: 100% !important; 
-    }
-    
-    .cards-grid, .valores-grid, .trabajo-grid, .lista-tarjetas-horizontales {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 1.5rem !important;
-        width: 100% !important;
-        padding: 0 !important;
-    }
-
-      /* ==========================================================================
-   13. CIERRE DE SECCIONES GENERALES Y ADAPTACIÓN EN MÓVIL
-   ========================================================================== */
-@media (max-width: 768px) {
-
-    /* Pie de página fluido */
-    .contacto-final-lista {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 15px !important;
-        width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .card-valor, .card-trabajo, .card-hero, .card, .tarjeta-horizontal {
-        display: flex !important;
-        flex-direction: column !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow: hidden !important;
-    }
-    
-    .bloque-izquierdo-visual, .bloque-derecho-texto {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        padding: 25px 15px !important;
-    }
-    
-    .bloque-izquierdo-visual img { 
-        max-width: 220px !important; 
-        width: 100% !important; 
-        margin: 0 auto !important; 
-    }
-    
-    .tarjeta-horizontal h2, .tarjeta-horizontal h3 { 
-        word-break: break-word; 
-        hyphens: auto; 
-        font-size: 1.4rem !important; 
-    }
-    
-    .tarjeta-contacto h1, .tarjeta-contacto h2, .contacto-titulo {
-        font-size: 1.8rem !important;
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-    
-    .tarjeta-contacto, .contacto-card { 
-        padding: 20px 15px !important; 
-        max-width: 100% !important; 
-    }
-    
-    /* Quitar máscaras en móviles */
-    .bloque-izquierdo-visual img, .tarjeta-horizontal img {
-        -webkit-mask-image: none !important;
-        mask-image: none !important;
-    }
-
-    /* Adaptación de tarjetas y recursos */
-    .tarjeta-recurso, 
-    .contenedor-mochila {
-        height: auto !important; 
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-
-    /* Invierte el orden solo en la biografía si contiene la tarjeta clara */
-    .tarjeta-recurso:has(.tarjeta-clara-texto) {
-        flex-direction: column-reverse !important;
-    }
-
-    .tarjeta-clara-texto, .tarjeta-presentacion-oscura {
-        height: auto !important;
-        overflow-y: visible !important; 
-        padding: 25px 20px !important; 
-    }
-
-    .tarjeta-presentacion-oscura p {
-        color: #FFFBF2 !important;
-    }
-
-    .tarjeta-recurso > div[style*="max-width: 400px"] {
-        height: auto !important;
-        max-height: 300px !important; 
-        width: 100% !important;
-    }
-
-    .tarjeta-recurso img,
-    .contenedor-mochila img {
-        width: 100% !important;
-        max-width: 220px !important;
-        height: auto !important;
-        object-fit: contain !important; 
-        margin: 0 auto 15px auto !important;
-    }
-/* FORZAR APILADO VERTICAL EN MÓVILES */
-@media (max-width: 768px) {
-  
-  /* 1. SECCIÓN CONÓCEME */
-  .fila-superior-flex {
-    display: flex !important;
-    flex-direction: column !important; /* Pone los elementos uno debajo de otro */
-    align-items: center !important;
-    width: 100% !important;
-  }
-
-  .contenedor-foto-reducida {
-    order: 1 !important; /* Fuerza a la foto a ir ARRIBA */
-    width: 100% !important;
-    margin-bottom: 25px !important;
-  }
-
-  .contenedor-foto-reducida img,
-  .foto-perfil-sobremi {
-    width: 100% !important;
-    max-width: 240px !important; /* Tamaño visible y centrado de la foto */
-    height: auto !important;
-    margin: 0 auto !important;
-  }
-
-  .tarjeta-sidebar {
-    order: 2 !important; /* Fuerza a la tarjeta a ir DEBAJO de la foto */
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-
-  /* 2. SECCIÓN RECURSOS (MOCHILA SENSORAL) */
-  .tarjeta-recurso,
-  div[class*="recurso"],
-  main > div {
-    display: flex !important;
-    flex-direction: column !important; /* Imagen arriba, tarjeta abajo */
-    align-items: center !important;
-    width: 100% !important;
-  }
-
-  .tarjeta-recurso img,
-  div[class*="recurso"] img {
-    order: 1 !important;
-    width: 100% !important;
-    max-width: 200px !important; /* Tamaño grande de la ilustración de la mochila */
-    height: auto !important;
-    margin: 0 auto 20px auto !important;
-  }
-
-  .tarjeta-presentacion-oscura,
-  .tarjeta-clara-texto {
-    order: 2 !important;
-    width: 100% !important;
-  }
-}
-/* --- ESTILOS BASE (ORDENADOR) --- */
+/* Contenedor Flex para horizontalidad en PC */
 .tarjeta-recurso {
     display: flex;
     flex-direction: row;
@@ -1066,22 +424,30 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     align-items: stretch;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 40px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
+.contenedor-imagen, 
 .contenedor-imagen-recurso {
     flex: 1;
     max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
-.contenedor-imagen-recurso img {
+.contenedor-imagen img,
+.contenedor-imagen-recurso img,
+.tarjeta-recurso img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
     display: block;
+    background: transparent !important;
+    border-radius: 16px;
 }
 
 .contenedor-imagen-recurso img.foto-sandra {
@@ -1089,132 +455,70 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     object-fit: cover;
 }
 
-.tarjeta-presentacion-oscura {
+.tarjeta-texto {
     flex: 1.5;
-    background-color: #6d4b53;
+    background-color: var(--bg-dark-resource);
+    color: var(--text-light-resource);
     padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12);
+}
+
+.tarjeta-presentacion-oscura {
+    flex: 1.5;
+    background-color: var(--bark);
+    padding: 35px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(109, 75, 83, 0.12);
 }
 
 .tarjeta-presentacion-oscura p {
     margin: 0;
-    color: #FFFBF2;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.4rem;
+    color: var(--cream);
+    font-family: var(--ff-display);
+    font-size: 1.25rem;
     line-height: 1.65;
 }
 
 .tarjeta-clara-texto {
     flex: 2;
-    background-color: #F7E1E5;
+    background-color: var(--blush);
     padding: 35px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 4px 15px rgba(109, 75, 83, 0.05);
 }
 
 .tarjeta-clara-texto p {
     margin: 0 0 20px 0;
-    color: #6d4b53;
-    font-size: 1.4rem;
+    color: var(--bark);
+    font-size: 1.15rem;
     line-height: 1.75;
-    font-family: Georgia, serif;
-}
-
-.tarjeta-clara-texto p strong {
-    color: #6d4b53;
-}
-
-/* --- VISTA MÓVIL (PANTALLAS PEQUEÑAS) --- */
-@media (max-width: 768px) {
-    .tarjeta-recurso {
-        flex-direction: column; /* Cambia a vertical */
-        align-items: center;
-    }
-
-    .contenedor-imagen-recurso {
-        max-width: 240px; /* Tamaño controlado de las imágenes en móvil */
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .tarjeta-presentacion-oscura,
-    .tarjeta-clara-texto {
-        width: 100%;
-        padding: 25px 20px;
-    }
-}
-/* ==========================================================================
-   ESTILOS GENERALES DE RECURSOS (ORDENADOR)
-   ========================================================================== */
-.recurso-bloque {
-    margin-bottom: 50px;
-}
-
-.titulo-recurso {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #6d4b53;
-    font-family: Georgia, serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-}
-
-.tarjeta-recurso {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: stretch;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contenedor-imagen {
-    flex: 1;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.contenedor-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-.tarjeta-texto {
-    flex: 1.5;
-    background-color: #4A2E35;
-    border-radius: 20px;
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+    font-family: var(--ff-display);
 }
 
 .subtitulo-recurso {
-    margin-top: 0;
     font-size: 1.25rem;
     font-weight: 700;
+    margin-top: 0;
     margin-bottom: 10px;
-    color: #fdfbf7;
-    font-family: Georgia, serif;
+    color: var(--text-light-resource);
+    font-family: var(--ff-display);
 }
 
 .descripcion-recurso {
     margin-bottom: 20px;
     line-height: 1.6;
-    color: #e5dadc;
+    color: var(--text-muted-resource);
 }
 
 .descripcion-recurso.texto-compacto {
@@ -1231,7 +535,7 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
     flex-direction: column;
     gap: 12px;
     line-height: 1.5;
-    color: #fdfbf7;
+    color: var(--text-light-resource);
 }
 
 .lista-recurso.lista-compacta {
@@ -1241,27 +545,124 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
 }
 
 .lista-recurso strong {
-    color: #ffffff;
+    color: var(--white);
 }
 
 /* ==========================================================================
-   ADAPTACIÓN RESPONSIVA (MÓVIL)
+   8. PIE DE PÁGINA CORPORATIVO
    ========================================================================== */
-@media (max-width: 768px) {
+.pie-contacto-final {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    background-color: var(--bark) !important;
+    padding: 20px 0 !important;
+    margin-top: 60px !important; 
+    box-sizing: border-box !important;
+}
+
+.pie-contenedor {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.contacto-final-lista {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista a, .contacto-final-lista span {
+    color: var(--cream) !important;
+    text-decoration: none !important;
+    font-family: var(--ff-display) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   9. MEDIA QUERY EXCLUSIVA PARA MÓVILES (PANTALLAS HASTA 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Adaptación general de layout */
+    html, body {
+        overflow-x: hidden !important;
+    }
+    
+    h1 { 
+        font-size: 1.8rem !important; 
+        text-align: center !important;
+    }
+    
+    h2 { font-size: 1.5rem !important; }
+    p { font-size: 1rem !important; }
+    
+    /* Menú Móvil */
+    nav.nav-principal {
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+    }
+    
+    nav.nav-principal ul.nav-links {
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+    
+    nav.nav-principal ul.nav-links li a {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Hero Móvil */
+    .sub-tarjetas-container {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .imagen-sandra-koala-nueva {
+        max-width: 240px !important;
+    }
+
+    /* Apilado vertical de Recursos (Imagen arriba -> Texto abajo) */
     .tarjeta-recurso {
-        flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    .contenedor-imagen {
-        max-width: 220px; /* Ancho ajustado para móviles */
-        width: 100%;
-        margin-bottom: 20px;
+    /* Excepción para la Biografía: coloca la imagen de Sandra arriba */
+    .tarjeta-recurso:has(.tarjeta-clara-texto) {
+        flex-direction: column-reverse !important;
     }
 
-    .tarjeta-texto {
-        width: 100%;
-        padding: 25px 20px;
+    .contenedor-imagen, 
+    .contenedor-imagen-recurso {
+        max-width: 240px !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .tarjeta-texto, 
+    .tarjeta-presentacion-oscura, 
+    .tarjeta-clara-texto {
+        width: 100% !important;
+        padding: 25px 20px !important;
+        border-radius: 15px !important;
+    }
+
+    /* Pie de página Móvil */
+    .contacto-final-lista {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
     }
 }
-} /* Fin de la @media query */
