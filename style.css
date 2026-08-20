@@ -997,5 +997,22 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         object-fit: contain !important; 
         margin: 0 auto !important;
     }
+@media (max-width: 768px) {
+  /* Forzamos a que el contenedor cambie de fila a columna */
+  .tarjeta-recurso, 
+  .contenedor-mochila { 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
 
+  /* Ajustamos la imagen para que se ponga arriba y centrada */
+  .tarjeta-recurso img,
+  .contenedor-mochila img {
+    width: 120px; /* Ajusta el tamaño de la ilustración */
+    height: auto;
+    margin-bottom: 15px; /* Espacio entre la imagen y la tarjeta */
+  }
+}
 } /* <<< ESTE ES EL CIERRE DE LA MEDIA QUERY GENERAL MÓVIL (CORREGIDO Y SIN LLAVES SOBERANTES) */
