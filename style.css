@@ -639,32 +639,6 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
         max-width: 240px !important;
     }
 
-    /* Apilado vertical de Recursos (Imagen arriba -> Texto abajo) */
-    .tarjeta-recurso {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Excepción para la Biografía: coloca la imagen de Sandra arriba */
-    .tarjeta-recurso:has(.tarjeta-clara-texto) {
-        flex-direction: column-reverse !important;
-    }
-
-    .contenedor-imagen, 
-    .contenedor-imagen-recurso {
-        max-width: 240px !important;
-        width: 100% !important;
-        margin-bottom: 15px !important;
-    }
-
-    .tarjeta-texto, 
-    .tarjeta-presentacion-oscura, 
-    .tarjeta-clara-texto {
-        width: 100% !important;
-        padding: 25px 20px !important;
-        border-radius: 15px !important;
-    }
-
     /* Pie de página Móvil (Ajustado) */
     .pie-contacto-final {
         padding: 30px 15px !important;
@@ -685,12 +659,23 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
         width: 100% !important;
         max-width: 100% !important;
     }
+} /* <--- AQUÍ se cierra correctamente tu diseño de móvil anterior */
    
-/* Solo afecta a pantallas de ordenador */
+/* CORRECCIÓN PARA LA VISTA DE ORDENADOR (Bloque Marrón) */
 @media (min-width: 1024px) {
-  .tu-contenedor-principal {
-    display: flex;
-    align-items: flex-start; /* Hace que el bloque marrón solo mida lo que ocupe su texto */
+  
+  /* 1. Evita que las dos columnas se estiren entre sí */
+  .tarjeta-recurso {
+    display: flex !important;
+    align-items: flex-start !important; 
+    height: auto !important;
+    min-height: 0 !important;
   }
-}
+
+  /* 2. Resetea la altura de los bloques de texto */
+  .tarjeta-presentacion-oscura, 
+  .tarjeta-clara-texto {
+    height: auto !important;
+    min-height: 0 !important;
+  }
 }
