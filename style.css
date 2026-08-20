@@ -1150,4 +1150,118 @@ footer, footer p, footer a, .footer, .footer p, .footer a, .pie-contacto-final, 
         padding: 25px 20px;
     }
 }
+/* ==========================================================================
+   ESTILOS GENERALES DE RECURSOS (ORDENADOR)
+   ========================================================================== */
+.recurso-bloque {
+    margin-bottom: 50px;
+}
+
+.titulo-recurso {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6d4b53;
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.tarjeta-recurso {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contenedor-imagen {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.tarjeta-texto {
+    flex: 1.5;
+    background-color: #4A2E35;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.subtitulo-recurso {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fdfbf7;
+    font-family: Georgia, serif;
+}
+
+.descripcion-recurso {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e5dadc;
+}
+
+.descripcion-recurso.texto-compacto {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.lista-recurso {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.5;
+    color: #fdfbf7;
+}
+
+.lista-recurso.lista-compacta {
+    gap: 10px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.lista-recurso strong {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA (MÓVIL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .tarjeta-recurso {
+        flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+        align-items: center;
+    }
+
+    .contenedor-imagen {
+        max-width: 220px; /* Ancho ajustado para móviles */
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-texto {
+        width: 100%;
+        padding: 25px 20px;
+    }
+}
 } /* Fin de la @media query */
