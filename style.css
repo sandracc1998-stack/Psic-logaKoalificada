@@ -685,5 +685,14 @@ footer, footer p, footer a, .footer, .pie-contacto-final, .contacto-final-lista 
         width: 100% !important;
         max-width: 100% !important;
     }
+   
+   /* Solo se aplicará en pantallas de ordenador (de 1024px en adelante) */
+@media (min-width: 1024px) {
+  .clase-de-tu-bloque-marron {
+    max-width: 700px;    /* Limita el ancho para que no se estire infinito */
+    height: auto;        /* Hace que el alto se adapte solo al texto contenido */
+    margin: 0 auto;      /* Centra el bloque si se queda muy a un lado */
+  }
 }
 
+}
