@@ -10,12 +10,9 @@
 
     <!-- MENÚ DE NAVEGACIÓN CORPORATIVA -->
     <nav class="nav-principal">
-        <!-- Nombre/Logo a la izquierda -->
         <a href="index.html" class="nav-logo">
             <span>Sandra Carrera Castaño</span>
         </a>
-        
-        <!-- Lista de botones -->
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="filosofia.html">Filosofía koala</a></li>
@@ -26,47 +23,47 @@
         </ul>
     </nav>
 
-    <!-- CONTENEDOR PRINCIPAL QUE LIMITA EL ANCHO EN PC Y DA MÁRGENES EN MÓVIL -->
-    <main class="section-inner" style="margin-top: 40px;">
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="section-inner" style="margin-top: 40px; padding: 0 20px;">
 
-        <!-- 1. SECCIÓN: PRESENTACIÓN (Koala + Texto Rosa Oscuro) -->
-        <div class="tarjeta-recurso" style="margin-bottom: 50px;">
-            <!-- Contenedor de la imagen corregido para el CSS -->
-            <div class="contenedor-imagen">
-                <img src="img/conoceme-koala.png.PNG" alt="Conóceme Koala">
+        <!-- 1. SECCIÓN: PRESENTACIÓN (Koala + Tarjeta Crema Claro) -->
+        <div class="tarjeta-recurso" style="margin-bottom: 50px; display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
+            <!-- Contenedor del koala -->
+            <div class="contenedor-imagen" style="flex: 1; min-width: 280px;">
+                <img src="img/conoceme-koala.png.PNG" alt="Conóceme Koala" style="width: 100%; height: auto; object-fit: contain;">
             </div>
 
-            <!-- Tarjeta de texto rosa oscuro -->
-            <div class="tarjeta-presentacion-oscura">
-                <p>
+            <!-- Tarjeta de texto crema claro -->
+            <div style="flex: 1.5; min-width: 300px; background-color: var(--cream) !important; padding: 40px !important; border-radius: 20px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; box-shadow: 0 8px 24px rgba(109, 75, 83, 0.06) !important; border: 1px solid rgba(109, 75, 83, 0.1) !important;">
+                <p style="color: var(--bark) !important; font-family: var(--ff-display), Georgia, serif !important; font-size: 1.2rem !important; line-height: 1.7 !important; margin: 0 !important; text-align: left !important; font-weight: 500 !important;">
                     ¡Hola! Soy Sandra Carrera. A través de este espacio te acompaño a comprender y guiar el neurodesarrollo y la educación de tus hijos, aportando estrategias prácticas desde un enfoque respetuoso y centrado en la tranquilidad familiar.
                 </p>
             </div>
         </div>
 
-        <!-- 2. SECCIÓN: BIOGRAFÍA (Foto Sandra + Texto Rosa Claro) -->
-        <div class="tarjeta-recurso" style="margin-bottom: 50px;">
-            <!-- Contenedor de la imagen de Sandra -->
-            <div class="contenedor-imagen">
-                <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-sandra">
-            </div>
-
-            <!-- Tarjeta de texto rosa claro -->
-            <div class="tarjeta-clara-texto">
-                <p>
+        <!-- 2. SECCIÓN: BIOGRAFÍA (Texto Rosa Claro + Foto Sandra a la Derecha) -->
+        <div class="tarjeta-recurso" style="margin-bottom: 50px; display: flex; gap: 30px; align-items: stretch; flex-wrap: wrap;">
+            <!-- Tarjeta de texto rosa claro (Izquierda) -->
+            <div class="tarjeta-clara-texto" style="flex: 1.5; min-width: 300px; display: flex; flex-direction: column; justify-content: center; padding: 40px; border-radius: 20px;">
+                <p style="margin-bottom: 15px;">
                     Soy <strong>psicóloga graduada</strong> por la Universidad de Santiago de Compostela y colegiada Nº G-07583.
                 </p>
-                <p>
+                <p style="margin: 0;">
                     Entiendo la psicología infantil como un espacio de acompañamiento cercano, seguro y sumamente respetuoso con los ritmos de cada menor y las necesidades de su familia.
                 </p>
             </div>
+
+            <!-- Contenedor de la foto de Sandra (Derecha) -->
+            <div class="contenedor-imagen" style="flex: 1; min-width: 280px; display: flex; justify-content: center; align-items: center;">
+                <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-sandra" style="width: 100%; height: auto; max-height: 320px; object-fit: cover; border-radius: 16px;">
+            </div>
         </div>
 
-        <!-- 3. SECCIÓN: COMPETENCIAS Y FORMACIÓN (Tarjetas en Paralelo) -->
-        <div class="tarjetas-grid-contenedor" style="margin-bottom: 60px;">
+        <!-- 3. SECCIÓN: COMPETENCIAS Y FORMACIÓN (Alineadas paralelas con mismo ancho) -->
+        <div class="tarjetas-grid-contenedor" style="margin-bottom: 60px; display: flex; gap: 30px; flex-wrap: wrap; align-items: stretch; width: 100%;">
             
             <!-- Tarjeta Formación Destacada -->
-            <aside class="tarjeta-sidebar value-item">
+            <aside class="tarjeta-sidebar value-item" style="flex: 1; min-width: 300px; box-sizing: border-box;">
                 <h3 style="color: #ffffff !important; font-family: var(--ff-display) !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Formación Destacada</h3>
                 <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.15rem !important;">
                     <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
@@ -78,7 +75,7 @@
             </aside>
 
             <!-- Tarjeta Áreas de Trabajo -->
-            <aside class="tarjeta-sidebar value-item">
+            <aside class="tarjeta-sidebar value-item" style="flex: 1; min-width: 300px; box-sizing: border-box;">
                 <h3 style="color: #ffffff !important; font-family: var(--ff-display) !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Áreas de Trabajo</h3>
                 <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.05rem !important;">
                     <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>👶</span> <span><strong>Atención Temprana (0-6 años):</strong> Seguimiento del desarrollo madurativo temprano.</span></li>
@@ -93,7 +90,7 @@
         </div>
     </main>
 
-    <!-- PIE DE PÁGINA CORPORATIVO (Ancho fluido controlado por CSS) -->
+    <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer class="pie-contacto-final">
         <div class="pie-contenedor">
             <ul class="contacto-final-lista">
