@@ -1,39 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conóceme - Sandra Carrera</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<body> <!-- CORRECCIÓN: Agregada la etiqueta body que faltaba -->
 
-
-    <!-- MENÚ DE NAVEGACIÓN CORPORATIVA ADAPTADO A MÓVILES -->
-    <nav class="nav-principal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); gap: 15px;">
-        
-        <!-- Nombre/Logo a la izquierda -->
-        <a href="index.html" class="nav-logo" style="text-decoration: none; color: #6d4b53; font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem;">
-            <span style="white-space: nowrap;">Sandra Carrera Castaño</span>
-        </a>
-        
-        <!-- Lista de botones que ahora se alinean al centro si caen de línea -->
-        <ul class="nav-links" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; list-style: none; margin: 0; padding: 0;">
-            <li><a href="index.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Inicio</a></li>
-            <li><a href="filosofia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Filosofía koala</a></li>
-            <li><a href="terapia.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Ramas terapéuticas</a></li>
-            <li><a href="recursos.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Recursos koalificados</a></li>
-            <li><a href="conoceme.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Conóceme</a></li>
-            <li><a href="contacto.html" style="background-color: #F7E1E5; color: #6d4b53; font-family: Georgia, serif; padding: 6px 12px; border-radius: 20px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 0.85rem;">Contáctame</a></li>
-        </ul>
-    </nav>
-</div>
-
- 
 <!-- 1. SECCIÓN: PRESENTACIÓN -->
-<div class="tarjeta-recurso">
+<!-- Agregamos 'section-inner' para centrar y dar márgenes limpios en PC -->
+<div class="tarjeta-recurso section-inner" style="margin-top: 40px; margin-bottom: 50px;">
     
-    <!-- A. IMAGEN KOALA INDEPENDIENTE -->
-    <div class="contenedor-imagen-recurso">
+    <!-- CORRECCIÓN: Cambiado a 'contenedor-imagen' para que el CSS controle el tamaño del koala -->
+    <div class="contenedor-imagen">
         <img src="img/conoceme-koala.png.PNG" alt="Conóceme Koala">
     </div>
 
@@ -46,11 +18,11 @@
 
 </div>
 
-<!-- 2. SECCIÓN: BIOGRAFÍA (Imagen primero en el HTML para que en móvil quede arriba) -->
-<div class="tarjeta-recurso">
+<!-- 2. SECCIÓN: BIOGRAFÍA -->
+<div class="tarjeta-recurso section-inner" style="margin-bottom: 50px;">
     
-    <!-- C. IMAGEN DE SANDRA (Puesta arriba del texto) -->
-    <div class="contenedor-imagen-recurso">
+    <!-- CORRECCIÓN: Cambiado a 'contenedor-imagen' para que la foto de Sandra se adapte perfectamente -->
+    <div class="contenedor-imagen">
         <img src="img/imagensandra.png" alt="Sandra Carrera - Psicóloga Infantil" class="foto-sandra">
     </div>
 
@@ -66,63 +38,58 @@
 
 </div>
 
+<!-- LÍNEA 2: COMPETENCIAS EN PARALELO (Adaptado a móviles) -->
+<!-- CORRECCIÓN: Quitamos el display:flex inline para que actúe la clase responsiva y eliminamos etiquetas duplicadas al final -->
+<div class="tarjetas-grid-contenedor section-inner" style="margin: 0 auto 40px auto !important; margin-top: 30px !important;">
+    
+    <!-- TARJETA Formación Destacada -->
+    <aside class="tarjeta-sidebar value-item">
+        <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Formación Destacada</h3>
+        <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.15rem !important;">
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (AEPSIS)</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas de Apoyo Educativo (Univ. Nebrija)</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>❤️</span> <span>Curso de Inteligencia Emocional (USAL)</span></li>
+            <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>❤️</span> <span>Título de monitora de ocio y tiempo libre (FESAN) y de educación especial (DEPORTAE)</span></li>
+        </ul>
+    </aside>
 
-<!-- LÍNEA 2: COMPETENCIAS EN PARALELO (Mantienen su fondo oscuro para generar contraste) -->
-<div class="fila-bloques-competencias" style="display: flex !important; gap: 30px !important; flex-wrap: wrap !important; align-items: stretch !important; margin: 0 auto 40px auto !important; max-width: 1100px !important; width: 100% !important; box-sizing: border-box !important;">
-  
-<!-- TARJETA Formación Destacada - TAMAÑO DE LETRA AUMENTADO -->
-<aside class="tarjeta-sidebar" style="flex: 1 !important; min-width: 300px !important; background-color: #4A2E35 !important; padding: 35px !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important;">
-    <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Formación Destacada</h3>
-    <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.15rem !important;">
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎓</span> <span>Grado en Psicología (USC)</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧩</span> <span>Especialista en Intervención, Detección y Evaluación en TEA (AEPSIS)</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🏫</span> <span>Curso en Detección e Intervención de Alumnado con Necesidades Específicas de Apoyo Educativo (Univ. Nebrija)</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>❤️</span> <span>Curso de Inteligencia Emocional (USAL)</span></li>
-        <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>❤️</span> <span>Título de monitora de ocio y tiempo libre (FESAN) y de educación especial (DEPORTAE)</span></li>
-    </ul>
-</aside>
-
-<!-- TARJETA Áreas de Trabajo - ENRIQUECIDA -->
-<aside class="tarjeta-sidebar" style="flex: 1 !important; min-width: 300px !important; background-color: #4A2E35 !important; padding: 35px !important; border-radius: 20px !important; box-shadow: 0 4px 15px rgba(74, 46, 53, 0.15) !important; box-sizing: border-box !important;">
-    <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Áreas de Trabajo</h3>
-    <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.05rem !important;">
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>👶</span> <span><strong>Atención Temprana (0-6 años):</strong> Seguimiento del desarrollo madurativo temprano.</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧠</span> <span><strong>Neurodesarrollo y TEA:</strong> Intervención integral y comunicación funcional (SAAC).</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🏫</span> <span><strong>Apoyo Educativo (NEAE):</strong> Asesoramiento escolar y pautas de inclusión en el aula.</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎨</span> <span><strong>Diseño de Material Adaptado:</strong> Agendas, historias visuales y recursos personalizados.</span></li>
-        <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>💬</span> <span><strong>Regulación Emocional:</strong> Estrategias de corregulación y gestión del estrés infantil.</span></li>
-        <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🤝</span> <span><strong>Orientación Familiar:</strong> Acompañamiento a padres en crianza respetuosa y positiva.</span></li>
-    </ul>
-</aside>
+    <!-- TARJETA Áreas de Trabajo -->
+    <aside class="tarjeta-sidebar value-item">
+        <h3 style="color: #ffffff !important; font-family: Georgia, serif !important; font-size: 1.6rem !important; margin-top: 0 !important; margin-bottom: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; padding-bottom: 10px !important;">Áreas de Trabajo</h3>
+        <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important; font-family: sans-serif !important; color: #ffffff !important; line-height: 1.8 !important; font-size: 1.05rem !important;">
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>👶</span> <span><strong>Atención Temprana (0-6 años):</strong> Seguimiento del desarrollo madurativo temprano.</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🧠</span> <span><strong>Neurodesarrollo y TEA:</strong> Intervención integral y comunicación funcional (SAAC).</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🏫</span> <span><strong>Apoyo Educativo (NEAE):</strong> Asesoramiento escolar y pautas de inclusión en el aula.</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🎨</span> <span><strong>Diseño de Material Adaptado:</strong> Agendas, historias visuales y recursos personalizados.</span></li>
+            <li style="margin-bottom: 12px !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>💬</span> <span><strong>Regulación Emocional:</strong> Estrategias de corregulación y gestión del estrés infantil.</span></li>
+            <li style="margin-bottom: 0 !important; display: flex !important; gap: 10px !important; align-items: flex-start !important;"><span>🤝</span> <span><strong>Orientación Familiar:</strong> Acompañamiento a padres en crianza respetuosa y positiva.</span></li>
+        </ul>
+    </aside>
 </div>
 
  
-<!-- PIE DE PÁGINA FINAL HORIZONTAL EMPOJADO ABAJO DEL TODO -->
-<footer class="pie-contacto-final" style="background-color: #6D4B53 !important; padding: 15px 0 !important; margin-top: 60px !important; width: 100vw !important; position: relative !important; left: 50% !important; right: 50% !important; margin-left: -50vw !important; margin-right: -50vw !important; box-sizing: border-box !important;">
-    <div class="pie-contenedor" style="max-width: 1100px !important; margin: 0 auto !important; padding: 0 20px !important; box-sizing: border-box !important;">
-        
-        <ul class="contacto-final-lista" style="list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 40px !important;">
+<!-- PIE DE PÁGINA CORPORATIVO -->
+<!-- CORRECCIÓN: Eliminamos el ancho 100vw inline y los márgenes negativos que rompen el móvil -->
+<footer class="pie-contacto-final">
+    <div class="pie-contenedor">
+        <ul class="contacto-final-lista">
             <li>
-                <a href="mailto:psikoala@psikoala.com" style="text-decoration: none !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important;">
+                <a href="mailto:psikoala@psikoala.com">
                     📩 psikoala@psikoala.com
                 </a>
             </li>
-            <li style="display: inline-block !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important; margin: 0 !important;">
+            <li>
                 📍 Santiago de Compostela
             </li>
             <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none !important; color: #FFFBF2 !important; font-family: Georgia, serif !important; font-size: 0.95rem !important; font-weight: 600 !important;">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                     📸 @psico.koalificada
                 </a>
             </li>
         </ul>
     </div>
 </footer>
-
-
-</body>
-</html>
-
 
 </body>
 </html>
